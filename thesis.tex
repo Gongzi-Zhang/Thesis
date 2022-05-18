@@ -1,0 +1,102 @@
+\documentclass[phd,bottom,nosig]{usbthesis}
+
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{physics}
+\usepackage{units}
+
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage[compat=1.1.0]{tikz-feynman}
+\usepackage{tikz}
+    \usetikzlibrary{arrows}
+\usepackage[colorlinks]{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks = true,
+    urlcolor = [rgb]{0.85, 0.52, 0.9},
+}
+\usepackage{color}
+\usepackage{bm}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{makecell}
+\usepackage{afterpage}
+\usepackage{hhline}
+\usepackage{url}
+\usepackage{hyperref} % see the file hyperref.cfg for options
+%\usepackage{indentfirst}
+\usepackage{footmisc} % provides \footref and \mpfootnotemark commands
+\usepackage{xspace}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{pdfpages}
+%\usepackage[nottoc]{tocbibind}
+\input{mathdefs}
+\input{callcommands}
+\input{newcommand}
+\hyphenation{put words here which LaTeX does not hy-phen-ate pro-per-ly}
+
+\author{Weibin Zhang}%
+\title{Precise Measurement of the Neutron Skin Thickness of $^{208}Pb$ and $^{48}Ca$}%
+
+\month{June}
+\year{2022}%
+\program{Physics}%
+\director{Ahbay~Deshpande}{Professor, Department of Physics and Astronomy}%
+%\chairman{Name of Chairman}{Professor, Department of Physics and Astronomy}%
+\chairman{Joanna~Kiryluk}{Professor,  Department of Physics and Astronomy}%
+%\fstmember{Name of Member}{Professor, Department of Physics and Astronomy}%
+\fstmember{James~M.~Lattimer}{Professor, Department of Physics and Astronomy}%
+%\outmember{Name of Outside Member}{Position}{Institution}%
+\outmember{Name of Outside Member}{Position}{Institution}%
+\dean{Eric Wertheimer}%
+
+\begin{document}
+
+\singlespacing %
+\pagenumbering{roman} %
+\maketitle %
+\makeapproval %
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+\tableofcontents %
+\listoffigures %
+%
+%\listoftables %
+%
+\begin{acknowledgements}
+    \input{sections/acknowledgements}
+\end{acknowledgements}
+\pagestyle{thesis}
+\newpage
+\pagenumbering{arabic}
+\include{sections/introduction}
+\include{sections/setup}
+\include{sections/data_analysis}
+\include{sections/transverse_asymmetry}
+\include{sections/systematic_uncertainties}
+\include{sections/results}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{unsrtnat}
+\renewcommand{\baselinestretch}{1}
+\normalsize
+
+\clearpage
+\newpage
+\phantomsection%
+\addcontentsline{toc}{chapter}{\numberline{}{Bibliography}}%
+\bibliography{thesis}
+
+\clearpage
+\newpage
+
+\appendix
+\include{sections/appendixSdkr}
+%\include{sections/appendixNOON}
+
+\end{document}
