@@ -4,14 +4,14 @@
 % 2. symmetry energy dependence on density
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{symmetry energy} 
+\subsection{symmetry Energy} 
 % what's symmetry energy
 % why it is important
 % how to know/measure it -- theoritically and experimentally
 It has long been a hot topic for nuclear scientists to study how the asymmetry 
 between number of proton and nucleon will affect nuclei, especially the binding
 energy, which hints us the limit of new isotope elements. Using the simplest 
-liquid drop model, we will get the Bethe-Weizsacker Semi-empirical Mass Foumula:
+Liquid Drop Model (LDM), we will get the Bethe-Weizsacker Semi-empirical Mass Foumula:
 \begin{equation}
     \label{eq:mass-foumula}
     \begin{gathered}
@@ -44,38 +44,64 @@ more neutrons than protons are needed to balance the repulsion between protons.
 Due to the Pauli exclusion principle, these extra neutrons' energy will be 
 higher than the rest of nucleons, therefore introducing this correction term.
 
+Regard the nuclear system as a free Fermi gas of protons and neutrons, then the 
+kinematic energy of this system will be:
+$$ E_k = E_N + E_Z = \frac{3}{5}ZE_F^p + \frac{3}{5}NE_F^n $$
+Since the Fermi energy is proportional the $n^{2/3}$
+$$ E_k = C(Z^{5/3} + N^{5/3})  $$
+Expanse it in terms of N-Z, we will get
+\begin{equation*}
+    \begin{aligned}
+	E_k &= 2^{-2/3}C\left(A^{5/3} + \frac{5}{9}\frac{(N-Z)^2}{A^{1/3}} \right) + O((N-Z)^4) \\
+	    &= \frac{3}{5} E_F A + \frac{1}{3}E_F\frac{(N-Z)^2}{A} + O((N-Z)^4) \\
+    \end{aligned}
+\end{equation*}
+The first term contributes to the volume term and the second term is minus the 
+asymmetry term because $E_k$ contributes to the binding energy negatively.
+
 For a general discussion, we can ignore the 3rd term to focus on the homogeneous
 nuclear (residual strong) interaction between nucleons, and the 5th term which is too small.
 Now, we can talk about any nuclear system composed of Z protons (EM charge-less) 
 and N neutrons, rather than just true nuclei. Now we have a simplified equation
 of state (EoS) for nuclear matter:
 \begin{equation}
-    \label{eq:modified-mass-formula}
+    \label{eq:modified-mass-formula-1}
     \begin{aligned}
 	E &= a_V A - a_S A^{2/3} - a_A\frac{(N-Z)^2}{A}  \\
-	e &= \frac{E}{A} = a_V - a_S A^{-1/3} - a_A\frac{(N-Z)^2}{A^2} = E_0(A) - a_A\left(\frac{N-Z}{A}\right)^2 
+	e &= \frac{E}{A} = a_V - a_S A^{-1/3} - a_A\frac{(N-Z)^2}{A^2}
     \end{aligned}
 \end{equation}
 
-We can see that the binding energy depends on two variables, N and Z; or N+Z (A)
-and N-Z. If we fix A, then $e$ will be a solely function of N-Z, or conventionally
-$\beta = (N-Z)/A$. $\beta$ characterizes the asymmetry between the number of 
-protons and neutrons. Again, for the purpose of generalization, we will replace
-N, Z and A with their corresponding density: $\rho_n$, $\rho_p$ and $\rho$
-($\beta = \frac{\rho_n - \rho_p}{\rho}$). 
-So we are considering a uniform nuclear system at 0 temperature that interacts
-only via the nuclear force.
-Rewrite eq \eqref{eq:modified-mass-formula}:
+Actually, we should also discard the second term. Obviously, we can't guarantee
+any specific shape about the nuclear system; what's mroe, for what people model
+with most -- the infinite nuclear system, we don't need to consider the surface 
+term at all.
+\begin{equation}
+    \label{eq:modified-mass-formula-2}
+    \begin{aligned}
+	E &= a_V A - a_A\frac{(N-Z)^2}{A}  \\
+	e &= \frac{E}{A} = a_V - a_A\frac{(N-Z)^2}{A^2} = e_0(A) - a_A\beta^2 
+    \end{aligned}
+\end{equation}
+Here we define $\beta = \frac{N-Z}{A}$ as asymmetry between the number of protons and neutrons. 
+
+For infinite system, density, instead of A, will be a better choice to parameterize
+the EoS. So we should replace N, Z and A with their corresponding density: $\rho_n$, 
+$\rho_p$ and $\rho$ ($\beta = \frac{\rho_n - \rho_p}{\rho}$). 
+So we are considering a infinite uniform nuclear system at 0 temperature that interacts
+only via the nuclear force. For any identified $\rho$,
+eq \eqref{eq:modified-mass-formula-2} will be:
 \begin{equation}
     \label{eq:symmetry-energy}
     e(\rho, \beta) = e(\rho, 0) + S(\rho)\beta^2 + O(\beta^4)
 \end{equation}
 
-This is the expansion of the binding energy per nucleon around $\beta = 0$.
+We find that eq \eqref{eq:modified-mass-formula-2} is a expansion of the 
+binding energy per nucleon around $\beta = 0$.
 Due to the isospin symmetry between proton and neutron, any isoscalar quantities
 F will keep unchanged under $n \leftrightarrow p$ interchange, while isovector 
 % change all n into p and p into n. Not just one proton and one neutron
-quantities G will change sign. $\beta$ is a isovector, so for a smooth $F(\beta)$,
+quantities G will change sign. $\beta$ is an isovector, so for a smooth $F(\beta)$,
 its expansion around $\beta = 0$ has even terms only:
 $$ F(\beta) = F_0 + F_2\beta^2 + F_4\beta^4 + \dots $$
 On the other hand, for a smooth $G(\beta)$, its expansion around $\beta = 0$ has
@@ -83,21 +109,15 @@ odd terms only:
 $$ G(\beta) = G_1\beta + G_3\beta^3 + \dots $$
 
 e is an isoscalar, it doesn't change under $n \leftrightarrow p$ interchange 
-as we can see from eq \eqref{eq:modified-mass-formula}. The coefficient $S(\rho)$ is
+as we can see from eq \eqref{eq:modified-mass-formula-2}. The coefficient 
+$S(\rho) = \frac{\partial^2 e (\rho, \beta)}{\partial \beta^2}$ is
 what we call the \textbf{symmetry energy}, a key parameter in explaining a wide
-range of nuclear properties and phenomena. It describes how much energy is needed
-to exchange all protons into neutrons for a symmetric nuclear matter. Take 
-neutron star \ref{Lattimer.2001} as an example, it has most neutrons and a few 
-protons, so its $\beta = 1$.
-$$ E = E_0 + S $$
-$$ P = \rho^2 \frac{dS}{d\rho} \approx \frac{L\rho^2}{3\rho_0} $$
-$$ RP^{-1/4} \approx const $$
-Once we know symmetry energy's dependence on density, we will know the pressure
-and therefore the radius of a neutron star.
+range of nuclear properties and phenomena. It describes how much energy will be
+released when exchange all protons into neutrons for a symmetric nuclear system. 
 
-Being such an important parameter, a great effort has been done to extract S 
-and its dependence on $\rho$. By convention, $S(\rho)$ is expanded around the
-nuclear saturation density $\rho_0$:
+Not only is $S$ itself important, but also its dependence on $\rho$. 
+By convention, $S(\rho)$ is expanded around the nuclear saturation density $\rho_0$
+(following the free Fermi gas assumption):
 \begin{equation}
     S(\rho) = S(\rho_0) 
     + \left.\frac{dS}{d\rho}\right|_{\rho_0}(\rho - \rho_0)
@@ -105,7 +125,7 @@ nuclear saturation density $\rho_0$:
     + \frac{1}{6}\left.\frac{d^3S}{d\rho^3}\right|_{\rho_0}(\rho - \rho_0)^3
     + \dots
 \end{equation}
-From which, we have some other parameters defined:
+From which, we have some auxiliary parameters defined:
 \begin{equation}
     \begin{aligned}
 	S_0 &= S(\rho_0)	\\
@@ -114,27 +134,61 @@ From which, we have some other parameters defined:
 	Q_{sym}	&= 27\rho_0^3\left.\frac{d^3S}{d\rho^3}\right|_{\rho_0}	\\
     \end{aligned}
 \end{equation}
-$$ S(\rho) = -a_A + \frac{L}{3}\frac{\rho - \rho_0}{\rho_0} $$
+Among them, L represents S's dependence on $\rho$.
 
+Take neutron star \ref{Lattimer.2001} as an example, it has most neutrons and a few 
+protons, so its $\beta = 1$.
+\begin{equation}
+    \label{eq:neutron-star}
+    \begin{aligned}
+	 E = E_0 + S	\\
+	 P = \rho^2 \frac{dS}{d\rho} \approx \frac{L\rho^2}{3\rho_0}	\\
+	 RP^{-1/4} \approx const    \\
+    \end{aligned}
+\end{equation}
+The amazing thing is that neutron star's pressure dependents on L is proportional
+to $R^4$. Once we know the L value, we will know the pressure and therefore the 
+radius of a neutron star. (Do all neutron stars have the same $\rho$ and R ???)
 
-% \begin{equation}
-%     \begin{aligned}
-% 	\frac{E_b}{A} &= -B + \frac{K_0}{18}\left(\frac{n}{n_s} - 1\right)^2 + \frac{K'_0}{162}\left(\frac{n}{n_s} - 1\right)^3 \\
-% 	    &+ \left[S_v + \frac{n_s}{3n}L\left(\frac{n}{n_s} - 1 \right) + \dots \right] \left(\frac{N-Z}{A} \right)^2 + \dots
-%     \end{aligned}
-% \end{equation}
-For symmetric nuclei (N = Z), 
-While neutron-rich nuclei, the extra nutrons are
-pushed out against the surface tension\cite{PRL.85.5296}, therefore the neutron skin.
+Being such an important parameter, a great effort has been done to extract S 
+and L. Comparing \eqref{eq:modified-mass-formula-2} and \eqref{eq:symmetry-energy},
+we can directly get:
+\begin{equation}
+    S(\rho) \approx -a_A
+% S(\rho) = -a_A + \frac{L}{3}\frac{\rho - \rho_0}{\rho_0}
+\end{equation}
+But this tells us only the symmetry energy at nuclear density ($1.22 \times 10^{44}\ m^{-3}$),
+what about the symmetry energy at other density values? Especially at the nuclear
+saturation density ($\sim 1.7 \times 10^{44}\ m^{-3}$)? And what about its density
+dependence? Another strategy is the energy density functionals (EDF), which fits
+the binding energy throughout the nuclear mass table to find out the best EDF,
+then use it to calculate $S(\rho)$. The problem is many EDFs can fit equally well
+with the binding energy and even the same S value at $\rho_0$, but have quite 
+different L values. If there is a experiment that can identify L value without 
+model dependence, then no doubt it will help a lot in understanding the symmetry 
+energy and the EoS.
 
-% \begin
-There has been many measurements (!!!FIXME!!!) about the charge form factor of many elements,
-but rarely any precise measurement of the weak form factor of any elements.
+% neutron skin
+The method to measure L in lab is to measure the neutron skin thickness of 
+neutron rich nuclei. For symmetric nuclei (N = Z), the protons and neutrons are
+expected to distribute uniformly. While for neutron-rich nuclei, the extra 
+neutrons are pushed out against the surface tension\cite{PRL.85.5296}, therefore
+forming a neutron skin. 
+
+Neutron skin and neutron star, though of their 18 orders of magnitude difference 
+in size (fm vs km), both are neutron-rich nuclear matter and governed by the 
+same physical laws: eq \eqref{eq:neutron-star}. So by measuring the neutron
+skin thickness, we can derive P and L values, for the study of neutron stars
+and nuclear EoS.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Neutron Radius}
+There has been many measurements (!!!FIXME!!!) about the charge form factor of many nuclei,
+but rarely any precise measurement of the weak form factor of any nuclei.
 The Pb Radius EXperiment-II (PREX-II) and Ca48 Radius EXperiment (CREX) are 
 high-precision experiments that measures the tiny asymmetry of polarized electrons
 scattered from neutron-rich targets to extract the weak form factor and neutron
 skin thickness of those nuclei. 
-
 
 With the high-polarization electron beam at 
 Thomas Jefferson National Accelerator Facility (TJNAF, also known as Jlab), 
@@ -145,14 +199,6 @@ cross section has been studied thoroughly, (!!!FIXME!!!: reference) the asymmetr
 measurement allows us to derive the weak charge distribution and finally the
 neutron distribution in a nuclear.
 
-The neutron skin of heavy nuclei and neutron stars, though of their 18 orders of 
-magnitude difference in size (fm vs km), both are neutron-rich matter and thereby
-governed by the same physical laws: the nuclear equation of state. 
-The measurement of neutron radius of neutron-rich nuclei will constrain 
-the density dependence of the symmetry energy for neutron-rich matter,
-(!!!FIXME: reference)
-it helps to identify the Equation of State (EoS) of neutron stars.
-
 There have been many explorations from different aspects to the neutron skin
 thickness: hadronic scattering experiment, coherent pion photoproduction,
 measurements of electric dipole polarizabilities and pygmy dipole resonances etc.
@@ -162,6 +208,8 @@ dependence and other uncertainties.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Asymmetry}
+\begin{figure}[h]
+    \centering
 \feynmandiagram[small, vertical' = a to b]{
     i1 [particle = $e^-$] -- [fermion] a -- [fermion] o1 [particle = $e^-$],
     a -- [photon, edge label={Q}, edge label'=$\gamma$] b,
@@ -172,10 +220,11 @@ dependence and other uncertainties.
     a -- [scalar, edge label={Q}, edge label'=Z] b,
     i2 [particle = p] -- [fermion] b -- [fermion] o2 [particle = p],
     };
+\end{figure}
 
 \begin{itemize}
     \item $\gamma$ interacts with only vector current
-    \item while $Z_0$ interacts with both vector and axial-vector current
+    \item $Z_0$ interacts with both vector and axial-vector current
 \end{itemize}
 
 \begin{equation*}
@@ -215,7 +264,7 @@ Where $G_E^p(q)$ and $G_E^n(q)$ are the EW single nucleon FFs, $\sin^2\theta_W =
 	G_{wk}^n &= q_p G_E^p + q_n G_E^n + q_0 G_E^s	\\
     \end{aligned}
 \end{equation*}
-For weak charges including radiative cor.
+For weak charges including radiative correction
 $$ q_p \approx 0.0712	\qquad q_n = q_0 \approx -0.9877 $$
 $$ \frac{F_{wk}(q)}{F_{ch}(q)} \approx \frac{F_n(q)}{F_p(q)}$$
 $$ \CA_{pv} = \frac{G_FQ^2}{4\pi\alpha\sqrt{2}}\frac{Q_{wk}}{Z}\left[ \frac{F_n(q)}{F_p(q)} - \frac{Z}{N}(1-4\sin^2\theta_W) \right]$$
@@ -240,22 +289,6 @@ When ignoring structure (tree level):
 	\CA_{pv} = \frac{G_F Q^2}{4\pi\alpha\sqrt{2}} \left[ 1- 4\sin^2\theta_W - \frac{F_n(Q^2)}{F_p(Q^2)} \right]
     \end{equation*}
 }
-
-\begin{equation*}
-    Q_{\text{weak}}^{p} \propto 1 - 4\sin^2\theta_{\text{W}} \approx 0.076
-    \quad
-    Q_{\text{weak}}^{n} \propto -1
-\end{equation*}
-\begin{equation*}
-    \sigma_{\text{raw}} = \sigma_{\text{sig}} + \sigma_{\text{other}} + \sigma_{\text{HC}}
-\end{equation*}
-
-\begin{equation*}
-    \begin{aligned}
-	\CA_{\text{pv, measured}} &= \frac{(\sigma_{\text{sig}}^R + \sigma_{\text{other}}^R + \sigma_{\text{HC}}^R) - (\sigma_{\text{sig}}^L + \sigma_{\text{other}}^L - \sigma_{\text{HC}}^L)}{(\sigma_{\text{sig}}^R + \sigma_{\text{other}}^R + \sigma_{\text{HC}}^R) + (\sigma_{\text{sig}}^L + \sigma_{\text{other}}^L - \sigma_{\text{HC}}^L)}    \\
-	&\approx \CA_{\text{pv, true}}\left( 1 - \frac{\sigma_{\text{other}}^R + \sigma_{\text{other}}^L}{\sigma_{\text{sig}}^R + \sigma_{\text{sig}}^L} \right) + \frac{\sigma_{\text{HC}}^R + \sigma_{\text{HC}}^L}{\sigma_{\text{sig}}^R + \sigma_{\text{sig}}^L} 
-    \end{aligned}
-\end{equation*}
 
 \subsection{Dynamics}
 \begin{center}
@@ -299,8 +332,6 @@ $$ E' = \frac{ME_0}{M + E_0(1-\cos\theta)}$$
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Why \Pb and \Ca}
 \begin{figure}
+    \centering
     \includegraphics[width=0.5\linewidth]{Nuclear_Landscape}
 \end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Physical Implication}
