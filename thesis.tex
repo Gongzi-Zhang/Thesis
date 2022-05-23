@@ -1,22 +1,23 @@
-\documentclass[phd,bottom,nosig]{usbthesis}
+\documentclass[phd,bottom,nosig,dvipsnames]{usbthesis}
 
-\usepackage{amsmath, amsthm, amssymb}
+\usepackage{amsmath, amsthm, amssymb, bm}
 \usepackage{physics}
 \usepackage{units}
 
 \usepackage{graphicx}
 \graphicspath{{figures/}}
-\usepackage[compat=1.1.0]{tikz-feynman}
-\usepackage{tikz}
-    \usetikzlibrary{arrows}
+\usepackage{tikz-feynman}
+\usepackage{tikz, pgfplots}
+    \usetikzlibrary{arrows, intersections, math}
+    \pgfplotsset{compat=1.15}
+\usepackage{subcaption}	% for subfigure
 \usepackage[colorlinks]{hyperref}
-\usepackage{xcolor}
+% \usepackage{xcolor}
 \hypersetup{
     colorlinks = true,
     urlcolor = [rgb]{0.85, 0.52, 0.9},
 }
-\usepackage{color}
-\usepackage{bm}
+% \usepackage{color}
 \usepackage{setspace}
 \usepackage{array}
 \usepackage{tabularx}
@@ -33,6 +34,8 @@
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage{pdfpages}
 %\usepackage[nottoc]{tocbibind}
+
+\usepackage{indentfirst}
 \input{mathdefs}
 \input{callcommands}
 \input{newcommand}
@@ -74,6 +77,8 @@
 \pagestyle{thesis}
 \newpage
 \pagenumbering{arabic}
+\setlength{\baselineskip}{15.pt}
+\include{sections/style}
 \include{sections/introduction}
 \include{sections/setup}
 \include{sections/data_analysis}

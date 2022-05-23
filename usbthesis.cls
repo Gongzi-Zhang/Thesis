@@ -19,26 +19,21 @@ recognize option: \CurrentOption}}
 %\ExecuteOptions{phd,bottom}
 \ProcessOptions\relax
 
-\LoadClass[letterpaper,12pt,oneside]{report}
+\LoadClass[a4paper,12pt,oneside]{report}
 
 \RequirePackage{setspace}
 \doublespacing
 \RequirePackage{vmargin}
-\setpapersize{USletter}
+\setpapersize{A4}
 
 %\setmargins{1.5in}{1.25in}{5.5in}{8.125in}{0.125in}{0.75in}{0.125in}{0.325in}
 %\setmargins{1.5in}{1.25in}{5.5in}{8.125in}{0.125in}{0.2in}{0.125in}{0.5in}
 
 \if@top
-     \setmarginsrb{1.5in}{1in}{1.5in}{1in}{0.125in}{0.75in}{0.125in}{0.325in}
+     \setmarginsrb{1.1in}{1in}{1.1in}{1in}{0.125in}{0.75in}{0.125in}{0.325in}
 \else
-     \setmarginsrb{1.5in}{1in}{1.5in}{1in}{0.125in}{0.2in}{0.125in}{0.5in}
+     \setmarginsrb{1.1in}{1in}{1.1in}{1in}{0.125in}{0.2in}{0.125in}{0.5in}
 \fi
-
-%\renewcommand{\LARGE}{\Large}
-%\renewcommand{\huge}{\Large}
-%\renewcommand{\Huge}{\LARGE}
-%\renewcommand{\Huge}{\Large}
 
 \newcommand{\ps@prelim}{%
      \pagenumbering{roman}%

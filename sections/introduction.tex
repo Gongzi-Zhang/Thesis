@@ -1,10 +1,31 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introduction}
+\chapter{Introduction}
+
+The Pb Radius EXperiment-II (PREX-II) and Ca48 Radius EXperiment (CREX) are 
+high-precision experiments that measure the tiny parity-violating asymmetry 
+(at part per billion (ppb) level) of longitudinally polarized electrons scattered 
+off neutron-rich targets (\Pb \ and \Ca), from which the weak form factors and 
+neutron skin thicknesses of those nuclei will be extracted.
+
+The parity-violating asymmetry ($\CA_{pv}$) comes from the interference between the 
+electromagnetic (EM) interaction and the neutral weak interaction, because weak 
+interaction doesn't conserve the parity symmetry. While the EM 
+interaction has been studied thoroughly, the asymmetry measurement allows 
+us to derive the weak charge and therefore the neutron distribution in a nucleus.
+
+Parity-violating electron scattering (PVES) experiments require high polarization
+electron beam, which was provided by the Continuous Electron Beam Accelerator
+Facility (CEBAF) at Thomas Jefferson National Accelerator Facility (TJNAF, 
+also known as JLab). The excellent beam qualities and dedicated instrumentations
+at JLab allowed the measurements to be statistics limited.
+
+% physical implication
+
+% history of PVES experiments
+
 % 1. neutron distribution
 % 2. symmetry energy dependence on density
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{symmetry Energy} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{symmetry Energy} 
 % what's symmetry energy
 % why it is important
 % how to know/measure it -- theoritically and experimentally
@@ -15,7 +36,11 @@ Liquid Drop Model (LDM), we will get the Bethe-Weizsacker Semi-empirical Mass Fo
 \begin{equation}
     \label{eq:mass-foumula}
     \begin{gathered}
-	E\ (MeV) = \textcolor{black}{a_V A} - \textcolor{blue}{a_S A^{2/3}} - \textcolor{green}{a_C\frac{Z(Z-1)}{A^{1/3}}} - \textcolor{red}{a_A\frac{(N-Z)^2}{A}} + \textcolor{cyan}{\delta(A, Z)} + \dots \\
+	E\ (MeV) = \textcolor{black}{a_V A} 
+	    - \textcolor{blue}{a_S A^{2/3}} 
+	    - \textcolor{green}{a_C\frac{Z(Z-1)}{A^{1/3}}} 
+	    - \textcolor{red}{a_A\frac{(N-Z)^2}{A}} 
+	    + \textcolor{cyan}{\delta(A, Z)} \\
 	\delta(A, Z) = 
 	    \begin{cases}
 		+\delta_0	& \text{Z, N even} \\
@@ -30,7 +55,7 @@ Liquid Drop Model (LDM), we will get the Bethe-Weizsacker Semi-empirical Mass Fo
 	through strong force ($a_V \sim 16\ MeV$)
     \color{blue}  \item Surface term: correction to the volume term -- nucleons 
 	on the surface aren't completely surrounded by other nucleons
-    \color{green} \item Coulomb term: electromagnetic (EM) charge repulsion
+    \color{green} \item Coulomb term: EM charge repulsion
     \color{red}   \item Asymmetry term: Pauli exclusion principle
     \color{cyan}  \item Pairing term: spin coupling effect -- if N and Z are even,
 	then the nuclei will be stable thanks to the occurance of 'paired spin';
@@ -47,7 +72,7 @@ higher than the rest of nucleons, therefore introducing this correction term.
 Regard the nuclear system as a free Fermi gas of protons and neutrons, then the 
 kinematic energy of this system will be:
 $$ E_k = E_N + E_Z = \frac{3}{5}ZE_F^p + \frac{3}{5}NE_F^n $$
-Since the Fermi energy is proportional the $n^{2/3}$
+Since the Fermi energy is proportional to $n^{2/3}$
 $$ E_k = C(Z^{5/3} + N^{5/3})  $$
 Expanse it in terms of N-Z, we will get
 \begin{equation*}
@@ -88,7 +113,7 @@ Here we define $\beta = \frac{N-Z}{A}$ as asymmetry between the number of proton
 For infinite system, density, instead of A, will be a better choice to parameterize
 the EoS. So we should replace N, Z and A with their corresponding density: $\rho_n$, 
 $\rho_p$ and $\rho$ ($\beta = \frac{\rho_n - \rho_p}{\rho}$). 
-So we are considering a infinite uniform nuclear system at 0 temperature that interacts
+So we are considering an infinite uniform nuclear system at 0 temperature that interacts
 only via the nuclear force. For any identified $\rho$,
 eq \eqref{eq:modified-mass-formula-2} will be:
 \begin{equation}
@@ -96,8 +121,7 @@ eq \eqref{eq:modified-mass-formula-2} will be:
     e(\rho, \beta) = e(\rho, 0) + S(\rho)\beta^2 + O(\beta^4)
 \end{equation}
 
-We find that eq \eqref{eq:modified-mass-formula-2} is a expansion of the 
-binding energy per nucleon around $\beta = 0$.
+This is an expansion of the binding energy per nucleon around $\beta = 0$.
 Due to the isospin symmetry between proton and neutron, any isoscalar quantities
 F will keep unchanged under $n \leftrightarrow p$ interchange, while isovector 
 % change all n into p and p into n. Not just one proton and one neutron
@@ -136,8 +160,8 @@ From which, we have some auxiliary parameters defined:
 \end{equation}
 Among them, L represents S's dependence on $\rho$.
 
-Take neutron star \ref{Lattimer.2001} as an example, it has most neutrons and a few 
-protons, so its $\beta = 1$.
+Take neutron star \cite{Lattimer.2001} as an example, it has most neutrons and 
+a few protons, so its $\beta = 1$.
 \begin{equation}
     \label{eq:neutron-star}
     \begin{aligned}
@@ -167,6 +191,7 @@ with the binding energy and even the same S value at $\rho_0$, but have quite
 different L values. If there is a experiment that can identify L value without 
 model dependence, then no doubt it will help a lot in understanding the symmetry 
 energy and the EoS.
+% experiments that measure L
 
 % neutron skin
 The method to measure L in lab is to measure the neutron skin thickness of 
@@ -182,22 +207,9 @@ skin thickness, we can derive P and L values, for the study of neutron stars
 and nuclear EoS.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Neutron Radius}
+\section{Neutron Radius}
 There has been many measurements (!!!FIXME!!!) about the charge form factor of many nuclei,
 but rarely any precise measurement of the weak form factor of any nuclei.
-The Pb Radius EXperiment-II (PREX-II) and Ca48 Radius EXperiment (CREX) are 
-high-precision experiments that measures the tiny asymmetry of polarized electrons
-scattered from neutron-rich targets to extract the weak form factor and neutron
-skin thickness of those nuclei. 
-
-With the high-polarization electron beam at 
-Thomas Jefferson National Accelerator Facility (TJNAF, also known as Jlab), 
-we were able to measure the asymmetry precisely. 
-The cross section asymmetry comes from the interference between 
-the electromagnetic (EM) interaction and the weak interaction. While the EM 
-cross section has been studied thoroughly, (!!!FIXME!!!: reference) the asymmetry 
-measurement allows us to derive the weak charge distribution and finally the
-neutron distribution in a nuclear.
 
 There have been many explorations from different aspects to the neutron skin
 thickness: hadronic scattering experiment, coherent pion photoproduction,
@@ -205,9 +217,14 @@ measurements of electric dipole polarizabilities and pygmy dipole resonances etc
 Though of their valuable efforts, these experiments are trapped by model 
 dependence and other uncertainties.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Physics Beyond the Standard Model (SM)} 
+Flavor conserving interaction:
+$$ |A_\gamma + A_Z + A_{new}|^2 \rightarrow A^2_\gamma\left[ 1 + 2\frac{A_Z}{A_\gamma}
+ + 2\frac{A_{new}}{A_\gamma} \right]$$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Asymmetry}
+\section{Asymmetry}
 \begin{figure}[h]
     \centering
 \feynmandiagram[small, vertical' = a to b]{
@@ -290,7 +307,7 @@ When ignoring structure (tree level):
     \end{equation*}
 }
 
-\subsection{Dynamics}
+\section{Dynamics}
 \begin{center}
 \begin{tikzpicture}
     \coordinate (N) at (0, 0);
@@ -330,7 +347,7 @@ $$ E' = \frac{ME_0}{M + E_0(1-\cos\theta)}$$
 \end{equation*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Why \Pb and \Ca}
+\subsection{Why \Pb and \Ca}
 \begin{figure}
     \centering
     \includegraphics[width=0.5\linewidth]{Nuclear_Landscape}
