@@ -15,15 +15,15 @@ The 2 sister experiments were carried out in Hall A of Jlab,
 	Beam Current ($\mu A$)	& 70	& 150	\\
 	Beam Polarization & 88\%   & 87.1\%   \\
 	Scattering angle ($\deg$)   & 5	& 4.51 \\
-	$Q^2$ ($GeV^2$)	&   & 0.0297	\\
+	$Q^2$ ($GeV^2$)	& 0.0063   & 0.0297	\\
 	Helicity rate (Hz)  & 240   & 120   \\
-	rate/arm (MHz)	&   & 25    \\
+	rate (MHz/arm)	&   & 25    \\
 	\hline
     \end{tabular}
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Design}
+\section{Design}
 Though weak charge distribution is what we want to measure, it doesn't mean we
 know nothing about it. Due to the symmetry between proton and neutron, we would
 expect the weak charge (neutron) distribution is similar to the charge (proton)
@@ -40,15 +40,110 @@ expressed as a 2-parameter Fermi function:
 where a and c denote the half-height radius and diffuseness respectively. 
 % Thiel et al J.Phys.G 46 (2019) 9, 093003 
 
-\subsubsection{Sensitivity}
+\subsection{Rate}
+The scattering rate will be:
+\begin{equation*}
+    R(\theta) = 2\,I\,\rho\,t\,\frac{d\sigma}{d\Omega}\,\frac{0.602}{A}\,a(\theta)
+\end{equation*}
+where
+\begin{itemize}
+    \item Factor of 2 for each spectrometer
+    \item $\rho$ and t are target density and thickness
+    \item A is atomic number
+    \item 0.602 $\approx \frac{208-82}{208}$ ???
+\end{itemize}
+Total rate is:
+\begin{equation*}
+    R = 2\pi \int R(\theta)\sin(\theta)d\theta
+\end{equation*}
+The scattered flux rates on main integrating det. can be GHz level ($~$ 2.5 GHz / arm)
+
+% To measure a ppm level quantaty to 5\% statistical uncertainty:
+% $$ \frac{\sigma A}{A} = \frac{1}{A} \frac{1}{\sqrt{2N}} = 5\% \Rightarrow N \sim 10^{14} $$
+% If we count scattered electrons one by one, at the rate of 2.5 GHz, it will take 
+% $\frac{10^{14}}{2.5 \ MHz} \sim 10^8 \ s \sim 3 \ years$
+% So we choose to integrate charge instead of counting electrons. But this requires
+% a high degree of linearity in PMT and ADCs.
+
+
+
+\begin{comment}
+    The measured asymmetry will be:
+    \begin{equation*}
+	\CA = \frac{2\pi}{R} \int \CA_0(\theta)R(\theta)d\theta
+    \end{equation*}
+
+    Define sensitivity as:
+    \begin{equation*}
+	S(\theta) = \frac{|\CA_0(\theta) - \CA_1(\theta)|}{\CA_0(\theta)}
+    \end{equation*}
+    where $\CA_1$ is the asym. for 1\% change in radius. Then we can 
+    calculate the total sensitivity:
+    \begin{equation*}
+	S = \frac{2\pi}{R} \int S(\theta)R(\theta)d\theta
+    \end{equation*}
+
+    For PREX-II: average sensitivity reduced by 5\% due to ${}^{12}C$ contamination
+    For CREX: average sensitivity reduced by 10\% due to ${}^{40}Ca$ contamination
+\end{comment}
+
+\subsection{Sensitivity}
+\begin{equation*}
+    \frac{\delta\CA}{\CA} = \sqrt{\sigma_{stat}^2 + \sigma_{sys}^2}
+\end{equation*}
+\begin{itemize}
+    \item $\sigma_{stat} = \left(\frac{\sigma_{det}}{P\sqrt{N}}\right) \frac{1}{A}$
+	\begin{itemize}
+	    \item $\sigma_{det} = \sqrt{1.06}$ is the det. error: $\sqrt{1.06}$ blowup to statistical err. due to det. resolution
+	    \item P is the beam polarization
+	    \item N is the number of electrons
+	\end{itemize}
+    \item $\sigma_{sys} = 2\% (1.25\%)$ for PREX (CREX)
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsubsection{Factor of 1.06}
+    While a quartz Cerenkov detector is valued for radiation hardness and insensitivity to soft backgrounds, there is a particular challenge for few GeV electrons. In this energy range, shower fluctuations in a thick or radiated detector significantly degrade energy resolution, while photon statistics degrade the energy resolution for a thin detector. The energy resolution $\Delta E$ at nominal electron energy E increases the statistical error that one would have with infinite resolution $\sigma_0$ to obtain the total statistical error:
+$$ \sigma = \sigma_0\sqrt{1+\left(\frac{\Delta E}{E}\right)^2}$$
+    
+Based on experience in the PREX experiment, we expect an reduction of statistical precision of a factor of 1.06 due to detector resolution.
+
+\bigskip
+Radius error:
+\begin{equation*}
+    \frac{\delta R_n}{R_n} = \frac{\delta \CA}{\CA}\frac{1}{\epsilon}
+\end{equation*}
+minimizing $\delta R_n/R_n$ means to minimize $\delta \CA/\CA$ and maximize $\epsilon$. 
+
+Given $\delta_{\text{sys}}$, minimizing $\delta\CA/\CA$ means to minimize $\sigma_{\text{stat}}$
+
+Given $\sigma_{\text{det}}$ and P, this means to maximize $\CA \times \sqrt{N}$
+
+So, we define FOM as:
+\begin{equation*}
+    \text{FOM} = R \times \CA^2 \times \epsilon^2
+\end{equation*}
+Note here R is the scattering rate, $\epsilon = \frac{dA/A}{dR_n/R_n}$ is the sensitivity of the asymmetry for a small change in $R_n$.
+
+\bigskip
+Using HRS of Hall A, a \textbf{small} scattering angle maximizes the FOM. 
+Given practical constraints on how low an angle ($4^\circ$) we can reach with 
+septum magnets, the energy is fixed and turns out to be 2.2 GeV, which is a 
+natural 1-pass beam energy for CEBAF operations in the 12 GeV era.
+
+\begin{figure}[h!]
+    \includegraphics[width=0.3\linewidth]{design_rate_vs_angle}
+    \includegraphics[width=0.3\linewidth]{design_A_vs_angle}
+    \includegraphics[width=0.3\linewidth]{design_sensitivity_vs_angle}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Continuous Electron Beam Accelerator Facility (CEBAF)}
-\begin{figure}[h]
+\section{Continuous Electron Beam Accelerator Facility (CEBAF)}
+\begin{figure}[h!]
     \includegraphics[width=0.5\linewidth]{jlab_1.jpg}
     \caption{aerial view of CEBAF} 
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[h!]
     \includegraphics[width=0.9\linewidth]{cebaf.png}
     \caption{Schematic plot of CEBAF: Hall D don't have its own slot, so it 
     follows either A or C} 
@@ -61,7 +156,12 @@ So different nuclear experiments can be carried out in different halls at the
 same time.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Polarized Electron Source}
+\section{Polarized Electron Source}
+% The key to the success of this experiment was the 1975 discovery of a new method for producing
+% polarized electrons made by a group in Colorado, which included E.L. Garwin of SLAC.
+% Shortly thereafter, a new source was built for the SLAC linac utilizing the method, thus
+% allowing for the 1978 parity violation measurements which were in close agreement with
+% those predicted by the GWS model. 
 PVES experiments motivate the development of polarized electron source, which 
 require a highly stable polarized electron source that can produce
 high polarization electron beam at a wide range of intensity, from nA to A 
@@ -85,13 +185,13 @@ When circularly polarized laser light with carefully selected energy $E_{gap} < 
 shoot on the semiconductor, only electrons on the valance band $P_{3/2}$ will be
 pumped into the conduction band $S_{1/2}$. The selection rule makes sure only
 those transitions that satisfy $\Delta m_j = +1 \ (-1)$ can occur for circularly
-right (left) incoming photons, As shown in fig. \ref{fg:excitation-b}.
+right (left) incoming photons, As shown in fig. \ref{fig:excitation-b}.
 The ratio of the transition rate is also marked out in circle in the plot, 
 which can be calculated from the Clebsch-Gordan coefficient easily. The excited
 electrons are polarzied and different states have different pumping rate, so
 we have polarized electron beam now with polarization as: P = (3-1)/(3+1) = 50\%,
 for both cases.
-\begin{figure}[h]
+\begin{figure}[h!]
     \tikzmath{\yone=1.3; \ytwo=2.5; \ythree=5;} 
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
@@ -124,7 +224,7 @@ for both cases.
 		\node [Blue, above] at (-1, \ythree) {\large\bm{$S_{1/2}$}};
 		\node [left, above] at (-0.2, \ytwo) {\large\bm{$E_F$}};
 	    \end{axis}
-	    \label{fg:excitation-a}
+	    \label{fig:excitation-a}
 	\end{tikzpicture}
     \end{subfigure}
     \hfill
@@ -161,12 +261,12 @@ for both cases.
 		\node [above, YellowOrange] at (5.5, \ytwo+0.5) {\bm{$\sigma^-$}};
 	    \end{axis}
 	\end{tikzpicture}
-	\label{fg:excitation-b}
+	\label{fig:excitation-b}
     \end{subfigure}
     \caption{Excitation of polarized electrons}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
     \centering
     \begin{subfigure}[b]{0.32\textwidth}
 	\tikzmath{\yone=2.5; \ytwo=5; \ythree=9.5;} 
@@ -196,7 +296,7 @@ for both cases.
 	    \end{axis}
 	\end{tikzpicture}
 	}
-	\label{fg:PEA}
+	\label{fig:PEA}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.32\textwidth}
@@ -225,7 +325,7 @@ for both cases.
 	    \end{axis}
 	\end{tikzpicture}
 	}
-	\label{fg:ZEA}	% zero EA
+	\label{fig:ZEA}	% zero EA
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.32\textwidth}
@@ -263,7 +363,7 @@ for both cases.
 	    \end{axis}
 	\end{tikzpicture}
 	}
-	\label{fg:NEA}
+	\label{fig:NEA}
     \end{subfigure}
     \caption{The energy band diagram of GaAs near its surfacer. 
     Left: bare p-type GaAs, the large positive electron affinity (PEA) 
@@ -275,7 +375,7 @@ for both cases.
     easily. \cite{CARDMAN1992317}}
 \end{figure}
 Then how can we liberate the polarzied electrons from the material, without 
-degenerating the polarization significantly. As shown in fig. \ref{fg:PEA},
+degenerating the polarization significantly. As shown in fig. \ref{fig:PEA},
 for bare GaAs, a $4.07 ev$ electron affinity (EA) prevents any electrons from
 leaving the surface. To solve this problem, a condition known as negative
 electron affinity (NEA) is used, that is to make the energy of electron in 
@@ -294,7 +394,7 @@ With a strained layer, the degeneracy of $P_{3/2}$ state is splitted,
 only states with $m_j = \pm 3/2$ will be pumped, therefore we will get 100\% 
 polarization, in ideal case. The real polaration achieved by CEBAF electron
 source is about 88\%.
-\begin{figure}[h]
+\begin{figure}[h!]
     \tikzmath{\yone=1.3; \ytwo=2.5; \ythree=5;} 
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
@@ -315,7 +415,7 @@ source is about 88\%.
 	    \node at (3/2, 3 + 1.3 + 1.3 + 0.4/2) {\bm{$0.1 \ \mu m$}};
 	    \node [explain, Red, text width=3.5 cm] at (5, 3+1.3+1.3+0.4/2) {\textbf{Strained GaAs}};
 	    \draw [thick] (0, 0) rectangle (3, 6);
-	    \label{fg:excitation-a}
+	    \label{fig:excitation-a}
 	\end{tikzpicture}
     \end{subfigure}
     \hfill
@@ -348,39 +448,247 @@ source is about 88\%.
 		\draw [-stealth, YellowOrange, line width=2pt] (5.5, \ytwo) -- (4, \ythree) node [above, midway, sloped] {\bm{$\sigma^-$}};
 	    \end{axis}
 	\end{tikzpicture}
-	\label{fg:excitation-b}
+	\label{fig:excitation-b}
     \end{subfigure}
     \caption{Strained GaAs}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Polarization Control}
-\begin{figure}[h]
+\section{Polarization Control}
+\begin{itemize}
+    \item Helicity Correlated Beam Asymmetry (HCBA) is the most largest false
+	asymmetry to the parity-violating asymmetry
+    \item It arises from the beam difference (intensity, position ...) between two helicity states from the injector
+    \item A well-control of the electron source configuration can help suppress the effect of HCBA
+    \item The dominant part is the Polarization Induced Transport Asymmetry (PITA) effect
+\end{itemize}
+\begin{figure}[h!]
     \includegraphics[width=\linewidth]{injector}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
     \begin{tikzpicture}
+	\tikzstyle{explain} = [align=center] 
 	\begin{scope}
 	    \node[anchor=south west, inner sep=0] (image) at (0, 0)
 	    {\includegraphics[width=\linewidth]{laser_table}};
 	    \begin{scope}[x={(image.south east)},y={(image.north west)}]
+		\node [blue,ultra thick] at (0.06,0.3) {\textbf{A}};
+		\node [blue,ultra thick] at (0.06,0.49) {\textbf{B}};
+		\node [blue,ultra thick] at (0.06,0.67) {\textbf{C}};
+		\node [blue,ultra thick] at (0.06,0.85) {\textbf{D}};
+
+		\node [blue,ultra thick] at (0.47,0.39) {\textbf{IA}};
+		\node [blue,ultra thick] at (0.47,0.56) {\textbf{IA}};
+		\node [blue,ultra thick] at (0.5,0.75) {\textbf{IA}};
+
+		\node [red] at (0.75,0.23) {\textbf{IHWP}};
+		\node [explain,red] at (0.76,0.33) {\textbf{Pockels } \\ \textbf{Cell}};
+		\node [red] at (0.8,0.51) {\textbf{RHWP}};
+		\node [explain,red] at (0.88, 0.96) {\textbf{Beamline} \\ \textbf{vaccum} \\ \textbf{window}};
 	    \end{scope}
 	\end{scope}
     \end{tikzpicture}
 \end{figure}
+\begin{comment}
+    1. what's the beam polarization before the Pockels cell? linearly or circularly
+    polarized?
+\end{comment}
+
+The following components in the injector help to control the beam polarization:
+\begin{itemize}
+    \item Intensity Attenuator (IA): equalize beam intensity acroos helicity states
+    \item Insertable Half-Wave Plate (IHWP): slow control, flip circular polarization
+    \item Pockels Cell (PC): based on Pockels effect, reversing the voltage reverses
+	the birefringence of the crystal and therefore the helicity
+    \item Rotatable Half-Wave Plate (RHWP): equalized any residual linear polarization,
+	establish a QE independent of helicity
+    \item Two Wien filters (vertical and horizontal) and solenoid magnets are 
+	used to set the spin alignment so that the electron spin is longitudinal 
+	at the target
+\end{itemize}
+
+\begin{figure}[h!]
+    \includegraphics[width=0.7\linewidth]{PC_phase_shift}
+    \caption{Phase shift by going through the PC}
+\end{figure}
+
+\begin{equation*}
+    \begin{gathered}
+	\delta^R = -\left(\frac{\pi}{2} + \alpha \right) - \Delta \\
+	\delta^L = +\left(\frac{\pi}{2} + \alpha \right) - \Delta
+    \end{gathered}
+\end{equation*}
+
+To first order:
+\begin{equation*}
+    \begin{gathered}
+    \CA_{I} = \frac{I^R - I^L}{I^R + I^L} = -\frac{\epsilon}{T}[\Delta\cos(2\theta)]	\\
+    \end{gathered}
+\end{equation*}
+\bigskip
+\begin{itemize}
+    \item $\Delta$: antisymmetric offset phase shift in PC
+    \item $\epsilon/T \ (<<1)$: ``analyzing power'', $\epsilon = T_{x'} - T_{y'}$ $T = T_{x'} + T_{y'}$
+    \item $\theta$: the angle between the PC's fast axis and the $x'$ transmission axis of the downstream analyzer
+\end{itemize}
+
+Considering other optical components downstream the PC:
+\begin{equation*}
+    \CA_{I} = -\frac{\epsilon}{T}[\cos(2\theta) \cdot (\Delta - \Delta^0)]
+\end{equation*}
+\begin{itemize}
+    \item $\Delta^0$: offset phase shift introduced by residual birefringence in the PC and other optical components
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Beam Modulation}
+It is very important for PVES to control the systematic uncertainty, especially
+the one from beam fluctuation (HCBA). Ideally, the electrons bunches with opposite
+polarization should have exactly the same internsity and energy, hitting the target 
+at the same place with the same angle, which is obviously impossible in reality. 
+So we need to correct the false asymmetry introduce by the beam fluctuation. There are a
+few methods to do the correction, one of them is the so called Beam modulation.
+The idea is to introduce man-made fluctuations to the beam through the 
+modulation system, then we can measure the changes in monitors and detectors 
+to find the sensitivities of detectors to changes in energy, position and angle,
+which will be used to correct the measured asymmetry.
+
+The beam modulcation system lies in Beam Switch Yard area right after existing 
+the CEBAF, it consists of 7 air-core coils and an energy vernier, the total 
+number of 8 coils provides a redudancy w.r.t. the free number of degrees 
+of beam phase space, making sure to cover all beam phase space at target.  
+These coils (vernier) are driven by a VME-DAC, which in turns is controlled by the parity DAQ.
+It takes 4.267 s for each coil (vernier) to modulate the beam, a whole 
+modulation cycle takes $85.68 \ s$ ($\sim 1$ beam modulation every 10 mins in
+data taking). For the position and angle modulation, the beam diplacement will
+be $0.3-0.5\ \mu m$ and energy vernier will result in a beam diplacement of $0.75 \ mm$
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.49\linewidth]{bmw_setup}
+    \includegraphics[width=0.49\linewidth]{bmw_modulated_beam}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Beam Modulation}
+\section{Polarimeters}
+We have 2 polarimeters to measure the polarization: the Compton polarimeter and
+the Moller polarimeter. While being more accurate, the Moller polarimeter makes
+invasive measurement, so we rely on the less accurate but non-invasive Compton
+polarimeter for daily monitor of the beam polarization.
+
+\subsection{Compton Polarimeter}
+The Compton polarimeter is non-invaisve, therefore it
+operates all the time along data taking to monitor the beam polarization. The
+Compton polarimeter locates at the entrance to hall A (about 20 m upstream the 
+target chamber), using the elastic scatter between polarized photon and electron
+to measured the polarization of the electron beam. As shown in fig \ref{fig:compton_pol},
+when the compton polarimeter is on, the electron beam will be bent into the 
+Compton chicane to interact with the polarized photons. The photon energy is 
+2.33 eV and the crossing angle is $23.5^\circ$. The scattered photons will be
+detected by the photon detector right of the interaction region, while the
+electron beam will be bent back to the beam pipe to bombar the target. Due to
+interaction with photons, the scattered electrons will be less energetic than
+the incoming ones. So under the same dipole field, the scattered electrons will
+be bent more than the non-interacting ones, as shown by the red dash line. This 
+seperation allow us to measure the scattered electrons, together with measurement
+of scattered photons, we can identify and scattering asymmetry and then the polarization
+of the electron beam.
+\begin{equation*}
+    \CA_{\text{th}} = \frac{\sigma_{\Rightarrow}^{R} - \sigma_{\Rightarrow}^{L}}{\sigma_{\Rightarrow}^{R} + \sigma_{\Rightarrow}^{L}}  \qquad
+    \CA_{\text{exp}} = \CP_{e}\CP_{\gamma}\CA_{\text{th}} = \frac{N_{\gamma}^R - N_{\gamma}^L}{N_{\gamma}^R + N_{\gamma}^L}
+\end{equation*}
+The Compoton polarimeter is able to achieve a 1\% overall absolute systemtatic
+uncertainty.
+\begin{figure}[h!]
+    \includegraphics[width=0.49\linewidth]{Compton_setup}
+    \includegraphics[width=0.49\linewidth]{Compton_beam_path}
+    \caption{Left: Compton chicane; Right: Schematic plot of electron/photon 
+    scattering} 
+    \label{fig:compton_pol}
+\end{figure}
+
+\subsection{Moller Polarimeter}
+The Moller polarimeter uses elastic electron-electron scattering to measure the
+asymmetry due to different beam polarizations. Since this is a pure QED process,
+its cross section is well understood and easily calculable to high order:
+\begin{equation*}
+    \frac{d\sigma}{d\Omega} = \left( \frac{d\sigma_0}{d\Omega} \right) [ 1 + P_b \cdot P_t \cdot A_{ZZ}(\theta)]
+\end{equation*}
+Where $\frac{d\sigma_0}{d\Omega} = \left( \frac{\alpha(4 - \sin^2\theta)}{2m_e\gamma\sin^2\theta }\right)^2$ is the unpolarized cross section and $A_{zz}(\theta)$ is the analyzing power, 
+in CoM frame, $A_zz(\theta) = -\sin^2\theta \frac{8 - \sin^2\theta}{(4-\sin^2\theta)^2}$.
+When $\theta_{CoM} = 90^\circ$, $A_{zz}$ is maximized to be $-\frac{7}{9}$.
+$P_b (P_t)$ is the polarization of beam (target). The polarized target electrons
+are provided by magnetized Fe-alloy foil, a strong (FIXME: how much) magnetic 
+field is required to polarized the target electrons. The scattered electrons will
+be separated by quadrupole or septum magnet, and then collected by electron 
+detectors. Because Moller measurement is invasive, it happens about every 10 days.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\linewidth]{moller_setup}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Target}
+\section{Target}
+As tiny as the neutron skin thickness, to measure it relatively accurate, the
+larger it is, the better our measurement will be. So the target elements should
+have a large neutron excess. So \Pb (\Ca) is chosed for PREX-II (CREX). Some
+bonus from the choice are:
+\begin{itemize}
+    \item Both are doubly-magic nuclei, which means they are stable than their
+	isotope
+    \item They are spin-0, no need to worry about the target polarization
+    \item Their first inelastic states are large, 2.6 MeV for \Ca, which helps
+	to reduce background from inelastic scattering
+    \item Both are heavy nuclei, which reduces recoiling effect and help
+	to achive low $Q^2$
+\end{itemize}
+
+In addition to the production targets, we had other targets to ensure our 
+understanding of the spectrometer optics. For example, we have Carbon Hole target
+to identify the beam position; there is Carbon target to measure the scattering
+rate of \C. A water target in the $45^\circ$ ladder helps to calibrate the 
+scattering angle, etc.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\linewidth]{target_1}
+\end{figure}
+
+\subsection{Target Cooling}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Magnets}
+\section{Collimator and Sieve}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{HRS}
+\section{Septum}
+The septum magnet is required to bridge the scattered electrons at small angle
+into the HRS. As said before, the designed scattering angle is about $5^\circ$
+while the smallest angle that HRS can reach is $12.5^\circ$, so we need the septum
+magnet to guide the scattered electrons into HRS. 
+
+The septum consists of 3 coils, by applying large current, it will produce a
+strong magnetic field (up to $\sim 1 \ T$ in the central region). A septum beampipe
+will connect the upstream collimator box and the downstream HRS vacuum pipe.
+
+\begin{figure}[h!]
+    \includegraphics[width=0.52\linewidth]{septum}
+    \includegraphics[width=0.46\linewidth]{septum_real}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Detector}
+\section{High Resolution Spectrometer (HRS)}
+As its names implies, the high resolution capability of the spectrometer helps
+us to reject most of inelastic electrons, leaving us a relative clean data with
+very small background from inelastic scattering. The HRS consists of 3 quadrupoles 
+and one dipole in each arm, the quadrupoles magnetic field is around $0.2 \ T$,
+while the dipole magnetic field will reach as high as $0.4 \ T$.
+the collimator at the Q1 entrance defines the acceptance shape.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\linewidth]{HRS}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Detector}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Beam Position Monitor (BPM) and Beam Current Monitor (BCM)}

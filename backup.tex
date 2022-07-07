@@ -8,6 +8,7 @@
 \usepackage{amsmath, bm}
 \usepackage{tkz-tab}
 \usepackage{graphicx}
+\graphicspath{{figures/}}
 \usepackage[showframe]{geometry}
 
 \begin{document}
@@ -263,6 +264,32 @@
 		\draw [-latex, thick, red] (0.46, 0.1) node {\scriptsize{Pinch Point}} -- (0.44,0.39);
 		\node[green] (coll) at (0.7, 0.2) {\scriptsize{Collimator}};
 		\draw [-latex, thick, green] (coll.north) -- (0.67,0.51);
+	    \end{scope}
+	\end{scope}
+    \end{tikzpicture}
+\end{figure}
+
+%%% laser table
+\begin{figure}[h]
+    \begin{tikzpicture}
+	\tikzstyle{explain} = [align=center] 
+	\begin{scope}
+	    \node[anchor=south west, inner sep=0] (image) at (0, 0)
+	    {\includegraphics[width=\linewidth]{laser_table}};
+	    \begin{scope}[x={(image.south east)},y={(image.north west)}]
+		\node [blue,ultra thick] at (0.06,0.3) {\textbf{A}};
+		\node [blue,ultra thick] at (0.06,0.49) {\textbf{B}};
+		\node [blue,ultra thick] at (0.06,0.67) {\textbf{C}};
+		\node [blue,ultra thick] at (0.06,0.85) {\textbf{D}};
+
+		\node [blue,ultra thick] at (0.47,0.39) {\textbf{IA}};
+		\node [blue,ultra thick] at (0.47,0.56) {\textbf{IA}};
+		\node [blue,ultra thick] at (0.5,0.75) {\textbf{IA}};
+
+		\node [red] at (0.75,0.23) {\textbf{IHWP}};
+		\node [explain,red] at (0.76,0.33) {\textbf{Pockels } \\ \textbf{Cell}};
+		\node [red] at (0.8,0.53) {\textbf{RHWP}};
+		\node [explain,red] at (0.88, 0.96) {\textbf{Beamline} \\ \textbf{vaccum} \\ \textbf{window}};
 	    \end{scope}
 	\end{scope}
     \end{tikzpicture}

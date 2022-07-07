@@ -21,6 +21,95 @@ at JLab allowed the measurements to be statistics limited.
 % physical implication
 
 % history of PVES experiments
+% Atomic PV
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Neutron Radius}
+The proton (charge) Root-Mean-Square (RMS) radii ($R_p$) of many nuclei have been
+precisely measured through atomic and nuclear experiments \cite{???}, but 
+the community has few precise data about the neutron RMS radius ($R_n$), which is another 
+important component in describing the structure of nuclei. The difficuties lie in that
+neutrons are electricly chargeless, so one can measure its size only through weak
+interaction or strong interaction. Both these 2 methods suffer from their own
+limitations: the weak interaction is weak to measure while the strong interaction
+has large uncertainty from the Quantum Chromodynamics (QCD). Though of these
+difficulties, there have been many effort from the community to explore the
+different aspects of neutron radius (and neutron skin thickness): 
+hadronic scattering experiment, coherent pion photoproduction,
+measurements of electric dipole polarizabilities and pygmy dipole resonances etc.
+Experimentally, the best resolution we got about $R_n$ is about 5\%. (FIXME)
+Theorectically, The best estimates of Rn appear to come from nuclear theory, 
+where models have been constrained primarily by data other than measurements 
+of neutron radii. Therefore, a measurement of Rn will provide a powerful 
+independent check of basic nuclear theory.
+
+The nucleon RMS radius is defined as:
+\begin{equation}
+    R_{p, n} \equiv \langle R_{p,n}^2\rangle^{1/2} = \sqrt{\frac{\int d^3r\,r^2\,\rho_{p,n}(r)}{\int d^3r\,\rho_{p,n}(r)}}
+    \label{eqn:rms_radius}
+\end{equation}
+where $\rho(r)$ is the nucleon density at radius r. 
+
+Experimentally, we measure the nucleon RMS radius from their corresponding form
+factors (FF). According to quantum mechanics, with Born approximation, the
+matrix element (ME) for a scattering is (assuming a $1/r$ potential):
+\begin{equation*}
+    \begin{aligned}
+	\CM_{fi} &= \bra{\Psi_f}V(\vec{r})\ket{\Psi_i} 
+		= \int e^{-i\vec{p}_f\vec{r}}V(\vec{r}) e^{i\vec{p}_i\vec{r}} d^3\vec{r}    \\	% 1
+	    &= \int e^{i(\vec{p_i} - \vec{p_f})\vec{r}} d^3\vec{r} 
+		\int \frac{\rho(\vec{r'})}{4\pi|\vec{r} - \vec{r'}|} d^3\vec{r'} \\	% 2
+	    &= \int \int e^{i\vec{Q} \vec{r} } 
+		 \frac{\rho(\vec{r'})}{4\pi|\vec{r} - \vec{r'}|} d^3\vec{r} d^3\vec{r'} \\	% 2
+	    &= \int\int e^{i\vec{Q}(\vec{r} - \vec{r'})} 
+		\frac{\rho(\vec{r'})}{4\pi|\vec{r} - \vec{r'}|} e^{i\vec{Q}\vec{r'}} d^3\vec{r} d^3\vec{r'}   \\  % 3
+	    &= \int e^{i\vec{Q}\vec{R}} \frac{1}{4\pi|\vec{R}|} d^3\vec{R} 
+		\int \rho(\vec{r'}) e^{i\vec{Q} \vec{r'}}d^3 \vec{r'}	\\  % 4
+	    &= (\CM_{fi})_{\text{point}} F(\vec{Q^2})   \\	% 5
+    \end{aligned}
+\end{equation*}
+So the FF is:
+\begin{equation}
+    F(\vec{Q}^2) = \int \rho(\vec{r}) e^{i\vec{Q} \vec{r}} d^3\vec{r}
+    \label{eqn:ff}
+\end{equation}
+which is just the Fourier transformation of nucleon distribution.
+For a spherical potential, $\rho(\vec{r}) = \rho({|\vec{r}|}) = \rho(r)$:
+\begin{equation*}
+    \begin{aligned}
+	F(\vec{Q}^2) &= \int \rho(r) e^{iQr\cos\theta} 2\pi r^2 \sin\theta dr d\theta	\\
+	    &= 4\pi \int r \rho(r) \frac{\sin{(Qr)}}{Q} dr
+    \end{aligned}
+\end{equation*}
+At the small
+$\vec{Q}^2$ limitation, we can do the Fourier expansion:
+\begin{equation*}
+    \begin{aligned}
+	F(\vec{Q}^2) &= 4\pi \int r \rho(r) \frac{\sin{(Qr)}}{Q} dr \\
+	    &= 4\pi \int \rho(r) r \left( r - \frac{1}{6} Q^2r^3 + \cdots \right) dr	\\
+	    &= \int \rho(r)  \left( 1 - \frac{1}{6} Q^2r + \cdots \right) 4\pi r^2 dr	\\
+	    &= Q_t (1 - \frac{1}{6}Q^2\langle r^2 \rangle + \cdots) \\
+	    &= F(0) + \left.\frac{dF}{dQ^2}\right|_{Q^2=0} \times Q^2 + \cdots	\\
+    \end{aligned}
+\end{equation*}
+where $Q_t = \int \rho(r) d^3\vec{r}$ is the total charge.
+
+\begin{equation}
+    \langle R^2 \rangle = -6 \left. \frac{dF(Q^2)}{dQ^2} \right|_{Q^2 = 0}
+\end{equation}
+So we can measure the FF at some low $Q^2$ points, exrapolate them 
+to $Q^2 = 0$, then the slope at $Q^2 = 0$ will be the RMS radius.
+
+For charged proton, the FF will be the precisely measured EM FF:
+\begin{equation}
+    \langle R_p^2 \rangle = -6 \left. \frac{dF_{EM}(Q^2)}{dQ^2} \right|_{Q^2 = 0}
+\end{equation}
+While neutron is neutral, we will measure its RMS radius from its weak charge
+distribution:
+\begin{equation}
+    \langle R_n^2 \rangle = -6 \left. \frac{dF_{weak}(Q^2)}{dQ^2} \right|_{Q^2 = 0}
+\end{equation}
 
 % 1. neutron distribution
 % 2. symmetry energy dependence on density
@@ -172,7 +261,7 @@ a few protons, so its $\beta = 1$.
 \end{equation}
 The amazing thing is that neutron star's pressure dependents on L is proportional
 to $R^4$. Once we know the L value, we will know the pressure and therefore the 
-radius of a neutron star. (Do all neutron stars have the same $\rho$ and R ???)
+radius of a neutron star. % (Do all neutron stars have the same $\rho$ and R ???)
 
 Being such an important parameter, a great effort has been done to extract S 
 and L. Comparing \eqref{eq:modified-mass-formula-2} and \eqref{eq:symmetry-energy},
@@ -207,18 +296,9 @@ skin thickness, we can derive P and L values, for the study of neutron stars
 and nuclear EoS.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Neutron Radius}
-There has been many measurements (!!!FIXME!!!) about the charge form factor of many nuclei,
-but rarely any precise measurement of the weak form factor of any nuclei.
-
-There have been many explorations from different aspects to the neutron skin
-thickness: hadronic scattering experiment, coherent pion photoproduction,
-measurements of electric dipole polarizabilities and pygmy dipole resonances etc.
-Though of their valuable efforts, these experiments are trapped by model 
-dependence and other uncertainties.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Physics Beyond the Standard Model (SM)} 
+Parity-Violating Electron Scattering is always a promising avenue for physics
+beyond the SM in precision frontier.
 Flavor conserving interaction:
 $$ |A_\gamma + A_Z + A_{new}|^2 \rightarrow A^2_\gamma\left[ 1 + 2\frac{A_Z}{A_\gamma}
  + 2\frac{A_{new}}{A_\gamma} \right]$$
@@ -347,8 +427,19 @@ $$ E' = \frac{ME_0}{M + E_0(1-\cos\theta)}$$
 \end{equation*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Why \Pb and \Ca}
+\section{Why Pb and Ca}
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\linewidth]{Nuclear_Landscape}
+    \includegraphics[width=0.6\linewidth]{Nuclear_Landscape}
+    \caption{Nuclear Landscape}
+    \label{fig:nuclear_landscape}
 \end{figure}
+Theoretically, there are a few methods to calculate the proton and neutron distribution
+inside a nucleus, namely ab-initio and density functional theory (DFT). Both
+methods works well in their own areas: ab-initio is suitable for describing  
+light nuclei and DFT is good at calculating heavy nuclei. Unfortunately, we 
+don't have a single complete theory that can predict for all nuclei. The medium
+nucleus Ca, as shown in fig. \ref{fig:nuclear_landscape}, is accessible from both
+ab-initio and DFT. By measuring the neutron skin thickness of \Ca, we hope to 
+provides a possibility to bridge these two methods. As for \Pb, that's based on
+PREX-I, that's why the name PREX-II.
