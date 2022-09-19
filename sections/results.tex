@@ -5,3 +5,75 @@
 \subsection{Compton}
 
 \section{Final Number}
+
+\section{Physical Implication}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Theoretical Models}
+Neither the nuclear interaction nor their wave functions are known to us.
+Unlike particle physics, there is no such a single Standard Model to describe
+general properties of a nuclear system, such as the ground state binding energy,
+nuclear size and excitation spectrum. Various models work well in their own
+territories. Ab-initio is mainly used to describe light nuclei while Density
+Functional Theory (DFT) provides very precise prediction for heavy nuclei.
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{ab-initio}
+Ab-initio is more like a theoretical approach, that needs to calculate the force
+between nucleons and then solve the quantum many-body equation from them. While
+DFT is more like an experimental approach, which uses experimental data to fit
+interactions in a given region of the nuclear landscape.
+\begin{itemize}
+    \item Green's function Monte Carlo (GFMC)
+    \item No-Core Shell Model (NCSM)
+    \item Coupled-cluster
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Nuclear Density Functional Theory (DFT)}
+The basic idea is to construct a general functional, with nucleons density 
+distribution as input, will output the ground-state energy and other properties
+of the nuclear system, the difficulty lies in that no single general functional
+can cover all nuclei.
+The basic idea is simple, once we know the density distribution function, then
+one can calculate the total energy of the system based on this distribution 
+function, minimization of the total energy will be the ground state, and other
+static properties will be inferred from the ground state. Excitation properties
+can also be calculated from DFT. The only problem is how to know the density
+distributio function.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Effective Field Theory (EFT)}
+Based on nucleons and pions, but still obey the symmetry of QCD. 
+% The strength of an EFT approach to thenuclear force lies in its power-counting capability. That is, theLagrangian of a theory with nucleons and pions can be expanded  order  by  order  in  terms  of  momentum  transfer  divided by a parameter that sets the momentum scale of the expansion
+Various EFT models are based on an effective interacting Lagragian, for example,
+FSUGold model has the following effective Lagrangian \cite{PhysRevLett.95.122501}:
+\begin{equation}
+    \begin{aligned}
+	\CL_{\text{int}} = &\bar{\psi} \left[ g_s\phi - \left( g_v V_\mu + \frac{g_\rho}{2}\vec{\tau}\cdot\vec{b}_\mu + \frac{e}{2}(1 + \tau_3) A_\mu \right)\gamma^\mu \right]\psi \\
+	    & - \frac{\kappa}{3!}(g_s\phi)^3 - \frac{\lambda}{4!}(g_s\phi)^4 + \frac{\zeta}{4!}(g_v^2 V_\mu V^\mu )^2	\\
+	    & + \Lambda_v(g_\rho^2\vec{b}_\mu\vec{b}^\mu)(g_v^2 V_\mu V^\mu)
+    \end{aligned}
+\end{equation}
+This Lagrangian density descirbes interactions of the nucleon field $\psi$ to
+various meson fields and their self-interctions. $\phi$ is a scalar.
+
+The difference between different EFT models is just how many coupling they
+include in their effetive Lagrangian density. With the Lagrangian density,
+one can calculate the properties of various nuclei, fitting predicted values
+to experimental results to get a parameter set for the coupling constant in
+the Lagrangian, which is called one model. Frequently used EFT models include
+NL3 \cite{}, FSUGold \cite{} and 
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Saturation}
+The invariance of bingding energy per nucleon ($E_b/A$) w.r.t. A means that
+the interaction between nucleons is not proportional to $A(A-1)$, but proportional
+to A, which means nucleons saturate.
+\subsection{Saturation Density}
+Nuclear Density Function Theory
+the basic idea is given a Lagrangian density function:

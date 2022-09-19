@@ -1,0 +1,17 @@
+\chapter{Symmetry Energy}
+\label{ap:symmetry_energy}
+$$ E_k = C(N^{5/3} + Z^{5/3}) $$
+Let: $A = N + Z$ and $B = N - Z$, then we have $N + \frac{A+B}{2}$, 
+$Z = \frac{A-B}{2}$ and $B << A$:
+\begin{equation*}
+    \begin{aligned}
+	E_k &= C\left( \left( \frac{A+B}{2}\right)^{5/3} + \left(\frac{A-B}{2} \right)^{5/3} \right)	\\
+	    &= C\left(\frac{A}{2}\right)^{5/3} \left( \left( 1 + \frac{B}{A} \right)^{5/3} + \left(1 - \frac{B}{A} \right)^{5/3} \right)   \\
+	    &= C\left(\frac{A}{2}\right)^{5/3} \left( \left(1 + \frac{5}{3}\frac{B}{A} + \frac{1}{2!}\frac{5}{3}\frac{2}{3} \left( \frac{B}{A} \right)^2 + \cdots \right) 
+		+ \left(1 + \frac{5}{3}\left(-\frac{B}{A} \right) + \frac{1}{2!}\frac{5}{3}\frac{2}{3} \left( -\frac{B}{A} \right)^2 + \cdots \right) \right) \\
+	    &= 2^{-2/3}C\left( A^{5/3} + \frac{5}{9}\frac{B^2}{A^{1/3}} \right) + O(\frac{B^4}{A^{7/3}})	\\
+	    &= 2^{-2/3}C\left( A^{5/3} + \frac{5}{9}\frac{(N-Z)^2}{A^{1/3}} \right) + O((N-Z)^4)	\\
+    \end{aligned}
+\end{equation*}
+
+

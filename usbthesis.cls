@@ -30,9 +30,9 @@ recognize option: \CurrentOption}}
 %\setmargins{1.5in}{1.25in}{5.5in}{8.125in}{0.125in}{0.2in}{0.125in}{0.5in}
 
 \if@top
-     \setmarginsrb{1.1in}{1in}{1.1in}{1in}{0.125in}{0.75in}{0.125in}{0.325in}
+     \setmarginsrb{1in}{1in}{1in}{1in}{0.125in}{0.5in}{0.125in}{0.325in}
 \else
-     \setmarginsrb{1.1in}{1in}{1.1in}{1in}{0.125in}{0.2in}{0.125in}{0.5in}
+     \setmarginsrb{1in}{1in}{1in}{1in}{0.125in}{0.2in}{0.125in}{0.5in}
 \fi
 
 \newcommand{\ps@prelim}{%

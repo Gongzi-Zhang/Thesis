@@ -1,18 +1,18 @@
 \chapter{Introduction}
-
 The Pb Radius EXperiment-II (PREX-II) and Ca48 Radius EXperiment (CREX) are 
-high-precision experiments that measure the tiny parity-violating asymmetry 
-(at part per billion (ppb) level) of longitudinally polarized electrons scattered 
-off neutron-rich targets (\Pb \ and \Ca), from which the weak form factors and 
-neutron skin thicknesses of those nuclei will be extracted.
+high-precision experiments that measure the tiny parity-violating (PV) asymmetry 
+(at part per million (ppm) level) of longitudinally polarized electrons scattered 
+off neutron-rich targets (\Pb and \Ca), from which the weak form factors, weak
+charge and neutron distribution, and finally
+neutron skin thickness of those nuclei will be extracted.
 
-The parity-violating asymmetry ($\CA_{pv}$) comes from the interference between the 
-electromagnetic (EM) interaction and the neutral weak interaction, because weak 
+The PV asymmetry ($\CA_{pv}$) comes from the interference between the 
+electromagnetic (EM) and (neutral) weak one-boson exchange amplitude, because weak 
 interaction doesn't conserve the parity symmetry. While the EM 
 interaction has been studied thoroughly, the asymmetry measurement allows 
 us to derive the weak charge and therefore the neutron distribution in a nucleus.
 
-Parity-violating electron scattering (PVES) experiments require high polarization
+Parity-violating electron scattering (PVES) experiments require high energy polarized
 electron beam, which was provided by the Continuous Electron Beam Accelerator
 Facility (CEBAF) at Thomas Jefferson National Accelerator Facility (TJNAF, 
 also known as JLab). The excellent beam qualities and dedicated instrumentations
@@ -20,104 +20,316 @@ at JLab allowed the measurements to be statistics limited.
 
 % physical implication
 
-% history of PVES experiments
 % Atomic PV
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Neutron Radius}
-The proton (charge) Root-Mean-Square (RMS) radii ($R_p$) of many nuclei have been
-precisely measured through atomic and nuclear experiments \cite{???}, but 
-the community has few precise data about the neutron RMS radius ($R_n$), which is another 
-important component in describing the structure of nuclei. The difficuties lie in that
-neutrons are electricly chargeless, so one can measure its size only through weak
-interaction or strong interaction. Both these 2 methods suffer from their own
-limitations: the weak interaction is weak to measure while the strong interaction
-has large uncertainty from the Quantum Chromodynamics (QCD). Though of these
-difficulties, there have been many effort from the community to explore the
-different aspects of neutron radius (and neutron skin thickness): 
-hadronic scattering experiment, coherent pion photoproduction,
-measurements of electric dipole polarizabilities and pygmy dipole resonances etc.
-Experimentally, the best resolution we got about $R_n$ is about 5\%. (FIXME)
-Theorectically, The best estimates of Rn appear to come from nuclear theory, 
-where models have been constrained primarily by data other than measurements 
-of neutron radii. Therefore, a measurement of Rn will provide a powerful 
-independent check of basic nuclear theory.
+\subsection{Neutron Radius and Neutron Skin}
+What's the size of a nucleus? Given the development of modern physics, many people may
+think there is a clear answer to this basic question. Unfortunately, we don't.
+Of course, one may estismate a nuclear radius as $R = cA^{1/3}$, where $A$ is the mass
+number and $c$ is an approximative constant coefficient that can be experimentally 
+identified ($\sim 1.20\ fm$ \cite{FIXME}). But this picture is
+over simplified and can't help in cases where precise nucleon distribution is needed.
+Physicists do have calculated and precisely measured the proton radius of many nuclei,
+but neutron, due to its neutrality, remains as a stubborn obstacle in 
+our understanding toward the structure of nuclei. Especially for heavy nuclei,
+where more neutrons than protons are needed to bound the nuclei, it is neutron
+radius rather than proton radius that defines the size of a heavy nucleus.
 
-The nucleon RMS radius is defined as:
+When we talk about the proton or neutron radius, it is actually a concept under the
+framework of Quantum Mechanics (QM), rather than the radius of any objects that we
+are familiar with in our daily life. In QM, particles are represented by a probability
+wave function, so the neutron (proton) Root-Mean-Square (RMS) radius is defined as:
+% why RMS radius, rather than r\rho(r) directly?
 \begin{equation}
-    R_{p, n} \equiv \langle R_{p,n}^2\rangle^{1/2} = \sqrt{\frac{\int d^3r\,r^2\,\rho_{p,n}(r)}{\int d^3r\,\rho_{p,n}(r)}}
+    R_{p, n} \equiv \langle R_{p,n}^2\rangle^{1/2} = \sqrt{\frac{\int d^3\vec{r}\,r^2\,\rho_{p,n}(\vec{r})}{\int d^3\vec{r}\,\rho_{p,n}(\vec{r})}}
     \label{eqn:rms_radius}
 \end{equation}
-where $\rho(r)$ is the nucleon density at radius r. 
-
-Experimentally, we measure the nucleon RMS radius from their corresponding form
-factors (FF). According to quantum mechanics, with Born approximation, the
-matrix element (ME) for a scattering is (assuming a $1/r$ potential):
+where $\rho(\vec{r})$ is the nucleon density at position $\vec{r}$, which satisfies the normalization
+condition:
 \begin{equation*}
+    \int d^3\vec{r} \rho_{p, n}(\vec{r}) = 1 
+\end{equation*}
+
+Searching through the literatures, we can find many works on the high-precision  
+(with an error $\le 0.02 \ fm$ )
+measurement of the proton (charge) radius ($R_p$) of many nuclei through atomic 
+and nuclear experiments \cite{DEVRIES1987495, ANGELI2004185} but not much 
+precise data about the neutron radius ($R_n$). The difficuties lie in that
+neutrons are electricly chargeless, so one can measure its size only through 
+strong or weak interaction. Both methods suffer from their own
+limitations: the weak interaction is too weak (compared to the background EM 
+interation) to measure it directly, therefore people turn to PV asymmetry
+measurement, which is also tiny, much effort is needed during experiments;
+while the strong interaction has large theoretical uncertainties from the 
+low energy non-perturbative Quantum Chromodynamics (QCD), the interpretation of
+hadronic measurement is usually model dependend. Though of these
+difficulties, there have been many effort from the community to explore the
+different aspects of neutron radius (and neutron skin thickness): 
+the hadronic probe includes pion \cite{???}, proton \cite{???}, antiproton \cite{???} 
+and alpha particle \cite{???};
+atomic experiments like electric dipole polarizabilities \cite{???} and 
+pygmy dipole resonances \cite{???}
+also provide input to our understanding.
+Experimentally, the best resolution we got about $R_n$ is about 5\%. (FIXME)
+Theorectically, The best estimates of $R_n$ appear to come from nuclear theory, 
+where models have been constrained primarily by data other than measurements 
+of neutron radii. Therefore, a measurement of $R_n$ will provide a powerful 
+independent check of basic nuclear theory.
+
+Experimentally, the nucleon radius is measured from their corresponding form
+factors (FFs). According to QM, under Born approximation, the matrix element (ME) 
+for a scattering process is (assuming a Coulomb-like potential):
+\begin{equation}
     \begin{aligned}
 	\CM_{fi} &= \bra{\Psi_f}V(\vec{r})\ket{\Psi_i} 
 		= \int e^{-i\vec{p}_f\vec{r}}V(\vec{r}) e^{i\vec{p}_i\vec{r}} d^3\vec{r}    \\	% 1
 	    &= \int e^{i(\vec{p_i} - \vec{p_f})\vec{r}} d^3\vec{r} 
-		\int \frac{\rho(\vec{r'})}{4\pi|\vec{r} - \vec{r'}|} d^3\vec{r'} \\	% 2
-	    &= \int \int e^{i\vec{Q} \vec{r} } 
-		 \frac{\rho(\vec{r'})}{4\pi|\vec{r} - \vec{r'}|} d^3\vec{r} d^3\vec{r'} \\	% 2
-	    &= \int\int e^{i\vec{Q}(\vec{r} - \vec{r'})} 
-		\frac{\rho(\vec{r'})}{4\pi|\vec{r} - \vec{r'}|} e^{i\vec{Q}\vec{r'}} d^3\vec{r} d^3\vec{r'}   \\  % 3
-	    &= \int e^{i\vec{Q}\vec{R}} \frac{1}{4\pi|\vec{R}|} d^3\vec{R} 
-		\int \rho(\vec{r'}) e^{i\vec{Q} \vec{r'}}d^3 \vec{r'}	\\  % 4
-	    &= (\CM_{fi})_{\text{point}} F(\vec{Q^2})   \\	% 5
+		\int \frac{Q_t\rho(\vec{r'})}{4\pi|\vec{r} - \vec{r'}|} d^3\vec{r'} \\	% 2
+	    &= \int \int e^{i\vec{q} \vec{r} } 
+		 \frac{Q_t \rho(\vec{r'})}{4\pi|\vec{r} - \vec{r'}|} d^3\vec{r} d^3\vec{r'} \\	% 2
+	    &= \int\int e^{i\vec{q}(\vec{r} - \vec{r'})} 
+		\frac{Q_t\rho(\vec{r'})}{4\pi|\vec{r} - \vec{r'}|} e^{i\vec{q}\vec{r'}} d^3\vec{r} d^3\vec{r'}   \\  % 3
+	    &= \int e^{i\vec{q}\vec{R}} \frac{Q_t}{4\pi|\vec{R}|} d^3\vec{R} 
+		\int \rho(\vec{r'}) e^{i\vec{q} \vec{r'}}d^3 \vec{r'}	\\  % 4
+	    &= (\CM_{fi})_{\text{point}} F(\vec{q})   \\	% 5
     \end{aligned}
-\end{equation*}
-So the FF is:
+    \label{eqn:ME}
+\end{equation}
+where $Q_t$ is the total charge. The ME can be factorized into two parts: the 
+scattering amplitude of a point-like nucleus with charge $Q_t$ and a modification
+due to the inner structure of the target, which is called the FF:
 \begin{equation}
-    F(\vec{Q}^2) = \int \rho(\vec{r}) e^{i\vec{Q} \vec{r}} d^3\vec{r}
+    F(\vec{q}) = \int \rho(\vec{r}) e^{i\vec{q} \vec{r}} d^3\vec{r}
     \label{eqn:ff}
 \end{equation}
-which is just the Fourier transformation of nucleon distribution.
-For a spherical potential, $\rho(\vec{r}) = \rho({|\vec{r}|}) = \rho(r)$:
-\begin{equation*}
-    \begin{aligned}
-	F(\vec{Q}^2) &= \int \rho(r) e^{iQr\cos\theta} 2\pi r^2 \sin\theta dr d\theta	\\
-	    &= 4\pi \int r \rho(r) \frac{\sin{(Qr)}}{Q} dr
-    \end{aligned}
-\end{equation*}
-At the small
-$\vec{Q}^2$ limitation, we can do the Fourier expansion:
-\begin{equation*}
-    \begin{aligned}
-	F(\vec{Q}^2) &= 4\pi \int r \rho(r) \frac{\sin{(Qr)}}{Q} dr \\
-	    &= 4\pi \int \rho(r) r \left( r - \frac{1}{6} Q^2r^3 + \cdots \right) dr	\\
-	    &= \int \rho(r)  \left( 1 - \frac{1}{6} Q^2r + \cdots \right) 4\pi r^2 dr	\\
-	    &= Q_t (1 - \frac{1}{6}Q^2\langle r^2 \rangle + \cdots) \\
-	    &= F(0) + \left.\frac{dF}{dQ^2}\right|_{Q^2=0} \times Q^2 + \cdots	\\
-    \end{aligned}
-\end{equation*}
-where $Q_t = \int \rho(r) d^3\vec{r}$ is the total charge.
-
+which is just the Fourier transformation of the spatial density distribution.
+Conversely, once we know (measure) the FF at different $\vec{q}$, we can
+derive the charge distribution:
 \begin{equation}
-    \langle R^2 \rangle = -6 \left. \frac{dF(Q^2)}{dQ^2} \right|_{Q^2 = 0}
+    \rho(\vec{r}) = \int F(\vec{q}) e^{-i\vec{q}\vec{r}} d^3\vec{q}
 \end{equation}
-So we can measure the FF at some low $Q^2$ points, exrapolate them 
-to $Q^2 = 0$, then the slope at $Q^2 = 0$ will be the RMS radius.
+This tells us how to measure the charge density distribution of a nucleus:
+\begin{equation}
+    F(\vec{q}) = \frac{\CM_{fi}}{(\CM_{fi})_{\text{point}}} 
+	= \sqrt{\frac{\sigma_{\text{measured}}}{\sigma_{\text{Mott}}}}
+\end{equation}
+Though of many precise data points at different $\vec{q}$ (most at low $q$ region), 
+there is obviously no way
+to cover the whole space of $\vec{q}$ experimently, therefore, some phenomenological
+models are needed to extract charge density distribution. 
+
+For a spherically symmetric density distribution, 
+$\rho(\vec{r}) = \rho({|\vec{r}|}) = \rho(r)$, 
+one can calculate the corresponding FF as:
+\begin{equation*}
+    \begin{aligned}
+	F(\vec{q}) &= \int \rho(r) e^{iqr\cos\theta} 2\pi r^2 \sin\theta dr d\theta	\\
+	    &= 4\pi \int r \rho(r) \frac{\sin{(qr)}}{q} dr
+    \end{aligned}
+\end{equation*}
+One can see that for a Coulomb-like potential, $F(\vec{q})$ doesn't depend on
+the direction of $\vec{q}$, but only its length: $q$, and for the convention 
+of Lorentz Invariance, people usually write $F$ in terms of $Q^2 = -q^2$, rather
+than $q$, so we will use $F(q^2)$ or $F(Q^2)$ hereafter.
+
+Some typical spherically symmetric density distribution and their 
+corresponding FFs are shown in Fig. \ref{fig:FSUGold_pb208}.
+\begin{figure}
+    \includegraphics[width=\linewidth]{rho_vs_FF}
+    \caption{Characristic of FF w.r.t. different density distribution functions}
+\end{figure}
+
+At small $\vec{q}^2$ limitation, one can do the Fourier expansion:
+\begin{equation*}
+    \begin{aligned}
+	F(q^2) &= 4\pi \int r \rho(r) \frac{\sin{(qr)}}{q} dr \\
+	    &= 4\pi \int \rho(r) r \left( r - \frac{1}{6} q^2r^3 + \cdots \right) dr	\\
+	    &= \int \rho(r)  \left( 1 - \frac{1}{6} q^2r^2 + \cdots \right) 4\pi r^2 dr	\\
+	    &= 1 - \frac{1}{6}q^2\langle r^2 \rangle + \cdots \\
+	    &= F(0) + \left.\frac{dF}{dq^2}\right|_{q^2=0} \times q^2 + \cdots	\\
+    \end{aligned}
+\end{equation*}
+
+and easily to get:
+\begin{equation}
+    \langle R^2 \rangle = -6 \left. \frac{dF(q^2)}{dq^2} \right|_{q^2 = 0}
+\end{equation}
+This equations prompts how to measure RMS radius:
+one can measure the FF at some low $q^2$ points, extrapolate them 
+to $q^2 = 0$, then the slope at $q^2 = 0$ will be the RMS radius (that's why
+we use the RMS radius rather than the more physical definition of: 
+$\langle R \rangle = \int d^3\vec{r} \ r \ \rho(\vec{r})$).
 
 For charged proton, the FF will be the precisely measured EM FF:
 \begin{equation}
-    \langle R_p^2 \rangle = -6 \left. \frac{dF_{EM}(Q^2)}{dQ^2} \right|_{Q^2 = 0}
+    \langle R_p^2 \rangle = -6 \left. \frac{dF_{EM}(q^2)}{dq^2} \right|_{q^2 = 0}
 \end{equation}
 While neutron is neutral, we will measure its RMS radius from its weak charge
 distribution:
 \begin{equation}
-    \langle R_n^2 \rangle = -6 \left. \frac{dF_{weak}(Q^2)}{dQ^2} \right|_{Q^2 = 0}
+    \langle R_n^2 \rangle = -6 \left. \frac{dF_{weak}(q^2)}{dq^2} \right|_{q^2 = 0}
 \end{equation}
+
+The difference between them will be what we called the neutron skin thickness
+\begin{equation}
+    R_{skin} = R_n - R_p 
+\end{equation}
+
+The neutron skin, as its name implies, is founded in neutron-rich isotopes that
+have more neutrons than protons. An intuitive picture is following: analog to
+atomic electron shell model, protons and neutrons also arrange themselves on
+shelles from low to high energy, without disturbing each other (nuclear shell model).
+The higher the energy level, the larger the orbit (radius).
+For most nuclei, they have similar number of proton and neutron, therefore an 
+approximative proton and neutron radius. But for neutron-rich isotopes, the extra neutrons
+need to stay on higher energy shell after filling all low energy ones, forming
+a larger radius than proton and therefore the neutron skin.
+
+Of course, this picture is too simple to fully understand the neutron skin.
+One quick question will be how can one ensure that the extra neutrons lies 
+in the surface rather than the core area? That's related to the symmetry energy, 
+more specifically, the density dependence of the symmtery energy. 
+Because the core area has a 
+higher nucleon density than the surface, and symmetry energy represents the 
+penalty for breaking the proton-neutron symmetry: the higher the density, the
+larger the symmetry energy, therefore the lower the binding energy (the energy
+needed to break down a nuclear system: $BE(N, Z) = M(N, Z)c^2 - Zm_p c^2 - Nm_n c^2$), the less
+stable the nuclei. So it is symmetry energy that pushes extra neutrons to 
+the surface, which is the deeper reason for the formation of neutron skin.
+% the more nucleons on surface, the stronger the surface tension, therefore
+% surface tension favorsl leaving extra neutrons in the core area
+
+Experimental hints of the existance of the neutron skin comes from optical isotope
+shifts (FIXME)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Theorectical Models} 
+\label{subsec:models}
+Though we don't know the actual neutron distribution, one would not expect too
+much difference between the proton and neutron distributions, and we know the
+proton distribution very well, through elastic ep scattering. 
+The scattering cross section is:
+\begin{equation}
+    \frac{d\sigma}{d\Omega} = \left( \frac{d\sigma}{d\Omega} \right)_{Mott} |F(q^2)|^2
+\end{equation}
+
+FF encodes information about the charge structure of a nucleon, it is an interference
+effect, finite size of the scattering center introduces a phase difference between
+different plane waves scattered from different points in space.
+\begin{figure}    
+    \centering
+    \begin{tikzpicture}
+	\draw (0, 0) circle (1 cm);
+	\draw[fill=black] (0.5, 0.5) circle (1 pt);
+	\draw[-stealth] (-2, 1.5) node [above] {$\vec{p}$} -- ++(1.5, 0) -- ++(1.5, 1);
+	\draw[-stealth, decorate, decoration=snake] (-1, 1) -- (0, 0);
+	\draw[dashed] (-0.5, 1.5) -- +(1.5, 0);
+	\draw (-0.3, 1.5) arc (0:34:0.2) node[right] {$\theta$};
+	\draw[-stealth, decorate, decoration={snake}] (-0.5, 1.5) -- node[above] {$\vec{q}$} (0.8, 0.2);
+	\draw[-stealth] (0, 0) -- (0.8, 0.2) node[below] {$\vec{r}$};
+	\draw[dashed] (0, 0) -- (0.5, 0.5);
+	\draw[red, decorate, decoration=snake] (0.5, 0.5) -- (0.8, 0.2) ;
+    \end{tikzpicture}
+    \caption{As we can see, the virtual photon wave absorbed by a nucleon at position
+    $\vec{r}$ will travel a further distance $\vec{q}\cdot\vec{r}$ than the one
+    absorbed at the central point, therefore a phase difference $e^{i\vec{q}\vec{r}/\hbar}$}
+    \label{fig:FF_phase_diff}
+\end{figure}
+
+Consider the simplest hard ball model:
+\begin{equation*}
+    \rho(r) = 
+    \begin{cases}
+	\frac{3}{4\pi R^3}  & r \le R	\\
+	0		    & r > R   \\
+    \end{cases}
+    \label{eqn:hard_ball_model}
+\end{equation*}
+Then the FF will be:
+\begin{equation*}
+    F(q^2) = \frac{3}{(qR)^3} \left( \sin(qR) - qR\cos(qR) \right)
+\end{equation*}
+where $q = 2p\sin(\theta/2)$
+
+Given the Mott cross section:
+\begin{equation}
+    \left( \frac{d\sigma}{d\Omega} \right)_{Mott} = 
+    \begin{cases}
+	\frac{Z^2 \alpha^2}{4E^2\sin^4(\theta/2)}\cos^2(\theta/2)   
+	    & \text{light nuclei} \ Z\alpha << 1  \\
+	\frac{Z^2 \alpha^2}{4E^2\sin^4(\theta/2)}\cos^2(\theta/2) \left[ 1 + \pi Z \alpha \frac{\sin(\theta/2)(1-\sin(\theta/2)))}{\cos^2(\theta/2)}\right]   
+	    & \text{medium nuclei}  \\
+    \end{cases}
+\end{equation}
+We can draw the cross section, as a function of scattering angle in Fig. \ref{fig:ca_xsec}.
+\begin{figure}
+    \includegraphics[width=0.32\linewidth]{ca48_xsec_mott}
+    \includegraphics[width=0.32\linewidth]{ca48_xsec_hard_ball}
+    \includegraphics[width=0.32\linewidth]{ca_xsec_exp}
+    \caption{Left: Mott cross section of electron elasticaly scattered off a Ca48
+    target. Parameters: $p=E=757.5 \ MeV$.
+    Middle: cross section of electron elasticly scattered off Ca48 with the hard ball
+    model (\ref{eqn:hard_ball_model}). Parameters: $E =  757.5\ MeV$, $R=A^{1/3}\ fm$. 
+    Right: experimental values (dots) and theoretical prediction (solid line),
+    their calculation assumed the charge distribution as a Fermi 3-parameter function.
+    $\rho(r) = \frac{\rho_0(1 + \omega r^2/c^2)}{1 + exp((r-c)/a)}$. The \Ca \ (\ca)
+    cross sections are multiplied by $10^{-1}$ ($10$) to seperate them.  
+    \cite{PhysRevLett.19.527}
+    }
+    \label{fig:ca_xsec}
+\end{figure}
+
+Well, the hard ball model doesn't reproduce the experimental distribution, it does
+characterize the real distribution and show us how FF modify the Mott cross section:
+the oscillating dips. As it turns out, a more realistic model will be the
+Saxon-Woods distribution (also called the Fermi 2-parameter model or the Fermi
+distribution):
+\begin{equation}
+    \rho(r) = \frac{\rho(0)}{1 + exp((r-R)/t)}
+\end{equation}
+where $R = (1.2A^{1/3} - 0.48) \ fm$ denotes the nuclear force radius, 
+and $t = 0.4-0.5 \ fm$ for  $A > 40$.
+\begin{figure}
+    \includegraphics[width=0.5\linewidth]{fermi_distribution}
+    \caption{In nuclear Shell Model, it is assumed that nucleons occupy 
+    different eigenstates of the same spherically symmetric average potential.
+    This potential, unlike that in atomic shell model, needed to be guessed. 
+    It turns out that the Saxon-Woods model is a good candidate: 
+    $V(r) = -\frac{V(0)}{1+exp((r-R)/t)}$. Because the potential is formed
+    by all nucleons, so it is approximatively proportional to the nucleon density, 
+    therefore the same distribution for nucleon density.} 
+\end{figure}
+The right plot on Fig. \ref{fig:ca_xsec} uses a fine tuned Fermi 3-parameter model,
+which fits quite well with the data. More detailed discussion about the Fermi 
+distribution can be found in \cite{Maximon:1966sqn}.
+% \begin{equation}
+%     \rho(r) = \frac{\rho_0(1 + \omega r^2/c^2)}{1 + exp((r-c)/a)}
+% \end{equation}
+
+One theoretical model based on the Fermi distribution is the FSUGold \cite{PhysRevLett.95.122501},
+the neutron distribution of \Pb predicted by FSUGold is shown in Fig. \ref{fig:FSUGold_pb208}.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\linewidth]{FSUGold_pb208}
+\end{figure}
+
+We also need to note that for medium and heavy nuclei, the Born approximation
+doesn't hold, where the incoming and outgoing waves are treated as plane waves.
+In reality, the waves are distorted by the intense nuclear EM field, making them
+no longer plane waves any more. So we have to take into account the 
+Coulomb-distortion effect, which has been calculated
+
+Using this model and solving the Dirac equation numerically,
+
 
 % 1. neutron distribution
 % 2. symmetry energy dependence on density
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{symmetry Energy} 
+\section{Symmetry Energy} 
 % what's symmetry energy
 % why it is important
 % how to know/measure it -- theoritically and experimentally
+% the energy difference between a pure neutron star and a corresponding symmetric
+% nuclear matter
 It has long been a hot topic for nuclear scientists to study how the asymmetry 
 between number of proton and nucleon will affect nuclei, especially the binding
 energy, which hints us the limit of new isotope elements. Using the simplest 
@@ -141,7 +353,8 @@ Liquid Drop Model (LDM), we will get the Bethe-Weizsacker Semi-empirical Mass Fo
 
 \begin{itemize}
     \color{black} \item Volume term: nucleons attract nearest neighbors 
-	through strong force ($a_V \sim 16\ MeV$)
+	through strong force ($a_V \sim 16\ MeV$), reflects the short-range
+	nature of strong interaction.
     \color{blue}  \item Surface term: correction to the volume term -- nucleons 
 	on the surface aren't completely surrounded by other nucleons
     \color{green} \item Coulomb term: EM charge repulsion
@@ -163,7 +376,7 @@ kinematic energy of this system will be:
 $$ E_k = E_N + E_Z = \frac{3}{5}ZE_F^p + \frac{3}{5}NE_F^n $$
 Since the Fermi energy is proportional to $n^{2/3}$
 $$ E_k = C(Z^{5/3} + N^{5/3})  $$
-Expanse it in terms of N-Z, we will get
+Expanse it in terms of N-Z \ref{ap:symmetry_energy}, we will get
 \begin{equation*}
     \begin{aligned}
 	E_k &= 2^{-2/3}C\left(A^{5/3} + \frac{5}{9}\frac{(N-Z)^2}{A^{1/3}} \right) + O((N-Z)^4) \\
@@ -227,6 +440,7 @@ $S(\rho) = \frac{\partial^2 e (\rho, \beta)}{\partial \beta^2}$ is
 what we call the \textbf{symmetry energy}, a key parameter in explaining a wide
 range of nuclear properties and phenomena. It describes how much energy will be
 released when exchange all protons into neutrons for a symmetric nuclear system. 
+% a plot for symmetry energy from some models
 
 Not only is $S$ itself important, but also its dependence on $\rho$. 
 By convention, $S(\rho)$ is expanded around the nuclear saturation density $\rho_0$
@@ -305,6 +519,279 @@ $$ |A_\gamma + A_Z + A_{new}|^2 \rightarrow A^2_\gamma\left[ 1 + 2\frac{A_Z}{A_\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Asymmetry}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}[decoration={markings, 
+	mark=at position 0.5 with {\arrow{stealth}}}
+	]
+	\begin{scope}
+	    \coordinate (O) at (0, 0);
+	    \filldraw[black] (O) circle (1pt);
+	    \node[red, above] at (O) {$G_F$};
+	    \draw[postaction={decorate}] (-2, 0) node[above] {n} -- +(2, 0);
+	    \draw[postaction={decorate}] (O) -- +(2, 0)node[above] {$p$} ;
+	    \draw[postaction={decorate}] (O) -- (35:2) node[above, sloped] {$e^-$};
+	    \draw[postaction={decorate}] (O) -- (-35:2) node[above, sloped] {$\bar{\nu}_e$};
+	\end{scope}
+
+	\begin{scope}[xshift=5cm]
+	    \coordinate (O) at (0, 0);
+	    \filldraw[black] (O) circle (1pt);
+	    \node[red, above] at (O) {$G_F$};
+	    \draw[postaction={decorate}] (-2, 0) node[above] {n} -- +(2, 0);
+	    \draw[postaction={decorate}] (O) -- +(2, 0)node[above] {$p$} ;
+	    \draw[postaction={decorate}] (O) -- (35:2) node[above, sloped] {$e^-$};
+	    \draw[postaction={decorate}] (-35:2) node[above, sloped] {$\nu_e$} -- (O);
+	\end{scope}
+    \end{tikzpicture}
+    \caption{Fermi's interpretation of beta decay, current $j_{n \rightarrow p}$ 
+    convert n into p and current $j_{\nu_e \rightarrow e}$ creates $(e, \ \bar{\nu}_e) $
+    pair.}
+\end{figure}
+To explain the beta decay, Fermi proposed the 4-fermion interaction 
+(Fermi's interaction) in 1933 \cite{Fermi1934}, which is a low-energy limit of the 
+weak interaction. In his theory, In analogy to the EM interaction (emission of a
+photon by an electron: $\CM = ej_\mu^{em} A^\mu$) Fermi interpretted the $\beta$
+decay as emission of a $(e, \bar{\nu}_e)$ pair, during the process neutron converts
+itself into a proton, therefore coupling of two current:
+\begin{equation}
+    \CM = G_F (\bar{p} \mathds{O}^\mu n)(\bar{e} \mathds{O}_\mu \nu_e) 
+	= G_F j^\mu_{(n\rightarrow p)} j_\mu^{(\nu_e\rightarrow e)}
+\end{equation}
+Where $G_F = 1.166 \times 10^{-5} \ (GeV)^{-2}$ is the coupling constant that 
+will be experimentally determined and $\mathds{O}$ represents 
+the possible operators. Out of the 5 possible Lorentz invariant bilinear forms 
+(Scalar (S: $\mathds{O} = \mathds{1}$), pseudoscalar (P: $\mathds{O} = \gamma^5$), 
+Vector (V: $\mathds{O} = \mathds{\gamma^\mu}$), Axial vecotr (A: $\mathds{O} = \gamma^\mu\gamma^5$) 
+and Tensor (T: $\mathds{O}=\sigma^{\mu\nu} = \frac{i}{2}(\gamma^\mu\gamma^\nu - \gamma^\nu\gamma^\mu)$)),
+Fermi selected the vector current to keep in line with the EM interaction:
+$j^\mu = \bar{u} \gamma^\mu u$.
+
+In 1956, T. D. Lee and C. N. Yang, both being Fermi's student, postulated the
+revolutionary idea of parity violation for solving the $\tau-\theta$ puzzle, 
+and they succeeded. Only one year later, their hypothesis was experimentally tested
+by Wu etc in the decay of polarized $Co^{60}$ nuclei, establishing the fact
+that parity is not conserved in weak interaction and therefore the weak 
+current is not a pure vector-like quantity. 
+Based on the experimental fact that parity is maximally violated \cite{PhysRev.109.1015}, 
+Sudarshan and Marshak \cite{PhysRev.109.1860.2}, 
+and independently Feymann and Gell-Mann \cite{PhysRev.109.193}
+updated Fermi's theory by replacing the vector current with a new current to 
+accomodate parity violation, which led us to:
+\begin{equation}
+    \CM = \frac{G_F}{\sqrt{2}}(\bar{p} \gamma^\mu(\mathds{1} - \gamma^5) n) (\bar{e} \gamma_\mu(\mathds{1} - \gamma^5) \nu_e)
+\end{equation}
+The factor of $\frac{1}{\sqrt{2}}$ was introduced to keep $G_F$ unchanged (Fermi's
+original theory was not aware the fact that neutrino was left-handed only, resulting
+in a decay phase space twice the real value in nature, to fix the problem, we can
+either modify the value of $G_F$ or introduce a correction factor $\frac{1}{\sqrt{2}}$).
+The V and A parts of V-A theory refer to the vector and axial vector current, 
+responsible for Fermi transitions and Gamow-Teller transitions respectively.
+\begin{equation}
+    j_V^\mu = \bar{u}\gamma^\mu u   \qquad 
+    j_A^\mu = \bar{u}\gamma^\mu\gamma^5 u   
+\end{equation}
+The form of V-A as $\mathds{1} - \gamma^5$ happens to be the projection operator:
+\begin{equation}
+    P_R = \frac{\mathds{1} + \gamma^5}{2}   \qquad P_L = \frac{\mathds{1} - \gamma^5}{2}
+\end{equation}
+By definition of gamma matrix, one can easily verify that:
+\begin{equation}
+    \begin{gathered}
+	\left(\frac{\mathds{1} - \gamma^5}{2} \right)^2 = \frac{\mathds{1} - \gamma^5}{2} 
+	\qquad 
+	\gamma^\mu \frac{\mathds{1} - \gamma^5}{2} = \frac{\mathds{1} + \gamma^5}{2} \gamma^\mu \\
+	\gamma^\mu \frac{\mathds{1} - \gamma^5}{2} = \frac{\mathds{1} + \gamma^5}{2} \gamma^\mu \frac{\mathds{1}-\gamma^5}{2}
+    \end{gathered}
+\end{equation}
+Then one can see the handness of the new current:
+\begin{equation}
+    \CM = \frac{4G_F}{\sqrt{2}}(\bar{p} \gamma^\mu\frac{\mathds{1} - \gamma^5}{2} n) (\bar{e} \gamma_\mu\frac{\mathds{1} - \gamma^5}{2} \nu_e) 
+    = \frac{4G_F}{\sqrt{2}}(\bar{p}_L \gamma^\mu n_L)(\bar{e}_L \gamma_\mu \nu_{e,L})
+\end{equation}
+Only left (right)-handed particle (antiparticle) can interact in weak interaction.
+In analogy to EM interaction, the coupling constant is proportional to a weak
+charge (weak isospin $T_3$), then right-handed fermions (left-handed antifermions) 
+will have $T_3 = 0$ and left-handed fermions have the same weak charge. 
+
+Given the fact that the charge current (it changes particle's electric charge) 
+connects 2 types of fermions and lepton number is conserved in weak interaction, 
+it is natural to group them in a lepton doublet: $f_L = \begin{pmatrix} l \\ \nu_l \end{pmatrix}_L$.
+This implies us that for left-handed fermions: $T=\frac{1}{2}, T_3 = \pm\frac{1}{2}$ 
+
+Applying the V-A theory to more decay and scattering process (
+$\mu^+ \rightarrow e^+ + \nu_e + \bar{\nu}_\mu$, $\pi^- \rightarrow l + \bar{\nu}_l$ etc.), 
+we have 2 charge currents:
+\begin{equation}
+    j_\mu^- = \bar{\nu}_{e, L} \gamma_\mu e_L	\quad 
+    j_\mu^+ = \bar{e}_L \gamma_\mu \nu_{e,L}
+\end{equation}
+which can be written in a more compact way w.r.t. the lepton doublet:
+\begin{equation}
+    j_\mu^\pm = \bar{f}_L \gamma_\mu t^\pm f_L
+\end{equation}
+where,
+\begin{equation}
+    t^+  =
+    \begin{pmatrix}
+	0   & 1	\\
+	0   & 0	\\
+    \end{pmatrix}
+    = \frac{1}{2}(\sigma^1 + i\sigma^2)
+    \quad
+    t^-  =
+    \begin{pmatrix}
+	0   & 0	\\
+	1   & 0	\\
+    \end{pmatrix}
+    = \frac{1}{2}(\sigma^1 - i\sigma^2)
+\end{equation}
+We can see clearly the SU(2) symmetry by the $t^\pm$ expression, the raising ($t^+$)
+and lowing matrices ($t^-$) are the combination of the first 2 Pauli matrices.
+Then one should consider the third component:
+\begin{equation}
+    j_\mu^3 = \bar{f}_L \gamma_\mu \frac{1}{2}t^3 f_L = \frac{1}{2} (\bar{\nu}_{e, L} \gamma_\mu \nu_{e, L} - \bar{e}_{L} \gamma_\mu e_L)
+\end{equation}
+This is a neutral current. But what does this neutral current represents for?
+The then only known neutral current is the EM current, but neutrino is neutral, how
+could it have a EM neutral current? The neutral current kept as a mystery until
+Glashow, Salam and Weinberg postulated the GSW model, which interpretes $j^3$ as
+part of a more complete neutral current that includes $j^{em}$ -- the so called
+$SU(2)_L \times U(1)$.
+
+One problem with Fermi's theory is that the cross section ($\sigma \sim G_F^2 E^2$) 
+will diverge at high energy, to which the solution was the introduction of
+mediating mesons: $W^\pm$. Unlike photon that mediats EM interaction, W boson
+is charged, and has a heavy mass implied from the short-range nature of the
+weak interaction. The introduction of W fields just make the weak interaction
+more similar to the EM interaction:
+\begin{equation}
+    \CL = g_W(J_+W^+ + J_-W^-)
+\end{equation}
+\begin{figure}[h!]
+    \centering
+    \begin{tikzpicture}[decoration={markings, 
+	mark=at position 0.5 with {\arrow{stealth}}}
+	]
+	\begin{scope}
+	    \coordinate (O) at (0, 0);
+	    \filldraw[black] (O) circle (1pt);
+	    \node[red, above left] at (O) {$\frac{G_F}{\sqrt{2}}$};
+	    \draw[postaction={decorate}] (-2, 0) node[above] {n} -- +(2, 0);
+	    \draw[postaction={decorate}] (O) -- +(2, 0)node[above] {$p$} ;
+	    \draw[postaction={decorate}] (O) -- (35:2) node[above, sloped] {$e^-$};
+	    \draw[postaction={decorate}] (-35:2) node[above, sloped] {$\nu_e$} -- (O);
+	\end{scope}
+
+	\begin{scope}[xshift=5cm]
+	    \coordinate (O) at (0, 0);
+	    \coordinate (P) at (-35:2);
+	    \filldraw[black] (O) circle (1pt);
+	    \filldraw[black] (P) circle (1pt);
+	    \node[red, above left] at (O) {$V_{ud}g_W$};
+	    \draw[postaction={decorate}] (-2, 0) node[above] {n} -- +(2, 0);
+	    \draw[postaction={decorate}] (O) -- +(2, 0)node[above] {$p$} ;
+	    \draw[decorate, decoration=snake] (O) -- node[red, midway, below left] {$\frac{1}{M^2_W}$} (P);
+	    \draw[postaction={decorate}] (P) -- +(20:1) node[above, sloped] {$e^-$};
+	    \draw[postaction={decorate}] ($(P) + (-20:1)$) node[below, sloped] {$\nu_e$} -- (P);
+	    \node[red, below] at (P) {$g_W$};
+	\end{scope}
+    \end{tikzpicture}
+    \caption{W-boson exchange picture of $\beta$ decay}
+\end{figure}
+
+Given the similarity between weak interaction and EM interaction, it is natural
+to unify them into a multiplet of gauge fields. Based on Yang and Mills' non-abelian 
+guuge theory, Salam and Weinberg successfully came up with a unified 
+framework for both interactions -- the $SU(2)_L \times U(1)$ structure firstly suggested 
+by Glashow. The SU(2) part is generated by `weak isospin', the subscript L refers
+to the fact that only left-handed fermions couple to gauge boson of SU(2), and the U(1)
+part comes from the `weak hypercharge'. There are 4 vector bosons:
+$$ W^1, W^2, W^3, B $$
+These bosons will couple to both left-handed and right-handed fermions. For simplicity,
+let's consider only the first generation leptons here:
+\begin{equation}
+    \psi_1 = \begin{pmatrix} e^-    \\ \nu_e	\end{pmatrix}	\quad
+    \psi_2 = e^-_R    \quad
+    \psi_3 = \nu_{e,R}
+\end{equation}
+
+For the left-handed doublet $\psi_1$, it interacts to all bosons, 
+so the covariant derivative is:
+\begin{equation}
+    D_\mu = \partial_\mu - ig\frac{\sigma^a}{2}W_\mu^a - ig'y_1B_\mu
+\end{equation}
+where $y_1$ is the hypercharge of $\psi_1$.
+The corresponding coupling Lagrangian is:
+\begin{equation}
+    \CL_{int, L} = -i\bar{\psi}_1 \gamma^\mu (g\frac{\sigma^a}{2}W^a_\mu + g'y_1B_\mu) \psi_1
+	= -i(g\vec{j}^\mu\vec{W}_\mu + g'y_1\bar{\psi}_1\gamma^\mu\psi_1 B_\mu)
+\end{equation}
+For right-handed singlests, they don't couple to weak vector bosons, 
+therefore the covariant derivative for right-handed fermions is:
+\begin{equation}
+    D_\mu = \partial_\mu - ig'y_{2(3)}B_\mu
+\end{equation}
+$y_{2(3)}$ are the hypercharge of $\psi_{2(3)}$
+and the Lagrangian:
+\begin{equation}
+    \CL_{int, R} = -ig'(y_2\bar{\psi}_2 \gamma^\mu \psi_2 + y_3\bar{\psi}_3\gamma^\mu \psi_3) B_\mu
+\end{equation}
+So the complete interacting Lagrangian is:
+\begin{equation}
+    \CL_{int} = \CL_{int, L} + \CL_{int, R} = -i(g\vec{j}^\mu \vec{W}_\mu + g'j^\mu_{Y} B_\mu)
+    \label{eqn:GSW}
+\end{equation}
+where $\vec{j}^\mu$ is the weak isospin current, it couples to a weak 
+isotriplet of vector bosons: $\vec{W} = (W^1, W^2, W^3)$ with
+coupling strength $g$; and the weak hypercharge current 
+$j^\mu_{Y} = \sum_{i=1}^3 \bar{\psi}_i\gamma^\mu\psi_i$ couples to 
+an isosinglet vector boson: $B^\mu$ with strength $g'$. 
+
+Rewrite eq. \ref{eqn:GSW} in our familiar form:
+\begin{equation}
+    \CL = ej_\mu^{EM}A + g_W (j^+W^+ + j^- W^-) + g_Z j_Z Z
+\end{equation}
+\begin{equation}
+    W^\pm = \frac{1}{\sqrt{2}}(W^1 \mp iW^2)	\quad
+    j^\pm = j^1 \pm ij^2
+\end{equation}
+\begin{equation}
+    j^1W^1 + j^2W^2 = \frac{1}{\sqrt{2}}(j^+W^+ + j^-W^-)
+\end{equation}
+We can derive exactly the same charged current in the GSW model. As for the other
+2 bosons, there is no way to satisfy $y_1 = y_2 = y_3$ and $g'y_i = eQ_i$ at the 
+same time, so B is not pure A. Since both fields are neutral, one can try to mix
+them, and get some result matching experimental result:
+\begin{equation}
+    \begin{gathered}
+	\begin{pmatrix}
+	    A   \\
+	    Z   \\
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+	    \cos\theta_W	& \sin\theta_W	\\
+	    -\sin\theta_W	& \cos\theta_W	\\
+	\end{pmatrix}
+	\begin{pmatrix}
+	    B   \\
+	    W^3 \\
+	\end{pmatrix} \\
+	ej^{EM} = gj^3\sin\theta_W + g'j^Y\cos\theta_W	\quad
+	g_Zj^{Z} = gj^3\cos\theta_W - g'j^Y\sin\theta	\\
+    \end{gathered}
+\end{equation}
+The mixing angle is known as the Weinberg angle. 
+a strikig prediction of the GSW model
+\begin{equation}
+    \begin{pmatrix}
+	A
+    \end{pmatrix}
+\end{equation}
+
+The striking thing from this model is the prediction of a weak neutral current,
+
 \begin{figure}[h]
     \centering
 \feynmandiagram[small, vertical' = a to b]{
@@ -395,13 +882,13 @@ When ignoring structure (tree level):
     \coordinate (eout) at (1.7, 1.7);
     \coordinate (p) at (0.6, -1.37);
 
-    \filldraw[black] (N) circle (2pt);
+    \filldraw[black] (N) circle (1pt);
     \node [above] at (N) {N};
-    \draw[->, thick] (ein) -- node [near start, above] {e ($E_0, p_0$)} ([xshift=-2pt]N);
+    \draw[-stealth, thick] (ein) -- node [near start, above] {e ($E_0, p_0$)} ([xshift=-2pt]N);
     \draw[dashed] (N.east) -- +(2, 0);
-    \draw[->, thick] (N) -- node[near end, above, sloped] {$e' (E', p')$} (eout);
-    \draw[->, thick] (N) -- node[near end, above, sloped] {N($E, p$)} (p);
-    \draw [->] ([xshift=8pt]N) arc (0:45:8pt) node[right] {$\theta$};
+    \draw[-stealth, thick] (N) -- node[near end, above, sloped] {$e' (E', p')$} (eout);
+    \draw[-stealth, thick] (N) -- node[near end, above, sloped] {N($E, p$)} (p);
+    \draw [-stealth] ([xshift=8pt]N) arc (0:45:8pt) node[right] {$\theta$};
 \end{tikzpicture}
 \end{center}
 
@@ -421,8 +908,8 @@ $$ M(E_0 - E') = E_0E'(1-\cos\theta) $$
 $$ E' = \frac{ME_0}{M + E_0(1-\cos\theta)}$$
 \begin{equation*}
     \begin{aligned}
-	Q^2 &= (E_0 - E')^2 - (\vec{p}_0 - \vec{p}')^2	\\
-	    &= -2E_0E'(1-\cos\theta)
+	Q^2 &= -q^2 = -[(E_0 - E')^2 - (\vec{p}_0 - \vec{p}')^2]    \\
+	    &= 2E_0E'(1-\cos\theta)
     \end{aligned}
 \end{equation*}
 
@@ -439,7 +926,17 @@ inside a nucleus, namely ab-initio and density functional theory (DFT). Both
 methods works well in their own areas: ab-initio is suitable for describing  
 light nuclei and DFT is good at calculating heavy nuclei. Unfortunately, we 
 don't have a single complete theory that can predict for all nuclei. The medium
-nucleus Ca, as shown in fig. \ref{fig:nuclear_landscape}, is accessible from both
+nucleus Ca, as shown in Fig. \ref{fig:nuclear_landscape}, is accessible from both
 ab-initio and DFT. By measuring the neutron skin thickness of \Ca, we hope to 
 provides a possibility to bridge these two methods. As for \Pb, that's based on
 PREX-I, that's why the name PREX-II.
+
+% what is the magic number: when a shell is completely filled, and the next higher
+% energy shell is empty, the nucleus is said to have a magic number of proton 
+% or neutrons
+Both \Ca and \Pb are doubly magic nuclei, therefore the energy of their first 
+excited state is much larger than the ground state, being 3.84 and 2.6 $MeV$ 
+respectively.
+can be resolved by HRS
+
+\Pb is the heaviest stable doubly-magic nucleus.

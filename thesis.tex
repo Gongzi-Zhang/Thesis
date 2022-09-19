@@ -1,6 +1,7 @@
 \documentclass[phd,bottom,nosig,dvipsnames]{usbthesis}
 
 \usepackage{amsmath, amsthm, amssymb, bm}
+\usepackage{dsfont}
 \usepackage{physics}
 \usepackage{units}
 
@@ -17,6 +18,7 @@
     colorlinks = true,
     urlcolor = [rgb]{0.85, 0.52, 0.9},
 }
+\usepackage[toc,page]{appendix}
 % \usepackage{color}
 \usepackage{setspace}
 \usepackage{array}
@@ -30,7 +32,7 @@
 \usepackage{hyperref} % see the file hyperref.cfg for options
 %\usepackage{indentfirst}
 \usepackage{footmisc} % provides \footref and \mpfootnotemark commands
-\usepackage{xspace}
+\usepackage{xspace} % ending space in custom macro
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage{pdfpages}
 %\usepackage[nottoc]{tocbibind}
@@ -48,7 +50,7 @@
 \month{June}
 \year{2022}%
 \program{Physics}%
-\director{Ahbay~Deshpande}{Professor, Department of Physics and Astronomy}%
+\director{Abhay~Deshpande}{Professor, Department of Physics and Astronomy}%
 %\chairman{Name of Chairman}{Professor, Department of Physics and Astronomy}%
 \chairman{Joanna~Kiryluk}{Professor,  Department of Physics and Astronomy}%
 %\fstmember{Name of Member}{Professor, Department of Physics and Astronomy}%
@@ -102,7 +104,7 @@
 \newpage
 
 \appendix
-\include{sections/appendixSdkr}
-%\include{sections/appendixNOON}
+\include{sections/appendix}
+%\include{sections/appendix}
 
 \end{document}

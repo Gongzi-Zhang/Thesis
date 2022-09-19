@@ -1,0 +1,83 @@
+# structure
+neutron skin thickness: 
+    what's neutron skin -- 2 pages
+    how to measure it -- 2 pages
+    why want to measure it?
+	symmetry energy
+	neutron star (EOS)
+	    size
+	    tidal deformability
+
+	beyond SM
+
+    charge radius:
+	muonic atom spectroscopy: transition spectrum
+	Isotope shift: difference of 1s-2p transition energy between isotopes 
+	    due to effect from finite size (field shift) and mass (mass shift) of the nucleus
+	electron scattering
+	    Fourier-Bessel Analysis -- B. Dreher etc (1974) Nucl. Phys. A 235, 219
+	    Sum of Gaussian -- I. Sick, Nucl. Phys. A 218, 509 (1974)
+    
+Asymmetry: 
+    how to derive it theoretically? -- 2 pages
+    tiny value
+
+* drip line: most weakly bounded isotopes
+How to derive weak FF from EW FF?
+
+Experimental setup:
+    source
+    helicity control
+    polarimeter
+    target
+    raster
+    septum
+    HRS
+    detector
+    systematic uncertainty control
+
+Data
+    raw data
+
+
+# Questions:
+* why asymmetry rather than measurement of weak interaction directly -- large 
+  background from EM interaction
+* why RMS definition -- because that's experimentally accessible, from FF
+
+# papers
+* Nuclear Fermi Momenta: E.Moniz, I.Sick, R.Whitney, et	al., Phys.Rev.Lett. 26	(1971)445.
+
+# phrase
+in closing
+
+# experimental setup
+* number of electrons / pulse ==> luminosity???
+## HRS
+    * 3.7 msr acceptance
+    * 10⁻⁴ momentum resolution
+
+# Systematics:
+* inelastic scattering
+* isotopes
+* Detector nonlinearity
+* Q^2
+* Polarization
+* Charge Normalization
+* Beam Asymmetries
+
+# Neutron stars
+    * size
+    * cooling
+    * properties of the crust
+
+# Models
+    * Skyrme-Hartree-Fock
+    * Relativistic Mean Field interaction FSUgold
+ 
+# resource
+* JLab pictures: https://www.jlab.org/help/Ghelp/
+* Hall A HRS: https://hallaweb.jlab.org/equipment/HRS.html
+	      https://hallaweb.jlab.org/equipment/high_resol.html
+* JLab thesis: https://misportal.jlab.org/ul/publications/search/advanced_search.cfm?title=&author=&JLabNumber=&notJlabNumber=jlab_number&Abstract=&year=&pub_type=Thesis&experiments=&journal=0&meeting=&affiliations=1.CS.003.0002.01&fileExt=&maxrows=10000&order_by=monthyear+desc&Submit_button=+Search+Pubs+&searchtype=complex/
+* JLab Mott polarimeter: https://www.jlab.org/accel/inj_group/mott/mott.html

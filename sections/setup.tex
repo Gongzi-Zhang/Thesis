@@ -1,29 +1,176 @@
 \chapter{Experimental Setup}
-The 2 sister experiments were carried out in Hall A of Jlab, 
+Over the past 30 years, PVES has been a well-established and powerful 
+experimental technique in atomic, nuclear and particle physics. Its success 
+traces back to Lee and Yang's prediction of parity violation in beta decay in 1956 \cite{PhysRev.104.254}
+and the following experimental provement by Wu in 1957 \cite{PhysRev.105.1413}.
+Shortly later, Zel'dovich first predicted the existance of parity-violating weak 
+neutral current and proposed to measure
+it in electron-proton scattering \cite{Zeldovich} in 1959. But it was only about 
+20 years later that people was able to experimently observe the PV asymmetry 
+in electron scattering experiments. 
+In 1978, C.Y. Prescott etc. (E122 experiment at SLAC) measured the PV asymmetry in the 
+inelastic scattering of longitunally 
+polarized electrons from an unpolarized deuterium target \cite{PRESCOTT1978347}.
+With this successful demonstration, more effort was made to improve this experimental
+technique, which matured and boomed at the turn of the last century. Many experiments 
+were conducted to probe the contribution of strange sea quarks
+to nucleons' EM FFs (SAMPLE, G0, HAPPEX and A4) and test the Electroweak 
+sector of the SM at low energy (E158, PVDIS, Qweak).
+It was PREX-I that first proposed the application of PVES to probe the structure
+of nuclei, then followed by PREX-II and CREX. Future programs (M\/oller, SoLID 
+and MESA experiments) will continue the development of PVES and push it to a
+higher precision.
+% First PVES experiment at JLab -- HAPPEX: Hall A Proton Parity EXperiment (E91-010)
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{PVES}
+    \caption{Evolution of PVES experiments, solid lines represent the relative 
+    precision. Generation I experiments (E122 (1978) \cite{PRESCOTT1978347}, 
+    MIT-12C (1989) \cite{PhysRevLett.65.694} and Mainz-Be (1990) \cite{HEIL19891}) 
+    did pioneering work to pave the way for PVES. Generation II experiments
+    (the SAMPLE collaboration \cite{SAMPLE} at the MIT-Bates accelerator, 
+    the G0 \cite{G0} and HAPPEX \cite{HAPPEX} collaboration at Jefferson Lab and
+    the A4 collaboration \cite{A4} at the Maizer Mikrotron (MAMI) accelerator) 
+    were devoted to the exploration of strange FFs in nucleons.
+    Generation III experiments (E158 at SLAC \cite{PhysRevLett.95.081601}, 
+    Qweak \cite{PhysRevLett.111.141803} and PVDIS \cite{PhysRevLett.111.082501})
+    tested the SM at low energy and measured the neutron skin thickness of nuclei
+    (PREX-I/II and CREX). The planned Generation IV experiments (SoLID program \cite{SoLID}
+    and M\\OLLER experiment \cite{Moller} at JLab, P2 experiment on the future
+    Mainz Energy-recovery Superconducting Accelerator (MESA) \cite{MESA-P2})
+    will continue to test the SM and explore the structure of nucleons with higher precisions.
+    (MESA-12C is the same experiment as MESA-P2 with a different \C target) }
+\end{figure}
+
+Generally, PVES experiments requries 2 experimental conditions: polarized electron
+beam and fast flipping of beam polarization. Both requirements actually come to 
+the same dependence: an intense source of polarized electrons and with quick response. 
+The nature of being PV means measurement between different polarization states, 
+while the \textbf{tiny} characteristic of PV asymmetry
+demands fast flipping of the polarization states.
+To measure such a tiny quantity, it is essential to control
+the experimental configurations as the same as possible between different
+beam helicities. One obvious and effective method to do the job is to fast 
+flipping of beam helicity, the faster the helicity reversal, the smaller
+the possible change in beam conditions, target and other apparatus, the smaller
+the introduced false asymmetry. This requirement makes PVES out of the capacity
+of storage ring accelerators.
+% The key for PVES experiments is the fast flipping ($10^2 - 10^3\ Hz$) of beam helicity to reduce 
+% the noise caused by fluctuations in target density and the beam qualities, that
+% means it is out of the capicity of storage ring accelrators and 
+% PVES depends on the development of the intense source of polarized electrons.
+Though of the fast reversal of electron's helicity, much effort is needed to
+control the beam fluctuation, making it as small as possible. Possible systematic
+uncertainties in the source and accelerator will be controlled through the slow
+reversal of beam helicity. In terms of the target deformity under electron bombarment,
+a raster with very high scanning rate will minimize this uncertainty. As for 
+detection of scattered electrons, electron flux rather than single electron will
+be counted due to high scattering rate in such experiments.
+
+The 2 sister experiments were conducted in Hall A at JLab, the CEBAF accelerator 
+at JLab is one of the few facilities in the world that can do PVES experiments (
+other facilities include MIMA and its successor MESA, the Facility for Antiproton
+and Ion Research (FAIR) and the Facility for Rare Isotope Beams (FRIB)). CEBAF 
+provided excellent polarized electron beams to hall A, with dedicated apparatus 
+(Compton polarimeter, taget chamber, HRS and others) in Hall A, we were able 
+to measure this tiny asymmetry precisely.
 
 % table of beam parameters
 \begin{table}[h]
     \centering
-    \begin{tabular}{c | c c }
+    \begin{tabular}{l | c c }
 	\hline
 	&   PREX-II & CREX  \\
 	\hline
 	Target	& \Pb	& \Ca	\\
-	Target thickness (mm)	& 0.5	& 6	\\
+	Target density ($g/cm^3$)   &	& 1.855	\\
+	Target thickness ($mm$)	& 0.15 + 0.5 + 0.15	& 6	\\
+	Number of Target & 10 & 1 + 1	\\
+	Used	& 6 & 2	\\
 	\hline
-	Beam Energy ($GeV$) & 0.97 & 2.18  \\
+	Beam Energy ($GeV$) & 0.953 & 2.18  \\
 	Beam Current ($\mu A$)	& 70	& 150	\\
-	Beam Polarization & 88\%   & 87.1\%   \\
-	Scattering angle ($\deg$)   & 5	& 4.51 \\
-	$Q^2$ ($GeV^2$)	& 0.0063   & 0.0297	\\
-	Helicity rate (Hz)  & 240   & 120   \\
-	rate (MHz/arm)	&   & 25    \\
+	Beam Polarization ($\%$) & 89.7   & 87.1   \\
+	Beam Rate (MHz) & 149	& 149	\\
+	\hline
+	Scattering angle ($\deg$)   & 4.7	& 4.51 \\
+	$Q^2$ ($GeV^2$)	& 0.00616   & 0.0297	\\
+	Helicity rate ($Hz$)  & 240   & 120   \\
+	Scattering rate (MHz/arm)	&   & 25    \\
+	Collected Charge ($C$)	& 114	& 412	\\
+	\hline
+	Acceptance (msr)    &	&   \\
+	\hline
+	predicted $\CA_{pv}$ ($ppm$)  0.6   & 2	\\
+	proposed precision  & 3\%   & 2.4\% \\
 	\hline
     \end{tabular}
 \end{table}
+\begin{itemize}
+    \item $2.2 \ GeV$ is a natural 1-pass beam energy for CEBAF operations in
+	the 12 GeV era
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% from materials/rate_estimation.pdf
+\subsubsection{Rate}
+rate of each arm:
+\begin{equation}
+    \frac{dR(\theta)}{d\Omega} = \frac{d\sigma}{d\Omega}\ I\ \rho t \  \frac{0.602}{A} \ a(\theta) 
+\end{equation}
+\begin{itemize}
+    \item $\frac{d\sigma}{d\Omega}$ is the fractional cross section in $barns/str$
+    \item I is the beam current in $electrons/s$
+    \item $\rho$ is the target density in $g/cm^{-3}$
+    \item t is the target thickness in $cm$
+    \item the factor of 0.602 arises from Avogadro's constant and conversion factors.
+    \item A is the atomic number
+\end{itemize}
+
+Total rate:
+\begin{equation}
+    R = \int \frac{dR(\theta)}{d\Omega} d\Omega 
+      = 2\pi \int \frac{dR(\theta)}{d\Omega} \sin\theta d\theta
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Error}
+% page 7 in https://prex.jlab.org/DocDB/0000/000065/001/kutz_fom.pdf
+\begin{equation}
+    \frac{\delta \CA}{\CA} = \sqrt{\sigma^2_{stat} + \sigma^2_{sys}}
+\end{equation}
+\begin{itemize}
+    \item $\sigma_{stat} = \frac{\sigma_{det}}{P\sqrt{N}}$ 
+	\begin{itemize}
+	    \item $\sigma_{det}$ is the detector uncertainty
+	    \item P is the beam polarizaiton
+	    \item N is the total number of scattered electrons
+	\end{itemize}
+    \item $\sigma_{sys} = 2\% (1.25\%)$ for PREX-II (CREX)
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Sensitivity}
+Define sensitivity as the change of relative asymmetry with respect to a small
+change in neutron radius:
+\begin{equation}
+    \epsilon = \frac{\delta \CA/\CA}{\delta R/R}
+\end{equation}
+Sensitivity is numerically calculated by  C.J. Horowitz \cite{PhysRevC.57.3430}
+
+Figure of Merits:
+\begin{equation}
+    \frac{\delta R}{R} = \frac{\delta \CA}{\CA} \frac{1}{\epsilon} 
+	= \frac{\sigma_{det}}{P} \frac{1}{\sqrt{N} \CA \epsilon}
+\end{equation}
+To minimize $\delta R/R$, it is equivalent to maxize $F = N\times \CA^2 \times \epsilon^2$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Design}
+As we shown in \ref{subsec:models}, we have some theoretical models about the
+neutron distribution in both \Pb and \Ca. Based on the theoretical calculations
+done by 
 Though weak charge distribution is what we want to measure, it doesn't mean we
 know nothing about it. Due to the symmetry between proton and neutron, we would
 expect the weak charge (neutron) distribution is similar to the charge (proton)
@@ -40,18 +187,6 @@ expressed as a 2-parameter Fermi function:
 where a and c denote the half-height radius and diffuseness respectively. 
 % Thiel et al J.Phys.G 46 (2019) 9, 093003 
 
-\subsection{Rate}
-The scattering rate will be:
-\begin{equation*}
-    R(\theta) = 2\,I\,\rho\,t\,\frac{d\sigma}{d\Omega}\,\frac{0.602}{A}\,a(\theta)
-\end{equation*}
-where
-\begin{itemize}
-    \item Factor of 2 for each spectrometer
-    \item $\rho$ and t are target density and thickness
-    \item A is atomic number
-    \item 0.602 $\approx \frac{208-82}{208}$ ???
-\end{itemize}
 Total rate is:
 \begin{equation*}
     R = 2\pi \int R(\theta)\sin(\theta)d\theta
@@ -132,10 +267,29 @@ septum magnets, the energy is fixed and turns out to be 2.2 GeV, which is a
 natural 1-pass beam energy for CEBAF operations in the 12 GeV era.
 
 \begin{figure}[h!]
-    \includegraphics[width=0.3\linewidth]{design_rate_vs_angle}
-    \includegraphics[width=0.3\linewidth]{design_A_vs_angle}
-    \includegraphics[width=0.3\linewidth]{design_sensitivity_vs_angle}
+    \includegraphics[width=0.32\linewidth]{design_rate_vs_angle}
+    \includegraphics[width=0.32\linewidth]{design_A_vs_angle}
+    \includegraphics[width=0.32\linewidth]{design_sensitivity_vs_angle}
+    \label{fig:FOM}
 \end{figure}
+
+\subsubsection{Determination of Beam Parameters}
+As we said above, to minimize the uncertainty in neutron radius, we have to 
+maximize FOM. As we can see in fig. \ref{fig:FOM}, the scattering rate decreases
+dramatically with the increasement of scattering angle, while the other terms
+increase slowly w.r.t. scattering angle, therefore we prefer a small scattering
+anle.
+% why not go to as small as possible, like 3\deg? limitation of septum? geometry
+% magnetic field?
+
+\begin{figure}[h!]
+    \includegraphics[width=0.9\linewidth]{Pb_A_vs_E}
+    \label{fig:Pb_A_vs_E}
+\end{figure}
+With a fixed small scattering angle, one can solve the Dirac equation numerically
+to get the asymmetry distribution w.r.t. energy, therefore identifying the 
+beam energy. As we can see in fig. \ref{fig:Pb_A_vs_E} \cite{PhysRevC.57.3430}, 
+For \Pb, at $\theta = 6\deg$, the asymmetry maximize at $E \sim 800 \ MeV$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Continuous Electron Beam Accelerator Facility (CEBAF)}
@@ -499,7 +653,9 @@ The following components in the injector help to control the beam polarization:
 \begin{itemize}
     \item Intensity Attenuator (IA): equalize beam intensity acroos helicity states
     \item Insertable Half-Wave Plate (IHWP): slow control, flip circular polarization
-    \item Pockels Cell (PC): based on Pockels effect, reversing the voltage reverses
+    \item Pockels Cell (PC): a crystal with birefringence proportional to the applied
+	electric field, it is able to convert the linearly polarized light into
+	circularly polarized light. Based on Pockels effect, reversing the high voltage reverses
 	the birefringence of the crystal and therefore the helicity
     \item Rotatable Half-Wave Plate (RHWP): equalized any residual linear polarization,
 	establish a QE independent of helicity
@@ -653,6 +809,19 @@ scattering angle, etc.
     \includegraphics[width=\linewidth]{target_1}
 \end{figure}
 
+Lessens learn from PREX-I (2010): over a few days of running, the incident
+electron beam degraded the Pb target; therefore we have multiple targets in
+PREX-II. Although the soft metal was cooled to 20 K, it still melted and 
+deformed under the beam's bombardment. Small nonuniformities in the target 
+thickness vary the scattering rate, and over the course of the experiment they 
+eventually generated enough noise to swamp the tiny weak-scattering signal.
+
+The PREX researchers found that they could significantly reduce the sensitivity 
+to target-thickness variations by synchronizing the scattering-rate measurements 
+with the back-and-forth motion of the beam as it sampled different areas on the target. 
+That technique was used for their second run in 2019, and they made extra targets 
+so each one could be switched out as soon as it showed signs of degradation.
+
 \subsection{Target Cooling}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -690,5 +859,12 @@ the collimator at the Q1 entrance defines the acceptance shape.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Detector}
 
+\section{Data AcQuisition (DAQ)}
+We use to pseudo random number generator to decide the helicity pattern, which
+will trigger the data taking of both detectors and monitors. DAQ will read data
+from PCs, BPMs, BCMs and detectors, which will then be digitalized by a 18 digits
+ADC. In one helicity window, they will sample ??? times, which will be grouped
+into 4 blocks. The sum of the 4 blocks was what we got.
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Beam Position Monitor (BPM) and Beam Current Monitor (BCM)}
+resolution
