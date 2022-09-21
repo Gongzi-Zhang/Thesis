@@ -5,10 +5,20 @@ neutron skin thickness:
     why want to measure it?
 	symmetry energy
 	neutron star (EOS)
-	    size
+	    radii/size
+	    mass
+	    luminosity/temperature, cooling rate
 	    tidal deformability
-
+	    crust thickness
+	    the proton fraction: the larger the symmetry energy, the larger the proton fraction 
+		==> URCA cooling
+	    exotic phase: strange star or quark star?
+        atomic parity violation -- test of the SM and BSM
+	nuclear theory ??
+	heavy ion collision
 	beyond SM
+	EOS (?pressure vs density?)
+	    high density at neutron star and low density measurement in nuclei
 
     charge radius:
 	muonic atom spectroscopy: transition spectrum

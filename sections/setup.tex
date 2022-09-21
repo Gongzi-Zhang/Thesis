@@ -72,7 +72,8 @@ The 2 sister experiments were conducted in Hall A at JLab, the CEBAF accelerator
 at JLab is one of the few facilities in the world that can do PVES experiments (
 other facilities include MIMA and its successor MESA, the Facility for Antiproton
 and Ion Research (FAIR) and the Facility for Rare Isotope Beams (FRIB)). CEBAF 
-provided excellent polarized electron beams to hall A, with dedicated apparatus 
+provided excellent polarized electron beams (helicity correlated difference at 
+sub-nanometer level) to hall A, with dedicated apparatus 
 (Compton polarimeter, taget chamber, HRS and others) in Hall A, we were able 
 to measure this tiny asymmetry precisely.
 
@@ -90,17 +91,21 @@ to measure this tiny asymmetry precisely.
 	Used	& 6 & 2	\\
 	\hline
 	Beam Energy ($GeV$) & 0.953 & 2.18  \\
-	Beam Current ($\mu A$)	& 70	& 150	\\
-	Beam Polarization ($\%$) & 89.7   & 87.1   \\
-	Beam Rate (MHz) & 149	& 149	\\
+	Largest Beam Current ($\mu A$)	& 70	& 150	\\
+	Average Beam Polarization ($\%$) & 89.7   & 87.1   \\
+	Beam Rate (MHz) & 249.5	& 249.5 \\
+	Electrons/Bunch	($\times 10^6$)	& 1.75	& 3.76	\\
+	Helicity rate ($Hz$)  & 240   & 120   \\
+	Power on Target (Watt)	&   &	\\
 	\hline
 	Scattering angle ($\deg$)   & 4.7	& 4.51 \\
 	$Q^2$ ($GeV^2$)	& 0.00616   & 0.0297	\\
-	Helicity rate ($Hz$)  & 240   & 120   \\
 	Scattering rate (MHz/arm)	&   & 25    \\
-	Collected Charge ($C$)	& 114	& 412	\\
+	xsection (mbarn)    & 
 	\hline
-	Acceptance (msr)    &	&   \\
+	Acceptance (msr)    &	0.0037 & 0.0037  \\
+	\hline
+	Collected Charge ($C$)	& 114	& 412	\\
 	\hline
 	predicted $\CA_{pv}$ ($ppm$)  0.6   & 2	\\
 	proposed precision  & 3\%   & 2.4\% \\
@@ -111,28 +116,6 @@ to measure this tiny asymmetry precisely.
     \item $2.2 \ GeV$ is a natural 1-pass beam energy for CEBAF operations in
 	the 12 GeV era
 \end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-% from materials/rate_estimation.pdf
-\subsubsection{Rate}
-rate of each arm:
-\begin{equation}
-    \frac{dR(\theta)}{d\Omega} = \frac{d\sigma}{d\Omega}\ I\ \rho t \  \frac{0.602}{A} \ a(\theta) 
-\end{equation}
-\begin{itemize}
-    \item $\frac{d\sigma}{d\Omega}$ is the fractional cross section in $barns/str$
-    \item I is the beam current in $electrons/s$
-    \item $\rho$ is the target density in $g/cm^{-3}$
-    \item t is the target thickness in $cm$
-    \item the factor of 0.602 arises from Avogadro's constant and conversion factors.
-    \item A is the atomic number
-\end{itemize}
-
-Total rate:
-\begin{equation}
-    R = \int \frac{dR(\theta)}{d\Omega} d\Omega 
-      = 2\pi \int \frac{dR(\theta)}{d\Omega} \sin\theta d\theta
-\end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Error}
@@ -168,30 +151,71 @@ To minimize $\delta R/R$, it is equivalent to maxize $F = N\times \CA^2 \times \
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Design}
-As we shown in \ref{subsec:models}, we have some theoretical models about the
-neutron distribution in both \Pb and \Ca. Based on the theoretical calculations
-done by 
-Though weak charge distribution is what we want to measure, it doesn't mean we
-know nothing about it. Due to the symmetry between proton and neutron, we would
-expect the weak charge (neutron) distribution is similar to the charge (proton)
-distribution. Based on this assumption, we will have some models to describe
-the neutron distribution and therefore the FFs, from which we can derive the
-cross section and their asymmetry.
+PREX-II and CREX are follow-up experiments to PREX-I, which also ran at JLab in 2010. 
+With excellent control of systematic uncertainty, and unfortunately, 
+many technical challenges during the experiment, PREX-I's result was statistics 
+limited, achieving a precision of 10\% \cite{PhysRevLett.108.112502}:
+$$ \CA_{Pb} = 656 \pm 60 (stat) \pm 14 (syst) \ ppb$$
+The goal of these 2 follow-up experiments is to improve the asymmetry precision 
+to 1\% \cite{PREX-II_proposal}. Based on the experience and the lessons we learned
+from PREX-I, PREX-II and CREX had more well-established designs, which helped to
+meet the goal of high-precision.
 
-For symmetric nuclei with equal number of proton and neutron, it is expected 
-that their density distributions are similar to each other, which are usually
-expressed as a 2-parameter Fermi function:
-\begin{equation}
-    \rho(r) = \frac{\rho_0}{1 + exp(r-a)/c}
-\end{equation}
-where a and c denote the half-height radius and diffuseness respectively. 
-% Thiel et al J.Phys.G 46 (2019) 9, 093003 
+One important feature of these 2 experiments is the redundancy design for critical
+components: we have 2 slow helicity reversal for systematic uncertainty control,
+we have 2 polarimeters for polarization measurement, we have multiple BPMs and
+BCMs for beam parameter monitoring, we have multiple Pb foil targets and finally
+2 HRS arms for electron reception.
 
-Total rate is:
+\subsection{Figure Of Merits (FOM)}
+The choice of beam energy and scattering angle is a compromise of competing
+factors. PV asymmetry prefers larger beam energy and larger scattering angle,
+while scattering rate falls dramatically with beam energy and scattering angle,
+$Q^2$ also likes smaller beam energy and scattering angle, and calculation 
+showes that the sensitivity of PV asymmetry w.r.t. neutron radius is oscillating
+along beam energy. All these considerations are incorporated into the FOM, which
+is defined as:
 \begin{equation*}
-    R = 2\pi \int R(\theta)\sin(\theta)d\theta
+    \text{FOM} = R \times \CA^2 \times \epsilon^2
 \end{equation*}
-The scattered flux rates on main integrating det. can be GHz level ($~$ 2.5 GHz / arm)
+where R is the scattering rate, $\CA$ the PV asymmetry and $\epsilon = \frac{d\CA}{dR_n}$ 
+the sensitivity of $\CA$ to $R_n$. One difference here is that FOMs for most PVES 
+experiments have only R and $\CA^2$, the inclusion of $\epsilon$ in our FOM help
+to achieve a higher precision in $R_n$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% from materials/rate_estimation.pdf
+\subsubsection{Rate}
+Assume one want to measure a $1 \ ppm$ asymmetry to 1\% statistical uncertainty,
+$$ \frac{\sigma_A}{A} = \frac{1}{A}\frac{1}{\sqrt{2N}} = 1\% \Rightarrow N = 5 \times 10^{15} $$
+a factor of 2 is included because we have 2 HRS arms.
+One need to count $10^{15}$ scattered electrons. Given a counting rate of $1\ MHz$, 
+it will take $\frac{5\times 10^{15}}{1\ MHz} = 5\times 10^{9}\ s \approx 160 \ years$,
+a completely unacceptable time. So we have to turn to integrated flux technique
+for a higher scattering rate, which is:
+\begin{equation}
+    \frac{dR(\theta)}{d\Omega} = \frac{d\sigma}{d\Omega}\ I\ \rho t \  \frac{0.602}{A} \ a(\theta) 
+\end{equation}
+\begin{itemize}
+    \item $\frac{d\sigma}{d\Omega}$ is the fractional cross section in $barns/str$,
+    \item I is the beam current in $electrons/s$
+    \item $\rho$ is the target density in $g/cm^{3}$
+    \item t is the target thickness in $cm$
+    \item the factor of 0.602 arises from Avogadro's constant and conversion factors.
+    \item A is the atomic number
+\end{itemize}
+
+The differential cross section can just be the EM differential cross section
+with values of 1.38 
+
+The total rate will be the integration over the acceptance:
+\begin{equation}
+    R = \int \frac{dR(\theta)}{d\Omega} d\Omega = \frac{dR}{d\Omega} d\Omega
+\end{equation}
+PREX-II and CREX have an acceptance of $d\Omega = 0.0037 \ str$
+
+Finally, we need to consider radiative correction.
+
 
 % To measure a ppm level quantaty to 5\% statistical uncertainty:
 % $$ \frac{\sigma A}{A} = \frac{1}{A} \frac{1}{\sqrt{2N}} = 5\% \Rightarrow N \sim 10^{14} $$
@@ -199,7 +223,6 @@ The scattered flux rates on main integrating det. can be GHz level ($~$ 2.5 GHz 
 % $\frac{10^{14}}{2.5 \ MHz} \sim 10^8 \ s \sim 3 \ years$
 % So we choose to integrate charge instead of counting electrons. But this requires
 % a high degree of linearity in PMT and ADCs.
-
 
 
 \begin{comment}
@@ -715,7 +738,7 @@ number of 8 coils provides a redudancy w.r.t. the free number of degrees
 of beam phase space, making sure to cover all beam phase space at target.  
 These coils (vernier) are driven by a VME-DAC, which in turns is controlled by the parity DAQ.
 It takes 4.267 s for each coil (vernier) to modulate the beam, a whole 
-modulation cycle takes $85.68 \ s$ ($\sim 1$ beam modulation every 10 mins in
+modulation cycle takes $85.68 \ s$ ($\sim 1$ beam modulation every 10 mins during
 data taking). For the position and angle modulation, the beam diplacement will
 be $0.3-0.5\ \mu m$ and energy vernier will result in a beam diplacement of $0.75 \ mm$
 \begin{figure}[h!]
@@ -825,7 +848,18 @@ so each one could be switched out as soon as it showed signs of degradation.
 \subsection{Target Cooling}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Raster}
+The non-uniformity of the thickness of target foils due to electron bambarbment, 
+if not corrected, will caused large noise to our asymmetry measurement. 
+Generally, the central beam area will become thinner while the outer area will 
+become thicker, Actually, this is how we see the status of a target foil and decide
+to replace a target foil if the measured asymmetry width increase significantly.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Collimator and Sieve}
+The collimator box is ??? downstream the target chamber, which is critical for
+controlling the radiation. Water cooled Tungsten with Copper jacket, 2 KW cooling
+is required in collimator.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Septum}
@@ -834,7 +868,8 @@ into the HRS. As said before, the designed scattering angle is about $5^\circ$
 while the smallest angle that HRS can reach is $12.5^\circ$, so we need the septum
 magnet to guide the scattered electrons into HRS. 
 
-The septum consists of 3 coils, by applying large current, it will produce a
+The septum magnets are normal conducting magnets that consist of 3 coils, 
+by applying large current, it will produce a
 strong magnetic field (up to $\sim 1 \ T$ in the central region). A septum beampipe
 will connect the upstream collimator box and the downstream HRS vacuum pipe.
 
@@ -865,6 +900,15 @@ will trigger the data taking of both detectors and monitors. DAQ will read data
 from PCs, BPMs, BCMs and detectors, which will then be digitalized by a 18 digits
 ADC. In one helicity window, they will sample ??? times, which will be grouped
 into 4 blocks. The sum of the 4 blocks was what we got.
+
+The integrated response of each detector and beam monitor was collected and sampled 
+by a custom 18-bit ADC for each helicity window.
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Beam Position Monitor (BPM) and Beam Current Monitor (BCM)}
-resolution
+Hall A resolution
+
+\begin{itemize}
+    \item Microwave Cavity BPM and BCM
+    \item Stripline Electrode Electronic (SEE) BPM and BCM
+    \item Cross check, and unfold beam fluctuation noise from instrumentation noise
+\end{itemize}
