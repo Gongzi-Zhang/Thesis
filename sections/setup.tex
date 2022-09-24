@@ -85,80 +85,48 @@ to measure this tiny asymmetry precisely.
 	&   PREX-II & CREX  \\
 	\hline
 	Target	& \Pb	& \Ca	\\
-	Target density ($g/cm^3$)   &	& 1.855	\\
-	Target thickness ($mm$)	& 0.15 + 0.5 + 0.15	& 6	\\
+	Target density ($g/cm^3$)   & 11.38 & 1.855	\\
+	Target thickness ($mm$)	& 0.15 + 0.55 + 0.15	& 6	\\
 	Number of Target & 10 & 1 + 1	\\
 	Used	& 6 & 2	\\
 	\hline
 	Beam Energy ($GeV$) & 0.953 & 2.18  \\
 	Largest Beam Current ($\mu A$)	& 70	& 150	\\
 	Average Beam Polarization ($\%$) & 89.7   & 87.1   \\
-	Beam Rate (MHz) & 249.5	& 249.5 \\
+	Beam Rate ($MHz$) & 249.5	& 249.5 \\
 	Electrons/Bunch	($\times 10^6$)	& 1.75	& 3.76	\\
-	Helicity rate ($Hz$)  & 240   & 120   \\
-	Power on Target (Watt)	&   &	\\
+	Helicity Flip Rate ($Hz$)  & 240   & 120   \\
+	Power on Target ($Watt$)	&   &	\\
 	\hline
 	Scattering angle ($\deg$)   & 4.7	& 4.51 \\
 	$Q^2$ ($GeV^2$)	& 0.00616   & 0.0297	\\
-	Scattering rate (MHz/arm)	&   & 25    \\
-	xsection (mbarn)    & 
-	\hline
-	Acceptance (msr)    &	0.0037 & 0.0037  \\
+	Scattering rate ($MHz/arm$)   & 576\footnote{This rate doesn't include the contribution from the diamond foils}   & 13 \\
+	xsection ($mbarn$)    & 3930.6	& 5.3   \\
+	Acceptance ($msr$)    &	0.0037 & 0.0037  \\
 	\hline
 	Collected Charge ($C$)	& 114	& 412	\\
 	\hline
-	predicted $\CA_{pv}$ ($ppm$)  0.6   & 2	\\
-	proposed precision  & 3\%   & 2.4\% \\
+	predicted $\CA_{pv}$ ($ppm$)	& 0.6   & 2 \\
+	proposed precision  & 3.6\%   & 2.4\% \\
 	\hline
     \end{tabular}
+    \caption{Summary of PREX-II and CREX}
+    \label{tb:parameters}
 \end{table}
 \begin{itemize}
     \item $2.2 \ GeV$ is a natural 1-pass beam energy for CEBAF operations in
 	the 12 GeV era
 \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Error}
-% page 7 in https://prex.jlab.org/DocDB/0000/000065/001/kutz_fom.pdf
-\begin{equation}
-    \frac{\delta \CA}{\CA} = \sqrt{\sigma^2_{stat} + \sigma^2_{sys}}
-\end{equation}
-\begin{itemize}
-    \item $\sigma_{stat} = \frac{\sigma_{det}}{P\sqrt{N}}$ 
-	\begin{itemize}
-	    \item $\sigma_{det}$ is the detector uncertainty
-	    \item P is the beam polarizaiton
-	    \item N is the total number of scattered electrons
-	\end{itemize}
-    \item $\sigma_{sys} = 2\% (1.25\%)$ for PREX-II (CREX)
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Sensitivity}
-Define sensitivity as the change of relative asymmetry with respect to a small
-change in neutron radius:
-\begin{equation}
-    \epsilon = \frac{\delta \CA/\CA}{\delta R/R}
-\end{equation}
-Sensitivity is numerically calculated by  C.J. Horowitz \cite{PhysRevC.57.3430}
-
-Figure of Merits:
-\begin{equation}
-    \frac{\delta R}{R} = \frac{\delta \CA}{\CA} \frac{1}{\epsilon} 
-	= \frac{\sigma_{det}}{P} \frac{1}{\sqrt{N} \CA \epsilon}
-\end{equation}
-To minimize $\delta R/R$, it is equivalent to maxize $F = N\times \CA^2 \times \epsilon^2$
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Design}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Kinematics}
 PREX-II and CREX are follow-up experiments to PREX-I, which also ran at JLab in 2010. 
-With excellent control of systematic uncertainty, and unfortunately, 
+With excellent control of systematic uncertainty, but unfortunately, 
 many technical challenges during the experiment, PREX-I's result was statistics 
 limited, achieving a precision of 10\% \cite{PhysRevLett.108.112502}:
 $$ \CA_{Pb} = 656 \pm 60 (stat) \pm 14 (syst) \ ppb$$
-The goal of these 2 follow-up experiments is to improve the asymmetry precision 
-to 1\% \cite{PREX-II_proposal}. Based on the experience and the lessons we learned
-from PREX-I, PREX-II and CREX had more well-established designs, which helped to
+Based on the experience and lessons we learned from PREX-I, 
+PREX-II and CREX had more well-established designs, which helped to
 meet the goal of high-precision.
 
 One important feature of these 2 experiments is the redundancy design for critical
@@ -167,6 +135,46 @@ we have 2 polarimeters for polarization measurement, we have multiple BPMs and
 BCMs for beam parameter monitoring, we have multiple Pb foil targets and finally
 2 HRS arms for electron reception.
 
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Uncertainty Budget}
+The goal of PREX-II is to achieve the 1\% precision in \Pb neutron radius proposed
+by PREX-I, which requires the presicion of PV asymmetry measurement better than 3\%. 
+CREX proposed similar goal, that a precision of $0.02 \ fm$ (0.6\%) in the
+\Ca neutron radius will be an essential benchmark to test various microscopic 
+models, which correspond to a 2.4\% total error in PV asymmetry.
+
+% page 7 in https://prex.jlab.org/DocDB/0000/000065/001/kutz_fom.pdf
+As said above, PREX-I already had impressive control over systematic uncertainties (2.1\%),
+so will the PREX-II and CREX. The main concern is to collect as much scattered 
+electrons as possible to reduce statistical error, which is inversely 
+proportional to $\sqrt{N}$.
+\begin{table}
+    \centering
+    \begin{tabular}{c| c c c}
+	\hline
+	Experiment  & Stat(\%)  & Sys (\%)  & Total (\%)    \\
+	\hline
+	PREX-II	& 3	& 2	& 3.6	\\ %FIXME: what's the proposed Sys uncertainty
+	CREX	& 2.1	& 1.2	& 2.4	\\
+	\hline
+    \end{tabular}
+    \caption{Budget of systematic and statiscal error in both experiments 
+    \cite{prex-II_proposal, crex_proposal}
+    }
+\end{table}
+
+\begin{equation}
+    \frac{\delta \CA}{\CA} = \sqrt{\sigma^2_{stat} + \sigma^2_{sys}}	\qquad 
+    \sigma_{stat} = \frac{\sigma_{det}}{P\sqrt{N}}
+\end{equation}
+where:
+\begin{itemize}
+    \item $\sigma_{det}$ is the detector uncertainty
+    \item P is the beam polarizaiton
+    \item N is the total number of scattered electrons
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Figure Of Merits (FOM)}
 The choice of beam energy and scattering angle is a compromise of competing
 factors. PV asymmetry prefers larger beam energy and larger scattering angle,
@@ -178,86 +186,132 @@ is defined as:
 \begin{equation*}
     \text{FOM} = R \times \CA^2 \times \epsilon^2
 \end{equation*}
-where R is the scattering rate, $\CA$ the PV asymmetry and $\epsilon = \frac{d\CA}{dR_n}$ 
-the sensitivity of $\CA$ to $R_n$. One difference here is that FOMs for most PVES 
+where R is the scattering rate, $\CA$ the PV asymmetry and $\epsilon$ 
+the sensitivity of $\CA$ w.r.t. $R_n$. One difference here is that FOMs for most PVES 
 experiments have only R and $\CA^2$, the inclusion of $\epsilon$ in our FOM help
-to achieve a higher precision in $R_n$.
+to achieve a higher precision in $R_n$ measurement.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % from materials/rate_estimation.pdf
 \subsubsection{Rate}
+For a data set of N independent events sampled from one normal distribution 
+$X\sim N(x_0, \sigma_0)$, the statistical uncertainty on the measured mean value
+will be:
+$$ var(\bar{x} = \frac{1}{n}\sum x_i) = \frac{1}{n^2}var(x_i) = \frac{\sigma_0^2}{n} 
+\quad \Longrightarrow \sigma(\bar{x}) = \frac{\sigma_0}{\sqrt{n}} $$
+
 Assume one want to measure a $1 \ ppm$ asymmetry to 1\% statistical uncertainty,
-$$ \frac{\sigma_A}{A} = \frac{1}{A}\frac{1}{\sqrt{2N}} = 1\% \Rightarrow N = 5 \times 10^{15} $$
+\begin{equation}
+    \frac{\sigma_A}{A} = \frac{1}{A}\frac{\sigma_{det}}{\sqrt{2N}} 
+    \approx \frac{1}{A\sqrt{2N}} = 1\% \quad 
+    \Longrightarrow N = 5 \times 10^{15} 
+    \label{eqn:statistical_error}
+\end{equation}
 a factor of 2 is included because we have 2 HRS arms.
-One need to count $10^{15}$ scattered electrons. Given a counting rate of $1\ MHz$, 
+One need to count $\sim10^{15}$ scattered electrons. Given a counting rate of $1\ MHz$, 
 it will take $\frac{5\times 10^{15}}{1\ MHz} = 5\times 10^{9}\ s \approx 160 \ years$,
-a completely unacceptable time. So we have to turn to integrated flux technique
+a completely unacceptable time scale. So we have to turn to integrated flux technique
 for a higher scattering rate, which is:
 \begin{equation}
-    \frac{dR(\theta)}{d\Omega} = \frac{d\sigma}{d\Omega}\ I\ \rho t \  \frac{0.602}{A} \ a(\theta) 
+    \frac{dR(\theta)}{d\Omega} = \frac{d\sigma}{d\Omega}\ I\ t\ \frac{\rho}{A} \times N_A   
 \end{equation}
 \begin{itemize}
-    \item $\frac{d\sigma}{d\Omega}$ is the fractional cross section in $barns/str$,
+    \item $\frac{d\sigma}{d\Omega}$ is the fractional cross section in $cm^2/str$,
     \item I is the beam current in $electrons/s$
-    \item $\rho$ is the target density in $g/cm^{3}$
     \item t is the target thickness in $cm$
-    \item the factor of 0.602 arises from Avogadro's constant and conversion factors.
+    \item $\rho$ is the target density in $g/cm^{3}$
     \item A is the atomic number
+    \item $N_A = 6.022\times 10^{23}$ is the Avogadro's constant and conversion factors.
 \end{itemize}
 
-The differential cross section can just be the EM differential cross section
-with values of 1.38 
+The differential cross section was numerically calculated by our theoretical friends
+with values of $3930.6 \ mbarn$ and $5.3 \ mbarn$ for \Pb and \Ca at their corresponding
+kinematics. Other parameters can be checked in table \ref{tb:parameters}.
 
 The total rate will be the integration over the acceptance:
 \begin{equation}
     R = \int \frac{dR(\theta)}{d\Omega} d\Omega = \frac{dR}{d\Omega} d\Omega
 \end{equation}
-PREX-II and CREX have an acceptance of $d\Omega = 0.0037 \ str$
+PREX-II and CREX have an acceptance defined by the septum and Q1 collimator, which
+is $d\Omega = 0.0037 \ str$
 
-Finally, we need to consider radiative correction.
+Finally, we should also consider radiative correction due to emission of virtual
+and real soft photons (Bremsstrahlung), and hard photons by vacuum polarization,
+this correction is formulated as:
+\begin{equation}
+    \eta = \left(\frac{\Delta}{E} \right)^{bt}
+\end{equation}
+which is evaluated to be: $\eta \sim 0.5$.
 
+\begin{figure}[h!]
+    \includegraphics[width=0.5\linewidth]{Pb208_rate}
+    \includegraphics[width=0.5\linewidth]{Ca48_rate}
+    \caption{Scattering rate versus beam energy and scattering angle for \Pb and \Ca,
+    the energy and scattering angle are design values.
+    We see that rate falls quickly along both beam energy and scattering angle for
+    both nuclei, so one would like small beam energy and small scattering angle (equivalently
+    small $\vec{q}$) for large scattering rate.}
+\end{figure}
 
-% To measure a ppm level quantaty to 5\% statistical uncertainty:
-% $$ \frac{\sigma A}{A} = \frac{1}{A} \frac{1}{\sqrt{2N}} = 5\% \Rightarrow N \sim 10^{14} $$
-% If we count scattered electrons one by one, at the rate of 2.5 GHz, it will take 
-% $\frac{10^{14}}{2.5 \ MHz} \sim 10^8 \ s \sim 3 \ years$
-% So we choose to integrate charge instead of counting electrons. But this requires
-% a high degree of linearity in PMT and ADCs.
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Asymmetry and Sensitivity}
+As we shown in eq. \ref{eqn:statistical_error}, the asymmetry itself matters,
+a 2 times larger asymmetry means we can reduce the run time to one quarter,
+a huge save of beam time. So we should choose the kinematics region where
+asymmetry is large. Besides, asymmetry's sensitivity ($\epsilon$) to neutron radius is
+also important, keep in mind that our final goal is to extract neutron radius
+from PV asymmetry, the more sensitive the asymmetry to neutron radius, the
+more precise the extracted neutron radius. The sensitivity is calculated
+as the relative change of $\CA$ with 1\% change in neutron radius.
+\begin{equation}
+    \epsilon = \frac{\delta \CA/\CA}{\delta R/R} = \frac{|\CA_{stretched} - \CA|/\CA}{1\%}
+\end{equation}
+Though asymmetry is what we want to measure, we can estimate its value based
+on some theoretical models, as was numerically calculated by our theoretical 
+friends in \cite{PhysRevC.57.3430}.
+\begin{figure}[h!]
+    \includegraphics[width=0.5\linewidth]{Pb208_asym}
+    \includegraphics[width=0.5\linewidth]{Pb208_sen}
+    \caption{Asymmetry and sensitivity plot for \Pb, which increases along beam 
+    energy and oscillating up along scattering angle. The sensitivity plot is
+    calculated with 1\% change in neutron radius and it shows the absolute value.
+    So in small scattering angle region, there is a local maximum around $6^\circ$}
+\end{figure}
+\begin{figure}[h!]
+    \includegraphics[width=0.5\linewidth]{Ca48_asym}
+    \includegraphics[width=0.5\linewidth]{Ca48_sen}
+    \caption{Asymmetry and sensitivity plot for \Ca, the asymmetry maximize around
+    2500 MeV and there is a local maximum about $4.5^\circ$. As for sensitivity,
+    there is regional maximum around $5^\circ$}
+\end{figure}
 
+Based on the theoretical result, we can optimize the kinematics for both nuclei:
+\begin{equation}
+    \frac{\delta R}{R} = \frac{\delta \CA}{\CA} \frac{1}{\epsilon} 
+	= \frac{\sigma_{det}}{P} \frac{1}{\sqrt{N} \CA \epsilon}
+\end{equation}
+To minimize $\delta R/R$, it is equivalent to maxize 
+\begin{equation}
+    FOM = N\times \CA^2 \times \epsilon^2
+\end{equation}
+\begin{figure}
+    \includegraphics[width=0.5\linewidth]{Pb208_fom}
+    \includegraphics[width=0.5\linewidth]{Ca48_fom}
+    \caption{For both nuclei, FOM supports a small scattering angle. As for beam energy,
+    FOM maximize around 950 (2200) $GeV$ for \Pb (\Ca).}
+\end{figure}
 
+The design values of beam energy and scattering angle were chosed to be 950 (2200) $MeV$
+and 5 (4) $degree$ for \Pb (\Ca). The beam energy of CREX is exactly 1-pass beam
+energy in CEBAF.
 \begin{comment}
     The measured asymmetry will be:
     \begin{equation*}
 	\CA = \frac{2\pi}{R} \int \CA_0(\theta)R(\theta)d\theta
     \end{equation*}
 
-    Define sensitivity as:
-    \begin{equation*}
-	S(\theta) = \frac{|\CA_0(\theta) - \CA_1(\theta)|}{\CA_0(\theta)}
-    \end{equation*}
-    where $\CA_1$ is the asym. for 1\% change in radius. Then we can 
-    calculate the total sensitivity:
-    \begin{equation*}
-	S = \frac{2\pi}{R} \int S(\theta)R(\theta)d\theta
-    \end{equation*}
-
     For PREX-II: average sensitivity reduced by 5\% due to ${}^{12}C$ contamination
     For CREX: average sensitivity reduced by 10\% due to ${}^{40}Ca$ contamination
-\end{comment}
-
-\subsection{Sensitivity}
-\begin{equation*}
-    \frac{\delta\CA}{\CA} = \sqrt{\sigma_{stat}^2 + \sigma_{sys}^2}
-\end{equation*}
-\begin{itemize}
-    \item $\sigma_{stat} = \left(\frac{\sigma_{det}}{P\sqrt{N}}\right) \frac{1}{A}$
-	\begin{itemize}
-	    \item $\sigma_{det} = \sqrt{1.06}$ is the det. error: $\sqrt{1.06}$ blowup to statistical err. due to det. resolution
-	    \item P is the beam polarization
-	    \item N is the number of electrons
-	\end{itemize}
-    \item $\sigma_{sys} = 2\% (1.25\%)$ for PREX (CREX)
-\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % \subsubsection{Factor of 1.06}
@@ -267,78 +321,95 @@ $$ \sigma = \sigma_0\sqrt{1+\left(\frac{\Delta E}{E}\right)^2}$$
 Based on experience in the PREX experiment, we expect an reduction of statistical precision of a factor of 1.06 due to detector resolution.
 
 \bigskip
-Radius error:
-\begin{equation*}
-    \frac{\delta R_n}{R_n} = \frac{\delta \CA}{\CA}\frac{1}{\epsilon}
-\end{equation*}
-minimizing $\delta R_n/R_n$ means to minimize $\delta \CA/\CA$ and maximize $\epsilon$. 
-
-Given $\delta_{\text{sys}}$, minimizing $\delta\CA/\CA$ means to minimize $\sigma_{\text{stat}}$
-
-Given $\sigma_{\text{det}}$ and P, this means to maximize $\CA \times \sqrt{N}$
-
-So, we define FOM as:
-\begin{equation*}
-    \text{FOM} = R \times \CA^2 \times \epsilon^2
-\end{equation*}
-Note here R is the scattering rate, $\epsilon = \frac{dA/A}{dR_n/R_n}$ is the sensitivity of the asymmetry for a small change in $R_n$.
-
-\bigskip
 Using HRS of Hall A, a \textbf{small} scattering angle maximizes the FOM. 
 Given practical constraints on how low an angle ($4^\circ$) we can reach with 
 septum magnets, the energy is fixed and turns out to be 2.2 GeV, which is a 
 natural 1-pass beam energy for CEBAF operations in the 12 GeV era.
+\end{comment}
 
-\begin{figure}[h!]
-    \includegraphics[width=0.32\linewidth]{design_rate_vs_angle}
-    \includegraphics[width=0.32\linewidth]{design_A_vs_angle}
-    \includegraphics[width=0.32\linewidth]{design_sensitivity_vs_angle}
-    \label{fig:FOM}
-\end{figure}
-
-\subsubsection{Determination of Beam Parameters}
-As we said above, to minimize the uncertainty in neutron radius, we have to 
-maximize FOM. As we can see in fig. \ref{fig:FOM}, the scattering rate decreases
-dramatically with the increasement of scattering angle, while the other terms
-increase slowly w.r.t. scattering angle, therefore we prefer a small scattering
-anle.
-% why not go to as small as possible, like 3\deg? limitation of septum? geometry
-% magnetic field?
-
-\begin{figure}[h!]
-    \includegraphics[width=0.9\linewidth]{Pb_A_vs_E}
-    \label{fig:Pb_A_vs_E}
-\end{figure}
-With a fixed small scattering angle, one can solve the Dirac equation numerically
-to get the asymmetry distribution w.r.t. energy, therefore identifying the 
-beam energy. As we can see in fig. \ref{fig:Pb_A_vs_E} \cite{PhysRevC.57.3430}, 
-For \Pb, at $\theta = 6\deg$, the asymmetry maximize at $E \sim 800 \ MeV$.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Continuous Electron Beam Accelerator Facility (CEBAF)}
 \begin{figure}[h!]
-    \includegraphics[width=0.5\linewidth]{jlab_1.jpg}
-    \caption{aerial view of CEBAF} 
+    \begin{subfigure}[b]{0.59\textwidth}
+    \begin{tikzpicture}
+	\begin{scope}
+	    \node[anchor=south west, inner sep=0] (image) at (0, 0)
+	    { \includegraphics[width=\linewidth]{jlab.jpg} };
+	    \begin{scope}[x={(image.south east)}, y={(image.north west)}]
+		\node [red] at (0.415, 0.355) {\textbf{A}};
+		\node [red] at (0.610, 0.355) {\textbf{B}};
+		\node [red] at (0.780, 0.355) {\textbf{C}};
+	    \end{scope}
+	\end{scope}
+    \end{tikzpicture}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.5\textwidth}
+	\includegraphics[width=0.9\linewidth]{tunnel_construction}
+	\includegraphics[width=0.9\linewidth]{hall_construction}
+    \end{subfigure}
+
+    \caption{Aerial view of JLab accelerator site, yellow line tells the position
+    of the CEBAF accelerator and the 3 experimental halls are marked out as A/B/C 
+    (Hall D locates on the top left corner, after the exit of north LINAC).
+    The accelerator tunnel is $30 \ feet$ ($\sim 9 \ m$) underground and $10 \ feet$ ($\sim 3 \ m$) 
+    high, with a circumference of about $7/8\ miles$ ($1.4\ km$). There are 2 superconducting 
+    LINAC (red lines), each of $1/4\ miles$ ($400\ m$). The pink part on the mid
+    left is the location of injector. The right 2 plots show the tunnel and 
+    experimental halls under construction.}
 \end{figure}
+
 \begin{figure}[h!]
     \includegraphics[width=0.9\linewidth]{cebaf.png}
-    \caption{Schematic plot of CEBAF: Hall D don't have its own slot, so it 
-    follows either A or C} 
+    \caption{Schematic plot of CEBAF. Low energy beams will be kicked into 
+    higher arc, and high energy beams will go through lower arc. The magnetic
+    field increases from higher arc to lower arc to keep electron trajectory 
+    have the same radius.
+    \label{fig:cebaf}
 \end{figure}
-With the 12 GeV upgrade, the north and south LINAC each has 25 cryomodules, 
-capable of accelrating electrons at the rate of 2.2 $GeV/turn$. The special
-design of CEBAF allows it to deliver electron beams of different energies to
-3 (4) halls simultaneously, as long as the total beam power is less than 1 MW.
-So different nuclear experiments can be carried out in different halls at the 
-same time.
+CEBAF is able to deliver multi-GeV continuous wave (cw) eletron beams of different
+energies and different intensities to 4 halls simultaneously.
+With the 12 GeV upgrade, the north and south $1497\ MHz$ LINAC each has 25 
+Superconducting Radial Frequency (SRF) cryomodules, capable of accelrating 
+electrons at the peak rate of 2.2 $GeV/turn$. Hall A, B and C can receive up
+to $2.2 \times 5 = 11 \ GeV$ cw beams and Hall D, with an extra half circle,
+can receive up to $12\ GeV$ cw beams. With this design, different nuclear 
+experiments can be carried out in different halls without interfering each other,
+theoretically.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Polarized Electron Source}
+While all 4 halls at JLab are dedicated to the study of nuclear structure, they
+focus on different aspects. Hall A concentrates on form factors of various nuclei, 
+Hall B digs into generalized parton distributions, Hall C devotes itself to precise
+determination of valance quark properties in nuclei, and finally, the newly 
+established Hall D explores origin of confinement through exotic mesons.
+
+The maxium beam current of $200\ \mu A$ available at CEBAF is limited by the 
+rf power ($1\ MW = 5\ GeV \times 200\ \mu A$) and by the beam power on the 
+beam dump. While Hall B and D requires only tiny amount of cw beams (at $nA$ level),
+it is actually Hall A and C that consume the $200 \ \mu A$ electron beams, both
+can receive a few tenths to over one hundred $\mu A$.
+
+As one can see in \ref{fig:cebaf}, laser pulse from 4 lasers (Hall D laser is not
+shown in the plot) shoot in the electron gun (2 electron guns in total) that 
+operates at $-130\ kV$ to excite electrons, which interweaving with each other, 
+forming a chain of electron bunches, with a phase difference of $120^\circ$ from 
+neaby bunches (Hall D doesn't have its own slit in the chopper, therefore 
+it follows either Hall A or Hall C). This electron chain is sent into north LINAC
+by the injector, accelerated by both LINACs. After reaching desired energy,
+they will be kicked out at the exit of south LINAC and delivered to experimental
+halls (A, B and C) for various experiments. Because all 4 halls share the same 
+electron gun, PVES experiment has priority over other experiments to maintain 
+the quality of polarized electron beam.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Polarized Electron}
 % The key to the success of this experiment was the 1975 discovery of a new method for producing
 % polarized electrons made by a group in Colorado, which included E.L. Garwin of SLAC.
 % Shortly thereafter, a new source was built for the SLAC linac utilizing the method, thus
 % allowing for the 1978 parity violation measurements which were in close agreement with
 % those predicted by the GWS model. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Polarized Electron Source}
 PVES experiments motivate the development of polarized electron source, which 
 require a highly stable polarized electron source that can produce
 high polarization electron beam at a wide range of intensity, from nA to A 
@@ -631,7 +702,7 @@ source is about 88\%.
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Polarization Control}
+\subsection{Polarization Control}
 \begin{itemize}
     \item Helicity Correlated Beam Asymmetry (HCBA) is the most largest false
 	asymmetry to the parity-violating asymmetry
@@ -719,42 +790,16 @@ Considering other optical components downstream the PC:
 \begin{itemize}
     \item $\Delta^0$: offset phase shift introduced by residual birefringence in the PC and other optical components
 \end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Beam Modulation}
-It is very important for PVES to control the systematic uncertainty, especially
-the one from beam fluctuation (HCBA). Ideally, the electrons bunches with opposite
-polarization should have exactly the same internsity and energy, hitting the target 
-at the same place with the same angle, which is obviously impossible in reality. 
-So we need to correct the false asymmetry introduce by the beam fluctuation. There are a
-few methods to do the correction, one of them is the so called Beam modulation.
-The idea is to introduce man-made fluctuations to the beam through the 
-modulation system, then we can measure the changes in monitors and detectors 
-to find the sensitivities of detectors to changes in energy, position and angle,
-which will be used to correct the measured asymmetry.
-
-The beam modulcation system lies in Beam Switch Yard area right after existing 
-the CEBAF, it consists of 7 air-core coils and an energy vernier, the total 
-number of 8 coils provides a redudancy w.r.t. the free number of degrees 
-of beam phase space, making sure to cover all beam phase space at target.  
-These coils (vernier) are driven by a VME-DAC, which in turns is controlled by the parity DAQ.
-It takes 4.267 s for each coil (vernier) to modulate the beam, a whole 
-modulation cycle takes $85.68 \ s$ ($\sim 1$ beam modulation every 10 mins during
-data taking). For the position and angle modulation, the beam diplacement will
-be $0.3-0.5\ \mu m$ and energy vernier will result in a beam diplacement of $0.75 \ mm$
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.49\linewidth]{bmw_setup}
-    \includegraphics[width=0.49\linewidth]{bmw_modulated_beam}
-\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Polarimeters}
+\subsection{Polarimeters}
 We have 2 polarimeters to measure the polarization: the Compton polarimeter and
 the Moller polarimeter. While being more accurate, the Moller polarimeter makes
 invasive measurement, so we rely on the less accurate but non-invasive Compton
 polarimeter for daily monitor of the beam polarization.
 
-\subsection{Compton Polarimeter}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Compton Polarimeter}
 The Compton polarimeter is non-invaisve, therefore it
 operates all the time along data taking to monitor the beam polarization. The
 Compton polarimeter locates at the entrance to hall A (about 20 m upstream the 
@@ -785,7 +830,8 @@ uncertainty.
     \label{fig:compton_pol}
 \end{figure}
 
-\subsection{Moller Polarimeter}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Moller Polarimeter}
 The Moller polarimeter uses elastic electron-electron scattering to measure the
 asymmetry due to different beam polarizations. Since this is a pure QED process,
 its cross section is well understood and easily calculable to high order:
@@ -912,3 +958,32 @@ Hall A resolution
     \item Stripline Electrode Electronic (SEE) BPM and BCM
     \item Cross check, and unfold beam fluctuation noise from instrumentation noise
 \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Beam Modulation}
+It is very important for PVES to control the systematic uncertainty, especially
+the one from beam fluctuation (HCBA). Ideally, the electrons bunches with opposite
+polarization should have exactly the same internsity and energy, hitting the target 
+at the same place with the same angle, which is obviously impossible in reality. 
+So we need to correct the false asymmetry introduce by the beam fluctuation. There are a
+few methods to do the correction, one of them is the so called Beam modulation.
+The idea is to introduce man-made fluctuations to the beam through the 
+modulation system, then we can measure the changes in monitors and detectors 
+to find the sensitivities of detectors to changes in energy, position and angle,
+which will be used to correct the measured asymmetry.
+
+The beam modulcation system lies in Beam Switch Yard area right after existing 
+the CEBAF, it consists of 7 air-core coils and an energy vernier, the total 
+number of 8 coils provides a redudancy w.r.t. the free number of degrees 
+of beam phase space, making sure to cover all beam phase space at target.  
+These coils (vernier) are driven by a VME-DAC, which in turns is controlled by the parity DAQ.
+It takes 4.267 s for each coil (vernier) to modulate the beam, a whole 
+modulation cycle takes $85.68 \ s$ ($\sim 1$ beam modulation every 10 mins during
+data taking). For the position and angle modulation, the beam diplacement will
+be $0.3-0.5\ \mu m$ and energy vernier will result in a beam diplacement of $0.75 \ mm$
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.49\linewidth]{bmw_setup}
+    \includegraphics[width=0.49\linewidth]{bmw_modulated_beam}
+\end{figure}
+
