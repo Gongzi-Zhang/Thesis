@@ -11,6 +11,36 @@ to PV asymmetry. So we need to remove such noise in the raw asymmetry we measure
 We use the same methods to process both PREX-II and CREX data, therefore we will
 talk about only CREX data here.
 
+\begin{table}
+    \begin{tabular}{c | c c c c }
+	\hline
+	variable    & quadruplet    & minirun	& run	& slug	\\
+	\hline
+	count	    &	&   &	&   \\
+	raw asymmetry ($ppk$)	&   \\
+	corrected asymmetry ($ppk$)	&   \\
+	\hline
+	bpm4aX	\\
+	bpm4aY	\\
+	bpm4eX	\\
+	bpm4eY	\\
+	bpm12X	\\
+	\hline
+    \end{tabular}
+    \caption{CREX Data Set}
+\end{table}
+
+\begin{table}
+    \begin{tabular}{c | c c c}
+	\hline
+	variable    & regression    & dithering	    & Lagrangian    \\
+	\hline
+	slope	\\
+	correction ($ppm$)  \\
+	\hline
+    \end{tabular}
+\end{table}
+
 CREX started commissioning around December 2019, we took the first good run on 
 Dec 12. 6 slugs (slug 100 - 105) were collected before the Christmas. After 
 the Christmas break, data taking was resumed until Jan 18 2020 when the \Ca 
@@ -44,6 +74,91 @@ we will talk about later.
     first 2 months is not so efficient due to various problems.}
 \end{figure}
 
+CREX collected 1451 production runs, among them, 1386 were identified as `Good'
+and used for final analysis. The good runs consists of 1362 both arms runs,
+6 left arm runs and 18 right arm runs. Each good production run took about $1\ hour$
+and collected about $0.3\ C$ charge with a charge efficiency of 80\%.
+\begin{figure}[h!]
+    \includegraphics[width=0.32\linewidth]{crex_run_time}
+    \includegraphics[width=0.32\linewidth]{crex_run_charge}
+    \includegraphics[width=0.32\linewidth]{crex_run_charge_efficiency}
+    \caption{Statistics of CREX runs}
+\end{figure}
+
+Though electrons come bunch by bunch, the bunch frequency of $249.5\ MHz$ is much
+larger than our helicity frequency of $120\ Hz$, so electron beam can be regarded
+as continous. All electrons within one helicity window will be integrated as 1
+record. Every 4 continuous helicty window data is grouped as quadruplet 
+in order to cancel the $60\ Hz$ noise in line power, and asymmetry will be 
+calculated based on quadruplet -- this is what we called one asymmetry event.
+So the asymmetry event frequency is $30\ Hz$. CREX collects ??? such good 
+asymmetry events.
+
+Every run is seperated into multiple miniruns to account for the fact beam
+conditions is changing quickly, it is inappropriate to calculate slope values
+over a 60 mins run. Minirun will be more proper, the beam conditions, and therefore
+the slope value should be more stable during such a shorter time period.  
+Every minirun contains 9000 events (5 mins), the last minirun contains 
+whatever number of events that can't be divided into 2 miniruns. 
+CREX has 8527 miniruns in total.
+
+Runs will be grouped into slugs. One slug is defined as all runs before the next
+IHWP flipping. With good beam conditions, we could collect 3 slugs per day, so 
+each slug took about 8 hours or longer in case of any accidents. CREX collects
+120 slugs.
+
+Finnaly, slugs will be grouped into part, with different wien flip status. We
+have 3 parts as said before.
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[xscale=2]
+	\tikzstyle{message} = [align = center]
+	\draw[dashed, cyan] (-0.1, 0) -- (4.2, 0);
+	\foreach \x in {0, 1}
+	{ \draw[dashed, red] (\x, 1.2) -- (\x, -3.5); }
+	\foreach \x in {0, 4}
+	{ \draw[thick, ForestGreen] (\x, 0) -- (\x, 1); }
+	\foreach \x in {1, 3}
+	{ \draw[thick, ForestGreen] (\x, -1) -- (\x, 1); }
+	\foreach \x in {0, 3}
+	{ 
+	    \draw[thick, ForestGreen] (\x, 1) -- +(1, 0); 
+	    \node[blue] at (\x+0.5, 0.5) {\textbf{+}};
+	}
+	\foreach \x in {1, 2}
+	{ 
+	    \draw[thick, ForestGreen] (\x, -1) -- +(1, 0); 
+	    \node[red] at (\x+0.5, -0.5) {\textbf{-}};
+	}
+	\node[message, ForestGreen, very thick] at (-1, 0) {Helicity \\  Window \\ 120 Hz};
+
+	\foreach \x in {0, ..., 3}
+	{
+	    \draw[Mulberry] (\x, -3.2) -- ++(0.1, 0) -- ++(0, 1.5) -- ++(0.8, 0) 
+	    -- ++(0, -1.5) -- ++(0.1, 0);
+	}
+	\draw[stealth-stealth, black] (2.1, -1.6) -- node[above] {$t_{\text{stable}}$}+(0.8, 0) ;
+	\draw[stealth-stealth, black] (1.9, -2.4) -- node[below] {$t_{\text{settle}}$}+(0.2, 0) ;
+	\draw[stealth-stealth, Violet] (0, -3.5) -- node[below] {30 Hz} +(4, 0);
+	\node[message, Mulberry, very thick] at (-1, -2.5) {Integrating \\ Gate};
+    \end{tikzpicture}
+    \caption{For CREX, $t_{\text{settle}} = 90\ \mu s$, to allow the PC stablizes
+    after flipping, avoiding any cross effect from last helicity state. The 
+    deputy factor is 98.92\%.}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Cut}
+We have only very loose cut on datas to keep as much data as possible. The online
+cuts include a current cut and some stability cuts. The current cut requires
+the beam current no smaller than $15\ \mu A$ below the nominal current, due to 
+non-linearity in monitor/detector pedestals. The stability cut says ???
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Beam Current}
+We have 5 bcms and the upstream analog bcm is used as the target current monitor.
+where are the 5 bcms
+why choose bcm\_an\_us as bcm\_target?
+
 \begin{itemize}
     \item non-linearity from electronics read out: false asymmetry. PMT $\rightarrow$
 	preamplifier $\rightarrow$ ADC
@@ -61,6 +176,8 @@ What we call one event is all electrons counted in one helicity window.
 The asymmetry value is calculated using every 4 (8 in PREX-II) helicity windows
 (+\-\-+ or -++-)to cancel the 60 Hz line power noise. The helicity pattern was
 chosed pseduo-randomly. The CREX data consists of ??? event.
+
+ErrorFlag 
 
 beam jetter ??? in position, ??? in energy and ??? in time scale
 
@@ -80,46 +197,48 @@ $$ asym = \frac{v^+ - v^-}{v^+ + v^-} $$
 \subsection{Measured Asymmetry}
 \subsection{Beam False Asymmetry}
 
+Can we count number of electrons from detector read out?
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Regression}
+
 \subsection{The Model}
-Considering one monitor and one detector. Assuming the reading noise of both 
-monitors and detectors follow the Gaussian distribution:
+Considering one monitor and one detector. Assuming the reading noise of detector
+follows the Gaussian distribution and the monitor is precise:
 \begin{equation*}
     \begin{gathered}
-	M = m + \epsilon(0, \sigma_0^M)    \\
+	M = m	\\
 	D = d + \epsilon(0, \sigma_0^D)    \\
     \end{gathered}
 \end{equation*}
-Here, M (D) is the measured value while m (d) is the real value and
-$\sigma_0^M$ ($\sigma_0^D$) is the variance of the noise for Monitor (Detector).
+Here, M (D) is the measured value while m (d) is the true value and $\sigma_0^D$ 
+is the variance of the noise for Detector.
 
 Then the difference between beams of opposite polarization will follow also
 the Gaussian distribution with a larger variance:
 \begin{equation*}
     \begin{gathered}
-	\Delta M = M^+ - M^- = (m^+ + \epsilon(0, \sigma_0^M)) - (m^- + \epsilon(0, \sigma_0^M))
-	    = \Delta m_0 + \epsilon(0, \sqrt{2}\sigma_0^M)
-	    = \Delta m_0 + \epsilon(0, \sigma_1^M) \\
+	\Delta M = M^+ - M^- = d^+ - d^-    
+	    = \Delta d_0    \\
 	\Delta D = D^+ - D^- = (d^+ + \epsilon(0, \sigma_0^D)) - (d^- + \epsilon(0, \sigma_0^D))
 	    = \Delta d_0 + \epsilon(0, \sqrt{2}\sigma_0^D)
 	    = \Delta d_0 + \epsilon(0, \sigma_1^D) \\
     \end{gathered}
 \end{equation*}
-Again, $(\Delta M)_0$ ($\Delta D)_0$ is the real difference between the
-different polarized beam while $\Delta M$ ($\Delta D$) is the measured value.
+Again, $\Delta m_0$ ($\Delta d_0$) is the real difference between the
+different polarized beams while $\Delta M$ ($\Delta D$) is the measured value.
 
-The probability for measuring $\Delta M$ and $\Delta D$ will be:
+The probability for measuring $\Delta D$ will be:
 \begin{equation*}
     \begin{gathered}
-	P(\Delta M) = \frac{1}{\sigma_1^M\sqrt{2\pi}} e^{-\frac{1}{2}\left( \frac{\Delta M - \Delta m_0}{\sigma_1^M}\right)^2}    \\
 	P(\Delta D) = \frac{1}{\sigma_1^D\sqrt{2\pi}} e^{-\frac{1}{2}\left( \frac{\Delta D - \Delta d_0}{\sigma_1^D}\right)^2}    \\
     \end{gathered}
 \end{equation*}
 
 We will have a bunch of data points: $(\Delta M, \Delta D)_i$ and we want to
-extract the relationship between $\Delta d_0$ and $\Delta m_0$: $c \equiv \frac{\partial D}{\partial M}$,
-we will use regression to derive it (assuming linear relationship).
+extract the relationship between $\Delta d_0$ and $\Delta m_0$: 
+$c \equiv \frac{\partial d}{\partial m}$ -- given the tinyness of $\delta m$, first
+order is precise enough. This is exactly a regression problem.
 $$ \Delta d = c \Delta m $$
 
 For any real data point $(\Delta m_0, \Delta d_0)_i$, the possibility to measure
@@ -131,13 +250,13 @@ $(\Delta M, \Delta D)_i$ is:
     \end{gathered}
 \end{equation*}
 
-For the accumulated data of one minirun (about 5 mins of data taking), the total
-probability will be:
+For the accumulated data of one minirun, the total probability will be:
 \begin{equation*}
     P = \prod_i^n P_i(\Delta D|\Delta M) = \prod_i^n \frac{1}{\sigma_1^D\sqrt{2\pi}} 
 	    e^{-\frac{1}{2}\left( \frac{\Delta D_i - c\Delta m_0}{\sigma_1^D}\right)^2}
 \end{equation*}
 
+What's the typical noise of bcm/bpm?
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
