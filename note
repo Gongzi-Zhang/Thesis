@@ -91,3 +91,16 @@ in closing
 	      https://hallaweb.jlab.org/equipment/high_resol.html
 * JLab thesis: https://misportal.jlab.org/ul/publications/search/advanced_search.cfm?title=&author=&JLabNumber=&notJlabNumber=jlab_number&Abstract=&year=&pub_type=Thesis&experiments=&journal=0&meeting=&affiliations=1.CS.003.0002.01&fileExt=&maxrows=10000&order_by=monthyear+desc&Submit_button=+Search+Pubs+&searchtype=complex/
 * JLab Mott polarimeter: https://www.jlab.org/accel/inj_group/mott/mott.html
+
+* crex respin2:	/lustre19/expphy/volatile/halla/parity/crex-respin2/
+    * japan raw file: japanOutput
+* CAD images: /u/group/halla/halla_eng/PREX\ CREX/HALL_A_PREX_II
+* Michael's resource: /u/group/halla/www/hallaweb/html/parity/prex
+* rcdb: /u/group/halla/www/hallaweb/html/rcdb_home
+* misc: /u/group/,  /u/group/halla
+* crex online: /u/group/prex/analysis/www/crex
+
+# jcache
+> jcache get /mss/halla/parity/rootfiles/pass1/crex_respin2/
+> file will be availabel at /cache/halla/parity/rootfiles/pass1/crex_respin2/
+

@@ -507,11 +507,29 @@ what about the symmetry energy at other density values? Especially at the nuclea
 saturation density ($\sim 1.7 \times 10^{44}\ m^{-3}$)? And what about its density
 dependence? Another strategy is the energy density functionals (EDF), which fits
 the binding energy throughout the nuclear mass table to find out the best EDF,
-then use it to calculate $S(\rho)$. The problem is many EDFs can fit equally well
-with the binding energy and even the same S value at $\rho_0$, but have quite 
-different L values. If there is a experiment that can identify L value without 
-model dependence, then no doubt it will help a lot in understanding the symmetry 
-energy and the EoS.
+then use it to calculate $S(\rho)$. Fitting parameterizations are constrained
+by nuclear density, proton RMS radii and nuclear binding energies. 
+The problem is many EDFs can fit equally well with these constrains, but have quite 
+different L values, as shown in Fig. \ref{fig:neutron_EOS}.
+If there is a experiment that can identify S (L) value without model dependence, 
+then no doubt it will help a lot in understanding the symmetry energy and the EoS.
+\begin{figure}
+    \begin{subfigure}[c]{0.5\textwidth}
+	\includegraphics[width=\linewidth]{S_vs_rho_n}
+	\caption{Neutron EOS for 18 Skyrme parameter sets. The filled circles are
+	the Friedman-Panharipande (FG) variational calculations and the crosses are SkX. 
+	\cite{PhysRevSTAB.7.042802}
+	We can see different models have very different symmetry energies.
+	}
+    \end{subfigure}
+    \begin{subfigure}[c]{0.5\textwidth}
+	\includegraphics[width=\linewidth]{S_Pb_in_S_N_EOS}
+	\caption{Symmetry energy for neutron EOS at $\rho_n = 0.1 \text{neutron}/fm^3$
+	(in units of MeV $fm^3$/neutron) vs the S value in \Pb for 18 Skyrme parameter sets. 
+	The cross is SkX. Determination of S in \Pb will greatly constrain the 
+	possible candidates.}
+    \end{subfigure}
+\end{figure}
 % experiments that measure L
 
 % neutron skin
