@@ -100,7 +100,7 @@ to measure this tiny asymmetry precisely.
 	\hline
 	Scattering angle ($\deg$)   & 4.7	& 4.51 \\
 	$Q^2$ ($GeV^2$)	& 0.00616   & 0.0297	\\
-	Scattering rate ($MHz/arm$)   & 576\footnote{This rate doesn't include the contribution from the diamond foils}   & 13 \\
+	Scattering rate ($MHz/arm$)   & $\sim 2200$\footnote{This rate doesn't include the contribution from the diamond foils}   & $\sim28$ \\
 	xsection ($mbarn$)    & 3930.6	& 5.3   \\
 	Acceptance ($msr$)    &	0.0037 & 0.0037  \\
 	\hline
@@ -408,6 +408,17 @@ focus on different aspects. Hall A concentrates on form factors of various nucle
 Hall B digs into generalized parton distributions, Hall C devotes itself to precise
 determination of valance quark properties in nuclei, and finally, the newly 
 established Hall D explores origin of confinement through exotic mesons.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.48\linewidth]{hall_A}
+    \includegraphics[width=0.51\linewidth]{hall_A_bird}
+    \caption{3D and bird view of Hall A \cite{halla_manual}. Originally, they
+    were called High Resolution Hadron Spectrometer (HRHS) and High Resolution Electron
+    Spectrometer (HRES), but they are essentially identical to each other and
+    can be used interchangeably.
+    so now they are called left arm (HRS-L) and right arm HRS (HRS-R).
+    }
+\end{figure}
 
 Because all 4 halls shared the same electron source and the same accelerator, 
 cooperation is needed to make them work at the same time. In terms of electron
@@ -1088,7 +1099,7 @@ which was about 0.75 for PREX-II and CREX.
 % https://prex.jlab.org/DocDB/0005/000502/002/CREX_Moller_Polarimetry_Systematics_Oct_2021.pdf
 The target foil was cooled by conduction through the target, whose temperature 
 will climb quickly with increase beam current, causing damage to target
-polarization. Therefore moller polarimeter can only operate at very low current ($\sim \mu A$).
+polarization. Therefore moller polarimeter can only operate at very low current ($\lesssim 1\mu A$).
 The extrapolation from polarization measurement at low current to high current
 where PREX-II and CREX run at, is a large source of systematic uncertainty.
 During PREX-II and CREX, the target polarization was measured to be $\CP_t \sim 8\%$ 
@@ -1142,7 +1153,7 @@ the voltage induced by the electron bunches in each electrode is sensitive to be
 Therefore we can extract (x', y') positions from opposite 2 pickup signals.
 \begin{figure}
     \centering
-    \includegraphics[width=0.4\linewidth]{stripline_bpm}
+    \includegraphics[width=0.35\linewidth]{stripline_bpm}
     \caption{Schematic plot of stripline BPM}
 \end{figure}
 \begin{equation}
@@ -1326,8 +1337,8 @@ The motion along ladder axis can be precise to $\sim12\ nm$.
 There are 2 target ladders in total, one for production targets and the other
 one for calibration targets. The production-ladder had 10 \Pb targets, 
 two Calcium isotope targets: \ca and \Ca, and 4 other calibration and diagnostic
-targets. The calibration-ladder holded a watercell, a thin C foil, a thin natural 
-Pb and a thin \ca target.
+targets, 16 target slots in total. The calibration-ladder had 5 targets, a carbon 
+hole, a watercell, a thin C foil, a thin natural Pb and a thin \ca target.
 The calibration-ladder was rotated $45^\circ$ w.r.t. the production ladder, 
 which was along the lab x axis, as shown in Fig. \ref{fig:scattering_chamber}
 and \ref{fig:target_ladder}.
@@ -1340,8 +1351,8 @@ and \ref{fig:target_ladder}.
 \end{figure}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.6\linewidth]{target_ladder}
-    \includegraphics[width=0.25\linewidth, angle=90]{calibration_ladder}
+    \includegraphics[width=0.67\linewidth]{target_ladder}
+    \includegraphics[width=0.2\linewidth, angle=90]{calibration_ladder}
     \caption{Production target ladder and calibration ladder}
     \label{fig:target_ladder}
 \end{figure}
@@ -1350,8 +1361,8 @@ The \ca and \Ca targets were installed on the cold heat sink in dedicated cylind
 sockets at the end of the production ladder. % tilted $45^\circ$ to beam axis. 
 The fact that the \Ca and the \Pb 
 targets share the same ladder means they actually had the same z location,
-therefore the same scattering angle, to save some effort in the re-installation 
-and re-commission of the target chamber.
+therefore the same scattering angle (CREX scattering angle was proposed at $4^\circ$), 
+to simplify the design, construction and installation of the target chamber.
 
 Special care was needed for \Ca target, the pressure should be less than $10^{-6}\ tort$
 to avoid Ca oxidation. The vacuum of the target chamber was maintained by a 
@@ -1370,16 +1381,20 @@ while the calibration ladder was water cooled, the calibration runs need only
 $\lesssim 1\ \mu A$ level beam current. Both ladders were made of cooper,
 the cooper frame of the production ladder was cooled by $15\ K$, $12\ atm$ gaseous helium, 
 which runs through the cooling tube surrounding the frame.
+Contact between the target and the frame and within each layer of the \Pb sandwich
+target is also important. Belleville washers were used to clamp the lead and 
+diamond foils to ensure contact as temperature changes in the beam, besides, 
+a thin layer of Apiezon L vacuum grease was applied to their interface to improve 
+heat conductivity. In the diamond/copper interface, a silver-based paste compound
+was used for the same purpose.
 % https://prex.jlab.org/DocDB/0000/000012/001/tgtchamber_err2_17may2017.pdf
 For D-Pb-D sandwich target with thick C foil, the heat loading will be $100\ W@70\ \mu A$
-with a $4\times 6 \ mm$ raster, the cooling system kept the Pb target stay at
-$\ K$ (FIXME) (melting point at $600 \ K$). For \Ca target, With $150\ \mu A$ beam current, 
-it will produce about $370\ Watts$ heat on the target, which raised the target temperature to
-% TargetOperation.pdf
-$\ K$ (FIXEM) (melting point at $1115\ K$).
-The max temperature of Ca will reach $203\ K$, assuming perfect contact between
-Ca foil and the cooper frame and a $15\ K$ coolant.
-
+with a $4\times 6 \ mm$ raster, the cooling system would keep the Pb target stay at
+$\sim60\ K$ (melting point at $600 \ K$) assuming good contact and smooth heat
+conduction. For \Ca target, With $150\ \mu A$ beam current, 
+it will produce about $370\ Watts$ heat on the target, which raised the target temperature 
+up to $\sim300\ K$ (melting point at $1115\ K$).
+% TargetOperation.pdf, tgtchamber_err2_17may2017.pdf
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1450,10 +1465,10 @@ shown in Fig. \ref{fig:target_temp_with_raster}.
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Beamline Collimator}
+\subsection{Beamline Collimator and Sieve Slit Collimators}
 \begin{figure}[h!]
     \centering
-    \includegraphics[height=0.23\paperheight]{beamline_collimator_side}
+    \includegraphics[height=0.21\paperheight]{beamline_collimator_side}
     \hspace{1 cm}
     \includegraphics[width=0.4\linewidth]{beamline_collimator_top}
     \caption{Side and top view of beamline collimator. Beam from left to right.}
@@ -1503,6 +1518,24 @@ neutrons from the collimator.
 % PREX-I O-ring failure: a large raster and a high current: 
 % https://hallaweb.jlab.org/halog/html/1004_archive/100413092229.html
 
+On both sides of the beamline collimator were the sieve slit collimators, which
+were used for optics study, helping electron trajectory reconstruction. When
+we took production data, the sieve slit collimators were moved out of the spectrometer
+acceptance; when we took optics data to measure the scattering angle and $Q^2$,
+the sieve slit collimators were put in to cover the whole spectrometer acceptance,
+without interfering the inner bore of the the beamline collimator. With known
+(x, y) information of each hole in the sieve plane, together with the vertical
+drift chamber (VDC) tracker, we can reconstruct the beam transport matrices.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.48\linewidth, angle=180]{beamline_collimator_and_sieve_slit}
+    \hspace{1cm}
+    \includegraphics[scale=0.18, angle=180]{beamline_collimator_and_sieve_slit_1}
+    \caption{Front picture of beamline collimator and sieve slit collimators, looking 
+    downstream. One can clearly see a cylinder removed from the central collimator.
+    The sieve planes lie after the beamline collimator and are movable like
+    a door, it can be opened or closed remotely.}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Septum}
@@ -1513,8 +1546,12 @@ magnet to guide the scattered electrons into HRS.
 
 The septum magnets are normal conducting magnets that consist of 3 coils, 
 by applying large current, it will produce a
-strong magnetic field (up to $\sim 1 \ T$ in the central region). A septum beampipe
-will connect the upstream collimator box and the downstream HRS vacuum pipe.
+strong magnetic field (up to $\sim 1 \ T$ in the central region). A non-magnetic
+stainless vacuum box will connect the upstream collimator box and the downstream 
+HRS vacuum pipe on both sides of the septum. The septum beampipe (the one that
+leads to the beam dump) is made of magnetic stainless steel to shield the
+magnetic field from the septum, on both ends of the septum beampipe, there
+are magnetic steel box to shield the fringe magnetic field from septum. 
 
 \begin{figure}[h!]
     \includegraphics[width=0.52\linewidth]{septum}
@@ -1525,27 +1562,190 @@ will connect the upstream collimator box and the downstream HRS vacuum pipe.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{High Resolution Spectrometer (HRS)}
-As its names implies, the high resolution capability of the spectrometer helps
-us to reject most of inelastic electrons, leaving us a relative clean data with
-very small background from inelastic scattering. The HRS consists of 3 quadrupoles 
-and one dipole in each arm, the quadrupoles magnetic field is around $0.2 \ T$,
-while the dipole magnetic field will reach as high as $0.4 \ T$.
-the collimator at the Q1 entrance defines the acceptance shape.
+The key component of every Hall A experiment -- spectrometer. The most frequently
+used ones are the high resolution spectrometer pair. Each HRS consists 3 superconducting
+quadrupoles and 1 dipole. The maximum magnetic field of the 3 quadrupoles are
+$1.2$, $1.0$ and $1.0\ T$ respectively while the dipole can provide up to $1.7\ T$ field. 
+The incoming electrons will be bent $45^\circ$ up in the vertical plane and then
+received by the following detectors.
+HRS has a small anglular acceptance ($\pm 28\ mr$ horizontally, $\pm 60\ mr$ vertically, 
+% Vertical_drift_chambers_for_the_Hall_A_high-resolu.pdf
+the solid angle being $7.8\ msr$), but can move over a wide range of angle
+around the hall ($12.5^\circ - 165^\circ$). As its name implies, it achieves a 
+very high momentum resolution at the $10^{-4}$ level over a wide range of momentum 
+($0.8 - 4\ GeV$). This capacity helped us to reject most of inelastic electrons, 
+beacause a small difference in electron momentum ($2-3\ MeV$) will lead to
+large seperation in the detector plane, thus leaving us a relative clean data 
+with very small background from inelastic scattering. 
+
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.8\linewidth]{HRS}
+    \includegraphics[width=0.32\linewidth]{HRS_1}
+    \includegraphics[width=0.32\linewidth]{hrs_rays}
+    \includegraphics[width=0.32\linewidth]{hrs_inelastic}
+    \caption{Schematic plot of HRS and particle rays inside it. \cite{halla3d}
+    The 'focal plane' in the middle plot, by design, should be at an angle of $45^\circ$
+    w.r.t the central ray, but is actually rotated to $70^\circ$ due to lackness
+    of sextupole winding in Q3. When we talk about the HRS focal plane, we
+    usually refer to the VDC lower plane.
+    }
+\end{figure}
+
+Before the entrance of Q1 quadrupoles was the Q1 collimator, which defined
+the sepctrometer acceptance. It was strictly required that the symmetry between
+left/right, and up/down of Q1 collimators should be preserved to reduce any
+possible systematic uncertainties.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Q1_collimator}
+    \caption{Picture of Q1 collimator pairs}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Detector Package}
+The standard HRS detector package on each arm consists of trigger scintillators for
+triggering, a pair of VDCs for particle tracking, Cherenkov type detectors and
+shower counters (calorimeters) for particle identification (PID). In PREX-II
+and CREX, we needed only part of these detectors, namely VDCs and S0/S3 triggers,
+others were removed for safety. We built our own Cherenkov counters that can 
+work in the so called 'intergrating mode'.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{detectors_1}
+    \caption{The detector package}
+    \label{fig:detectors}
+\end{figure}
+
+\subsubsection{Vertical Drift Chamber (VDC)}
+Each VDC detector package consists of 2 drift chambers, one lower and one upper
+chamber with a vertical seperation of $0.23\ m$ ($0.335\ m$ between the same
+U or V planes of the lower and upper chamber), to enable precise position and angle measurement. 
+The drift chamber is actually a multiwire proportional chamber (MWPC) with 2 
+layers of sense wires -- U and V planes in the lab horizontal plane, which are 
+orthoganal to each other and has a vertical seperation of $26\ mm$. 
+Each wire plane consists of 368 tungsten wires with the width of adjacent wires 
+being $4.24\ mm$, corresponding to $6\ mm$ in the spectrometer cross section due to the $45^\circ$
+cross angle between the central ray and the VDC plane. The ion's drift time in 
+the chamber are used to reconstruct particle trajectory. The single plane can
+achieve a position resolution of $\sim 235\ mm$ FWHM, the angular resolution
+is $6\ mrad$ FWHM for $\theta$ (out-of-plane angle) $2.3\ mrad$ for $\phi$ (in-plane
+angle) \cite{FISSUM2001108}.
+% composition, configuration and performance
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{VDC}
+    \caption{Schematic plot of VDCs showing UV wires \cite{FISSUM2001108}}
+\end{figure}
+
+VDCs were only used for optics runs in PREX-II and CREX, when we collect electrons
+one by one to measure their scattering angle and energy, otherwise they were
+turned off during normal production runs.
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsubsection{GEMs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Trigger}
+Same as VDCs, triggers were only used in counting mode for optics study. The standard
+detector package consists of multiple trigger planes, and we used only 2 of them:
+S0 and S3 plastic scintillators. The S0 scintillator locates between VDCs and the main
+detectors while S3 lies behind the main detectors, they have a sensitive area
+of $170\ cm$ long by $25\ cm$ wide. Their signals were logically combined to 
+provide different trigger rate. The trigger rate was controlled to be less
+than $50\ kHz$ most of the time (the up limit of VDC is about $250\ kHz$).
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Main Detector}
+The main detector of PREX-II and CREX was the $5\ mm$ thick fused silica (quartz) tiles,
+with a size of $16\ cm$ long by $3.5\ cm$ wide ($3\ cm \times 3\ cm$ active area). 
+2 identical quartz detectors were installed with the upstream one used as the 
+main detector and the downstream one as the backup (also used for a cross check 
+in PREX-II). They are tilted to be perpendicular to the electron rays.
+The high refractive index of quartz ($n\approx 1.45$) means the opening angle $\theta$
+in Fig. \ref{fig:quartz} is about $46^\circ$, larger than the critical angle
+to make total internal reflection ($\theta_c = \arcsin\frac{1}{n} = 43.6^\circ$),
+therefore, the Cherenkov light produced by high energy electrons will be totally
+reflected inside the quartz and finally collected by the PMT. The high photon
+yield make it easier to resolve the electron peak, which was beneficial given
+the fact that non-linearity of the PMTs is one of the major contributors to 
+systematic uncertainties.
+\begin{figure}
+    \includegraphics[width=0.3\linewidth]{quartz}
+    \includegraphics[width=0.3\linewidth]{Cherenkov}
+    \begin{tikzpicture}[xshift=2cm]
+	\draw[fill, Gray] (0, 0) -- ++(-2,2) -- ++(0.25, 0.25) node[right] {\small{quartz}} -- ++(2.25, -2.25) -- (0, 0);
+	\draw (0, 0) -- ++(0, -0.8) -- ++(0.5, 0) node[right] {\small{PMT}} -- ++(0, 0.8);
+	\draw[fill] (0, -0.8) -- ++(0, -0.2) -- ++(0.5, 0) -- ++(0, 0.2);
+	\foreach \i in {1, 2, 3}{
+	    \draw[red] (135:\i*0.1) -- ++(0, 0.5) -- ++(-0.5, 0) 
+		-- ++(0, 0.5) -- ++(-0.5, 0)
+		-- ++(0, 0.5) -- ++(-0.5, 0);
+	    \draw[red, -stealth] (135:\i*0.1) -- ++(0.5, 0) -- ++(0, -0.5-\i*0.1);
+	    }
+	\draw[-stealth,Blue, line width=1mm] (-2, 0) -- ++(2, 2) node[below right] {\small{electrons}};
+	\node[red] at (0.8, 0.5) {\small{Cherenkov}};
+    \end{tikzpicture}
+    \caption{Left: CAD drawing of the quartz detector; 
+    Middle: schematic plot of Cherenkov radiation, the angle between 
+    electron and the Cherenkov radiation is 
+    $\cos\theta = \frac{v_c}{v_e} = \frac{c}{nv_e} = \frac{1}{n\beta} \approx \frac{1}{n}$;
+    Right: electron flux goes through a quartz detector.
+    }
+    \label{fig:quartz}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{quartz_QE}
+    \caption{Simulation result of photo-electron (PE) spectrum for single electron
+    passing through the main detectors. The wider tail in the downstream
+    detector is due to particle showering in the upstream quartz.
+    Plot from Devi Adhikari.}
+\end{figure}
+The width of the photon-electron distribution will increase
+the statistical uncertainty:
+\begin{equation}
+    \sigma_{A} = \sigma_{stat} \times \sqrt{1 + \left( \frac{\sigma_{PE}}{\langle PE \rangle }\right)^2}
+\end{equation}
+where $\sigma_{PE}$ is the RMS of the distribution. The RMS can be parameterized
+into 2 parts: the Gaussian princaple part which is inversely proportional to
+the quartz thickness and a Landou tail which comes from the showering process
+and is proportional the thickness. The final decision of $5\ mm$ of thickness
+was a compromise between these 2 parts to minimize detector resolution 
+$\frac{\sigma_{PE}}{\langle PE \rangle}$: thicker to increase photon-electron
+yield and thinner to reduce showering.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.32\linewidth]{quartz_x}
+    \includegraphics[width=0.32\linewidth]{quartz_y}
+    \includegraphics[width=0.32\linewidth]{quartz_xy}
+    \caption{Data of x,y distribution on quartz. Plots from Devi Adhikari.}
+\end{figure}
+
+There was a homemade motion control system in each arm to move the main detectors
+remotely, which allowed us to tune the position of the main detectors when we
+changed gain of the main detectors under a different beam current.
+
+% Can we used it as calorimeter? How do measure the beam energy?
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{AT Monitors}
+About $1\ m$ downstream the main detector were a pair of AT monitors, as shown 
+in Fig. \ref{fig:detectors}, which used exactly the same quartz piece as the 
+main detectors. They were used to minotor transverse polarization in the beam.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.48\linewidth]{ATL1}
+    \includegraphics[width=0.48\linewidth]{ATL2}
+    \caption{Scatter plot of electrons on the AT monitor plane. Red and blue represent
+    events with opposite transverse polarization. 
+    % Some dots outside the AT acceptance due to showering in the upstream main detectors
+    }
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Detector}
-Quartz detector with phototubes (PMT) to detect Cherenkov radiation
-the counting uncertainty will be:
-\begin{equation}
-    \sigma = \sigma_{stat}\sqrt{1 + \sigma^2_{res}}
-\end{equation}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Data AcQuisition (DAQ)}
+CEBAF Online Data Qcquisition (CODA) system
 We use to pseudo random number generator to decide the helicity pattern, which
 will trigger the data taking of both detectors and monitors. DAQ will read data
 from PCs, BPMs, BCMs and detectors, which will then be digitalized by a 18 digits
@@ -1555,3 +1755,4 @@ into 4 blocks. The sum of the 4 blocks was what we got.
 The integrated response of each detector and beam monitor was collected and sampled 
 by a custom 18-bit ADC for each helicity window.
 
+Integrating mode and counting mode
