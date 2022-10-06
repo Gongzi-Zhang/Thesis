@@ -34,36 +34,75 @@ For CREX, Ca48 has good thermal conductivity, so the current can go up to $150\ 
 the contamination is mainly Ca40 ($\sim 4\%$ FIXME), which is also isoscalar
 and spin-0 nucleus, so benign background
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Accptance Function}
-The acceptance function is defined as the proportion of detected electrons
-over scattered electrons, it is a function of the scattering angle $\theta$:
-$$ A(\theta) = \frac{N_{det}(\theta)}{N_{sca}} $$
+As we said before, the spectrometer acceptance was mainly defined by the Q1 
+collimator, but other devices may also have affections on it. And the accepted
+area is quite large ($0.00377 sr$), not every point within the acceptance has 
+the same detection efficiency and cross section asymmetry, therefore what
+we measured was actually the average asymmetry over the acceptance:
+\begin{equation}
+    \CA_{mea} = \frac{\int d\theta \sin\theta A(\theta) \frac{d\sigma}{d\Omega} \epsilon(\theta)}{\int d\theta \sin\theta \frac{d\sigma}{d\Omega} \epsilon(\theta)}
+    \ref{eq:acceptance_function}
+\end{equation}
+Here $\epsilon(\theta)$ is the aceeptance function, which is defined as
+the proportion of electrons that reach the main detector over all scattered
+electrons, which is a function of the scattering angle $theta$:
+$$ \epsilon(\theta) = \frac{N_{det}(\theta)}{N_{sca}} $$
 
-The acceptance function has another importance: only with the acceptance
-function, can we interpret our measurement:
-\includegraphics[width=0.5\linewidth]{asym_ca48}
-\begin{equation*}
-    \langle A \rangle = \frac{\int d\theta \sin\theta A(\theta) \frac{d\sigma}{d\Omega} \epsilon(\theta)}{\int d\theta \sin\theta \frac{d\sigma}{d\Omega} \epsilon(\theta)}
-\end{equation*}
+From Eq. \ref{eq:acceptance_function}, we see the importance of the acceptance
+function. Firstly, it will be a systematic uncertainty of our asymmetry
+measurement; and secondly, only with the acceptance function, can we compare
+our experimental measurement to theoretical predictions to interpret our
+result.
 
-The idea is to match simulation with optics data; then we can extract the 
-acceptance function from the simulation. For optics data, we have 2 sieves
-(which is just a thin steel plane with many holes on it) before the septum.
-Because we know each hole position on the sieve, we can therefore reconstruct
-the transfrom matrices between target and detector. Which can then be used in
-simulation to extract the acceptance function.
+To extract the acceptance function, we have to turn to simulation. Then how
+do we know our simulation was correct? We will compare our simulation result
+to optics runs, and match of various kinematic variables between simulation
+and data was required. 
 
-For the simulation, we need to identify a few things:
-\begin{itemize}
-    \item Beam Position
-    \item 
-\end{itemize}
+When we took optics data, we will put in the sieve slit collimators so that 
+we can reconstruct electron trajectory using track info from VDCs or GEMs 
+to match holes in the sieve plane, therefore we can know the scattering angle, 
+energy for each electron trajectory.
 
-We will scan through some parameters to find the best model:
+In terms of simulation, we will tune a few parameters to find out the best
+match: so called best model, which will be used to calculate the acceptance
+function. The few parameters we explored were:
 \begin{itemize}
     \item Septum current
-    \item Collimator shift
+    \item Q1 collimator shift
     \item Pinch point shift
 \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Data}
+Due to the existance of various magnetic fields (septum, HRS) from target to detector, 
+there is no way to know the exact analytical expression of the transportation
+from target to detectors, we have to measure it.
+is array of parameters that define the evolution of charge particle's trajectory 
+inside a magnetic environment. The electron's trajectory can be parameterized
+as: $(x, \theta, y, \phi, \delta)^T$ w.r.t. to a reference trajectory.
+In the transport coordinate, $\hat{z}$ is the direction of reference trajectory;
+x is the displacement in the dispersive plane relative to the reference 
+trajectory, and $\theta$ is electron's `velocity' in the dispersive plane:
+$\theta = \frac{\partial x}{\partial z}$; similary, y and $\phi$ are displacement
+and `velocity' in the y-z plane, $\hat{y}$ is oriented such that $\hat{x}$, 
+$\hat{y}$, $\hat{z}$ are orthogonal to each other and and they form a 
+right-handed coordinate $\hat{z} = \hat{x} \times \hat{y}$.
+$\delta = \frac{\Delta p}{p}$ represents the fraction deviation of momentum
+from that of the reference trajectory. To first order, the transportation
+
+One clever method is the usage of sieve slit collimator.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Simulation}
+\begin{itemize}
+    \item Beam Position
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Result}
+
 
 % \subsection{tgt variables}
