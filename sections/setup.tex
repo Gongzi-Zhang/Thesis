@@ -114,6 +114,9 @@ to measure this tiny asymmetry precisely.
     \caption{Summary of PREX-II and CREX}
     \label{tb:parameters}
 \end{table}
+\begin{comment}
+    crex rate: https://logbooks.jlab.org/entry/3748863
+\end{comment}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Kinematics}
@@ -898,6 +901,7 @@ needed to make sure the spin is (anti) parallel to electron momentum at target.
     \includegraphics[width=0.6\linewidth]{wien_filter}
     \caption{Schematic plot of double wien filter, electron beam travels from left
     to right. \cite{osti_1059486}}
+    \label{fig:double_wien_filter}
 \end{figure}
 
 This tells us another function of the wien filter, to set a non-longitudinal 
@@ -1519,7 +1523,8 @@ neutrons from the collimator.
 % PREX-I O-ring failure: a large raster and a high current: 
 % https://hallaweb.jlab.org/halog/html/1004_archive/100413092229.html
 
-On both sides of the beamline collimator were the sieve slit collimators, which
+On both sides of the beamline collimator were the $5\ mm$ thick stainless steel
+sieve slit collimators (about $1.1\ m$ from the target), which    % NIM paper
 were used for optics study, helping electron trajectory reconstruction. When
 we took production data, the sieve slit collimators were moved out of the spectrometer
 acceptance; when we took optics data to measure the scattering angle and $Q^2$,
@@ -1592,6 +1597,8 @@ with very small background from inelastic scattering.
     }
 \end{figure}
 
+% HRS magnetic field were monitor by 2 arrays of 3 NMR field probes	% NIM paper
+
 Before the entrance of Q1 quadrupoles was the Q1 collimator, which defined
 the sepctrometer acceptance. It was strictly required that the symmetry between
 left/right, and up/down of Q1 collimators should be preserved to reduce any
@@ -1641,6 +1648,8 @@ VDCs were only used for optics runs in PREX-II and CREX, when we collect electro
 one by one to measure their scattering angle and energy, otherwise they were
 turned off during normal production runs.
 
+% VDC efficiency: http://ace.phys.virginia.edu/HAPPEX/4463
+
 %%%%%%%%%%%%%%%%%%%%%%%%
 % \subsubsection{GEMs}
 
@@ -1653,7 +1662,7 @@ detectors while S3 lies behind the main detectors, they have a sensitive area
 of $170\ cm$ long by $25\ cm$ wide. Their signals were logically combined to 
 provide different trigger rate. The trigger rate was controlled to be less
 than $50\ kHz$ most of the time (the up limit of VDC is about $250\ kHz$).
-
+% T1 records 8.4 kHz for 1.5 uA
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Main Detector}
 The main detector of PREX-II and CREX was the $5\ mm$ thick fused silica (quartz) tiles,
