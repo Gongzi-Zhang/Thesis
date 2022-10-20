@@ -1,4 +1,5 @@
 \newcommand{\CA}{\mathcal{A}}
+\newcommand{\CH}{\mathcal{H}}
 \newcommand{\CI}{\mathcal{I}}
 \newcommand{\CK}{\mathcal{K}}
 \newcommand{\CL}{\mathcal{L}}
@@ -17,3 +18,24 @@
 \newcommand{\Goto}{\Rightarrow}
 \newcommand{\Goback}{\Leftarrow}
 \newcommand{\Godown}{\Downarrow}
+
+\newcommand{\AxisRotator}[1][rotate=0]{
+    \tikz [x=0.2 cm, y=0.45 cm, line width=.2 ex, -stealth, #1] \draw (0, 0) arc (150:-150:1 and 1);
+}
+\newcommand{\AxisRotatorReversed}[1][rotate=0]{
+    \tikz [x=0.2 cm, y=0.45 cm, line width=.2 ex, -stealth, #1] \draw (0, 0) arc (-150:150:1 and 1);
+}
+\newcommand*{\@rowstyle}{}
+
+\newcommand*{\rowstyle}[1]{% sets the style of the next row
+  \gdef\@rowstyle{#1}%
+  \@rowstyle\ignorespaces%
+}
+
+\newcolumntype{=}{% resets the row style
+  >{\gdef\@rowstyle{}}%
+}
+
+\newcolumntype{+}{% adds the current row style to the next column
+  >{\@rowstyle}%
+}

@@ -1,53 +1,482 @@
-\begin{comment}
 \chapter{Systematic Uncertainties}
 
-Systematic uncertainty control is very important to and a highlight of this 
-high-precision experiment. To achieve a smaller systematic uncertainty, a
-combination of fast-control and slow control was employed, which helped us
-to eliminate systematic uncertainties brought by the accelerator to the
+Systematic uncertainty control is very important to and a highlight of these 2
+high-precision experiments. To achieve a smaller systematic uncertainty, a
+combination of fast-control and slow control was employed, which helped 
+to cancel many systematic uncertainties brought by the accelerator to the
 beam. Except the uncertainty from the machine, another important source
-of systematic undertainties come from detection process, namely the 
+of systematic undertainties is the detection process, namely the 
 acceptance function.
+
+After removing false asymmetry from the beam, we need further correction of the
+background asymmetry, namely, target contamination and inelastic scattering,
+as shown in Eq. \ref{eq:background_correction}.
+\begin{equation}
+    \CA_{pv} = \frac{\CA_{cor}/\CP - \sum_i \CA_i f_i}{1 - \sum_i f_i}
+    \label{eq:background_correction}
+\end{equation}
+Here, $\CA_i$ and $f_i$ refer to the asymmetry and rate fraction of background
+processes. In PREX-II, contamination from the diamond foil contributed the
+largest backgroun correction.
+
+The uncertainty proporgation
+\begin{equation}
+    (\delta \CA_{pv})^2 = 
+      \left( \frac{\partial \CA_{pv}}{\partial \CA_{cor}} \delta \CA_{cor} \right)^2
+      + \left( \frac{\partial \CA_{pv}}{\partial \CP} \delta \CP \right)^2
+      + \sum_i \left[ \left(\frac{\partial \CA_{pv}}{\partial \CA_i}\delta \CA_i \right)^2 
+	 + \left(\frac{\partial \CA_{pv}}{\partial f_i}\delta f_i \right)^2 \right]
+\end{equation}
+
+\begin{equation}
+    \frac{\partial \CA_{pv}}{\partial \CA_j} = -\frac{f_j}{1 - \sum_i f_i}  \qquad
+    \frac{\partial \CA_{pv}}{\partial f_j} = \frac{\CA_{pv} - \CA_j}{1 - \sum_i f_i}
+    \label{eq:systematic_uncertainty}
+\end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{$Q^2$ and $\theta$}
-Physical interpretation of $\CA_{PV}$ requires measurement of precise knowledge
+Physical interpretation of $\CA_{PV}$ requires precise knowledge
 of the scattering angle and corresponding $Q^2$, which were determined using
-a watercell target. As we will discuss later, when we run
-    from the reconstructed scattering angle $\theta_{lab}$,
-Counting mode:
-\begin{itemize}
-    \item low current
-    \item single electron events
-    \item tracks 
-\end{itemize}
-The scattering angle was measured using the watercell target, with the elastic
-scattering peak:
+a watercell target. 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{watercell_Dp}
+    \caption{Momentum distribution of the optics run with watercell. The x-axis
+    is the relative energy difference: $dp = \frac{p - p0}{p0}$. Plot from Siyu}
+    % HRS_optics_siyu
+\end{figure}
+As we see from Eq. \ref{eq:scattered_energy}, the energy difference between the
+2 elastic peaks is
 \begin{equation}
     \Delta E' = E'_O - E'_H = E\left( \frac{1}{1 + \frac{E(1-\cos\theta)}{M_O}} -
     \frac{1}{1 + \frac{E(1-\cos\theta)}{M_H}} \right)
 \end{equation}
-
-\begin{equation}
-    Q^2 = 2EE'(1-\cos\theta)
-\end{equation}
-
+From above equation, we could calculate the scattering angle from the watercell
+target. The advantage of using the watercell target rather than the production
+target directly is that the energy difference between the 2 elastic peaks cancels
+many uncertainties due to electron detection and trajectory reconstruction, therefore
+being more precise.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Carbon Contamination in PREX-II}
-The Pb foil is not good thermal conductivity, which limits the highest current
-we can apply. To help dissipate the heat produced
-by electron bombarment, auxiliary meterials -- the Diamond foils, which are 
-excellent thermal conductivity are used. Besides, C12 is isoscalar, and spin-0 
+% prex_target_subassy_revB.pdf
+The Pb foil is not good thermal conductor, which limited the highest beam current
+we could apply. With pure \Pb foil, it will melt at $\sim 10 \mu A$. To help 
+dissipate the heat produced by electron bombarment, auxiliary meterials -- the 
+diamond foils, which are excellent thermal conductor, were used. 
+With the help of Diomand foils, the
+\Pb target could tolerate up to $\gtrsim 100\ mu A$. Besides, \C is isoscalar, and spin-0 
 nucleus, whose PV asymmetry is well-measured (FIXME), so the background is 
-well-understood. Even so, the highest current is only $70 \ \mu A$.
-
-The Pb208 foil is $0.5\ mm$ thick, each diamond foil is half the thickness 
+well-understood. 
 
 For CREX, Ca48 has good thermal conductivity, so the current can go up to $150\ \mu A$
-the contamination is mainly Ca40 ($\sim 4\%$ FIXME), which is also isoscalar
-and spin-0 nucleus, so benign background
+the contamination mainly come from Ca40 ($\sim 4\%$ FIXME), which is also isoscalar
+and spin-0 nucleus, so benign background.
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Target Thickness}
+The \Pb foil was $0.5\ mm$ thick, the upstream and downstream diamond foils 
+were half the \Pb thickness, as shown in Table \ref{tab:target_thickness}.
+
+% https://prex.jlab.org/DocDB/0004/000446/001/target_thickness_errors.txt
+The target foils' thicknesses were measured differently. The diamond foil's 
+thickness was measured directly using calipers with an accuracy of $0.0005 \ in$ ($0.0127 \ mm$).
+Given diomand foil's thickness of $1\ in$ ($0.255 \ mm$), an estimation of 5\% 
+relative error was reasonbale. Foil to foil variations were small than 5\% (the
+largest variation was 3.6\%), as shown in Table \ref{tab:target_thickness}.
+
+As for the \Pb foil, its thickness (area density) was inferred from its mass 
+and area, which was calculated from the measurement of its four corners ($\rho t = \frac{m}{A}$). 
+So the final result was average over the whole foil, but the rastered beam 
+didn't occupy the whole area, that was a source of uncertainty. The small irregular
+in the edge (corner) was another error. A conservative estimation of the systematic
+uncertainty of \Pb foil was also 5\%. Again, variations from foil to foil were 
+smaller than that (the largest variation being 3.8\%).
+
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{c | c | c c c c}
+	\hline
+	position    & target& \makecell{Upstream \\ ($mg/cm^2$)}    & \makecell{Center \\ ($mg/cm^2$)}     & \makecell{Downstream \\ ($mg/cm^2$)}   & runs  \\
+	\hline
+	1   & C-Pb-C	    & 88    & 556   & 88    & \\
+	2   & D\#I-Pb-D\#J      & 90    & 557   & 90    & \\
+	\hline
+	3   & C-208Pb\#1-C    & 88    & 620   & 88    & \\
+	4   & Carbon 1\%    &       & 445   &	    & \\
+	\hline
+	5   & \color{red}{D\#A-208Pb\#2-D\#B}  & 89.0  & 632   & 88.6  & 3134-3636 \\
+	6   & D\#C-208Pb\#3-D\#D  & 88.2  & 626   & 90.7  & \\
+	7   & D\#E-208Pb\#4-D\#F  & 89.6  & 628   & 91.9  & \\
+	8   & \color{red}{D\#G-208Pb\#5-D\#20} & 86.8  & 632   & 90    & 4372-4607 \\
+	9   & \color{red}{D\#1-208Pb\#6-D\#2}  & 90    & 618   & 90    & 4865-4980 \\
+	10  & \color{red}{D\#3-208Pb\#7-D\#4}  & 90    & 639   & 90    & 4608-4864 \\
+	11  & \color{red}{D\#5-208Pb\#8-D\#6}  & 90    & 620   & 90    & 4147-4370 \\
+	12  & \color{red}{D\#7-208Pb\#9-D\#8}  & 90    & 615   & 90    & 3822-4146 \\
+	13  & \color{red}{D\#9-208Pb\#10-D\#10}& 90    & 623   & 90    & 3644-3821 \\
+	\hline
+	14  & C-Hole	    &       & N/A   &       & \\
+	15  & \color{red}{\Ca}	    &       & 1016  &       & \\
+	16  & \ca	    &       & 1004  &       & \\
+	\hline
+    \end{tabular}
+    \caption{Target thickness of each target in the production ladder. 
+    Name convention: upstream material\#label - central material\#label - downstream material\#label. 
+    Pb208 foils count from 1 to 10, diomand foils count 1-10, A-G, I, J, 20. 
+    The first 2 Pb targets are natural Pb foil, not pure \Pb isotope foil. 
+    The 3rd Pb target is sandwiched by graphite, not diomand. Red color marks
+    out the targets we used in PREX-II and CREX. To convert the number to real 
+    thickness, use the density of $\rho_D = 3.52\ g/cm^3$ and $\rho_{208Pb} 
+    = 11.38 \ g/cm^3$.}
+    \label{tab:target_thickness}
+% in simulation, the density values were 3.515 (diamond) and 11.34 (Pb208) respectively -- from wiki
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Simulation}
+In the simulation, the \Pb foil thickness was set to $0.552\ mm$ ($628.176\ mg/cm^2$), 
+upstream diamond foil $0.2554\ mm$ ($89.9008\ mg/cm^2$) and downstream diamond 
+foil $0.2556\ mm$ ($89.9712\ mg/cm^2$). The central point angle being $4.74^\circ$,
+and raster size $6\ mm \times 4\ mm$. 
+Only simple cuts were applied to the simulation, as shown below.
+
+\begin{lstlisting}[float,style=C][H]
+    xcol != -333 && xvdc != -333    // collimator and vdc see the track
+    && CollimatorL(xcol, ycol)	// Q1 collimator geometry cut
+    && (nuclA == 12 || nuclA == 208)
+    && Pz_peak- Pz < pcut	// radiative tail cut; cut only on lower side
+\end{lstlisting}
+where Pz was the post target electron momentum, Pz peak $948.97\ MeV$ 
+was the momentum peak without momentum cut. With this cut, we could count the scattering
+rate from \C and \Pb directly and calculate the ratio between them.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{prex_C_contamination_P}
+    \caption{Post target electron momentum distribution. The lower end tail comes 
+    from multi-scattering and radiaction.}
+\end{figure}
+
+The goodness of simulatin could be checked by comparison to optics data.
+\begin{table}
+    \centering
+    \begin{tabular}{c c c | c c c c | c c}
+	\hline
+	\multicolumn{2}{c}{target thickness}	& \multirow{2}{*}{\makecell{p cut \\ (MeV)}}	& \multicolumn{4}{c|}{post target $Q^2$ ($GeV^2$)}   & \multicolumn{2}{c}{Asym ($ppm$)}	\\
+	\cline{4-7}
+	Pb & C	&   & Pb & C & C (US)	& C (DS) & Pb    & C \\
+	\hline
+	-5\%	& -5\%	& 2.2	& 0.00625   & 0.00658	& 0.00658   & 0.00658	& 0.55774   & 0.53861 \\
+	-5\%	&  0\%	& 2.2	& 0.00626   & 0.00656	& 0.00658   & 0.00654	& 0.55809   & 0.53776 \\
+	-5\%	&  5\%	& 2.2	& 0.00627   & 0.00658	& 0.00658   & 0.00657	& 0.55883   & 0.53932 \\
+	 0\%	& -5\%	& 2.2	& 0.00627   & 0.00657	& 0.00657   & 0.00657	& 0.55942   & 0.53917 \\
+	 0\%	&  0\%	& 2.2	& 0.00626   & 0.00658	& 0.00657   & 0.00660	& 0.55824   & 0.53936 \\
+	 0\%	&  5\%	& 2.2	& 0.00627   & 0.00658	& 0.00658   & 0.00658	& 0.55847   & 0.53847 \\
+	 5\%	& -5\%	& 2.2	& 0.00625   & 0.00657	& 0.00655   & 0.00658	& 0.55674   & 0.53696 \\
+	 5\%	&  0\%	& 2.2	& 0.00627   & 0.00658	& 0.00659   & 0.00657	& 0.55782   & 0.53808 \\
+	 5\%	&  5\%	& 2.2	& 0.00629   & 0.00659	& 0.00659   & 0.00659	& 0.55847   & 0.53962 \\
+	\hline
+	\multicolumn{3}{c|}{average} & 0.00626	& 0.00658   & 0.00658	& 0.00658   & 0.55820   & 0.53859 \\
+	\hline
+    \end{tabular}
+    \caption{Average post target (left arm) $Q^2$ for various thickness configurations. 
+    As expected, the $Q^2$ doesn't change with varied foil thicknesses. There is
+    some fluctuation in the asymmetry values.}
+    % why the C $Q^2$ is a little larger than that of Pb:
+    % different scattering angle?
+    \label{tab:prex_C_contam_Q2}
+\end{table}
+From which we can calculate the combined $Q^2$ value
+\begin{equation*}
+    Q^2 = \frac{R_C Q^2_C + R_{Pb} Q^2_{Pb}}{R_C + R_{Pb}} 
+	= \frac{6.71\%\times 0.00658 + 0.00629}{6.71\% + 1} = 0.00629
+\end{equation*}
+
+\begin{comment}
+\begin{landscape}
+    \begin{table}
+    \centering
+    \begin{tabular}{c c c | c c c c c c c c c c}
+	\hline
+	\multicolumn{2}{c}{target thicknesses}	& \multirow{2}{*}{\makecell{p cut \\ (MeV)}}	& \multicolumn{2}{c}{$Q^2$ Pb ($GeV^2$)}    & \multicolumn{2}{c}{$Q^2$ C}	& \multicolumn{2}{c}{$Q^2$ C US}  & \multicolumn{2}{c}{$Q^2$ C DS}  & \multicolumn{2}{c}{Asym ($ppm$)}	\\
+	Pb & C	&   & vertex	& post vertex	& V	& P-V	& V & P-V   &V	& P-V	& Pb	& C \\
+	\hline
+	-5\%	& -5\%	& 2.2	& 0.00608   & 0.00625   & 0.00649   & 0.00658	& 0.00641   & 0.00658	& 0.00658   & 0.00658	& 0.55774   & 0.53861 \\
+	-5\%	&  0\%	& 2.2	& 0.00609   & 0.00626   & 0.00648   & 0.00656	& 0.00643   & 0.00658	& 0.00654   & 0.00654	& 0.55809   & 0.53776 \\
+	-5\%	&  5\%	& 2.2	& 0.00610   & 0.00627   & 0.00650   & 0.00658	& 0.00643   & 0.00658	& 0.00657   & 0.00657	& 0.55883   & 0.53932 \\
+	 0\%	& -5\%	& 2.2	& 0.00611   & 0.00627   & 0.00650   & 0.00657	& 0.00643   & 0.00657	& 0.00657   & 0.00657	& 0.55942   & 0.53917 \\
+	 0\%	&  0\%	& 2.2	& 0.00609   & 0.00626   & 0.00650   & 0.00658	& 0.00641   & 0.00657	& 0.00660   & 0.00660	& 0.55824   & 0.53936 \\
+	 0\%	&  5\%	& 2.2	& 0.00610   & 0.00627   & 0.00649   & 0.00658	& 0.00641   & 0.00658	& 0.00658   & 0.00658	& 0.55847   & 0.53847 \\
+	 5\%	& -5\%	& 2.2	& 0.00607   & 0.00625   & 0.00647   & 0.00657	& 0.00637   & 0.00655	& 0.00658   & 0.00658	& 0.55674   & 0.53696 \\
+	 5\%	&  0\%	& 2.2	& 0.00609   & 0.00627   & 0.00649   & 0.00658	& 0.00641   & 0.00659	& 0.00657   & 0.00657	& 0.55782   & 0.53808 \\
+	 5\%	&  5\%	& 2.2	& 0.00610   & 0.00629   & 0.00650   & 0.00659	& 0.00643   & 0.00659	& 0.00659   & 0.00659	& 0.55847   & 0.53962 \\
+	\hline
+	\multicolumn{3}{c}{average} &0.00609 & 0.00626	& 0.00649   & 0.00658	& 0.00642   & 0.00658	& 0.00658   & 0.00658	& 0.55820   & 0.53859 \\
+    \end{tabular}
+	\caption{Average $Q^2$}
+    \end{table}
+\end{landscape}
+
+I am doubting if I was comparing the same thing. 
+In data, $Q^2$ was calculated as:
+$$ Q^2 = 2*beamE*P*(1-\cos(\theta))$$
+where beamE was the average beam energy (before hitting the target), 
+and P was the reconstructed beam energy, or post-target energy 
+and $\theta$ was the reconstructed scattering angle 
+
+But in simulation, $Q^2$ was calculated as:
+$$ Q^2 = 2*E*Ef*(1-\cos(\theta)) $$
+where E was the post vertex beam energy: I made a mistake here, E should be 
+pre vertex beam energy.
+$$ Ef = M*E/(M + E*(1-cos(th))) $$
+was the theorectical beam energy after elastic scattering and $\theta$ was 
+the scattering angle.
+
+Obviously, data and simulation had different definitions:
+$$ beamE > E	\quad P < E	\quad P \stacker{?}{\sim} $$
+The only good news was that beamE, E, P, Ef were all close to each other. Overall,
+the simulation would make the simulation $Q^2$ smaller than that of data. Not
+sure how large the uncertainty was.
+
+The only difference here for vertex and post-vertex was the scattering angle,
+one was the vertex angle and the other being the post-target scattering angle.
+
+The CREX analysis was comparing the same thing.
 \end{comment}
+
+Compare the simulation $Q^2$ to optics data. We saw quite good agreement in left
+arm. For the right arm, the larger scattering angle caused a little difference
+in $Q^2$ (2\%).
+\begin{table}
+    \centering
+    \begin{tabular}{c | c c}
+	\hline
+	arm & $\theta$	& $Q^2$ ($GeV^2$)   \\
+	\hline
+	Left	& $4.748 \pm 0.006$ & $0.00627 \pm 0.00002$	\\
+	Right	& $4.813 \pm 0.004$ & $0.00642 \pm 0.00001$	\\
+	\hline
+    \end{tabular}
+    \caption{Average $\theta$ and $Q^2$ for left and right arms. These values were
+    combination of Pb and C.}
+    \label{tab:prex_C_contam_Q2}
+\end{table}
+
+To study the systematic uncertainties, we varied the thickness of \Pb foil and 
+diamond foil (total thickness) by 5 percent based on the nominal values, and applied
+different momentum cut (varied from 1.8 to 2.6 $MeV$), the result is shown in
+Table \ref{tab:prex_C_contam_rate_thickness} and \ref{tab:prex_C_contam_rate_pcut}. 
+$f_c$ is the rate fraction.
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{=c +c | c | +c +c +c +c}
+	\hline
+	\makecell{\Pb thickness \\ variation}	& \makecell{C thickness	\\ variation}	
+	& \makecell{p cut \\ (MeV)} & \makecell{C rate \\ (MHz)}    & \makecell{\Pb rate \\ (MHz)}  
+	& $\frac{R_C}{R_{Pb}} (\%)$	& $f_c = \frac{R_C}{R_C + R_{Pb}}$ (\%)	\\
+	\hline
+	-5\% & -5\% &	  & 1.26E+2 & 1.88E+3 & 6.72 & 6.30	\\
+	-5\% &  0\% &     & 1.34E+2 & 1.90E+3 & 7.05 & 6.59   \\
+	-5\% &  5\% &     & 1.38E+2 & 1.90E+3 & 7.23 & 6.75   \\
+	 0\% & -5\% &     & 1.22E+2 & 1.90E+3 & 6.43 & 6.04   \\
+	 \rowstyle{\color{red}}   
+	 0\% &  0\% & 2.2 & 1.29E+2 & 1.93E+3 & 6.71 & 6.29   \\
+	 0\% &  5\% &     & 1.35E+2 & 1.89E+3 & 7.11 & 6.64   \\
+	 5\% & -5\% &     & 1.16E+2 & 1.95E+3 & 5.94 & 5.61   \\
+	 5\% &  0\% &     & 1.22E+2 & 1.94E+3 & 6.31 & 5.93   \\
+	 5\% &  5\% &     & 1.28E+2 & 1.91E+3 & 6.72 & 6.30   \\
+	\hline
+    \end{tabular}
+    \caption{Scattering rate of the \Pb and diamond foils with different foil
+    thicknesses.}
+    \label{tab:prex_C_contam_rate_thickness}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{=c c | +c | +c +c +c +c}
+	\hline
+	\makecell{\Pb thickness \\ variation}	& \makecell{C thickness	\\ variation}	
+	& \makecell{p cut \\ (MeV)} & \makecell{C rate \\ (MHz)}    & \makecell{\Pb rate \\ (MHz)}  
+	& $\frac{R_C}{R_{Pb}} (\%)$	& $f_c$ (\%)	\\
+	\hline
+	\multirow{12}{*}{0\%}	& \multirow{12}{*}{0\%}	&
+	    1.80 & 1.24E+2 & 1.86E+3 & 6.68 & 6.26  \\
+	& & 1.90 & 1.25E+2 & 1.87E+3 & 6.69 & 6.27  \\
+	& & 2.00 & 1.27E+2 & 1.89E+3 & 6.70 & 6.28  \\
+	& & 2.05 & 1.27E+2 & 1.90E+3 & 6.70 & 6.28  \\
+	& & 2.10 & 1.28E+2 & 1.91E+3 & 6.71 & 6.28  \\
+	& & 2.15 & 1.29E+2 & 1.92E+3 & 6.71 & 6.29  \\
+	\rowstyle{\color{red}}   
+	& & 2.20 & 1.29E+2 & 1.93E+3 & 6.71 & 6.29  \\
+	& & 2.25 & 1.30E+2 & 1.94E+3 & 6.72 & 6.30  \\
+	& & 2.30 & 1.31E+2 & 1.95E+3 & 6.73 & 6.30  \\
+	& & 2.35 & 1.31E+2 & 1.95E+3 & 6.73 & 6.31  \\
+	& & 2.40 & 1.32E+2 & 1.96E+3 & 6.74 & 6.32  \\
+	& & 2.60 & 1.34E+2 & 1.99E+3 & 6.74 & 6.32  \\
+	\hline
+    \end{tabular}
+    \caption{Scattering rate of the \Pb and diamond foils with different momentum 
+    cut.}
+    \label{tab:prex_C_contam_rate_pcut}
+\end{table}
+
+The uncertainty for each variation was taken to be the absolute difference 
+from the nominal value, as shown below:
+\begin{table}
+    \centering
+    \begin{tabular}{c | c c | c c}
+	\hline
+	variation   & maximum	& diff in $f_C$  & minimum    & diff in $f_C$ \\
+	\hline
+	Pb & (-5, 0) - (0, 0)	& 2.98E-3   & (+5, 0) - (0, 0)	& -3.55E-3  \\
+	C  & (0, +5) - (0, 0)	& 3.53E-3   & (0, -5) - (0, 0)	& -2.49E-3  \\
+	p cut	& (2.6) - (2.2)	& 2.93E-4   & (1.8) - (2.2)	& -2.88E-4  \\
+	\hline
+	total	&   & 4.63E-3	&   & 4.35E-3	\\
+	\hline
+    \end{tabular}
+    \caption{The maximum and minimum difference for each variation. (n1, n2) 
+    represents the configuration of target foils' thicknesses. n1 for Pb foil
+    and n2 for C foil. (pcut) indicates the p cut value}
+    \label{tab:prex_C_contam_error}
+\end{table}
+Based on Table \ref{tab:prex_C_contam_error}, a conservative error value 
+(the larger one) was used , which gave out the final value of $f_C$
+\begin{equation*}
+    f_C = 0.0629 \pm 0.005
+\end{equation*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Cross Check}
+The scattering rate is proportional to the cross section and number of atoms
+in unit area. 
+\begin{equation}
+    R \propto \sigma \times N = \sigma \times \frac{t}{m}
+\end{equation}
+t and m are, respectively, area density and atomic mass. Therefore
+\begin{equation}
+    \frac{R_C}{R_{Pb}} = \frac{\sigma_C}{\sigma_{Pb}} \times \frac{t_c}{t_{Pb}} \times \frac{m_{Pb}}{m_C}
+\end{equation}
+Take $E = 0.95\ GeV$ and $\theta = 4.8^\circ$ (based on Table \ref{tab:prex_C_contam_Q2}), 
+our theorist friends predicted the cross section of C and Pb to be
+\begin{equation*}
+    \sigma_C = 48.001\ mbarn	\qquad \sigma_{Pb} = 3386.100\ mbarn	
+\end{equation*}
+% this angle is different from what we used in simulation 4.74
+
+The ratio of $t_C/T_{Pb}$ was calculated as
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{c | c c c | c c c}
+	\hline
+	target	& \makecell{$t_C$ (US + DS) \\ ($mg/cm^2$)} & \makecell{$t_{Pb}$ \\ ($mg/cm^2$)}	
+	& $t_C/t_{Pb}$  & \makecell{main detector \\ error n} & \makecell{weight \\ $1/\sqrt{n}$}    & \makecell{weighted \\ $t_C/t_{Pb}$} \\
+	\hline
+	Pb208\#2    & 177.6	& 632	& 0.281	& 42.743    & 0.1530	& 0.037 \\
+	Pb208\#10   & 180	& 623	& 0.289	& 33.3465   & 0.1732	& 0.043	\\
+	Pb208\#9    & 180	& 615   & 0.293 & 28.9264   & 0.1859   	& 0.047	\\
+	Pb208\#8    & 180	& 620   & 0.290 & 33.5835   & 0.1726   	& 0.043	\\
+	Pb208\#5    & 176.8	& 632   & 0.280 & 36.3435   & 0.1659   	& 0.040	\\
+	Pb208\#7    & 180	& 639   & 0.282 & 32.7936   & 0.1746   	& 0.042	\\
+	Pb208\#6    & 180	& 618   & 0.291 & 47.6238   & 0.1449   	& 0.036	\\
+	\hline
+		    & 179.2	& 625.6	& 0.286	&	    & 1.1700	& \color{red} 0.287 \\
+	\hline                                                
+    \end{tabular}
+    \caption{Calculation of weighted $t_C/T_{Pb}$, the main detector error was
+    the uncertainty of the main detector mean value (reg\_asym\_us\_avg); the 
+    weighted ratio was calculated as $\frac{w_j}{\sum_i w_i} \times \left( t_C/t_{Pb} \right)_j$.}
+    \label{tab:ratio_of_area_density}
+\end{table}
+
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{c c | c c c | c c}
+	\hline
+	E ($GeV$)   & $\theta$  & Target    & $\sigma$ ($mbarn$)    & m & $\frac{R_C}{R_{Pb}}$ (\%) & $f_C$ (\%)    \\
+	\hline
+	\multirow{2}{*}{0.95}	& \multirow{2}{*}{$4.8^\circ$}	& 
+	      \C    & 48.001	& 12.011    & \multirow{2}{*}{7.04} & \multirow{2}{*}{6.57} \\
+	\cline{3-5}
+	&   & \Pb   & 3386.100	& 207.977   &	& \\
+	\hline
+    \end{tabular}
+    \caption{Theoretical calculation of $f_C$. These are updated values. In the 
+    initial study, the scattering was chosed to be $4.8^\circ$, with corresponding
+    $\sigma_C = 48.001\ mbarn$ and $\sigma_{Pb} = 3386.1\ mbran$, leading to
+    $R_C/R_{Pb} = 7.04\%$ and $f_C = 6.57\%$.}
+\end{table}
+The theoretical value was 4.6\% higher than the simulation result.
+
+\subsubsection{Controbution to $\CA_{pv}$}
+As said before, the asymmetry from carbon scattering was well understood, and
+we had a table of cross section and asymmetry for electron-carbon elastic scattering
+at various energies and scattering angles, which were numerical solved from the Dirac equation
+by our theoretical friends. The same for Pb.
+The asymmetry for carbon was taken to be $539.36 \ ppb$ as shown in Table \ref{tab:prex_C_contam_Q2}
+with the nominal Pb and nominal C thicknesses. The uncertainty for it was taken
+to be a conservative estimation of 4\%.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.49\linewidth]{prex_asym_C}
+    \includegraphics[width=0.49\linewidth]{prex_asym_Pb}
+    \caption{Theoretical values of the asymmetry for C and Pb in our experimental 
+    dynamics predicted by Chuck's table, which included Coulomb correction, cross
+    checked with a Standard Model Born approximation calculation. We see similar
+    asymmetry values for C and Pb.}
+    \label{prex_asym}
+\end{figure}
+Using Eq. \ref{eq:systematic_uncertainty}, we could caluclate the uncertainty
+contribution to $\CA_{pv}$, summarized in Table. \ref{tab:prex_C_contam}
+\begin{equation*}
+    \begin{gathered}
+	\frac{\partial \CA_{pv}}{\partial \CA_C} \delta \CA_C = 
+	-\frac{0.0629}{1 - 0.0629} \times 4\% \times 539.36 = -1.4481\ ppb   \\
+	\frac{\partial \CA_{pv}}{\partial f_C}\delta f_C =
+	\frac{550 - 539.46}{1 - 0.0629} \times 0.00463 = 0.0521\ ppb	\\
+    \end{gathered}
+\end{equation*}
+
+\begin{table}
+    \centering
+    \begin{tabular}{c | c c | c c | c c}
+        \hline
+	\thead{$\CA_{cor}/\CP$ \\ ($ppb$)}   & \thead{$\CA_C$ \\ ($ppb$)}   & $\frac{\delta\CA_C}{\CA_C}$   & $f_C$ & $\delta f_C$  & \thead{rel. error \\ due to $\CA_C$ } & \thead{rel. error \\ due to $f_C$}\\
+        \hline
+	549.34	& $539.36$  & 4\%   & 6.29\%	& 0.463\%   & 0.26\%	& 0.01\% \\
+        \hline
+    \end{tabular}
+    \caption{Relative uncertainty due to $\CA_C$ and $f_C$.}
+    \label{tab:prex_C_contan}
+\end{table}
+The uncertainty caused by error in $f_C$ was negligible, and the one from $\CA_C$
+was also tiny, which in hindsight, justifies our adoption of the sandwich target.
+
+\begin{comment}
+% somehow, the rate derivatino was wrong
+\bigskip
+One could also estimate the rate from measurement. 
+\begin{eqaution}
+    \sigma = \sqrt{\frac{1}{R/30}}
+\end{eqaution}
+\begin{table}[!h]
+    \centering
+    \begin{tabular}{c c c | c c c c c c}
+	\hline
+	Target	& run	& I $(\mu A)$   & \thead{rms \\ ($ppm$)} & \thead{rms@$70\ \mu A$ \\ ($ppm$)} & \thead{bcm res. \\ ($ppm$)}   & \thead{bpm res. \\ ($ppm$)}   & \thead{cor. rms \\ ($ppm$)}  & \thead{rate \\ ($GHz$)}  \\
+	\hline
+	C12	& 4133	& 86.2	& 143	& 158.7	& 20	& 25	& 150.4	& 1.326	\\
+	D-Pb-D	& 4112	& 67.7	& 93	& 91.5	& 20	& 25	& 82.9	& 4.365	\\
+	\hline
+    \end{tabular}
+    \caption{The corrected rms was calculated as: $\sqrt{\frac{\sigma^2 - \sigma^2_{bcm} - \sigma^2_{bpm}}{1 + 0.26^2}}$}
+% why the factor of 0.26
+\end{table}
+The C graphite target has a thickness of $1.991\ mm$ and a density of 
+\end{comment}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Accptance Function}
@@ -165,7 +594,7 @@ The reason that we don't use BPM to `measure' beam position/angle on target is t
 multiscattering/radiation inside the target foil will distort the beam trajectory. 
 
 A typical HRS transportation plot looks like Fig. \ref{fig:hrs_transport}:
-\begin{figure}[h!]
+\begin{figure}[H]
     \includegraphics[width=0.50\linewidth]{hrs_transport_x}
     \includegraphics[width=0.48\linewidth]{hrs_transport_y}
     \caption{Transportation plot of HRS. One can clearly see the dispersion effect
@@ -220,7 +649,7 @@ between them are defined below.
 	to the dispersive plane and points away (toward) the beamline for L-HRS (R-HRS).
 \end{itemize}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \begin{subfigure}[b]{0.5\textwidth}
 	\includegraphics[width=\linewidth]{HCS}
 	\caption{Top view of HCS}
@@ -289,7 +718,7 @@ is a post-target (apparent) quantity, which includes effect of post-vertex radia
 multi-scattering, not the `real' scattering angle (vertex quantity) at the vertex 
 where the interesting PV elastic scattering happens. The correction from the apparent 
 distribution to the vertex distribution is about 1.5\%.
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{scattering}
     \caption{Schematic plot of vertex and apparent quantities.}
@@ -324,7 +753,7 @@ the largest acceptance (\textbf{inner edge search}).
 During the central ray search, if the septum current was inappropriate, 
 then when we changed the Q1 current, the central hole in reconstructed sieve 
 pattern plot would shift, as shown in Fig. \ref{fig:central_ray_0}.
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.32\linewidth]{minus10_septum_minus10_Q1_right}
     \includegraphics[width=0.32\linewidth]{minus10_septum_nominal_Q1_right}
@@ -339,7 +768,7 @@ pattern plot would shift, as shown in Fig. \ref{fig:central_ray_0}.
     \label{fig:central_ray_0}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.32\linewidth]{nominal_septum_minus10_Q1_right}
     \includegraphics[width=0.32\linewidth]{nominal_septum_nominal_Q1_right}
@@ -360,7 +789,7 @@ so we could move on to inner edge search with this septum nominal value: to
 see more inner holes -- holes with largest (smallest) phi in Left (right) arm.
 It turned out a 5\% increasement from the nominal value gave us the largest 
 acceptance, which corresponds to a septum current of: $1.05 \times (333*2.183522/0.95285) = 801.25 \ A$.
-\begin{figure}[h!]
+\begin{figure}[H]
 % https://logbooks.jlab.org/entry/3748464
     \begin{tikzpicture}
 	\begin{scope}
@@ -449,7 +878,7 @@ Using this construction, we could firstly vary the septum current to choose the
 one that most matched the data, then scaned through collimator shift and pinch point
 shift to select the best model.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \includegraphics[width=0.49\linewidth]{sieve_run3103}
     \includegraphics[width=0.49\linewidth]{sieve_run22109}
     \caption{Sieve plot of CREX tune. Centered at (-0.3, -1.5), the new beam 
@@ -458,7 +887,7 @@ shift to select the best model.
 
 Somewhat expected, a coarse scan through the septum told us the septum range
 for best model: around 0-5\% above the nominal value.
-\begin{figure}[h!]
+\begin{figure}[H]
     \begin{tikzpicture}
 	\begin{scope}
 	    \node[anchor=south west, inner sep=0] (image) at (0, 0)
@@ -495,7 +924,7 @@ for best model: around 0-5\% above the nominal value.
     \caption{Sieve pattern plots from simulation with different septum current.}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \begin{tikzpicture}
 	\begin{scope}
@@ -519,7 +948,7 @@ which of course has a large impact on the acceptance. For each simulation, we
 will compare the average scattering angle $\theta_{lab}$, $Q^2$ and asymmetry to
 that of optics data.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.32\linewidth]{pinch_scan_th_lab_-1_run0}
     \includegraphics[width=0.32\linewidth]{pinch_scan_qsq_-1_run0}
@@ -538,7 +967,7 @@ As shown in Fig. \ref{fig:pinch_scan}, when we shift the pinch point toward the
 beam pipe (from negative values to positive values for left arm, opposite for 
 right arm), the acceptance increases until the nominal value, and then saturates. 
 Similar trend was seen for shift of Q1 collimator.
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.49\linewidth]{col_scan_th_lab_0_run0}
     \includegraphics[width=0.49\linewidth]{col_scan_th_lab_0_run99999}
@@ -570,7 +999,7 @@ between simulation and data in $\theta_{lab}$ and $Q^2$:
 \end{table}
 
 We can check the $\theta_{lab}$ for the best models
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.49\linewidth]{best_model_run2886_th_lab}
     \includegraphics[width=0.49\linewidth]{best_model_run2886_qsq}
@@ -589,7 +1018,7 @@ We can check the $\theta_{lab}$ for the best models
 % \end{figure}
 
 Using this best models, we can calculate the acceptance function as Eq. \ref{eq:acceptance_definition}:
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.49\linewidth]{acc1_L_p2_-1_0_0.0}
     \includegraphics[width=0.49\linewidth]{acc1_R_p5_2_0_0.0}

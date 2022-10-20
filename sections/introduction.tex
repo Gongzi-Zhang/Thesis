@@ -4,41 +4,46 @@ high-precision experiments that measure the tiny parity-violating (PV) asymmetry
 (at part per million (ppm) level) of longitudinally polarized electrons scattered 
 off neutron-rich targets (\Pb and \Ca), from which the weak form factors, weak
 charge and neutron distribution, and finally
-neutron skin thickness of those nuclei will be extracted.
+neutron skin thickness of the target nuclei will be extracted.
 
 The PV asymmetry ($\CA_{pv}$) comes from the interference between the 
 electromagnetic (EM) and (neutral) weak one-boson exchange amplitude, because weak 
 interaction doesn't conserve the parity symmetry. While the EM 
-interaction has been studied thoroughly, the asymmetry measurement allows 
-us to derive the weak charge and therefore the neutron distribution in a nucleus.
+interaction has been well understood, the PV asymmetry measurement allows 
+us to derive the weak charge and therefore the neutron (which has almost all the 
+weak charge) distribution inside a nucleus.
 
-Parity-violating electron scattering (PVES) experiments require high energy polarized
-electron beam, which was provided by the Continuous Electron Beam Accelerator
+Parity-violating electron scattering (PVES) experiments require middle to high energy and 
+highly polarized electron beam, which was provided by the Continuous Electron Beam Accelerator
 Facility (CEBAF) at Thomas Jefferson National Accelerator Facility (TJNAF, 
 also known as JLab). The excellent beam qualities and dedicated instrumentations
-at JLab allowed the measurements to be statistics limited.
+at JLab allowed the asymmetry measurements to be statistics limited.
 
 % physical implication
 
 % Atomic PV
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Neutron Radius and Neutron Skin}
+\section{Neutron Radius and Neutron Skin}
 What's the size of a nucleus? Given the development of modern physics, many people may
 think there is a clear answer to this basic question. Unfortunately, we don't.
-Of course, one may estismate a nuclear radius as $R = cA^{1/3}$, where $A$ is the mass
-number and $c$ is an approximative constant coefficient that can be experimentally 
-identified ($\sim 1.20\ fm$ \cite{FIXME}). But this picture is
-over simplified and can't help in cases where precise nucleon distribution is needed.
+Well, we don't have a complete and thorough understanding about nuclei. In a 
+simple picture, of course, one may estismate the nuclear radius as $R = cA^{1/3}$, 
+where $A$ is the nuclear mass number 
+and $c$ is an approximative constant coefficient that can be experimentally 
+identified ($\sim 1.20\ fm$ \cite{FIXME}). But this simple picture become powerless
+in cases where precise nucleon distribution of a nucleus is needed. % FIXME: such as
+For example, what's the shape of a nucleus?
 Physicists do have calculated and precisely measured the proton radius of many nuclei,
 but neutron, due to its neutrality, remains as a stubborn obstacle in 
-our understanding toward the structure of nuclei. Especially for heavy nuclei,
+our understanding toward the inner structure of nuclei. Especially for heavy nuclei,
 where more neutrons than protons are needed to bound the nuclei, it is neutron
 radius rather than proton radius that defines the size of a heavy nucleus.
 
 When we talk about the proton or neutron radius, it is actually a concept under the
-framework of Quantum Mechanics (QM), rather than the radius of any objects that we
-are familiar with in our daily life. In QM, particles are represented by a probability
-wave function, so the neutron (proton) Root-Mean-Square (RMS) radius is defined as:
+framework of Quantum Mechanics (QM), rather than the usual object radius that we
+are familiar with in our daily life. In QM, particles are represented by probability
+wave, whose magnitude tells the probability to find a specific particle in a specific
+position, so the neutron (proton) Root-Mean-Square (RMS) radius is defined as:
 % why RMS radius, rather than r\rho(r) directly?
 \begin{equation}
     R_{p, n} \equiv \langle R_{p,n}^2\rangle^{1/2} = \sqrt{\frac{\int d^3\vec{r}\,r^2\,\rho_{p,n}(\vec{r})}{\int d^3\vec{r}\,\rho_{p,n}(\vec{r})}}
@@ -46,16 +51,16 @@ wave function, so the neutron (proton) Root-Mean-Square (RMS) radius is defined 
 \end{equation}
 where $\rho(\vec{r})$ is the nucleon density at position $\vec{r}$, which satisfies the normalization
 condition:
-\begin{equation*}
+\begin{equation}
     \int d^3\vec{r} \rho_{p, n}(\vec{r}) = 1 
-\end{equation*}
+\end{equation}
 
 Searching through the literatures, we can find many works on the high-precision  
 (with an error $\le 0.02 \ fm$ )
 measurement of the proton (charge) radius ($R_p$) of many nuclei through atomic 
-and nuclear experiments \cite{DEVRIES1987495, ANGELI2004185} but not much 
-precise data about the neutron radius ($R_n$). The difficuties lie in that
-neutrons are electricly chargeless, so one can measure its size only through 
+and nuclear experiments \cite{DEVRIES1987495, ANGELI2004185} but few
+precise determination of the neutron radius ($R_n$). The difficuties lie in that
+neutrons are electricly chargeless, so one can measure its size through only 
 strong or weak interaction. Both methods suffer from their own
 limitations: the weak interaction is too weak (compared to the background EM 
 interation) to measure it directly, therefore people turn to PV asymmetry
@@ -71,14 +76,15 @@ atomic experiments like electric dipole polarizabilities \cite{???} and
 pygmy dipole resonances \cite{???}
 also provide input to our understanding.
 Experimentally, the best resolution we got about $R_n$ is about 5\%. (FIXME)
-Theorectically, The best estimates of $R_n$ appear to come from nuclear theory, 
+Theorectically, The best estimate of $R_n$ appear to come from nuclear theory, 
 where models have been constrained primarily by data other than measurements 
-of neutron radii. Therefore, a measurement of $R_n$ will provide a powerful 
-independent check of basic nuclear theory.
+of neutron radii. Therefore, a precise measurement of $R_n$ will provide a powerful 
+independent check of the basic nuclear theory.
 
 Experimentally, the nucleon radius is measured from their corresponding form
-factors (FFs). According to QM, under Born approximation, the matrix element (ME) 
-for a scattering process is (assuming a Coulomb-like potential):
+factors (FFs). According to QM, under the Born approximation, the matrix element (ME) 
+for the scattering of a plane wave (a free particle) from a Coulomb-like potential 
+(a target nucleus) is:
 \begin{equation}
     \begin{aligned}
 	\CM_{fi} &= \bra{\Psi_f}V(\vec{r})\ket{\Psi_i} 
@@ -102,8 +108,8 @@ due to the inner structure of the target, which is called the FF:
     F(\vec{q}) = \int \rho(\vec{r}) e^{i\vec{q} \vec{r}} d^3\vec{r}
     \label{eqn:ff}
 \end{equation}
-which is just the Fourier transformation of the spatial density distribution.
-Conversely, once we know (measure) the FF at different $\vec{q}$, we can
+The FF is just the Fourier transformation of the spatial density distribution.
+Conversely, once we know (measure) the FFs at different $\vec{q}$, we can
 derive the charge distribution:
 \begin{equation}
     \rho(\vec{r}) = \int F(\vec{q}) e^{-i\vec{q}\vec{r}} d^3\vec{q}
@@ -121,41 +127,40 @@ models are needed to extract charge density distribution.
 For a spherically symmetric density distribution, 
 $\rho(\vec{r}) = \rho({|\vec{r}|}) = \rho(r)$, 
 one can calculate the corresponding FF as:
-\begin{equation*}
+\begin{equation}
     \begin{aligned}
 	F(\vec{q}) &= \int \rho(r) e^{iqr\cos\theta} 2\pi r^2 \sin\theta dr d\theta	\\
 	    &= 4\pi \int r \rho(r) \frac{\sin{(qr)}}{q} dr
     \end{aligned}
-\end{equation*}
+\end{equation}
 One can see that for a Coulomb-like potential, $F(\vec{q})$ doesn't depend on
-the direction of $\vec{q}$, but only its length: $q$, and for the convention 
+the direction of $\vec{q}$, but only its magnitude: $q$, and for the convenience 
 of Lorentz Invariance, people usually write $F$ in terms of $Q^2 = -q^2$, rather
 than $q$, so we will use $F(q^2)$ or $F(Q^2)$ hereafter.
-
 Some typical spherically symmetric density distribution and their 
-corresponding FFs are shown in Fig. \ref{fig:FSUGold_pb208}.
+corresponding FFs are shown in Fig. \ref{fig:FFs}.
 \begin{figure}
     \includegraphics[width=\linewidth]{rho_vs_FF}
-    \caption{Characristic of FF w.r.t. different density distribution functions}
+    \caption{Characristic of FFs w.r.t. different density distribution functions}
+    \label{fig:FFs}
 \end{figure}
 
-At small $\vec{q}^2$ limitation, one can do the Fourier expansion:
-\begin{equation*}
+At small $\vec{q}^2$ limitation ($q^2 << 1$), one can do the Fourier expansion:
+\begin{equation}
     \begin{aligned}
+	F(q^2) &= F(0) + \left.\frac{dF}{dq^2}\right|_{q^2=0} \times q^2 + \cdots	\\
 	F(q^2) &= 4\pi \int r \rho(r) \frac{\sin{(qr)}}{q} dr \\
 	    &= 4\pi \int \rho(r) r \left( r - \frac{1}{6} q^2r^3 + \cdots \right) dr	\\
 	    &= \int \rho(r)  \left( 1 - \frac{1}{6} q^2r^2 + \cdots \right) 4\pi r^2 dr	\\
 	    &= 1 - \frac{1}{6}q^2\langle r^2 \rangle + \cdots \\
-	    &= F(0) + \left.\frac{dF}{dq^2}\right|_{q^2=0} \times q^2 + \cdots	\\
     \end{aligned}
-\end{equation*}
-
-and easily to get:
+\end{equation}
+which leads to:
 \begin{equation}
     \langle R^2 \rangle = -6 \left. \frac{dF(q^2)}{dq^2} \right|_{q^2 = 0}
 \end{equation}
-This equations prompts how to measure RMS radius:
-one can measure the FF at some low $q^2$ points, extrapolate them 
+This equation prompts how to measure RMS radius:
+one can measure the FFs at some small $q^2$ points, extrapolate them 
 to $q^2 = 0$, then the slope at $q^2 = 0$ will be the RMS radius (that's why
 we use the RMS radius rather than the more physical definition of: 
 $\langle R \rangle = \int d^3\vec{r} \ r \ \rho(\vec{r})$).
@@ -169,10 +174,9 @@ distribution:
 \begin{equation}
     \langle R_n^2 \rangle = -6 \left. \frac{dF_{weak}(q^2)}{dq^2} \right|_{q^2 = 0}
 \end{equation}
-
-The difference between them will be what we called the neutron skin thickness
+The difference between them will be what we called the neutron skin thickness:
 \begin{equation}
-    R_{skin} = R_n - R_p 
+    R_{skin} = R_n - R_p = \sqrt{\langle R_n^2 \rangle} - \sqrt{\langle R_p^2 \rangle}
 \end{equation}
 
 The neutron skin, as its name implies, is founded in neutron-rich isotopes that
@@ -180,9 +184,9 @@ have more neutrons than protons. An intuitive picture is following: analog to
 atomic electron shell model, protons and neutrons also arrange themselves on
 shelles from low to high energy, without disturbing each other (nuclear shell model).
 The higher the energy level, the larger the orbit (radius).
-For most nuclei, they have similar number of proton and neutron, therefore an 
+For most nuclei, they have similar number of protons and neutrons, therefore an 
 approximative proton and neutron radius. But for neutron-rich isotopes, the extra neutrons
-need to stay on higher energy shell after filling all low energy ones, forming
+have to stay on higher energy shell after filling all low energy ones, forming
 a larger radius than proton and therefore the neutron skin.
 
 Of course, this picture is too simple to fully understand the neutron skin.
@@ -194,20 +198,23 @@ higher nucleon density than the surface, and symmetry energy represents the
 penalty for breaking the proton-neutron symmetry: the higher the density, the
 larger the symmetry energy, therefore the lower the binding energy (the energy
 needed to break down a nuclear system: $BE(N, Z) = M(N, Z)c^2 - Zm_p c^2 - Nm_n c^2$), the less
-stable the nuclei. So it is symmetry energy that pushes extra neutrons to 
-the surface, which is the deeper reason for the formation of neutron skin.
-% the more nucleons on surface, the stronger the surface tension, therefore
-% surface tension favorsl leaving extra neutrons in the core area
+stable the nuclei. So it is the symmetry energy that pushes extra neutrons to 
+the surface. On the other hand, the more nucleons on surface, the stronger 
+the surface tension, therefore the surface tension favors squeezing extra neutrons 
+into the core. The confrontation and balance between the symmetry energy and 
+the surface tension decide the thickness of the neutron skin.
 
-Experimental hints of the existance of the neutron skin comes from optical isotope
-shifts (FIXME)
+% Experimental hints of the existance of the neutron skin comes from optical isotope
+% shifts (FIXME)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Theorectical Models} 
 \label{subsec:models}
 Though we don't know the actual neutron distribution, one would not expect too
-much difference between the proton and neutron distributions, and we know the
-proton distribution very well, through elastic ep scattering. 
-The scattering cross section is:
+much difference between the proton and neutron distributions, even in nuclei with
+asymmetric number of protons and neutrons. So the proton distribution is a good
+starting point for the study of neutron distribution, given that we have quite
+good knowledge about proton distribution, learned from various eA or AA scatterings. 
+The elastic scattering cross section is:
 \begin{equation}
     \frac{d\sigma}{d\Omega} = \left( \frac{d\sigma}{d\Omega} \right)_{Mott} |F(q^2)|^2
 \end{equation}
@@ -229,38 +236,43 @@ different plane waves scattered from different points in space.
 	\draw[dashed] (0, 0) -- (0.5, 0.5);
 	\draw[red, decorate, decoration=snake] (0.5, 0.5) -- (0.8, 0.2) ;
     \end{tikzpicture}
-    \caption{As we can see, the virtual photon wave absorbed by a nucleon at position
+    \caption{Schemtaic plot of eA scattering. As we can see, the virtual photon 
+    wave absorbed by a nucleon at position
     $\vec{r}$ will travel a further distance $\vec{q}\cdot\vec{r}$ than the one
     absorbed at the central point, therefore a phase difference $e^{i\vec{q}\vec{r}/\hbar}$}
     \label{fig:FF_phase_diff}
 \end{figure}
 
 Consider the simplest hard ball model:
-\begin{equation*}
+\begin{equation}
     \rho(r) = 
     \begin{cases}
 	\frac{3}{4\pi R^3}  & r \le R	\\
 	0		    & r > R   \\
     \end{cases}
     \label{eqn:hard_ball_model}
-\end{equation*}
+\end{equation}
 Then the FF will be:
-\begin{equation*}
+\begin{equation}
     F(q^2) = \frac{3}{(qR)^3} \left( \sin(qR) - qR\cos(qR) \right)
-\end{equation*}
+\end{equation}
 where $q = 2p\sin(\theta/2)$
 
 Given the Mott cross section:
+% \begin{equation}
+%     \left( \frac{d\sigma}{d\Omega} \right)_{Mott} = 
+%     \begin{cases}
+% 	\frac{Z^2 \alpha^2}{4E^2\sin^4(\theta/2)}\cos^2(\theta/2)   
+% 	    & \text{light nuclei} \ Z\alpha << 1  \\
+% 	\frac{Z^2 \alpha^2}{4E^2\sin^4(\theta/2)}\cos^2(\theta/2) \left[ 1 + \pi Z \alpha \frac{\sin(\theta/2)(1-\sin(\theta/2)))}{\cos^2(\theta/2)}\right]   
+% 	    & \text{medium nuclei}  \\
+%     \end{cases}
+% \end{equation}
 \begin{equation}
     \left( \frac{d\sigma}{d\Omega} \right)_{Mott} = 
-    \begin{cases}
 	\frac{Z^2 \alpha^2}{4E^2\sin^4(\theta/2)}\cos^2(\theta/2)   
-	    & \text{light nuclei} \ Z\alpha << 1  \\
-	\frac{Z^2 \alpha^2}{4E^2\sin^4(\theta/2)}\cos^2(\theta/2) \left[ 1 + \pi Z \alpha \frac{\sin(\theta/2)(1-\sin(\theta/2)))}{\cos^2(\theta/2)}\right]   
-	    & \text{medium nuclei}  \\
-    \end{cases}
 \end{equation}
-We can draw the cross section, as a function of scattering angle in Fig. \ref{fig:ca_xsec}.
+We can draw the cross section, as a function of the scattering angle in Fig. \ref{fig:ca_xsec}.
 \begin{figure}
     \includegraphics[width=0.32\linewidth]{ca48_xsec_mott}
     \includegraphics[width=0.32\linewidth]{ca48_xsec_hard_ball}
@@ -284,7 +296,7 @@ the oscillating dips. As it turns out, a more realistic model will be the
 Saxon-Woods distribution (also called the Fermi 2-parameter model or the Fermi
 distribution):
 \begin{equation}
-    \rho(r) = \frac{\rho(0)}{1 + exp((r-R)/t)}
+    \rho(r) = \frac{\rho(0)}{1 + \exp((r-R)/t)}
 \end{equation}
 where $R = (1.2A^{1/3} - 0.48) \ fm$ denotes the nuclear force radius, 
 and $t = 0.4-0.5 \ fm$ for  $A > 40$.
@@ -295,7 +307,7 @@ and $t = 0.4-0.5 \ fm$ for  $A > 40$.
     different eigenstates of the same spherically symmetric average potential.
     This potential, unlike that in atomic shell model, needed to be guessed. 
     It turns out that the Saxon-Woods model is a good candidate: 
-    $V(r) = -\frac{V(0)}{1+exp((r-c)/a)}$ (c is the half-height raidus and a represents
+    $V(r) = -\frac{V(0)}{1+\exp((r-c)/a)}$ (c is the half-height raidus and a represents
     diffuseness of the distribution). Because the potential is formed
     by all nucleons, so it is approximatively proportional to the nucleon density, 
     therefore the same distribution for nucleon density.} 
@@ -309,9 +321,12 @@ distribution can be found in \cite{Maximon:1966sqn}.
 
 One theoretical model based on the Fermi distribution is the FSUGold \cite{PhysRevLett.95.122501},
 the neutron distribution of \Pb predicted by FSUGold is shown in Fig. \ref{fig:FSUGold_pb208}.
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
     \includegraphics[width=0.6\linewidth]{FSUGold_pb208}
+    \caption{Neutron and weak charge distribution in \Pb predicted by the FSUGold model.
+    The blue dots are experimental measurements of the charge distribution.}
+    \label{fig:FSUGold_pb208}
 \end{figure}
 
 We also need to note that for medium and heavy nuclei, the Born approximation
@@ -323,12 +338,11 @@ Coulomb distortion can be understood as multiple EM interactions with
 the same nucleus, so the distortion correction is proportional to $Z\alpha$. 
 Obviously, this correction is more important for \Pb because of its large Z value,
 Coulomd-distortion could reduce the PV asymmetry by as much as 30\% as we can see
-in the following plots.
-
+in the Fig. \ref{fig:Coulomb_distortion}.
 
 With these information, one is able to solve the Dirac equation directly to know
-the PV asymmetry, as shown in the following 2 plots:
-\begin{figure}[h!]
+the PV asymmetry, as shown in the following 2 plots.
+\begin{figure}[!ht]
     \includegraphics[width=0.49\linewidth]{Coulomb_distortion_Pb208}
     \includegraphics[width=0.49\linewidth]{Coulomb_distortion_Ca48}
     \caption{PV asymmetry for \Pb and \Ca versus scattering angle at 850 MeV 
@@ -336,6 +350,7 @@ the PV asymmetry, as shown in the following 2 plots:
     The dotted curve assumes the same weak and charge distribution, 
     while the solid curve is based on relativistic Mean Field Densities. The
     dashed curve in \Pb plot uses 3 parameter Fermi distribition \cite{PhysRevC.57.3430}}
+    \label{fig:Coulomb_distortion}
 \end{figure}
 
 
@@ -349,11 +364,10 @@ the PV asymmetry, as shown in the following 2 plots:
 % the energy difference between a pure neutron star and a corresponding symmetric
 % nuclear matter
 It has long been a hot topic for nuclear scientists to study how the asymmetry 
-between number of proton and nucleon will affect nuclei, especially the binding
-energy, which hints us the limit of new isotope elements. Using the simplest 
+between number of protons and nucleons will affect various properties of nuclei, 
+especially the binding energy, which hints us the limit of new isotope elements. Using the simplest 
 Liquid Drop Model (LDM), we will get the Bethe-Weizsacker Semi-empirical Mass Foumula:
 \begin{equation}
-    \label{eq:mass-foumula}
     \begin{gathered}
 	E\ (MeV) = \textcolor{black}{a_V A} 
 	    - \textcolor{blue}{a_S A^{2/3}} 
@@ -367,6 +381,7 @@ Liquid Drop Model (LDM), we will get the Bethe-Weizsacker Semi-empirical Mass Fo
 		-\delta_0	& \text{Z, N odd (A even)} \\
 	    \end{cases}
     \end{gathered}
+    \label{eq:mass-formula}
 \end{equation}
 
 \begin{itemize}
@@ -378,15 +393,15 @@ Liquid Drop Model (LDM), we will get the Bethe-Weizsacker Semi-empirical Mass Fo
     \color{green} \item Coulomb term: EM charge repulsion
     \color{red}   \item Asymmetry term: Pauli exclusion principle
     \color{cyan}  \item Pairing term: spin coupling effect -- if N and Z are even,
-	then the nuclei will be stable thanks to the occurance of 'paired spin';
+	then the nuclei will be stable thanks to the occurance of `paired spin';
 	on the other hand, nuclei with odd number of proton and neutron are usually
 	unstable. ($\delta_0 \sim 1\ MeV$, slowly decreasing with A)
 \end{itemize}
 
 The first 3 terms are natural and easy to understand, while the 4th term is 
-not so obvious. It is based only on Pauli exclusion principle. In heavy nuclei,
+not so obvious. It is based only on the Pauli exclusion principle. In heavy nuclei,
 more neutrons than protons are needed to balance the repulsion between protons.
-Due to the Pauli exclusion principle, these extra neutrons' energy will be 
+Due to the Pauli exclusion principle, these extra neutrons' energies will be 
 higher than the rest of nucleons, therefore introducing this correction term.
 
 Regard the nuclear system as a free Fermi gas of protons and neutrons, then the 
@@ -394,39 +409,43 @@ kinematic energy of this system will be:
 $$ E_k = E_N + E_Z = \frac{3}{5}ZE_F^p + \frac{3}{5}NE_F^n $$
 Since the Fermi energy is proportional to $n^{2/3}$
 $$ E_k = C(Z^{5/3} + N^{5/3})  $$
-Expanse it in terms of N-Z \ref{ap:symmetry_energy}, we will get
-\begin{equation*}
+Expanse it in terms of N-Z (\ref{ap:symmetry_energy}), we will get
+\begin{equation}
     \begin{aligned}
 	E_k &= 2^{-2/3}C\left(A^{5/3} + \frac{5}{9}\frac{(N-Z)^2}{A^{1/3}} \right) + O((N-Z)^4) \\
 	    &= \frac{3}{5} E_F A + \frac{1}{3}E_F\frac{(N-Z)^2}{A} + O((N-Z)^4) \\
     \end{aligned}
-\end{equation*}
-The first term contributes to the volume term and the second term is minus the 
+    \label{eq:free_fermi_gas}
+\end{equation}
+The first term in Eq. \ref{eq:free_fermi_gas} contributes to the volume term 
+of the binding energy and the second term is minus the 
 asymmetry term because $E_k$ contributes to the binding energy negatively.
 
-For a general discussion, we can ignore the 3rd term to focus on the homogeneous
-nuclear (residual strong) interaction between nucleons, and the 5th term which is too small.
+For a general discussion, we can ignore the 3rd term in Eq. \ref{eq:mass-formula}
+to focus on the homogeneous nuclear (residual strong) interaction between nucleons, 
+and the 5th term which is too small.
 Now, we can talk about any nuclear system composed of Z protons (EM charge-less) 
 and N neutrons, rather than just true nuclei. Now we have a simplified equation
 of state (EoS) for nuclear matter:
 \begin{equation}
-    \label{eq:modified-mass-formula-1}
     \begin{aligned}
 	E &= a_V A - a_S A^{2/3} - a_A\frac{(N-Z)^2}{A}  \\
 	e &= \frac{E}{A} = a_V - a_S A^{-1/3} - a_A\frac{(N-Z)^2}{A^2}
     \end{aligned}
+    \label{eq:modified-mass-formula-1}
 \end{equation}
 
-Actually, we should also discard the second term. Obviously, we can't guarantee
-any specific shape about the nuclear system; what's mroe, for what people model
+Actually, we should also discard the second term in Eq. \ref{eq:modified-mass-formula-1}. 
+Obviously, we can't guarantee
+any specific shape about the nuclear system; what's more, for what people model
 with most -- the infinite nuclear system, we don't need to consider the surface 
 term at all.
 \begin{equation}
-    \label{eq:modified-mass-formula-2}
     \begin{aligned}
 	E &= a_V A - a_A\frac{(N-Z)^2}{A}  \\
 	e &= \frac{E}{A} = a_V - a_A\frac{(N-Z)^2}{A^2} = e_0(A) - a_A\beta^2 
     \end{aligned}
+    \label{eq:modified-mass-formula-2}
 \end{equation}
 Here we define $\beta = \frac{N-Z}{A}$ as asymmetry between the number of protons and neutrons. 
 
@@ -435,10 +454,10 @@ the EoS. So we should replace N, Z and A with their corresponding density: $\rho
 $\rho_p$ and $\rho$ ($\beta = \frac{\rho_n - \rho_p}{\rho}$). 
 So we are considering an infinite uniform nuclear system at 0 temperature that interacts
 only via the nuclear force. For any identified $\rho$,
-eq \eqref{eq:modified-mass-formula-2} will be:
+Eq. \ref{eq:modified-mass-formula-2} will be:
 \begin{equation}
-    \label{eq:symmetry-energy}
     e(\rho, \beta) = e(\rho, 0) + S(\rho)\beta^2 + O(\beta^4)
+    \label{eq:symmetry-energy}
 \end{equation}
 
 This is an expansion of the binding energy per nucleon around $\beta = 0$.
@@ -453,7 +472,7 @@ odd terms only:
 $$ G(\beta) = G_1\beta + G_3\beta^3 + \dots $$
 
 e is an isoscalar, it doesn't change under $n \leftrightarrow p$ interchange 
-as we can see from eq \eqref{eq:modified-mass-formula-2}. The coefficient 
+as we can see from Eq. \ref{eq:modified-mass-formula-2}. The coefficient 
 $S(\rho) = \frac{\partial^2 e (\rho, \beta)}{\partial \beta^2}$ is
 what we call the \textbf{symmetry energy}, a key parameter in explaining a wide
 range of nuclear properties and phenomena. It describes how much energy will be
@@ -481,22 +500,23 @@ From which, we have some auxiliary parameters defined:
 \end{equation}
 Among them, L represents S's dependence on $\rho$.
 
-Take neutron star \cite{Lattimer.2001} as an example, it has most neutrons and 
+Take neutron star \cite{Lattimer.2001} as an example. Though of their 18 orders of
+magnitude difference in size (fm vs km), the nuetron star and the nuclei
+neutron skin share the same EoS. A neutron star has most neutrons and  
 a few protons, so its $\beta = 1$.
 \begin{equation}
-    \label{eq:neutron-star}
     \begin{aligned}
 	 E = E_0 + S	\\
 	 P = \rho^2 \frac{dS}{d\rho} \approx \frac{L\rho^2}{3\rho_0}	\\
 	 RP^{-1/4} \approx const    \\
     \end{aligned}
+    \label{eq:neutron-star}
 \end{equation}
-The amazing thing is that neutron star's pressure dependents on L is proportional
-to $R^4$. Once we know the L value, we will know the pressure and therefore the 
-radius of a neutron star. % (Do all neutron stars have the same $\rho$ and R ???)
+The amazing thing is that neutron star's pressure dependents on L and is proportional 
+to $R^4$. Once we know the L value, we can therefore calculate the radius of a neutron star. 
 
 Being such an important parameter, a great effort has been done to extract S 
-and L. Comparing \eqref{eq:modified-mass-formula-2} and \eqref{eq:symmetry-energy},
+and L. Comparing Eq. \ref{eq:modified-mass-formula-2} and \ref{eq:symmetry-energy},
 we can directly get:
 \begin{equation}
     S(\rho) \approx -a_A
@@ -514,50 +534,272 @@ different L values, as shown in Fig. \ref{fig:neutron_EOS}.
 If there is a experiment that can identify S (L) value without model dependence, 
 then no doubt it will help a lot in understanding the symmetry energy and the EoS.
 \begin{figure}
-    \begin{subfigure}[c]{0.5\textwidth}
-	\includegraphics[width=\linewidth]{S_vs_rho_n}
-	\caption{Neutron EOS for 18 Skyrme parameter sets. The filled circles are
-	the Friedman-Panharipande (FG) variational calculations and the crosses are SkX. 
-	\cite{PhysRevSTAB.7.042802}
-	We can see different models have very different symmetry energies.
-	}
-    \end{subfigure}
-    \begin{subfigure}[c]{0.5\textwidth}
-	\includegraphics[width=\linewidth]{S_Pb_in_S_N_EOS}
-	\caption{Symmetry energy for neutron EOS at $\rho_n = 0.1 \text{neutron}/fm^3$
-	(in units of MeV $fm^3$/neutron) vs the S value in \Pb for 18 Skyrme parameter sets. 
-	The cross is SkX. Determination of S in \Pb will greatly constrain the 
-	possible candidates.}
-    \end{subfigure}
+    \includegraphics[width=0.48\linewidth]{S_vs_rho_n}
+    \hfill
+    \includegraphics[width=0.49\linewidth]{S_Pb_in_S_N_EOS}
+    \caption{Left: Neutron EOS for 18 Skyrme parameter sets. The filled circles are
+    the Friedman-Panharipande (FG) variational calculations and the crosses are SkX. 
+    \cite{PhysRevSTAB.7.042802}
+    We can see different models have very different symmetry energies.
+    Right: Symmetry energy for neutron EOS at $\rho_n = 0.1 \text{neutron}/fm^3$
+    (in units of MeV $fm^3$/neutron) vs the S value in \Pb for 18 Skyrme parameter sets. 
+    The cross is SkX. Determination of S in \Pb will greatly constrain the 
+    possible candidates.
+    }
+    \label{fig:neutron_EOS}
 \end{figure}
 % experiments that measure L
 
 % neutron skin
-The method to measure L in lab is to measure the neutron skin thickness of 
-neutron rich nuclei. For symmetric nuclei (N = Z), the protons and neutrons are
-expected to distribute uniformly. While for neutron-rich nuclei, the extra 
-neutrons are pushed out against the surface tension\cite{PRL.85.5296}, therefore
-forming a neutron skin. 
-
-Neutron skin and neutron star, though of their 18 orders of magnitude difference 
-in size (fm vs km), both are neutron-rich nuclear matter and governed by the 
-same physical laws: eq \eqref{eq:neutron-star}. So by measuring the neutron
-skin thickness, we can derive P and L values, for the study of neutron stars
-and nuclear EoS.
+% The method to measure L in lab is to measure the neutron skin thickness of 
+% neutron rich nuclei. For symmetric nuclei (N = Z), the protons and neutrons are
+% expected to distribute uniformly. While for neutron-rich nuclei, the extra 
+% neutrons are pushed out against the surface tension\cite{PRL.85.5296}, therefore
+% forming a neutron skin. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Physics Beyond the Standard Model (SM)} 
-Parity-Violating Electron Scattering is always a promising avenue for physics
-beyond the SM in precision frontier.
-Flavor conserving interaction:
-$$ |A_\gamma + A_Z + A_{new}|^2 \rightarrow A^2_\gamma\left[ 1 + 2\frac{A_Z}{A_\gamma}
- + 2\frac{A_{new}}{A_\gamma} \right]$$
+Parity-Violating Electron Scattering is always a promising avenue for the search
+of physics beyond the SM in precision frontier.
+For flavor conserving interactions, their Feynman plots are shown below:
+\begin{figure}
+    \centering
+\feynmandiagram[small, vertical' = a to b]{
+    i1 [particle = $e^-$] -- [fermion] a -- [fermion] o1 [particle = $e^-$],
+    a -- [photon, edge label={Q}, edge label'=$\gamma$] b,
+    i2 [particle = N] -- [fermion] b -- [fermion] o2 [particle = N],
+    };
+\feynmandiagram[small, vertical' = a to b]{
+    i1 [particle = $e^-$] -- [fermion] a -- [fermion] o1 [particle = $e^-$],
+    a -- [scalar, edge label={Q}, edge label'=Z] b,
+    i2 [particle = N] -- [fermion] b -- [fermion] o2 [particle = N],
+    };
+\feynmandiagram[small, vertical' = a to b]{
+    i1 [particle = $e^-$] -- [fermion] a -- [fermion] o1 [particle = $e^-$],
+    a -- [scalar, edge label={Q}, edge label'=Z'] b,
+    i2 [particle = N] -- [fermion] b -- [fermion] o2 [particle = N],
+    };
+    \caption{Feynman diagrams of elastic eA scattering.}
+\end{figure}
+
+Knowing that the EM interaction is much larger than the neutral weak current and
+the possible new interaction:
+\begin{equation}
+|A_\gamma + A_Z + A_{new}|^2 \rightarrow A^2_\gamma\left[ 1 + 2\frac{A_Z}{A_\gamma}
+ + 2\frac{A_{new}}{A_\gamma} \right]
+\end{equation}
+If the new interaction amplitude $A_{new}$ is comparable to $A_Z$ or our measurement 
+of $A_Z$ is precise enough, we will be able to distinguish any possible deviation,
+clueing up the new physics.
+
+Any PV interaction can be described in the SM as:
+\begin{equation}
+    L_{pv}  = -\frac{G_F}{\sqrt{2}}\left[ 
+	\bar{e}\gamma_\mu\gamma_5 e (C_{1u}\bar{u}\gamma^\mu u + C_{1d}\bar{d}\gamma^\mu d)
+      + \bar{e}\gamma_\mu e (C_{2u}\bar{u}\gamma^\mu\gamma^5 u + C_{1d}\bar{d}\gamma^\mu \gamma^5d)
+	\right]
+% https://doi.org/10.1140/epja/i2006-09-011-8
+\end{equation}
+where $C_{iq}$ are coefficient constants predicted by the SM, which can be combined
+to give favorable experimental observables:
+\begin{equation}
+    \begin{aligned}
+	\tilde{\alpha} &= -C_{1u} + C_{1d} = -(1-2\sin^2\theta_W)	\\
+	\tilde{\beta} &= -C_{2u} + C_{2d} = -(1-4\sin^2\theta_W)	\\
+	\tilde{\gamma} &= -C_{1u} - C_{1d} = \frac{2}{3}\sin^2\theta_W	\\
+	\tilde{\delta} &= -C_{2u} - C_{2d} = 0	\\
+    \end{aligned}
+\end{equation}
+$\theta_W$ is the weak mixing angle.
+
+More PVES experiments measure the weak charge or the weak mixing angle directly, like
+E158 at SLAC and the impending M\"OLLER at JLab. Compared to these experiments, PREX/CREX
+are less sensitive to new physics, because PREX/CREX measurements involve many 
+weak charge sources inside a nucleus and their distribution. Though new physics
+is not the main goal of the PREX/CREX collaboration, the possibility for new physics 
+is not completely 0.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Asymmetry}
-\subsubsection{Parity}
+\section{Symmetry and Asymmetry}
+Symmetry is the most profound concept and foundation of modern physics. For any
+physical system, by applying the proper symmetry reqruirement, one can derive 
+(guess) the Lagrangian of the system, and therefore properties and Equation of Motion (EoM)
+of the system.
 
+Common spacetime symmetries can be seperated into continuous symmetries 
+and discrete ones. Continuous symmetries include translation, rotation and
+boost, while discrete symmetries have space reflection (P) and time reversal (T).
+Another important discrete symmetry is the charge conjugate (C).
+
+Playing such a key role, the violation of any symmetry is also an inspiring, challenging
+and far-reaching research. Physicts are doing their best to prove or falsify various
+symmetries (and their combinations). Currently, it is widely accepted continuous
+symmetries are conserved by all interactions while weak interaction violates
+some discrete symmetries, namely C, P, and their combination CP. There are some
+speculations that the strong interaction can violate the CP symmetry, but no
+experimental observation reported yet.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Parity Symmetry}
+Parity symmetry is a discrete symmetry which states that the physical laws in
+the mirror (reflection) world should be the same as that in the real world. 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\linewidth]{parity}
+    \caption{Explanation of space reflection.}
+\end{figure}
+
+The parity operation will flip the sign of any spatial coordinate:
+\begin{equation}
+    P: \vec{r} \rightarrow -\vec{r}
+\end{equation}
+The same for any spatial vector, like momentum ($\vec{p}$), angular momentum ($\vec{L}$)
+and the EM vector potential ($\vec{A}$).
+
+In the language of QM, the parity operator ($\hat{\pi}'$) will transform 
+a wave function, as shown in Eq. \ref{eq:parity_transformation}.
+\begin{equation}
+    \hat{\pi}'\psi(x, y, z) = \eta \psi(-x, -y, -z)
+    \label{eq:parity_transformation}
+\end{equation}
+where $\eta$ is a coefficient picked up by the transformation. One would expect
+the state goes back to itself after 2 times of parity transformations:
+\begin{equation}
+    |\hat{\pi}'^2 \psi(x, y, z)|^2 = |\psi(x, y, z)|^2
+    \qquad
+    \hat{\pi}'\psi{x, y, z} = e^{i\phi/2}\psi(-x, -y, -z)
+\end{equation}
+which means $\hat{\pi}'$ is an unitary operator. The pick up phase can
+be absorbed into the operator to get the new parity operator (what we use hereafter): 
+\begin{equation}
+    \hat{\pi} = \hat{\pi}'e^{-i\phi/2}
+\end{equation}
+Then we have
+\begin{equation}
+    \hat{\pi}^2 = 1 
+\end{equation}
+So $\hat{\pi}$ has eigenvalues of $p = \pm 1$. States with eigenvalue of 1 are called
+parity-even states and the others with eigenvalue of -1 the parity-odd states.
+
+For any scalar potential, $V(\vec{r}) = V{r}$ ($[\hat{\pi}, V] = 0$), the parity 
+operator $\hat{\pi}$ commutes with the Hamiltonian ($[\hat{\pi}, \CH] = 0$). 
+So the energy eigenstates are also the eigenstate
+of $\hat{\pi}$. Among these eigenstates, the orbital angular momentum eigenstates are
+of special interest. Given an orbital angular momentum $\vec{L}$ with z-axis projection
+$L_z$, one will have:
+\begin{equation}
+    \hat{\pi}\ket{\vec{L}, L_z} = (-1)^L\ket{\vec{L}, L_z}
+\end{equation}
+
+Another quantity which is similar to the orbital angular momentum in most aspects but
+different in parity is spin. Spin is also an angular momentum, but it is an 
+intrinsic property, rather than a spacetime motion. While $\hat{\pi}$ is operation
+of the space, spin is not affect by $\hat{\pi}$. So the parity of a spin state
+is randomly assigned: electron, proton and neutron are assigned even parity and
+their anti-particles have odd parity.
+
+Now we can play with helicity, which is the projection of the spin on the momentum
+direction: 
+\begin{equation}
+    H \equiv \frac{\vec{s}\cdot \vec{p}}{|\vec{s}\cdot\vec{p}|}
+\end{equation}
+If a particle's spin is parallel/anti-parallel to its momentum, we call it a
+right/left-handed particle. Obviously, when we apply parity operator to a helicity
+eigenstate, we will flip its helicity because spin keeps intact and momentum 
+will flip its sign, as shown in Fig. \ref{fig:parity_eA_scattering_1}.
 \begin{figure}[h!]
+    \centering
+    \begin{subfigure}[c]{0.44\linewidth}
+	\begin{tikzpicture}[scale=0.8]
+	    \begin{feynman}[transform shape]
+		\vertex (i1) {$e^-$};
+		\vertex [right=1.0cm of i1, inner sep=-2pt] (inspin) {\AxisRotator};
+		\vertex [right=2.3cm of inspin] (ip);
+		\vertex [right=2.8cm of ip] (i2) {A};
+		\vertex [above right = 2cm and 2cm of ip] (o1) {$e^-$};
+		\vertex [above right = 1cm and 1cm of ip] (outspin) {\AxisRotator[rotate=45]};
+		\vertex [below left = 2cm and 2cm of ip] (o2) {A};
+
+		\diagram* { {[edge=fermion]
+		    (i1) --[edge label=$\vec{k}$] (ip) [dot] --[edge label = $\vec{k}'$] (o1),
+		    (i2) --[edge label=$\vec{p}$](ip) [dot] -- [edge label = $\vec{p}'$]  (o2)},
+		};
+	    \end{feynman}
+	\end{tikzpicture}
+    \end{subfigure}
+    $\overset{\hat{\pi}}{\Longrightarrow}$
+    \hspace{0.2cm}
+    \begin{subfigure}[c]{0.44\linewidth}
+	\begin{tikzpicture}[scale=0.8]
+	    \begin{feynman}[transform shape]
+		\vertex (i1) {$e^-$};
+		\vertex [right=1.0cm of i1, inner sep=-2pt] (inspin) {\AxisRotator};
+		\vertex [right=2.3cm of inspin] (ip);
+		\vertex [right=2.8cm of ip] (i2) {A};
+		\vertex [above right = 2cm and 2cm of ip] (o1) {$e^-$};
+		\vertex [above right = 1cm and 1cm of ip] (outspin) {\AxisRotator[rotate=45]};
+		\vertex [below left = 2cm and 2cm of ip] (o2) {A};
+
+		\diagram* { {[edge=anti fermion]
+		    (i1) --[edge label=$\vec{k}$] (ip) [dot] --[edge label = $\vec{k}'$] (o1),
+		    (i2) --[edge label=$\vec{p}$](ip) [dot] -- [edge label = $\vec{p}'$]  (o2)},
+		};
+	    \end{feynman}
+	\end{tikzpicture}
+    \end{subfigure}
+    \caption{Parity transformation of the eA scattering}
+    \label{fig:parity_eA_scattering_1}
+\end{figure}
+
+If the partiy is not conserved, there will be difference between the 2 scattering 
+processes in Fig. \ref{fig:parity_eA_scattering_1}, which is exactly what we
+measured in PREX/CREX. Experimentally, it is easier to flip the spin direction
+rather than the momentum direction, as shown in Fig. \ref{fig:parity_eA_scattering_2},
+which is equivalent plot of Fig. \ref{fig:parity_eA_scattering_1}.
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}[c]{0.48\linewidth}
+	\begin{tikzpicture}[scale=0.8]
+	    \begin{feynman}[transform shape]
+		\vertex (i1) {$e^-$};
+		\vertex [right=1.0cm of i1, inner sep=-2pt] (inspin) {\AxisRotator};
+		\vertex [right=2.3cm of inspin] (ip);
+		\vertex [right=2.8cm of ip] (i2) {A};
+		\vertex [above right = 2cm and 2cm of ip] (o1) {$e^-$};
+		\vertex [above right = 1cm and 1cm of ip] (outspin) {\AxisRotator[rotate=45]};
+		\vertex [below left = 2cm and 2cm of ip] (o2) {A};
+
+		\diagram* { {[edge=fermion]
+		    (i1) --[edge label=$\vec{k}$] (ip) [dot] --[edge label = $\vec{k}'$] (o1),
+		    (i2) --[edge label=$\vec{p}$](ip) [dot] -- [edge label = $\vec{p}'$]  (o2)},
+		};
+	    \end{feynman}
+	\end{tikzpicture}
+    \end{subfigure}
+    \begin{subfigure}[c]{0.48\linewidth}
+	\begin{tikzpicture}[scale=0.8]
+	    \begin{feynman}[transform shape]
+		\vertex (i1) {$e^-$};
+		\vertex [right=1.0cm of i1, inner sep=-2pt] (inspin) {\AxisRotatorReversed};
+		\vertex [right=2.3cm of inspin] (ip);
+		\vertex [right=2.8cm of ip] (i2) {A};
+		\vertex [above right = 2cm and 2cm of ip] (o1) {$e^-$};
+		\vertex [above right = 1cm and 1cm of ip] (outspin) {\AxisRotatorReversed[rotate=45]};
+		\vertex [below left = 2cm and 2cm of ip] (o2) {A};
+
+		\diagram* { {[edge=fermion]
+		    (i1) --[edge label=$\vec{k}$] (ip) [dot] --[edge label = $\vec{k}'$] (o1),
+		    (i2) --[edge label=$\vec{p}$](ip) [dot] -- [edge label = $\vec{p}'$]  (o2)},
+		};
+	    \end{feynman}
+	\end{tikzpicture}
+    \end{subfigure}
+    \caption{Equivalent of Fig. \ref{fig:parity_eA_scattering_1}}
+    \label{fig:parity_eA_scattering_2}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Parity Violation}
+\begin{figure}[!ht]
     \centering
     \begin{tikzpicture}[decoration={markings, 
 	mark=at position 0.5 with {\arrow{stealth}}}
@@ -707,7 +949,7 @@ more similar to the EM interaction:
 \begin{equation}
     \CL = g_W(J^+W^+ + J^-W^-)
 \end{equation}
-\begin{figure}[h!]
+\begin{figure}[!ht]
     \centering
     \begin{tikzpicture}[decoration={markings, 
 	mark=at position 0.5 with {\arrow{stealth}}}
@@ -917,7 +1159,7 @@ which was experimentally observed in 1973 in the Gargemlle neutrino experiment \
 What we are going to observe in PREX-II and CREX exactly originates from this
 neutral weak current.
 
-\begin{figure}[h]
+\begin{figure}[!h]
     \centering
 \feynmandiagram[small, vertical' = a to b]{
     i1 [particle = $e^-$] -- [fermion] a -- [fermion] o1 [particle = $e^-$],
@@ -1008,23 +1250,29 @@ When ignoring structure (tree level):
 4-Momentum conservation 
 $$ E_0 + M = E' + E \qquad \vec{p}_0 = \vec{p}' + \vec{p} $$
 Assume ($m_e << 0 \Rightarrow E_0 \approx p_0, E' \approx p'$)
-\begin{equation*}
+\begin{equation}
     \begin{aligned}
 	E^2 &= M^2 + \vec{p}^2 = M^2 + (\vec{p}_0 - \vec{p}')^2  \\
 	    &= M^2 + (E_0 - E'\cos\theta)^2 + (E'\sin\theta)^2	\\
 	    &= M^2 + E_0^2 + E'^2 - 2E_0E'\cos\theta	\\
 	    &= (E_0 + M - E')^2
     \end{aligned}
-\end{equation*}
+\end{equation}
 So we can get
-$$ M(E_0 - E') = E_0E'(1-\cos\theta) $$
-$$ E' = \frac{ME_0}{M + E_0(1-\cos\theta)}$$
-\begin{equation*}
+\begin{equation}
+    \begin{gathered}
+	M(E_0 - E') = E_0E'(1-\cos\theta)   \\ 
+	E' = \frac{ME_0}{M + E_0(1-\cos\theta)}
+    \end{gathered}
+    \label{eq:scattered_energy}
+\end{equation}
+\begin{equation}
     \begin{aligned}
 	Q^2 &= -q^2 = -[(E_0 - E')^2 - (\vec{p}_0 - \vec{p}')^2]    \\
 	    &= 2E_0E'(1-\cos\theta)
     \end{aligned}
-\end{equation*}
+    \label{eq:Q2}
+\end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \section{Why Pb and Ca}

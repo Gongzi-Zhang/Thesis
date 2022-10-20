@@ -1337,7 +1337,8 @@ the new \Ca target was a stack of 3 seperated foils with similar total thickness
 Targets were firmly mounted in bays of target ladders, whose axes were 
 perpendicular to the beam line. The ladder was movable along its axis by an 
 AC servo-motor, which can receive remote instructions through internet. 
-The motion along ladder axis can be precise to $\sim12\ nm$.
+The motion along ladder axis can be precise to $0.1\ mm$.
+% prex2crex_target_paper_draft.pdf
 % Thus each target foil would be placed at the same z position. 
 There are 2 target ladders in total, one for production targets and the other
 one for calibration targets. The production-ladder had 10 \Pb targets, 
@@ -1390,8 +1391,9 @@ Contact between the target and the frame and within each layer of the \Pb sandwi
 target is also important. Belleville washers were used to clamp the lead and 
 diamond foils to ensure contact as temperature changes in the beam, besides, 
 a thin layer of Apiezon L vacuum grease was applied to their interface to improve 
-heat conductivity. In the diamond/copper interface, a silver-based paste compound
-was used for the same purpose.
+thermal contact. One hypothesis for the sudden failure of the Pb target after
+one week of running is that the vacuum grease doesn't last long.
+In the diamond/copper interface, a silver-based paste compound was used for the same purpose.
 % https://prex.jlab.org/DocDB/0000/000012/001/tgtchamber_err2_17may2017.pdf
 For D-Pb-D sandwich target with thick C foil, the heat loading will be $100\ W@70\ \mu A$
 with a $4\times 6 \ mm$ raster, the cooling system would keep the Pb target stay at
@@ -1425,7 +1427,9 @@ The solution to this problem is the raster, which is a set of dipole magnets % w
 that deflect the beam at about $25\ kHz$ to spread the beam on the target.
 What we learned from PREX-I was that we could significantly reduce the sensitivity 
 to target-thickness variations by synchronizing the helicity flipping frequency
-with the raster frequency so that it sampled different areas on the target. 
+with the raster frequency so that it sampled exactly the same areas on the target,
+any noise from target thickness variation cancels by taking the difference of
+a helicity pair or quadruplet. 
 As shown in Fig. \ref{fig:raster_pattern}, the Lissajous pattern we got depends
 on the frequency difference between X and Y, the larger the frequency difference,
 the larger the scanning area. The ratio of $f_y/f_x$ should be an irrational number

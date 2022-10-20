@@ -11,6 +11,7 @@
 \usepackage{tikz, pgfplots}
     \usetikzlibrary{arrows, intersections, math}
     \pgfplotsset{compat=1.15}
+\usepackage{float}
 \usepackage{subcaption}	% for subfigure
 \usepackage[colorlinks]{hyperref}
 % \usepackage{xcolor}
@@ -18,10 +19,18 @@
     colorlinks = true,
     urlcolor = [rgb]{0.85, 0.52, 0.9},
 }
+\usepackage{listings}
+\lstset{
+    % basicstyle=\linespread{0.6},
+    % lineskip={0 pt},
+    columns=fullflexible,
+}
 \usepackage[toc,page]{appendix}
 % \usepackage{color}
 \usepackage{setspace}
 \usepackage{array}
+\usepackage{lscape}
+\usepackage{adjustbox}
 \usepackage{tabularx}
 \usepackage{multirow}
 \usepackage{multicol}
@@ -42,6 +51,16 @@
 \input{mathdefs}
 \input{callcommands}
 \input{newcommand}
+
+\definecolor{darkpink}{rgb}{.239, .027, .161}
+\lstdefinestyle{C}{
+    language=C,
+    backgroundcolor=\color{darkpink},
+    basicstyle=\ttfamily\footnotesize\singlespacing\color{white},
+    % breakatwhitespace=false,
+    commentstyle=\color{blue!60},
+}
+
 \hyphenation{put words here which LaTeX does not hy-phen-ate pro-per-ly}
 
 \author{Weibin Zhang}%
