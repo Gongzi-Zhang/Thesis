@@ -1,15 +1,16 @@
 \chapter{Data Analysis}
-As mentioned before, though of fast flipping and tremendous effort to keep electron beam in exactly
-the same conditions (intensity, energy, position and angle on target) through 
-opposite helicity states, life is not easy and there is no way to achieve such
-a goal, after all, no one can understand completely and control every aspect of
+As mentioned before, though of fast flipping and tremendous effort to keep 
+electron beam in exactly the same conditions (intensity, energy, position 
+and angle on target) through opposite helicity states, unfortunately, 
+there is no way to achieve such a goal. 
+After all, no one can understand completely and control every aspect of
 something as complicated as an accelerator. There is always various noise caused
 in various parts of the machine, though very small in general sense, they are
-large compare to what we want to measure, and actually the largest correction
-to PV asymmetry. So we need to remove such noise in the raw asymmetry we measured.
+large enough compare to what we want to measure, and actually the largest correction
+to PV asymmetry. So we need to reduce such noise in the raw asymmetry we measured.
 
 We use the same methods to process both PREX-II and CREX data, therefore we will
-talk about only CREX data here.
+discuss only CREX data here.
 
 \begin{table}
     \centering
@@ -21,14 +22,13 @@ talk about only CREX data here.
 	raw asymmetry ($ppk$)	&   \\
 	corrected asymmetry ($ppk$)	&   \\
 	\hline
-	bpm4aX	\\
-	bpm4aY	\\
-	bpm4eX	\\
-	bpm4eY	\\
-	bpm12X	\\
+	charge asymmetry ($ppb$)    \\
+	position difference ($nm$)\\
+	angle difference ($nrad$)	\\
+	size difference ($\delta\sigma/\sigma$)	\\
 	\hline
     \end{tabular}
-    \caption{CREX Data Set}
+    \caption{CREX Data Statistics}
 \end{table}
 
 \begin{table}
@@ -42,10 +42,23 @@ talk about only CREX data here.
     \end{tabular}
 \end{table}
 
+\begin{comment}
+    % https://prex.jlab.org/DocDB/0000/000009/001/riordan_err_recommend-3.pdf
+    \begin{itemize}
+	\item (design) PREX-II statistical width: $\sim 120\ ppm @30Hz$
+	\item (design) BCM resolution: $40\ ppm$
+	\item (measured) 1 MHz BCM electronics: $\sim 25\ ppm @30 Hz, 20\ \mu A$
+	\item charge and position jitter
+	    $$ A_Q: 100-300\ ppm \quad \Delta x: 5-25\ \mu m$$
+    \end{itemize}
+\end{comment}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Raw Data}
 CREX started commissioning around December 2019, we took the first good run on 
-Dec 12. 6 slugs (slug 100 - 105) were collected before the Christmas. After 
-the Christmas break, data taking was resumed until Jan 18 2020 when the \Ca 
-target was damaged accidently. It tooks 5 days to prepare a new \Ca target.
+Dec 12. 6 slugs (slug 100 - 105) were collected before the Christmas break. After 
+the Christmas break, data taking was resumed until Jan 18 2020 when the first \Ca 
+target was damaged accidently. It took 5 days to prepare a new \Ca target.
 Things moving on quite smoothly, we had 2 days of transverse asymmetry 
 measurement from Feb 10 to Feb 12. We were a little over halfway on data taking 
 when Covid-19 hitted and the lab was shut down at the end of March 2020. Fortunately,
@@ -153,6 +166,11 @@ have 3 parts as said before.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Cut}
+\begin{itemize}
+    % p10 in https://prex.jlab.org/DocDB/0002/000213/001/pking_prex_20180726.pdf
+    \item event cut
+    \item stability cut
+\end{itemize}
 We have only very loose cut on datas to keep as much data as possible. The online
 cuts include a current cut and some stability cuts. The current cut requires
 the beam current no smaller than $15\ \mu A$ below the nominal current, due to 

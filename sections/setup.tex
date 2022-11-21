@@ -9,7 +9,7 @@ it in electron-proton scattering \cite{Zeldovich} in 1959. But it was only about
 20 years later that people was able to experimently observe the PV asymmetry 
 in electron scattering experiments. 
 In 1978, C.Y. Prescott etc. (E122 experiment at SLAC) measured the PV asymmetry in the 
-inelastic scattering of longitunally 
+inelastic scattering of longitudinally 
 polarized electrons from an unpolarized deuterium target \cite{PRESCOTT1978347}.
 With this successful demonstration, more effort was made to improve this experimental
 technique, which matured and boomed at the turn of the last century. Many experiments 
@@ -39,31 +39,47 @@ higher precision.
     (PREX-I/II and CREX). The planned Generation IV experiments (SoLID program \cite{SoLID}
     and M\\OLLER experiment \cite{Moller} at JLab, P2 experiment on the future
     Mainz Energy-recovery Superconducting Accelerator (MESA) \cite{MESA-P2})
-    will continue to test the SM and explore the structure of nucleons with higher precisions.
+    will continue to test the SM and explore the structure of nucleons with higher precision.
     (MESA-12C is the same experiment as MESA-P2 with a different \C target) }
 \end{figure}
 
-Generally, PVES experiments requries 2 experimental conditions: polarized electron
+The idea of PVES experiments is very simple, scatter longitudinally polarized
+electrons off unpolarized target (Hydrogen, Deuterium, Helium, Carbon, Calcium, Pb),
+measure number of scattered electrons ($N$) and beam current ($I$); reverse the beam helicity 
+and do the same measurement. The PV asymmetry between different helicities will be:
+\begin{equation}
+    \CA_{pv} = \frac{N^+/I^+ - N^-/I^-}{N^+/I^+ + N^-/I^-}
+\end{equation}
+Repeat above procedure millions of times to get a statistically precise result
+because the asymmetry is usually teeny tiny.
+
+% low frequency noise and high frequency noise
+The devil is in the details.
+Generally, PVES experiments require 2 experimental conditions: polarized electron
 beam and fast flipping of beam polarization. Both requirements actually come to 
 the same dependence: an intense source of polarized electrons and with quick response. 
-The nature of being PV means measurement between different polarization states, 
-while the \textbf{tiny} characteristic of PV asymmetry
-demands fast flipping of the polarization states.
-To measure such a tiny quantity, it is essential to control
-the experimental configurations as the same as possible between different
-beam helicities. One obvious and effective method to do the job is to fast 
-flipping of beam helicity, the faster the helicity reversal, the smaller
+It took experimental physicists a few decades to develop such an electron source.
+Right now, the electron source at JLab can reach a polarization of about 90\%,
+continued effort is being made to improve the polarization further.
+% The nature of being PV means measurement of different polarization states, 
+% while the \textbf{tiny} characteristic of PV asymmetry demands fast flipping of the polarization states.
+The fast flipping requirement originates from the consideration to cancel various 
+noises. To measure such a tiny quantity, it is essential to control
+the experimental conditions as the same as possible between different
+helicity states. One obvious and effective method to satisfy such a requirement is fast 
+flipping of beam helicity: the faster the helicity reversal, the smaller
 the possible change in beam conditions, target density and other apparatus, the smaller
 the introduced false asymmetry. This requirement makes PVES out of the capacity
 of storage ring accelerators.
 % The key for PVES experiments is the fast flipping ($10^2 - 10^3\ Hz$) of beam helicity to reduce 
 % the random noise caused by fluctuations in target density and the beam qualities, that
-% means it is out of the capicity of storage ring accelrators and 
+% means it is out of the capacity of storage ring accelerators and 
 % PVES depends on the development of the intense source of polarized electrons.
-Though of the fast reversal of electron's helicity, much effort is needed to
-control the beam fluctuation, making it as small as possible. Possible systematic
-uncertainties in the source and accelerator will be controlled through the slow
-reversal of beam helicity. In terms of the target deformity under electron bombarment,
+Though of the fast reversal of electron's helicity, much effort is still needed to
+control the beam fluctuation, making it as small as possible, which is called
+Parity-Quality Beam (PQB). Possible systematic
+uncertainties in the source (injector) and accelerator will be controlled through the slow
+reversal of beam helicity. In terms of the target deformity under electron bombardment,
 a raster with very high scanning rate will minimize this uncertainty. As for 
 detection of scattered electrons, electron flux rather than single electron will
 be counted due to high scattering rate in such experiments.
@@ -74,7 +90,7 @@ other facilities include MIMA and its successor MESA, the Facility for Antiproto
 and Ion Research (FAIR) and the Facility for Rare Isotope Beams (FRIB)). CEBAF 
 provided excellent polarized electron beams (helicity correlated difference at 
 sub-nanometer level) to hall A, with dedicated apparatus 
-(Compton polarimeter, taget chamber, HRS and others) in Hall A, we were able 
+(Compton polarimeter, target chamber, HRS and others) in Hall A, we were able 
 to measure this tiny asymmetry precisely.
 
 % table of beam parameters
@@ -93,14 +109,15 @@ to measure this tiny asymmetry precisely.
 	Beam Energy ($GeV$) & 0.953 & 2.18  \\
 	Largest Beam Current ($\mu A$)	& 70	& 150	\\
 	Average Beam Polarization ($\%$) & 89.7   & 87.1   \\
-	Beam Rate ($MHz$) & 249.5	& 249.5 \\
+	Beam Rate ($MHz$) & 499	& 499 \\
 	Electrons/Bunch	($\times 10^6$)	& 1.75	& 3.76	\\
 	Helicity Flip Rate ($Hz$)  & 240   & 120   \\
 	Power on Target ($Watt$)	&   &	\\
 	\hline
 	Scattering angle ($\deg$)   & 4.7	& 4.51 \\
 	$Q^2$ ($GeV^2$)	& 0.00616   & 0.0297	\\
-	Scattering rate ($MHz/arm$)   & $\sim 2200$\footnote{This rate doesn't include the contribution from the diamond foils}   & $\sim28$ \\
+	Scattering rate ($MHz/\mu A/arm$)   & $\sim 30$\footnote{This rate doesn't include the contribution from the diamond foils}   & $\sim0.2$ \\
+	Scattering rate ($1/bunch/arm$)   & $\sim 4.5$   & $\sim 0.05$ \\
 	xsection ($mbarn$)    & 3930.6	& 5.3   \\
 	Acceptance ($msr$)    &	0.0037 & 0.0037  \\
 	\hline
@@ -112,14 +129,14 @@ to measure this tiny asymmetry precisely.
 	\hline
     \end{tabular}
     \caption{Summary of PREX-II and CREX}
-    \label{tb:parameters}
+    \label{tab:parameters}
 \end{table}
 \begin{comment}
     crex rate: https://logbooks.jlab.org/entry/3748863
 \end{comment}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Kinematics}
+\section{Beam Parameters}
 PREX-II and CREX are follow-up experiments to PREX-I, which also ran at JLab in 2010. 
 With excellent control of systematic uncertainty, but unfortunately, 
 many technical challenges during the experiment, PREX-I's result was statistics 
@@ -135,10 +152,10 @@ we have 2 polarimeters for polarization measurement, we have multiple BPMs and
 BCMs for beam parameter monitoring, we have multiple Pb foil targets and finally
 2 HRS arms for electron reception.
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Uncertainty Budget}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Uncertainty Budget}
 The goal of PREX-II is to achieve the 1\% precision in \Pb neutron radius proposed
-by PREX-I, which requires the presicion of PV asymmetry measurement better than 3\% \cite{PhysRevLett.106.252501}. 
+by PREX-I, which requires the precision of PV asymmetry measurement better than 3\% \cite{PhysRevLett.106.252501}. 
 CREX proposed similar goal, that a precision of $0.02 \ fm$ (0.6\%) in the
 \Ca neutron radius will be an essential benchmark to test various microscopic 
 models, which correspond to a 2.4\% total error in PV asymmetry.
@@ -170,7 +187,7 @@ proportional to $\sqrt{N}$.
 	Total			& 3.6	& 2.7	\\
 	\hline
     \end{tabular}
-    \caption{Budget of systematic and statiscal error in both experiments 
+    \caption{Budget of systematic and statisitcal error in both experiments 
     \cite{prex-II_proposal, crex_proposal}
     }
 \end{table}
@@ -182,17 +199,17 @@ proportional to $\sqrt{N}$.
 where:
 \begin{itemize}
     \item $\sigma_{det}$ is the detector uncertainty
-    \item P is the beam polarizaiton
+    \item P is the beam polarization
     \item N is the total number of scattered electrons
 \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Figure Of Merits (FOM)}
 The choice of beam energy and scattering angle is a compromise of competing
 factors. PV asymmetry prefers larger beam energy and larger scattering angle,
 while scattering rate falls dramatically with beam energy and scattering angle,
 $Q^2$ also likes smaller beam energy and scattering angle, and calculation 
-showes that the sensitivity of PV asymmetry w.r.t. neutron radius is oscillating
+shows that the sensitivity of PV asymmetry w.r.t. neutron radius is oscillating
 along beam energy. All these considerations are incorporated into the FOM, which
 is defined as:
 \begin{equation*}
@@ -238,7 +255,7 @@ for a higher scattering rate, which is:
 
 The differential cross section was numerically calculated by our theoretical friends
 with values of $3930.6 \ mbarn$ and $5.3 \ mbarn$ for \Pb and \Ca at their corresponding
-kinematics. Other parameters can be checked in table \ref{tb:parameters}.
+kinematics. Other parameters can be checked in table \ref{tab:parameters}.
 
 The total rate will be the integration over the acceptance:
 \begin{equation}
@@ -303,7 +320,7 @@ Based on the theoretical result, we can optimize the kinematics for both nuclei:
     \frac{\delta R}{R} = \frac{\delta \CA}{\CA} \frac{1}{\epsilon} 
 	= \frac{\sigma_{det}}{P} \frac{1}{\sqrt{N} \CA \epsilon}
 \end{equation}
-To minimize $\delta R/R$, it is equivalent to maxize 
+To minimize $\delta R/R$, it is equivalent to maximize 
 \begin{equation}
     FOM = N\times \CA^2 \times \epsilon^2
 \end{equation}
@@ -314,7 +331,7 @@ To minimize $\delta R/R$, it is equivalent to maxize
     FOM maximize around 950 (2200) $GeV$ for \Pb (\Ca).}
 \end{figure}
 
-The design values of beam energy and scattering angle were chosed to be 950 (2200) $MeV$
+The design values of beam energy and scattering angle were chosen to be 950 (2200) $MeV$
 and 5 (4) $degree$ for \Pb (\Ca). The beam energy of CREX is exactly 1-pass beam
 energy in CEBAF.
 \begin{comment}
@@ -339,6 +356,38 @@ Given practical constraints on how low an angle ($4^\circ$) we can reach with
 septum magnets, the energy is fixed and turns out to be 2.2 GeV, which is a 
 natural 1-pass beam energy for CEBAF operations in the 12 GeV era.
 \end{comment}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Helicity Flip Frequency}
+The main consideration for the choice of the $120\ Hz$ ($240\ Hz$) flipping frequency 
+was to cancel the 60 Hz power line noise, which was the major source of noise
+in PVES experiments. 
+
+There are a few methods to cancel this low frequency noise in a PVES experiment.
+\begin{enumerate}
+    \item Set the flipping frequency to a very high value, say $1\ kHz$, then
+	the change of fluctuations caused by this low frequency noise will be negligible
+	between two nearby helicity windows and cancelled in the asymmetry calculation. 
+	This methods can eliminate many low frequency noises and was adopted in the Qweak experiment.
+    \item Integrate over this $60\ Hz$ noise within a helicity window, which means
+	$f = \frac{60}{n}\ Hz\ n = 1, 2, \cdots$. This way no $60\ Hz$ line noise
+	will be recorded at all.
+    \item Select a flipping frequency of $f = 60 \times n\ Hz$,
+	then use helicity pattern to cancel the $60\ Hz$ noise. For example, 
+	if $f = 120\ Hz$, then every $f/30 = 4$ continuous helicity windows form a 
+	helicity pattern, asymmetry will be calculated based on helicity patterns. 
+	This was what we used in PREX-II/CREX.
+\end{enumerate}
+
+In terms of cancelling the $60\ Hz$ line noise, the second method works best,
+it removes the line noise completely, while other 2 methods also cancel the noise
+in their asymmetry calculation, it broadens the asymmetry width. But in a comprehensive
+consideration, the frequency in the second method is not high enough to cancel
+other low frequency noises. As for the first method, it is best in terms of
+removing low frequency noises, the only drawback is that with fixed $T_{settle}$,
+the higher the frequency, the lower the $T_{stable}$ -- the stable time window
+that we integrate scattered electrons, and therefore the longer run time. 
+As a compromisation, the third method was chosen for PREX-II/CREX.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Continuous Electron Beam Accelerator Facility (CEBAF)}
@@ -379,11 +428,13 @@ natural 1-pass beam energy for CEBAF operations in the 12 GeV era.
     have the same radius.}
     \label{fig:cebaf}
 \end{figure}
-CEBAF is able to deliver multi-GeV continuous wave (cw) eletron beams of different
+CEBAF is able to deliver multi-GeV continuous wave (cw) electron beams of different
 energies and different intensities to 4 halls simultaneously.
-With the 12 GeV upgrade, the north and south $1497\ MHz$ LINAC each has 25 
-Superconducting Radial Frequency (SRF) cryomodules, capable of accelrating 
-electrons at the peak rate of 2.2 $GeV/turn$. Hall A, B and C can receive up
+With the 12 GeV upgrade, the injector energy was increased from $67.5\ MeV$ to 
+$123\ MeV$. The north and south $1497\ MHz$ LINAC each has 25 
+Superconducting Radial Frequency (SRF) cryomodules, capable of accelerating 
+electrons at the peak rate of $1.1 \times 2 = 2.2\ GeV/turn$. With 11 arcs of magnets
+connecting the LINACs, Hall A, B and C can receive up
 to $2.2 \times 5 = 11 \ GeV$ cw beams and Hall D, with an extra half circle,
 can receive up to $12\ GeV$ cw beams. With this design, different nuclear 
 experiments can be carried out in different halls without interfering each other,
@@ -400,7 +451,7 @@ by the injector, accelerated by both LINACs. After reaching desired energy,
 they will be kicked out at the exit of south LINAC and delivered to experimental
 halls (A, B and C) for various experiments. 
 
-The maxium beam current of $200\ \mu A$ at (old) highest energy of $5\ GeV$ 
+The maximum beam current of $200\ \mu A$ at (old) highest energy of $5\ GeV$ 
 available at CEBAF is limited by the rf power ($1\ MW = 5\ GeV \times 200\ \mu A$) 
 and by the beam power on the beam dump. While Hall B and D requires only tiny 
 amount of cw beams (at $nA$ level), it is actually Hall A and C that consume 
@@ -455,7 +506,7 @@ kind of electron source was the only one that could satisfy high peak currents
 required by the low duty factors of the old accelerators and rapid helicity 
 reversal required by PVES. That's why it is the only player on the market now.
 Over the past few decades, pulsed beam has been replaced by continuous beam while
-this electron source is inheritated and further developed. The polarized electron
+this electron source is inherited and further developed. The polarized electron
 source used by CEBAF can produce electron beam with polarization greater than
 85\%, much larger than the 37\% polarization from its inauguration at SLAC. \cite{PRESCOTT1978347}
 
@@ -468,7 +519,7 @@ those transitions that satisfy $\Delta m_j = +1 \ (-1)$ can occur for circularly
 right (left) incoming photons, As shown in fig. \ref{fig:excitation-b}.
 The ratio of the transition rate is also marked out in circle in the plot, 
 which can be calculated from the Clebsch-Gordan coefficient easily. The excited
-electrons are polarzied and different states have different pumping rate, so
+electrons are polarized and different states have different pumping rate, so
 we have polarized electron beam now with polarization as: P = (3-1)/(3+1) = 50\%,
 for both cases.
 \begin{figure}[h!]
@@ -776,7 +827,7 @@ quickly while keeping polarization as stable as possible. It is not easy and tim
 consuming to manipulate the electron directly, while manipulating photons is much 
 easier. One just need to reverse the circular polarization of the laser pulse,
 it will flip the electron beam polarization. The easiest way to do the job is
-a half-wave plane, by inseting in into or retracting it from the laser path,
+a half-wave plane, by inserting it into or retracting it from the laser path,
 the phase of the laser pulse will be changed by $\pi$, flipping the laser
 circular polarization. But mechanical movement is not fast enough, the fast 
 flipping of beam polarization is done by a component called Pockels Cell (PC),
@@ -786,8 +837,8 @@ an electric field, the birefringence is proportional to the strength of the
 applied electric field. By applying appropriate high voltage ($\sim 1.5\ kV$),
 % from Caryn's thesis
 PC will act as a quarter wave plate (photon amplitude along fast and low axes
-$E_x$, $E_y$ will have a phase difference of $\pm \frac{\pi}{2}$ dependeing on
-the polarity of the applied electric field), converting lineraly polarized laser beam
+$E_x$, $E_y$ will have a phase difference of $\pm \frac{\pi}{2}$ depending on
+the polarity of the applied electric field), converting linearly polarized laser beam
 into circularly polarized laser beam. And reserve the electric field polarity
 will reverse the polarization of the laser beam. This transition can be very
 fast, up to $1 \ kHz$, with a dead time of about $60\ \mu s$.
@@ -814,7 +865,7 @@ The PITA effect is characterized by the PC induced phase shift $\delta$
 \begin{equation*}
     \delta^{R(L)} = \mp\left(\frac{\pi}{2} + \alpha \right) - \Delta \\
 \end{equation*}
-where $\alpha$ and $\Delta$ represnet the symmetric and asymmetric offset phase
+where $\alpha$ and $\Delta$ represent the symmetric and asymmetric offset phase
 shift respectively. The resultant slightly elliptical beam has a residual
 linear component, leading to an intensity asymmetry (to first order):
 \begin{equation}
@@ -822,7 +873,7 @@ linear component, leading to an intensity asymmetry (to first order):
 \end{equation}
 $\epsilon/T \ (<<1)$ defines the ``analyzing power'', $\epsilon = T_{x'} - T_{y'}$ 
 and $T = (T_{x'} + T_{y'})/2$,
-$T_{x' (y')}$ is the transimission coefficient along the axis x' (y') of the
+$T_{x' (y')}$ is the transmission coefficient along the axis x' (y') of the
 downstream analyzer. $\theta$ is the angle between the PC's fast axis and the 
 $x'$ axis of the analyzer
 
@@ -843,7 +894,7 @@ intensity asymmetry is ??? ppm.
 As you may see in fig. \ref{fig:injector}, the charge feedback system also
 controls the HV supply of the Intensity Attenuator (IA), which, together with
 the slit in beam chopper, controls the intensity of electron beams. So, IA also
-plays a key role in achieving a small charge intensity asymmetry by eqaulizing
+plays a key role in achieving a small charge intensity asymmetry by equalizing
 beam intensity across helicity states.
 
 A optical element called Rotatable Half-Wave Plate (RHWP) lies downstream the PC,
@@ -864,7 +915,7 @@ PREX-I and Qweak experiments for better systematic precision -- the wien filter.
 
 The IHWP lies upstream of the PC, it is the easiest way to reverse the beam 
 helicity by inserting or retracting the IHWP. With slow helicity reversal, we 
-can identify the possible systematic undertainties. The idea
+can identify the possible systematic uncertainties. The idea
 is simple, assume the true and a systematic false asymmetry to be $A_0$ and $\Delta A$,
 then what we measure by inserting (retracting) the IHWP will be:
 \begin{equation}
@@ -893,7 +944,7 @@ the polarity of the solenoid, a wien flip means to change the polarity of the sp
 Finally, the horizontal wien filter will fine tune the spin direction to optimize 
 the longitudinal polarization in the experimental hall. Note that electrons
 exit the double wien filters are not longitudinally polarized, because electron
-spin will precess when travel through the accelrator, causing a rotation in the
+spin will precess when travel through the accelerator, causing a rotation in the
 horizontal plane. Therefore, a carefully selected initial spin direction is 
 needed to make sure the spin is (anti) parallel to electron momentum at target.
 \begin{figure}
@@ -908,8 +959,22 @@ This tells us another function of the wien filter, to set a non-longitudinal
 initial spin to cancel out the shift caused by spin precession during acceleration, 
 so that we have exactly longitudinally polarized electron beam at target.
 
-With both IHWP and Wien filter, we are able to cancle most systematic false 
+With both IHWP and Wien filter, we are able to cancel most systematic false 
 asymmetries, achieving very small systematic errors.
+\begin{comment}
+    IHWP
+    % https://www.jlab.org/accel/inj_group/docs/2009/parity_Ops_Training_05Aug09.pdf
+    \begin{itemize}
+	\item Cancels electronic cross talk and Pockels Cell steering
+	\item  Residual linear polarization effects do not cancel
+	\item Spot size asymmetry, which we cannot measure, does not cancel
+    \end{itemize}
+
+    Wine filters and solenoid
+    \begin{itemize}
+	\item Cancels all helicity-correlated beam asymmetries from Injector including spot size
+    \end{itemize}
+\end{comment}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Polarimeters}
@@ -968,22 +1033,24 @@ helps to normalize the polarization measurement in the experimental halls.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Compton Polarimeter}
+% Compton photon detector: https://prex.jlab.org/DocDB/0002/000273/002/Cornejo_and_Quinn_ComptonPhoton_CREX_PREX_Nov_2018.pdf
 The Compton polarimeter locates at the entrance to hall A (about 20 m upstream the 
 target chamber), using the elastic scatter between polarized photon and electron
 to measured the polarization of the electron beam. As shown in fig \ref{fig:compton_pol},
-when the compton polarimeter is on, the electron beam will be bent into the 
+when the Compton polarimeter is on, the electron beam will be bent into the 
 Compton Chicane to interact with the polarized photons nearly head-on (a tiny
 crossing angle of $23.5\ mrad$). The Fabry-Perot Cavity
 is locked to and filled with circularly polarized ($> 99\%$) green laser beam
 ($\lambda = 532\ nm$, $E = 2.334\ eV$).
-The back-scattered photons will be
-detected by a GSO (low energy) or $\text{PbWO}_4$ crystal calorimeter right of the interaction region, while the
-electron beam will be bent back to the beam pipe to bombar the target. Due to
+The back-scattered photons will be detected by a GSO crystal calorimeter right 
+of the interaction region, while the
+% GSO (low energy) or $\text{PbWO}_4$ 
+electron beam will be bent back to the beam pipe to bombard the target. Due to
 interaction with photons, the scattered electrons will be less energetic than
 the incoming ones. So under the same dipole field, the scattered electrons will
 be bent more than the non-interacting electrons, as shown by the red dash line 
 in Fig. \ref{fig:compton_pol}. This 
-seperation allow us to measure the scattered electrons, together with measurement
+separation allow us to measure the scattered electrons, together with measurement
 of scattered photons, we can identify and scattering asymmetry and then the polarization
 of the electron beam.
 \begin{figure}[h!]
@@ -1040,7 +1107,7 @@ The advantage of the Compoton polarimeter is that it can tolerate quite high cur
 polarization monitor. The disadvantage is, comparing to Mott or Moller polarimeter,
 its analyzing power is quite low at GeV energy level, while increase the beam
 energy will lead to high background in the photon detection due to synchrotron 
-radiation. Overall, the Compton polarimeter is able to achieve a 1\% absolute systemtatic
+radiation. Overall, the Compton polarimeter is able to achieve a 1\% absolute systematic
 uncertainty.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -1059,7 +1126,7 @@ asymmetry due to different beam polarizations.
     \end{gathered}
     \label{eqn:moller_xsection}
 \end{equation}
-With $frac{d\sigma_0}{d\Omega}$ being the unpolarized moller scattering cross section,
+With $\frac{d\sigma_0}{d\Omega}$ being the unpolarized moller scattering cross section,
 s is the Mandalstam variable: $s = 2m_e(E+m_e) \approx 2m_e^2\gamma$,
 $\CP_b \ (\CP_t)$ the polarization of beam (target). 
 $\theta_{CM}$ and $A_{ij}$ the scattering angle and analyzing power in CoM frame. 
@@ -1089,10 +1156,10 @@ So Eq. \ref{eqn:moller_xsection} is simplified to:
 \end{equation}
 The moller pair (the scattered incident electrons and recoil target electron)
 centered around $\theta_{CM} = 90^\circ$ ($\theta_{lab} < 3^\circ$), 
-are seperated from the undeflected beam by set of magnets, then goes through
+are separated from the undeflected beam by set of magnets, then goes through
 collimators (at the exit of dipole, not shown in Fig. \ref{fig:moller_polarimeter}) 
-that define the acceptance, and finnally is detected by electron detectors in coincidence.
-The measreud asymmetry between spin-parallel and anti-parallel cross section is:
+that define the acceptance, and finally is detected by electron detectors in coincidence.
+The measured asymmetry between spin-parallel and anti-parallel cross section is:
 \begin{equation}
     A_{exp} = \frac{N^+ - N^-}{N^+ + N^-} = \CP_b \CP_t \langle A_{zz} \rangle 
     \Rightarrow
@@ -1128,7 +1195,7 @@ current between different helicity states. Because there is no way to ensure
 exactly the same beam parameters between different helicity states, even with fast
 helicity flipping. We monitored these variables with redundant specialised devices
 -- Beam Position Monitors (BPMs) and Beam Current Monitors (BCMS). For PREX-II
-and CREX, we had another independent monitor system -- Small Angle Monitors (SAms).
+and CREX, we had another independent monitor system -- Small Angle Monitors (SAMs).
 There monitors were able to measure the beam difference as precise as:
 $$ \Delta x \sim 1\ \mu m \quad \Delta x' \sim 1\ mrad \quad \Delta p/p \sim 0.0004 \quad \Delta I/I \sim 100 \ ppm$$ (FIXME)
 \begin{figure}[h!]
@@ -1138,12 +1205,22 @@ $$ \Delta x \sim 1\ \mu m \quad \Delta x' \sim 1\ mrad \quad \Delta p/p \sim 0.0
     \label{fig:hall_a_monitors_and_modulation}
 \end{figure}
 
+\begin{comment}
+    \begin{itemize}
+	\item beam correlations
+	\item monitor precision (resolution): double difference width
+	\item noise
+	\item pedestal: calibration
+	\item cross-correlation
+    \end{itemize}
+\end{comment}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{BPMs}
 \begin{comment}
 Cross check, and unfold beam fluctuation noise from instrumentation noise
 \end{comment}
-Hall A has a series of BPMs along the beam piple leading to the target chamber
+Hall A has a series of BPMs along the beam pipe leading to the target chamber
 to monitor the beam conditions, among them, 6 switchec electrode electronics (SEE) 
 stripline BPMs are important to PREX-II and CREX, 
 their records are used to extract beam parameters. These 6
@@ -1186,7 +1263,7 @@ travel through the beam pipe, it will induce a magnetic field in the beam pipe (
 which in turn will induce a current in the secondary winding (toroid), 
 whose output is proportional to the beam current. 
 To make a precise measurement, it is important to shield any outside magnetic 
-field and seperate the segment of beam pipe where the BCM lies in from the rest.
+field and separate the segment of beam pipe where the BCM lies in from the rest.
 
 The BCM system in Hall A consists of two radio frequency (rf) cavities and
 an unser monitor in between, the unser monitor is a parametric current transformer (PCT),
@@ -1216,7 +1293,7 @@ The induced voltage is proportional to the traversing charge q:
 where $k_{loss}$ is the loss factor, which depends only on the electric field
 distribution, therefore is sensitive to beam position and particle velocity.
 To measure beam intensity, one would prefer the EM mode whose electric field
-doens't depend on r position, these are $\text{TM}_{\text{010}}$ like modes;
+doesn't depend on r position, these are $\text{TM}_{\text{010}}$ like modes;
 while for measurement of beam position, exactly the opposite is wanted, the
 electric field should have an azimuth angle and r dependence, which are $\text{TM}_{\text{110}}$
 like modes.
@@ -1229,15 +1306,15 @@ like modes.
 	\includegraphics[width=0.52\linewidth]{TM010}
 	\includegraphics[width=0.46\linewidth]{TM110}
     \end{subfigure}
-    \caption{Up: Schemtaic plot of current convertor; 
+    \caption{Up: Schematic plot of current converter; 
     Down: $\text{TM}_\text{010}$ and $\text{TM}_\text{110}$ modes, the red arrows are electric field}
 \end{figure}
 
 The 2 rf-cavity current monitors are of Pill box type (the electric field is
 concentrated near axis, while the magnetic field is concentrated at outer
 cylindrical wall), which operates at $\text{TM}_\text{010}$ mode. The voltage 
-readout will be downconverted to lower frequencies signals, then filtered, 
-amplified and further precessed before writing into the data stream. Due to
+readout will be down-converted to lower frequencies signals, then filtered, 
+amplified and further processed before writing into the data stream. Due to
 non-linearity at low current region, actually 3 signals (the same signal with
 different gains: x1, x3 and x10) will be recorded \cite{hall_A_equip_manual}.
 
@@ -1273,7 +1350,7 @@ possible beam or electronic noise.
 \begin{comment}
 It is very important for PVES to control the systematic uncertainty, especially
 the one from beam fluctuation (HCBA). Ideally, the electrons bunches with opposite
-polarization should have exactly the same internsity and energy, hitting the target 
+polarization should have exactly the same intensity and energy, hitting the target 
 at the same place with the same angle, which is obviously impossible in reality. 
 So we need to correct the false asymmetry introduce by the beam fluctuation. There are a
 few methods to do the correction, one of them is the so called Beam modulation.
@@ -1285,9 +1362,9 @@ which will be used to correct the measured asymmetry.
 
 Another system we see in Fig. \ref{fig:hall_a_monitors_and_modulation} is the
 beam modulation system, which lies in beamline arc right after Beam Switch Yard 
-where electron chains are seperate into Hall A/B/C beams.
+where electron chains are separate into Hall A/B/C beams.
 It consists of 6 air-core coils and an energy vernier in the last cavity of south LINAC, 
-the total number of 7 coils provides a redudancy w.r.t. the free number of degrees 
+the total number of 7 coils provides a redundancy w.r.t. the free number of degrees 
 of beam phase space, making sure to cover all beam phase space at target.  
 Coil (trim) 1, 3, 5 are responsible for modulating beam x position and coil 
 2, 4, 5 will modulate beam y position.
@@ -1301,7 +1378,7 @@ regression. When beam was modulated, BPMs and detectors will record correspondin
 change in their readout, to calculate detector sensitivity w.r.t. jitter in beam
 parameters. Therefore, the modulation should be much larger than the natural
 jitter in the beam, a typical position modulation will be about $100\ \mu m$ (FIXME)
-and the energy vernier will result in a beam diplacement of $0.75 \ mm$ in BPM 11/12.
+and the energy vernier will result in a beam displacement of $0.75 \ mm$ in BPM 11/12.
 % \begin{figure}[h!]
 %     \centering
 %     \includegraphics[width=0.49\linewidth]{bmw_modulated_beam}
@@ -1310,14 +1387,14 @@ and the energy vernier will result in a beam diplacement of $0.75 \ mm$ in BPM 1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Target}
 For the sake of statistics, the designed current was quite large, as shown in
-Table. \ref{table}. With such high current, the electron beam will deposit quite
+Table. \ref{tab:parameters}. With such high current, the electron beam will deposit quite
 a lot of heat on the target, it will be a disaster if we can't take away these
 heat as soon as possible to keep a stable target temperature.
 For PREX-II, because Pb itself is not a good thermal conductor ($35\ W/m\cdot K$),
 auxiliary diamond foils ($> 1000\ W/m\cdot K$) were used to form a D-Pb-D sandwich target to help heat
 dissipation. The thickness of the diamond foil matters, one lessen we learned 
-from PREX-I was that with thin ($0.15\ mm$) diamond foil, the thermol conductivity
-of the diamond foil droped greatly (from $1000 \ W/m \cdot K$ to $100 \ W/m\cdot K$) after about 
+from PREX-I was that with thin ($0.15\ mm$) diamond foil, the thermal conductivity
+of the diamond foil dropped greatly (from $1000 \ W/m \cdot K$ to $100 \ W/m\cdot K$) after about 
 1 week of running with $70\ \mu A$ cw beam, resulting in some Pb targets melted. 
 While a thicker diamond foil ($0.25\ mm$) will protect Pb foils from melting 
 under the same conditions. In PREX-II, a factor of 2 safety margin was
@@ -1331,7 +1408,7 @@ materials and higher current can be applied. Isotopically pure \Ca (the original
 target we used had a purity of 95.99\%) is much more 
 expansive than pure \Pb target, so only one \Ca target was prepared for CREX. 
 After the target accident, 
-the new \Ca target was a stack of 3 seperated foils with similar total thickness.
+the new \Ca target was a stack of 3 separated foils with similar total thickness.
 % https://logbooks.jlab.org/entry/3769028
 
 Targets were firmly mounted in bays of target ladders, whose axes were 
@@ -1372,16 +1449,19 @@ to simplify the design, construction and installation of the target chamber.
 
 Special care was needed for \Ca target, the pressure should be less than $10^{-6}\ tort$
 to avoid Ca oxidation. The vacuum of the target chamber was maintained by a 
-turbo-molecular pumpoing system, which created a $10^{-7}\ (10^{-8})\ torr$ vacuum 
+turbo-molecular pumping system, which created a $10^{-7}\ (10^{-8})\ torr$ vacuum 
 for the calibration (production) ladder in the target chamber. What's more,
 gate valves were closed to isolate the target chamber from upstream and downstream
 beam pipes when beam was not on. By way of precaution, a nitrogen purge system 
 was installed to purge air in case of possible leak.
 Every time we warmed up the \Ca target, boiling was needed before restarting data taking.
 % Ca oxidation: CaO, $\text{CaCO}_3$, $\text{Ca}_3\text{N}_2$, $\text{Ca(OH)}_2$
+% an inert gas system was included to protect the \Ca target in case of long term
+% vacuum loss or the chamber needs to be brought up to atmospheric pressure
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Target Cooling}
+% we don't understand the failure modes of the target yet.
 The production ladder was cryogenically cooled due to high power from electron beam,
 while the calibration ladder was water cooled, the calibration runs need only
 $\lesssim 1\ \mu A$ level beam current. Both ladders were made of cooper,
@@ -1424,6 +1504,7 @@ replace a target if the measured asymmetry width increase significantly.
 \end{figure}
 
 The solution to this problem is the raster, which is a set of dipole magnets % where are they
+between the Compton and the Moller polarimeters
 that deflect the beam at about $25\ kHz$ to spread the beam on the target.
 What we learned from PREX-I was that we could significantly reduce the sensitivity 
 to target-thickness variations by synchronizing the helicity flipping frequency
@@ -1433,7 +1514,7 @@ a helicity pair or quadruplet.
 As shown in Fig. \ref{fig:raster_pattern}, the Lissajous pattern we got depends
 on the frequency difference between X and Y, the larger the frequency difference,
 the larger the scanning area. The ratio of $f_y/f_x$ should be an irrational number
-to prevent a closed Lissajous pattern. The actual freqeuncies we used were $25.44$
+to prevent a closed Lissajous pattern. The actual frequencies we used were $25.44$
 and $24.48\ kHz$, for PREX-II, the raster size was $4 \times 6\ mm$, and CREX
 had a raster size of $2 \times 2\ mm$.
 % https://prex.jlab.org/wiki/index.php/Raster_Scope
@@ -1501,9 +1582,9 @@ the inner collimator, to make sure the electrons/radiation are completely
 absorbed inside the collimator. The beamline collimator was water cooled, with
 maximum heat loading of about $3.65\ kW$ from Pb target. The power on the beamline
 % ffrom my simulation note
-collimator was another signal for the degration of target. When the temperature 
+collimator was another signal for the degradation of target. When the temperature 
 of the outgoing water increased dramatically, it was time to replace the target.
-as shown in Fig. \ref{fig:collimator_see_target_degration}
+as shown in Fig. \ref{fig:collimator_see_target_degradation}
 
 Besides the beamline collimator, a few other devices were installed 
 to further eliminate the radiation level in the hall. These devices include the 
@@ -1511,18 +1592,20 @@ high-density polyethylene (HDPE) neutron shield around the beamline collimator
 region and a skyshine shield consisting of a $6\ cm$ thick tungsten block and
 massive concrete blocks. These extra shields were used to block high energy
 neutrons from the collimator.
+% to make sure the site boundary does in a calendar year will not be exceeded.
+% https://prex.jlab.org/DocDB/0000/000009/001/riordan_err_recommend-3.pdf
 
 \begin{figure}[h!]
     \includegraphics[width=0.32\linewidth]{collimator_power_fit}
     \includegraphics[width=0.32\linewidth]{Pb10_ndx02_n}
     \includegraphics[width=0.32\linewidth]{Pb10_ndx02_g}
-    \caption{Left: a simple model of target degration -- assumming the inner 
+    \caption{Left: a simple model of target degradation -- assuming the inner 
     foil ($t_1$) is becoming thinner and the outer foil is becoming thicker ($t_2$) 
-    while the total mass keeps intact. The plot showes how the power deposition 
+    while the total mass keeps intact. The plot shows how the power deposition 
     on the beamline collimator change in this model. Middle and Right: actual
     neutron and photon radiation level monitored along charge accumulation. They
     show similar trends.}
-    \label{fig:collimator_see_target_degration}
+    \label{fig:collimator_see_target_degradation}
 \end{figure}
 % PREX-I O-ring failure: a large raster and a high current: 
 % https://hallaweb.jlab.org/halog/html/1004_archive/100413092229.html
@@ -1563,6 +1646,7 @@ leads to the beam dump) is made of magnetic stainless steel to shield the
 magnetic field from the septum, on both ends of the septum beampipe, there
 are magnetic steel box to shield the fringe magnetic field from septum. 
 
+% quad field resulted from the septum
 \begin{figure}[h!]
     \includegraphics[width=0.52\linewidth]{septum}
     \includegraphics[width=0.46\linewidth]{septum_real}
@@ -1578,14 +1662,14 @@ quadrupoles and 1 dipole. The maximum magnetic field of the 3 quadrupoles are
 $1.2$, $1.0$ and $1.0\ T$ respectively while the dipole can provide up to $1.7\ T$ field. 
 The incoming electrons will be bent $45^\circ$ up in the vertical plane and then
 received by the following detectors.
-HRS has a small anglular acceptance ($\pm 28\ mr$ horizontally, $\pm 60\ mr$ vertically, 
+HRS has a small angular acceptance ($\pm 28\ mr$ horizontally, $\pm 60\ mr$ vertically, 
 % Vertical_drift_chambers_for_the_Hall_A_high-resolu.pdf
 the solid angle being $7.8\ msr$), but can move over a wide range of angle
 around the hall ($12.5^\circ - 165^\circ$). As its name implies, it achieves a 
 very high momentum resolution at the $10^{-4}$ level over a wide range of momentum 
 ($0.8 - 4\ GeV$). This capacity helped us to reject most of inelastic electrons, 
-beacause a small difference in electron momentum ($2-3\ MeV$) will lead to
-large seperation in the detector plane, thus leaving us a relative clean data 
+because a small difference in electron momentum ($2-3\ MeV$) will lead to
+large separation in the detector plane, thus leaving us a relative clean data 
 with very small background from inelastic scattering. 
 
 \begin{figure}[h!]
@@ -1604,7 +1688,7 @@ with very small background from inelastic scattering.
 % HRS magnetic field were monitor by 2 arrays of 3 NMR field probes	% NIM paper
 
 Before the entrance of Q1 quadrupoles was the Q1 collimator, which defined
-the sepctrometer acceptance. It was strictly required that the symmetry between
+the spectrometer acceptance. It was strictly required that the symmetry between
 left/right, and up/down of Q1 collimators should be preserved to reduce any
 possible systematic uncertainties.
 \begin{figure}[h!]
@@ -1629,11 +1713,11 @@ work in the so called 'intergrating mode'.
 
 \subsubsection{Vertical Drift Chamber (VDC)}
 Each VDC detector package consists of 2 drift chambers, one lower and one upper
-chamber with a vertical seperation of $0.23\ m$ ($0.335\ m$ between the same
+chamber with a vertical separation of $0.23\ m$ ($0.335\ m$ between the same
 U or V planes of the lower and upper chamber), to enable precise position and angle measurement. 
 The drift chamber is actually a multiwire proportional chamber (MWPC) with 2 
 layers of sense wires -- U and V planes in the lab horizontal plane, which are 
-orthoganal to each other and has a vertical seperation of $26\ mm$. 
+orthogonal to each other and has a vertical separation of $26\ mm$. 
 Each wire plane consists of 368 tungsten wires with the width of adjacent wires 
 being $4.24\ mm$, corresponding to $6\ mm$ in the spectrometer cross section due to the $45^\circ$
 cross angle between the central ray and the VDC plane. The ion's drift time in 
@@ -1721,8 +1805,8 @@ the statistical uncertainty:
     \sigma_{A} = \sigma_{stat} \times \sqrt{1 + \left( \frac{\sigma_{PE}}{\langle PE \rangle }\right)^2}
 \end{equation}
 where $\sigma_{PE}$ is the RMS of the distribution. The RMS can be parameterized
-into 2 parts: the Gaussian princaple part which is inversely proportional to
-the quartz thickness and a Landou tail which comes from the showering process
+into 2 parts: the Gaussian principle part which is inversely proportional to
+the quartz thickness and a Landau tail which comes from the showering process
 and is proportional the thickness. The final decision of $5\ mm$ of thickness
 was a compromise between these 2 parts to minimize detector resolution 
 $\frac{\sigma_{PE}}{\langle PE \rangle}$: thicker to increase photon-electron
@@ -1744,9 +1828,10 @@ changed gain of the main detectors under a different beam current.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{AT Monitors}
+% last page of https://prex.jlab.org/DocDB/0000/000096/002/riordan_prex_soft.pdf
 About $1\ m$ downstream the main detector were a pair of AT monitors, as shown 
 in Fig. \ref{fig:detectors}, which used exactly the same quartz piece as the 
-main detectors. They were used to minotor transverse polarization in the beam.
+main detectors. They were used to monitor transverse polarization in the beam.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.48\linewidth]{ATL1}
@@ -1759,14 +1844,146 @@ main detectors. They were used to minotor transverse polarization in the beam.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Data AcQuisition (DAQ)}
-CEBAF Online Data Qcquisition (CODA) system
-We use to pseudo random number generator to decide the helicity pattern, which
-will trigger the data taking of both detectors and monitors. DAQ will read data
-from PCs, BPMs, BCMs and detectors, which will then be digitalized by a 18 digits
-ADC. In one helicity window, they will sample ??? times, which will be grouped
-into 4 blocks. The sum of the 4 blocks was what we got.
+JLab has its own framework of hardwares and softwares to aquire data, which
+is called CODA (CEBAF Online Data Acquisition) \cite{CODA}. It is a distributed
+system that can be scaled from a few detector channels to tens of thousands of
+channels needed in an experiment. CODA version 2.6.2 was used for PREX-II and CREX.
+% CODA data structure: https://hallaweb.jlab.org/equipment/daq/dstruct.html
 
-The integrated response of each detector and beam monitor was collected and sampled 
-by a custom 18-bit ADC for each helicity window.
+Data acquisition worked in 2 modes: the integrating mode and the counting mode,
+both have their own DAQs, because they had different triggers and read from
+different detectors.
 
-Integrating mode and counting mode
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Integrating DAQ}
+The integrating DAQ consists of 4 primary DAQ systems spread in the injector,
+the Counting House (CH) and the hall (LHRS/RHRS). They are controlled by the
+CODA Run Control system in the CH, and triggered by the helicity signal.
+
+The helicity signal was produced by a Helicity Control Board \cite{Hboard} 
+located in the Injector Service Building, which is an Advanced Programmable Logic
+Generator. It has 4 timing modes: 3 fixed-frequencies of 30, 120 and 240 Hz
+and a fourth free-running mode. In fixed-frequency mode, as we chose in PREX-II/CREX,
+the phase was locked to the `Beam Sync': the accelerator's $60\ Hz$ AC line synchronized 
+global timing reference, which means the last helicity window in a helicity pattern
+may be shorter or longer than other helicity windows because the $60\ Hz$ line signal
+wanders from time to time, shown as Beam Sync Jitter in the second timing diagram 
+in Fig. \ref{fig:timing}. To ensure that all helicity windows have the same integrating
+time, an artificial deadtime was introduce, which was $T_{dead} = 51.33\ mu s$,
+as shown in Fig. \ref{fig:integrating_timing}.
+This slightly reduce the integration time: $T_{int} = T_{stable} - T_{dead}$.
+% Beam sync signal: SCAM module, https://prex.jlab.org/wiki/index.php/Helicity_Control
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{timing}
+    \caption{Helicity timing diagram. The Tsettle signal (falling edge) indicates 
+    the start of a new helicity window, which was chosen as the t=0 reference
+    point for all timing diagram, it goes to the CH/hall.
+    The QRT (Pattern Sync) signal indicates the start of each helicity pattern,
+    it goes to the CH. 
+    The Pair Sync signal toggles between 0 and 1, indicating the start and end
+    of a helicity pair, it goes to the CH. This signal is not important, all it
+    tells can be inferred from the QRT signal.
+    The Hel+ signal decides the helicity of the current window, it goes to the 
+    laser table in the injector.
+    The Hel- signal is a complementary signal to Hel+, so that the board always 
+    keeps the same current regardless of the helicity state, preventing helicity 
+    correlated electrical pickup from the board. This signal is not shown in the
+    plot, it goes to the helicity magnets (Wien filters).
+    The Delayed Helicity (DLY RPT) signal (by specified n windows).
+    It tells what the helicity was n windows before. It goes to the CH. This
+    signal is not shown in the plot.}
+    \label{fig:timing}
+\end{figure}
+
+The helicity signal sent to injector components (PCs, IAs and the Wien Filters) 
+can be regarded as real time due to their geographical vicinity. The Tsettle 
+signal sent to hall A 
+will stop (falling edge) data taking in the previous helicity window, then hold for
+$T_{settle}$ time to allow settlement of the high voltage in PCs % $0\ \mu s$
+and readout of previous window data, its rising edge tells the start time of data taking in current 
+helicity window. The delay caused by signal transportation in fiber optics cables to Hall A 
+was about $100\ ns$, $1\ \mu s$ was reserved between the Tsettle and the helicity
+signals to inform the hall of the change of helicity, as shown in Fig. \ref{fig:timing}.
+Actually, this is not necessary, because $T_{settle} = 90\ \mu s$ was long enough to
+allow such delay in signal transportation, as well as delay caused by beam 
+transportation in the accelerator, which was $1.4 km/c = 4.7\ \mu s$.
+
+The actual helicity signal (DLY RPT) sent to Hall A will be delayed (by 8 helicity windows
+in PREX-II/CREX), so that no monitors along the beamline or detectors in the 
+hall know the helicity of current window, making sure that the monitors/detectors
+were not helicity sensitive. In the DAQ side, we needed to verify that
+the helicity pattern is expected based on the helicity pattern signal and the 
+measured helicity agrees with the delayed helicity signal, to ensure that the
+helicity information was correct. When doing data analysis, the data needs 
+to be shifted number of delayed helicity windows to match the actual helicity 
+pattern. The helicity pattern was pseudo-randomly chosen by the helicity board 
+using a 30-bit Shift Register.
+
+% https://prex.jlab.org/DocDB/0001/000187/001/PREX_DAQ_25July18.pdf
+The analog signals from the main detectors and various beam monitors were converted 
+to voltage by a customised I-to-V 
+preamplifier developed for the Qweak experiment, the voltage output was fed
+to a 18-bit ADC (Analog-Digital-Converter), sampled and integrated there. The
+18-bit ADC was also a product of previous parity experiments. The detector signal was
+sampled every $2\ \mu s$ and integrated into 4 sub-blocks for each helicity window
+(1024 samples per sub-block, 4096 samples per helicity window at $120\ Hz$).
+The ADC will be triggered $80\ \mu s$ after the start of $T_{settle}$, as shown
+in Fig. \ref{fig:integrating_timing}, this allows $10\ \mu s$ wait time for 
+ADC to void any possible effects from the external triggering NIM pulse on the 
+internal signal processing. To synchronize data collection (integration), 
+a HAPPEX Timing Board (HAPTB) was used, which received the Tsettle signal and
+produced the integration gate signal, distributing them to each ADC/scalar to trigger
+signal integration/collection.
+% HAPTB: https://prex.jlab.org/wiki/index.php/DAQ_Hardware_HAPTB
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{integrating_timing}
+    \caption{Integrating timing}
+    \label{fig:integrating_timing}
+\end{figure}
+
+Each DAQ has its own VME crate holding all necessary hardware modules, a read 
+out controller (ROC) controls the VME crate. All these crates (ROCs) were
+managed by a Trigger Supervisor (TS), which had its own VME crate. The TS was
+triggered by the Tsettle signal, which in turn trigger the ROCs.
+By receiving the triggering signal, ROC will read data stored in their memory 
+buffer and send it to the CODA system, 
+which will build, transport and store events. We had an analyzer JAPAN (Just
+Another Parity ANalyzer) to monitor online data and analyze data off-line.
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.5\linewidth]{Coda}
+% \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Counting DAQ}
+The 2 counting DAQs, one for each HRS, were different from the integrating DAQs,
+in both hardwares and softwares. In contrast to counting electrons in the integrating
+mode, the counting DAQ record and recounstruct track for each scattered electrons.
+The counting DAQ read data from the scintillators,
+VDCs and GEMs, the main detectors were not used in the counting DAQ; and was
+triggered by the scintillators, different logical combinations of the scintillator
+signals could trigger different counting rates. Most of the time, we used the S0
+trigger signal, as discussed in the scintillator sector.
+
+The analyser used for decoding counting mode data was the general Hall A analyser,
+which will read out the hit information in each detector and reconstruct the 
+electron track based on these hits. By reversing the optics matrix, it will
+calculate the electron info (position, angle and energy) on the target, allowing
+us to measure the scattering angle and $Q^2$, to tune the optics matrix, 
+to do detector alignment and check backgrounds.
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{EPICS}
+Besides the 2 DAQ systems, we had a site-wise slow (relative to the helicity frequency) 
+control system, called Experimental Physics and Industrial Control System (EPICS) \cite{EPICS},
+to monitor and control every important apparatus and quantity, such as magnets, 
+beam current/position/energy, vacuum level, temperature, gas flow, 
+high voltage supply etc. EPICS polled a series of 
+Input/Output Controllers (IOCs) and record their average values about every second.
+It provided real-time monitoring of the whole system: both accelerator and detectors, and
+allowed us to trace back the status whenever there were some problems.

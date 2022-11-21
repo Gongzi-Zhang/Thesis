@@ -5,7 +5,7 @@ high-precision experiments. To achieve a smaller systematic uncertainty, a
 combination of fast-control and slow control was employed, which helped 
 to cancel many systematic uncertainties brought by the accelerator to the
 beam. Except the uncertainty from the machine, another important source
-of systematic undertainties is the detection process, namely the 
+of systematic uncertainties is the detection process, namely the 
 acceptance function.
 
 After removing false asymmetry from the beam, we need further correction of the
@@ -17,9 +17,9 @@ as shown in Eq. \ref{eq:background_correction}.
 \end{equation}
 Here, $\CA_i$ and $f_i$ refer to the asymmetry and rate fraction of background
 processes. In PREX-II, contamination from the diamond foil contributed the
-largest backgroun correction.
+largest background correction.
 
-The uncertainty proporgation
+The uncertainty propagation
 \begin{equation}
     (\delta \CA_{pv})^2 = 
       \left( \frac{\partial \CA_{pv}}{\partial \CA_{cor}} \delta \CA_{cor} \right)^2
@@ -63,9 +63,9 @@ being more precise.
 % prex_target_subassy_revB.pdf
 The Pb foil is not good thermal conductor, which limited the highest beam current
 we could apply. With pure \Pb foil, it will melt at $\sim 10 \mu A$. To help 
-dissipate the heat produced by electron bombarment, auxiliary meterials -- the 
+dissipate the heat produced by electron bombardment, auxiliary materials -- the 
 diamond foils, which are excellent thermal conductor, were used. 
-With the help of Diomand foils, the
+With the help of Diamond foils, the
 \Pb target could tolerate up to $\gtrsim 100\ mu A$. Besides, \C is isoscalar, and spin-0 
 nucleus, whose PV asymmetry is well-measured (FIXME), so the background is 
 well-understood. 
@@ -82,8 +82,8 @@ were half the \Pb thickness, as shown in Table \ref{tab:target_thickness}.
 % https://prex.jlab.org/DocDB/0004/000446/001/target_thickness_errors.txt
 The target foils' thicknesses were measured differently. The diamond foil's 
 thickness was measured directly using calipers with an accuracy of $0.0005 \ in$ ($0.0127 \ mm$).
-Given diomand foil's thickness of $1\ in$ ($0.255 \ mm$), an estimation of 5\% 
-relative error was reasonbale. Foil to foil variations were small than 5\% (the
+Given diamond foil's thickness of $1\ in$ ($0.255 \ mm$), an estimation of 5\% 
+relative error was reasonable. Foil to foil variations were small than 5\% (the
 largest variation was 3.6\%), as shown in Table \ref{tab:target_thickness}.
 
 As for the \Pb foil, its thickness (area density) was inferred from its mass 
@@ -123,9 +123,9 @@ smaller than that (the largest variation being 3.8\%).
     \end{tabular}
     \caption{Target thickness of each target in the production ladder. 
     Name convention: upstream material\#label - central material\#label - downstream material\#label. 
-    Pb208 foils count from 1 to 10, diomand foils count 1-10, A-G, I, J, 20. 
+    Pb208 foils count from 1 to 10, diamond foils count 1-10, A-G, I, J, 20. 
     The first 2 Pb targets are natural Pb foil, not pure \Pb isotope foil. 
-    The 3rd Pb target is sandwiched by graphite, not diomand. Red color marks
+    The 3rd Pb target is sandwiched by graphite, not diamond. Red color marks
     out the targets we used in PREX-II and CREX. To convert the number to real 
     thickness, use the density of $\rho_D = 3.52\ g/cm^3$ and $\rho_{208Pb} 
     = 11.38 \ g/cm^3$.}
@@ -155,10 +155,10 @@ rate from \C and \Pb directly and calculate the ratio between them.
     \centering
     \includegraphics[width=0.5\linewidth]{prex_C_contamination_P}
     \caption{Post target electron momentum distribution. The lower end tail comes 
-    from multi-scattering and radiaction.}
+    from multi-scattering and radiation.}
 \end{figure}
 
-The goodness of simulatin could be checked by comparison to optics data.
+The goodness of simulation could be checked by comparison to optics data.
 \begin{table}
     \centering
     \begin{tabular}{c c c | c c c c | c c}
@@ -228,7 +228,7 @@ and $\theta$ was the reconstructed scattering angle
 But in simulation, $Q^2$ was calculated as:
 $$ Q^2 = 2*E*Ef*(1-\cos(\theta)) $$
 where E was the post vertex beam energy: I made a mistake here, E should be 
-pre vertex beam energy.
+pre-vertex beam energy.
 $$ Ef = M*E/(M + E*(1-cos(th))) $$
 was the theorectical beam energy after elastic scattering and $\theta$ was 
 the scattering angle.
@@ -404,13 +404,13 @@ The ratio of $t_C/T_{Pb}$ was calculated as
 	\hline
     \end{tabular}
     \caption{Theoretical calculation of $f_C$. These are updated values. In the 
-    initial study, the scattering was chosed to be $4.8^\circ$, with corresponding
-    $\sigma_C = 48.001\ mbarn$ and $\sigma_{Pb} = 3386.1\ mbran$, leading to
+    initial study, the scattering angle was chosen to be $4.8^\circ$, with corresponding
+    $\sigma_C = 48.001\ mbarn$ and $\sigma_{Pb} = 3386.1\ mbarn$, leading to
     $R_C/R_{Pb} = 7.04\%$ and $f_C = 6.57\%$.}
 \end{table}
 The theoretical value was 4.6\% higher than the simulation result.
 
-\subsubsection{Controbution to $\CA_{pv}$}
+\subsubsection{Contribution to $\CA_{pv}$}
 As said before, the asymmetry from carbon scattering was well understood, and
 we had a table of cross section and asymmetry for electron-carbon elastic scattering
 at various energies and scattering angles, which were numerical solved from the Dirac equation
@@ -428,7 +428,7 @@ to be a conservative estimation of 4\%.
     asymmetry values for C and Pb.}
     \label{prex_asym}
 \end{figure}
-Using Eq. \ref{eq:systematic_uncertainty}, we could caluclate the uncertainty
+Using Eq. \ref{eq:systematic_uncertainty}, we could calculate the uncertainty
 contribution to $\CA_{pv}$, summarized in Table. \ref{tab:prex_C_contam}
 \begin{equation*}
     \begin{gathered}
@@ -455,7 +455,7 @@ The uncertainty caused by error in $f_C$ was negligible, and the one from $\CA_C
 was also tiny, which in hindsight, justifies our adoption of the sandwich target.
 
 \begin{comment}
-% somehow, the rate derivatino was wrong
+% somehow, the rate derivation was wrong
 \bigskip
 One could also estimate the rate from measurement. 
 \begin{eqaution}
@@ -479,7 +479,7 @@ The C graphite target has a thickness of $1.991\ mm$ and a density of
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Accptance Function}
+\section{Acceptance Function}
 As we said before, the spectrometer acceptance was mainly defined by the Q1 
 collimator, but other devices may also have affections on it. And the accepted
 area was not tiny ($0.00377 \ sr$), not every point within the acceptance had
@@ -489,7 +489,7 @@ we measured was actually the average asymmetry over the acceptance:
     \CA_{mea} = \frac{\int d\theta \sin\theta A(\theta) \frac{d\sigma}{d\Omega} \epsilon(\theta)}{\int d\theta \sin\theta \frac{d\sigma}{d\Omega} \epsilon(\theta)}
     \label{eq:acceptance_function}
 \end{equation}
-Here $\epsilon(\theta)$ is the aceeptance function, which is defined as
+Here $\epsilon(\theta)$ is the acceptance function, which is defined as
 the ratio of electrons that reach the main detector over all scattered
 electrons, which depends on the scattering angle $\theta$:
 \begin{equation}
@@ -524,7 +524,7 @@ function. The few parameters we explored were:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Transportation Matrix}
-Due to the existance of various magnetic fields (septum, HRS) from target to detector, 
+Due to the existence of various magnetic fields (septum, HRS) from target to detector, 
 there is no way to know the exact analytical expression of the transportation
 from target to detector, though we can approximate and measure it.
 
@@ -533,13 +533,13 @@ w.r.t. to a reference trajectory (usually the central ray). In the transport coo
 $\hat{z}$ is the direction of reference trajectory;
 x is the displacement in the dispersive plane relative to the reference 
 trajectory, and $\theta$ is electron's `velocity' in the dispersive plane:
-$\theta = \frac{\partial x}{\partial z}$; similary, y and $\phi$ are displacement
+$\theta = \frac{\partial x}{\partial z}$; similarly, y and $\phi$ are displacement
 and `velocity' in the y-z plane, $\hat{y}$ is oriented such that $\hat{x}$, 
 $\hat{y}$, $\hat{z}$ are orthogonal to each other and they form a 
 right-handed coordinate $\hat{z} = \hat{x} \times \hat{y}$.
 $\delta = \frac{\Delta p}{p}$ represents the fractional deviation of momentum
 from that of the reference trajectory. With these definitions, we can expressed
-one electron's position along the optical path as a Fourier exanpansion of the
+one electron's position along the optical path as a Fourier expansion of the
 initial position of $\vec{X}_0$
 \begin{equation}
     x_i = \sum_j T_{ij} x_{j,0} + \sum_j \sum_k S_{ijk} x_{j,0}x_{k, 0} + \cdots
@@ -591,7 +591,7 @@ plane will be:
     \label{eq:reconstruction}
 \end{equation}
 The reason that we don't use BPM to `measure' beam position/angle on target is that 
-multiscattering/radiation inside the target foil will distort the beam trajectory. 
+multi-scattering/radiation inside the target foil will distort the beam trajectory. 
 
 A typical HRS transportation plot looks like Fig. \ref{fig:hrs_transport}:
 \begin{figure}[H]
@@ -616,7 +616,7 @@ from different holes were naturally separated on the focal plane, which allowed
 us to match them to sieve holes one by one. With a reasonable inital value of 
 the transportation matrix (from previous experiments),
 we could reconstruct electron's trajectory on the sieve plane using Eq. \ref{eq:reconstruction}.
-By tuning the matrix element, the one that minizes the distance of each electron's trajectory on the sieve
+By tuning the matrix element, the one that minimizes the distance of each electron's trajectory on the sieve
 plane from its corresponding hole center was identified as the transportation
 matrix, so this is a linear regression problem. The identification of the septum 
 and HRS current was based on the sieve pattern calculated from the 
@@ -742,6 +742,34 @@ distribution to the vertex distribution is about 1.5\%.
     \label{tab:pcrex_tune}
 \end{table}
 
+\begin{comment}
+    PREX tune B: p7 in https://prex.jlab.org/DocDB/0001/000112/001/OpticsCalc.pdf
+    \begin{equation}
+	\begin{pmatrix}
+	    x_{fp}  \\
+	    \theta_{fp}  \\
+	    y_{fp}  \\
+	    \phi_{fp}  \\
+	    \delta_{fp}  \\
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+	    -3.09   & -0.02 & 0	& 0 & 16.73 \\
+	    -0.31   & -0.32 & 0	& 0 & 2.5   \\
+	    0	& 0 & 2.11  & 0.01  & -0.48 \\
+	    0	& 0 & 1.1   & 0.48  & -0.19 \\
+	    0	& 0 & 0	& 0 & 1	\\
+	\end{pmatrix}
+	\begin{pmatrix}
+	    x_{tg}  \\
+	    \theta_{tg}  \\
+	    y_{tg}  \\
+	    \phi_{tg}  \\
+	    \delta_{tg}  \\
+	\end{pmatrix}
+    \end{equation}
+\end{comment}
+
 To determine the new tune of septum and HRS settings for CREX, we started with 
 PREX-II tune, scaled it to CREX momentum. To know the appropriate septum 
 current that will bridge the central ray into HRS axis we tuned septum and 
@@ -787,7 +815,7 @@ pattern plot would shift, as shown in Fig. \ref{fig:central_ray_0}.
 Fig. \ref{fig:central_ray_1} told us the nominal septum current and HRS settings was not a bad choice,
 so we could move on to inner edge search with this septum nominal value: to
 see more inner holes -- holes with largest (smallest) phi in Left (right) arm.
-It turned out a 5\% increasement from the nominal value gave us the largest 
+It turned out a 5\% increment from the nominal value gave us the largest 
 acceptance, which corresponds to a septum current of: $1.05 \times (333*2.183522/0.95285) = 801.25 \ A$.
 \begin{figure}[H]
 % https://logbooks.jlab.org/entry/3748464
@@ -815,7 +843,7 @@ acceptance, which corresponds to a septum current of: $1.05 \times (333*2.183522
     \caption{Inner edge search on the left arm. Septum current from top left
     to bottom right: +2.5\%, +5\%, +7.5\%, +10\%. The inner middle hole starts
     to appear since +5\%, and outer holes disappear since 7.5\%, so the best
-    septum current was chosed to be +5\%}
+    septum current was chosen to be +5\%}
 \end{figure}
 
 With selected septum current, we continued to minimize beam spot size on the detector
@@ -875,7 +903,7 @@ The same for HRS field: % how to know HRS field at each position
 \end{equation}
 
 Using this construction, we could firstly vary the septum current to choose the
-one that most matched the data, then scaned through collimator shift and pinch point
+one that most matched the data, then scanned through collimator shift and pinch point
 shift to select the best model.
 
 \begin{figure}[H]
@@ -940,7 +968,7 @@ for best model: around 0-5\% above the nominal value.
     \end{tikzpicture}
     \caption{Position of the pinch point and the Q1 collimator.}
 \end{figure}
-Then we can scan throught the pinch point and collimator shift with a fine tune
+Then we can scan through the pinch point and collimator shift with a fine tune
 of the septum current (from -1\% to +5\%). The pinch point is the connection point
 between the septum beampipe and the collimator box, whose misalignment will affect
 the acceptance; another parameter we can tune is the collimator (TCS) y position,
@@ -1005,7 +1033,7 @@ We can check the $\theta_{lab}$ for the best models
     \includegraphics[width=0.49\linewidth]{best_model_run2886_qsq}
     \includegraphics[width=0.49\linewidth]{best_model_run21874_th_lab}
     \includegraphics[width=0.49\linewidth]{best_model_run21874_qsq}
-    \caption{$\theta_{lab}$ and $Q^2$ comparesion between best models and data (apparent values).}
+    \caption{$\theta_{lab}$ and $Q^2$ comparison between best models and data (apparent values).}
 \end{figure}
 % We can also check the difference between the vertex values and data:
 % \begin{figure}
@@ -1014,7 +1042,7 @@ We can check the $\theta_{lab}$ for the best models
 %     \includegraphics[width=0.49\linewidth]{p3_-2_0_0.0_run2886_qsq_v}
 %     \includegraphics[width=0.49\linewidth]{p5_0_-1_0.0_run21874_th_lab_v}
 %     \includegraphics[width=0.49\linewidth]{p5_0_-1_0.0_run21874_qsq_v}
-%     \caption{$\theta_{lab}$ and $Q^2$ comparesion between best models and data (apparent values).}
+%     \caption{$\theta_{lab}$ and $Q^2$ comparison between best models and data (apparent values).}
 % \end{figure}
 
 Using this best models, we can calculate the acceptance function as Eq. \ref{eq:acceptance_definition}:
@@ -1022,7 +1050,17 @@ Using this best models, we can calculate the acceptance function as Eq. \ref{eq:
     \centering
     \includegraphics[width=0.49\linewidth]{acc1_L_p2_-1_0_0.0}
     \includegraphics[width=0.49\linewidth]{acc1_R_p5_2_0_0.0}
-    \caption{Acceptance function extraced using the best models.}
+    \caption{Acceptance function extracted using the best models.}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Non-Linearity}
+\begin{equation}
+    Y = I + \alpha I^2 + \beta I^3 + \gamma I^4 + \cdots
+\end{equation}
+Non-linearity: $\alpha$, reduce it 
+\begin{itemize}
+    \item $\alpha=0.0028$ for Compton $\gamma$ detector
+    % https://prex.jlab.org/DocDB/0002/000273/002/Cornejo_and_Quinn_ComptonPhoton_CREX_PREX_Nov_2018.pdf
+\end{itemize}
 % \subsection{tg variables}
