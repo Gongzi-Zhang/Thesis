@@ -21,6 +21,7 @@ of nuclei, then followed by PREX-II and CREX. Future programs (M\/oller, SoLID
 and MESA experiments) will continue the development of PVES and push it to a
 higher precision.
 % First PVES experiment at JLab -- HAPPEX: Hall A Proton Parity EXperiment (E91-010)
+% PREX-I is the first EW observation that there is a neutron skin around a heavy nucleus -- https://indico.ihep.ac.cn/event/8987/contributions/105838/attachments/56820/65550/PREXCREX_jlzhang.pdf
 
 \begin{figure}[h!]
     \centering
@@ -42,6 +43,8 @@ higher precision.
     will continue to test the SM and explore the structure of nucleons with higher precision.
     (MESA-12C is the same experiment as MESA-P2 with a different \C target) }
 \end{figure}
+% precision of PREX-I doesn't allow to exclude many models, that's why people
+% proposed PREX-II.
 
 The idea of PVES experiments is very simple, scatter longitudinally polarized
 electrons off unpolarized target (Hydrogen, Deuterium, Helium, Carbon, Calcium, Pb),
@@ -168,23 +171,25 @@ proportional to $\sqrt{N}$.
 \begin{table}
     \centering
     % page 19 in https://www.jlab.org/intralab/calendar/phys_seminar/2019/JLabtalk_20190206mod_Palatchi.pdf
-    \begin{tabular}{c| c c}
+    % Jinlon's slide says a 2% statistical uncertainty for CREX, while Caryn's slide says 4%
+    % Paul's slide says 2.4%, maybe the total uncertainty
+    \begin{tabular}{c| c c c}
 	\hline
-	Experiment  & PREX-II (\%)	& CREX (\%)	\\
+	Experiment  & PREX-I (\%)   & PREX-II (\%)	& CREX (\%)	\\
 	\hline
-	Charge Normalization	& 0.1	& 0.1	\\
-	Beam Asymmetry		& 1.1	& 0.3	\\
-	Detector Non-Linearity	& 1.0	& 0.3	\\
-	Transverse Asymmetry	& 0.2	& 0.1	\\
-	Polarization		& 1.1	& 0.8	\\
-	Target Contamination	& 0.4	& 0.2	\\
-	Inelastic Scattering	& $<0.1$    & 0.2   \\
-	Effective $Q^2$		& 0.4	& 0.8	\\
+	Charge Normalization	& 0.2	& 0.1	& 0.1	\\
+	Beam Asymmetry		& 1.1	& 1.1	& 0.3	\\
+	Detector Non-Linearity	& 1.2	& 1.0	& 0.3	\\
+	Transverse Asymmetry	& 0.2	& 0.2	& 0.1	\\
+	Polarization		& 1.3	& 1.1	& 0.8	\\
+	Target Contamination	& 0.4	& 0.4	& 0.2	\\
+	Inelastic Scattering	& $<0.1\%$  & $<0.1$    & 0.2   \\
+	Effective $Q^2$		& 0.5	& 0.4	& 0.8	\\
 	\hline
-	Total Systematic	& 2	& 1.2	\\
-	Statistical		& 3	& 2.4	\\
-	\hline
-	Total			& 3.6	& 2.7	\\
+	Total Systematic	& 2.1	& 2	& 1.2	\\
+	Statistical		& 9	& 3	& 2	\\
+	% \hline
+	% Total			& 9.24	& 3.6	& 2.7	\\
 	\hline
     \end{tabular}
     \caption{Budget of systematic and statisitcal error in both experiments 
