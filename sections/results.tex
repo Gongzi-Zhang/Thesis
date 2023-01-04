@@ -3,6 +3,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Final Number}
 
+\begin{comment}
+    Measured asymmetry 
+    $\downarrow$
+    correct for Coulomb distortions 
+    $\downarrow$
+    Weak density at one $Q^2$
+    $\downarrow$
+    small correction for $G_E^n$, $G_E^s$
+    $\downarrow$
+    Neutron density at one $Q^2$
+    $\downarrow$
+    assume suface thickness good to 25\% (MFT)
+    $\downarrow$
+    $R_n$
+
+\end{comment}
 The overall beam polarization was inverse-variance weighted average of the Complton
 and Moller measurements.
 \begin{table}[!h]
@@ -135,6 +151,7 @@ c and a. Then the weak saturation density will be
 
 \begin{figure}
     \centering
+    % \includegraphics[width=0.6\linewidth]{weak_FF}
     \includegraphics[width=0.6\linewidth]{prex_Rw}
     \caption{Correlation between weak radius (neutron skin thickness) with $\CA_{pv}$ for \Pb.}
     \label{fig:prex_Rw}
@@ -511,9 +528,24 @@ The baryon saturation density is measured to be
 \begin{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Atomic Parity Violation Asymmetry}
+Atomic parity violation is caused by the exchange of $Z^0$ boson between electrons
+and the quarks in the nucleus, which interferes with the ``normal'' Coulomb interaction.
+
+The exchange of a $Z^0$ boson is a parity violating effect and it causes the atomic states 
+to acquire a small admixture of opposite-parity states. The effect is dominated by 
+the admixture of P states into S states, $S \rightarrow S + \epsilon P$. 
+In this case a parity-forbidden electric quadropole E2 $S \rightarrow D$ transition 
+is joined by an E1 parity non-conserving transition. The parity mixing effect is tiny, 
+but it has been shown (Bouchiat \& Bouchiat, 1974) that it scales faster than $Z^3$, 
+so the effect will be larger for heavier atoms.
+
 Accuracy of atomic PV measurement is about 0.3\% (FIXME), which is important
 for the test of the SM and the search for physics beyond the SM. A higher (0.1\%)
 precision requires knowledge about the neutron radius better than 1\%. \cite{PhysRevC.46.2587}
+
+\begin{equation}
+    H_{PNC} \approx \frac{G_F}{2\sqrt{2}}\int [-N\rho_N(\vec{r}) + Z(1-4\sin^2\theta_W)\rho_P(\vec{r})] \phi_e^\dag \gamma^5\phi_e d^3r
+\end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Coherent Neutrino Scattering off Nucleus}
@@ -538,9 +570,11 @@ share the same nuclear EoS. So by probing the neutron skin thickness of \Pb and
 \Ca, the result will remind us the stiffness of the EoS, which can be used to
 constraint the size of neutron stars.
 
+% some extreme properties
 Neutron star is the most dense celestial body known, the pressure is so strong
 that even atoms inside the star collapse, crushing together electrons
-and protons into neutrons, that's why the name of neutron star. By exploring
+and protons into neutrons, that's why the name of neutron star. Primarily neutron
+stars are observed either as pulsars or in binary systems. By exploring
 neutron stars, we will touch some fundermental questions in nuclear physics and 
 astrophysics. Like
 \begin{itemize}
@@ -549,43 +583,85 @@ astrophysics. Like
 	and what determines their EM, neutrino and gravitational-wave radiations.
 \end{itemize}
 
-result are different ==> phase transition
+Specifically, the connection between the neutron skin thickness and the size of
+a neutron star is the pressure. It is the same pressure that supports the neutron
+skin against the surface tension and a neutron star against gravity. 
+The larger the neutron skin thickness, the larger the pressure, and therefore 
+the larger the radius of the neutron star; vice versa.
+% Pb neutron skin constrains the pressure of neutron matter at subnuclear densities
+% while NS radius depends on the pressure at nuclear density and above
 
-Pb neutron radius is large ==> stiff EOS at low nuclear density (subnuclear density)
-combine NS radius measurement
-NS radius is small ==> soft EOS at high density
-these 2 measurements will mean softening of EOS with density ==> transition to
-an exotic high density phase such as quark matter, strange matter, color
-superconductor, kaon condensate
+Neutron star is expected to have a solid crust over the liquid core. The phase transition
+from high density core to low density crust depends on the properties of
+neutron-rich matter, specifically, the symmetry energy dependence on density L.
+A thickner neutron skin in \Pb indicates a large value of L, or rapid rise of
+symmetry energy with density, which leads to a low transition density in neutron
+star.
 
+PREX-II measures L to be
+\begin{equation}
+    L = 106 \pm 37 \ MeV
+\end{equation}
+
+One can also learn about direct UCRA cooling of neutron stars from the
+neutron skin thickness of \Pb. Proton fraction for matter in beta equilibrium 
+depends on symmetry energy. So the larger neutron skin thickness in \Pb, the
+lower the threshold mass for direct URCA cooling. If $R_{skin} > 0.25\ fm$, then
+all neutron star models have UCRA cooling process in $1.4 M_{\odot}$ stars.
+% some neutron stars seem too cold
 %%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Ridius}
+\subsubsection{Multi-Messenger Measurements of Neutron Star Ridius}
 NICER (Neutron star Interior Composition ExploreR) is a X-ray telescope that
-measures the lightcurve of a neutron star. A neutron star has a hot-spot, which
-is the magnetic pole of the neutron star. When the hot-spot face you, you will
-observe the maximum flux; when it is in the far-side, you will observe the minimum
-flux due to curvature of the space caused by the neutron star. So by observing 
+measures the lightcurve of a neutron star (pulsar). A pulsar has a hot-spot, which
+is the magnetic pole of the neutron star. The observed light flux fluctuates 
+with the orientation of the hot-spot. When it faces you, you will observe the 
+maximum flux; when it eschews you, you will observe the minimum flux due to 
+curvature of the space caused by the neutron star. So by observing 
 the depth of the light flux, one can infer the curvature of the space near the
 neutron star, which depends on the radius of the neutron star. This is how NICER
-tells the radius of a neutron star.
-\begin{itemize}
-    \item NICER result of PSR J0030 + 045 I: consistent with LIGO favored region
-\end{itemize}
+measures the radius of a neutron star.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{pulsar_lightcurve}
+\end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Tidal Deformability}
-\begin{itemize}
+One can also measure the size of a neutron star through gravitational waves.
+The famous LIGO-Virgo event, GW170817, observed the gravitational wave emission 
+from a binary neutron star merger. In a binary system, neutron star deforms
+due to tidal force from the other body, this property is described by 
+tidal deformability (quadrupole polarizability):
+\begin{equation}
+    \Lambda = \sum_f \frac{|\bra{f}r^2Y_{20}\ket{i}|^2}{E_f - E_i} \propto R^5 
+\end{equation}
+Tidal deformability can be probed by detection of gravitational waves.
+LIGO observation of GW170817 sets upper limit on $\Lambda$, it favors smaller 
+deformability ($<600$) and therefore smaller neutron radius ($<13\ km$)
+
+\begin{figure}
+    % page 12 of https://indico2.riken.jp/event/3082/contributions/17269/attachments/10634/15080/PREX2SPIN2021_DonJones.pdf
+    \centering
+    \includegraphics[width=0.6\linewidth]{neutron_star_radius}
+    \caption{LIGO sets upper limit on tidal deformability $\Lambda_{1.4} < 580$ 
+    for the neutron star merger GW170817: $\Lambda_{1.4} = 190 ^{+390}_{-120}$ (90\% CL).
+    Plot from \cite{PhysRevLett.126.172503}}
+\end{figure}
+
+The NICER result is consistent with both LIGO observation and PREX-II measurement,
+while PREX-II result is a little tensioned with LIGO observation.
+% PREX-II result suggests EoS is still at low density while NICER and LIGO observations
+% indicate that EoS is soft at high density.
+% The softening of EoS with density could strongly suggest a transition to an
+% exotic high density phase such as quark matter, starnge matter, color superconductor
+% and kaon condensate
+
+\begin{comment}
     \item Dipole polarizability of an atom $\sim R^3$
 	$$ \kappa = \sum_f \frac{|\bra{f}rY_{10}\ket{i}|^2}{E_f - E_i} \propto R^3 $$
     \item Tidal deformability (quardupole polarizability) of a neutron star scales as $R^5$
 	$$ \Lambda = \sum_f \frac{|\bra{f}r^2Y_{20}\ket{i}|^2}{E_f - E_i} \propto R^5 $$
-    \item LIGO observation of GW170817 sets upper limit on $\Lambda$, it favors
-	smaller deformability ($<600$) and therefore smaller neutron radius ($<13\ km$)
-    \item PREX-II result is consistent with NICER and there is a little tension 
-	with LIGO observation.
     \item Next generation observer: cosmic explorer (https://arxiv.org/abs/2109.09882)
 	can accurately determine deformability of neutron stars
-\end{itemize}
+\end{comment}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{URCA Cooling}
@@ -593,8 +669,83 @@ proton fraction for matter in beat equilibrium depends on symmetry energy S(n).o
 The larger Rn in Pb, the lower the threshold mass for direct URCA cooling.
 If $R_n - R_p < 0.2 \ fm$ all EOS models don't have direct URCA in 1.4 $M_{sun}$ stars
 If $R_n - R_p > 0.25 \ fm$, all models do have URCA in 1.4 $M_{sun}$ stars
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{UCRA_vs_R_skin}
+\end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Future Outlook}
-\subsection{MREX at MESA}
+The PV electron scattering experiments are still developing and flourishing, 
+such experiments that will happen in the near future include
+MOLLER and the P2 experiments.
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Measurement Of a Lepton Lepton Electroweak Reaction (MOLLER)}
+As a test of the SM, the weak mixing angle ($\sin^2\theta_W$) is of great importance 
+and has been measured by SLAC E158 through polarized electron-electron (Moller) scattering:
+\begin{equation}
+    \CA_{pv} \approx 280 \ ppb
+\end{equation}
+The proposed MOLLER experiment at JLab in 12 GeV era is a follow up experiment 
+of E158, intenting to improve the measurement precision by a factor of 5.
+This low energy precison frontier experiment will produce the most precise 
+measurement of $\sin^\theta_W$ over the next decade. With such high precision,
+the result will be sensitive to interference of the known EM amplitude and any
+possible unknown neutron currents, probing new particles beyond the Higgs up
+to a scale of $\sim 27\ TeV$.
+
+At tree level, the weak charge of an electron is
+\begin{equation}
+    Q_W^e = 1 - 4\sin^2\theta_W
+\end{equation}
+However, $Q_W^e$ runs with energy if one takes into account higher order correction
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{weak_mixing_angle}
+    \caption{Running weak charge (weak mixing angle) along energy scale.}
+\end{figure}
+Moller will use the upgraded $11\ GeV$ longitudinally polarized electron beam 
+to scatter off unpolarized electrons (liquid $H_2$ target), the PV asymmetry
+is measured to be
+\begin{equation}
+    \CA_{pv} = \frac{\sigma_R - \sigma_L}{\sigma_R + \sigma_L}
+    = mE\frac{G_F}{\sqrt{2}\pi\alpha}\frac{4\sin^2\theta}{(3+\cos^2\theta)^2} Q_W^e
+\end{equation}
+where $\theta$ is the scattering angle in the CoM frame. SB Predicts $\CA_{pv} \approx 33 \ ppb$
+for Moller kinematics and the overall uncertainty is designed to be $\sigma(\CA_{pv}) = 0.7 \ ppb (2.1\%)$,
+which corresponding to $2.4\%$ relative uncertainty in the measurement of $Q_W^e$.
+% scattering angle, Q2
+
+% Moller asymmetry: $\CA_{pv} = 35.6 \ ppb$, $\delta(\CA_{pv}) = 0.73\ ppb$, $\delta(Q_W^e) = \pm 2.1\% (stat.) \pm 1.0\% (syst.)$, $\delta(\sin^2\theta_W) = \pm 0.00026 (stat.) \pm 0.00012 (syst.)$
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Mainz MESA P2}
+While MOLLER will be the most precise weak mixing angle measurement, the most
+precise weak charge measurement will be the P2 experiment at Mainz.
+P2 is also a successor, which will measure the weak charge of proton $Q_W^p = 1 - 4\sin^2\theta_W$
+that has been measured by the Qweak experiment at Jlab \cite{???}. Compared to
+Qweak, P2 will improve the measurement presicion by a factor of 3.
+Similar to MOLLER, P2 provide indirect search for new physics up to a mass scale
+of $50\ TeV$.
+
+The electron beam that will be used in P2 has a much lower energy as $155\ MeV$, 
+the target is also the liquid $H_2$. The elstaically scattered electrons will
+be detected in an azimuthally symmetric Chenrenkov detector. The PV asymmetry
+of elastic ep scattering is
+\begin{equation}
+    \CA_{pv} = -\frac{G_F Q^2}{4\pi\alpha\sqrt{2}} \left[ Q_W^p + F(\theta, Q^2) \right]
+\end{equation}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{P2}
+\end{figure}
+At the selected low $Q^2 \sim 0.006 \ GeV^2$ region, P2 will measure the asymmetry
+to a precision of $1.4\%$:
+\begin{equation}
+    \CA_{pv} = -39.94 \pm 0.56\ ppb
+\end{equation}
+This translate to $0.14\%$ uncertainty in weak mixing angle:
+\begin{equation}
+    \sin^2_W = 0.23 \pm 0.00033
+\end{equation}
