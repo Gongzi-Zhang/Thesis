@@ -199,7 +199,7 @@ One quick question will be how can one ensure that the extra neutrons lies
 in the surface rather than the core area? That's related to the symmetry energy, 
 more specifically, the density dependence of the symmetry energy. 
 Because the core area has a higher nucleon density than the surface, and symmetry energy 
-represents the penalty for breaking the proton-neutron symmetry, the higher the density, 
+represents the penalty for breaking the proton-neutron symmetry. The higher the density, 
 the larger the symmetry energy, therefore the lower the binding energy (the energy
 needed to break down a nuclear system: $BE(N, Z) = M(N, Z)c^2 - Zm_p c^2 - Nm_n c^2$), the less
 stable the nuclei. So it is the symmetry energy that pushes extra neutrons to 
@@ -316,7 +316,7 @@ and $t \sim 0.4-0.5 \ fm$ for  $A > 40$ indicates the surface thickness.
     This potential, unlike that in atomic shell model, needed to be guessed. 
     It turns out that the Saxon-Woods model is a good candidate: 
     $V(r) = -\frac{V(0)}{1+\exp((r-c)/a)}$ ($c$ is the half-height radius and $a$ represents
-    diffuseness of the distribution). Because the potential is formed
+    diffuseness of the distribution). This potential is formed
     by all other nucleons, so it is approximatively proportional to the nucleon density, 
     therefore the same distribution for nucleon density.} 
 \end{figure}
@@ -355,8 +355,8 @@ the PV asymmetry, as shown in the following 2 plots.
 \begin{figure}[H]
     \includegraphics[width=0.49\linewidth]{Coulomb_distortion_Pb208}
     \includegraphics[width=0.48\linewidth]{Coulomb_distortion_Ca48}
-    \caption{PV asymmetry for \Pb and \Ca versus scattering angle at 850 MeV 
-    (Coulomb distortion correction included). 
+    \caption{PV asymmetry for \Pb (left) and \Ca (right) versus scattering angle 
+    at 850 MeV (Coulomb distortion correction included). 
     The dotted curve assumes the same weak and charge distribution, 
     while the solid curve is based on relativistic Mean Field Densities. The
     dashed curve in \Pb plot uses 3 parameter Fermi distribution \cite{PhysRevC.57.3430}.
@@ -855,22 +855,22 @@ which is an equivalent plot of Fig. \ref{fig:parity_eA_scattering_1}.
 	\end{scope}
     \end{tikzpicture}
     \caption{Fermi's interpretation of beta decay, current $j_{n \rightarrow p}$ 
-    convert n into p and current $j_{\nu_e \rightarrow e}$ creates $(e, \ \bar{\nu}_e) $
+    convert $n$ into $p$ and current $j_{\nu_e \rightarrow e}$ creates $(e, \ \bar{\nu}_e) $
     pair.}
 \end{figure}
-The story of parity violation traces back to the early age of particle physics. To explain the beta decay, 
-Fermi proposed the 4-fermion interaction 
+The story of parity violation traces back to the early age of particle physics. 
+To explain the beta decay, Fermi proposed the 4-fermion interaction 
 (Fermi's interaction) in 1933 \cite{Fermi1934}, which is a low-energy limit of the 
 weak interaction. In his theory, In analogy to the EM interaction (emission of a
 photon by an electron: $\CM = ej_\mu^{em} A^\mu$) Fermi interpreted the $\beta$
-decay as emission of a $(e, \bar{\nu}_e)$ pair, during the process neutron converts
+decay as emission of the $(e, \bar{\nu}_e)$ pair, during the process neutron converts
 itself into a proton, therefore coupling of two current:
 \begin{equation}
     \CM = G_F (\bar{p} \mathds{O}^\mu n)(\bar{e} \mathds{O}_\mu \nu_e) 
 	= G_F j^\mu_{(n\rightarrow p)} j_\mu^{(\nu_e\rightarrow e)}
 \end{equation}
 Where $G_F = 1.166 \times 10^{-5} \ (GeV)^{-2}$ is the coupling constant that 
-will be experimentally determined and $\mathds{O}$ represents 
+can be experimentally determined and $\mathds{O}$ represents 
 the possible operators. Out of the 5 possible Lorentz invariant bilinear forms 
 (Scalar (S: $\mathds{O} = \mathds{1}$), pseudoscalar (P: $\mathds{O} = \gamma^5$), 
 Vector (V: $\mathds{O} = \mathds{\gamma^\mu}$), Axial vecotr (A: $\mathds{O} = \gamma^\mu\gamma^5$) 
@@ -878,13 +878,15 @@ and Tensor (T: $\mathds{O}=\sigma^{\mu\nu} = \frac{i}{2}(\gamma^\mu\gamma^\nu - 
 Fermi selected the vector current to keep in line with the EM interaction:
 $j^\mu = \bar{u} \gamma^\mu u$.
 
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{V-A Theory}
 In 1956, T. D. Lee and C. N. Yang, both being Fermi's student, postulated the
-revolutionary idea of parity violation for solving the $\tau-\theta$ puzzle, 
+revolutionary idea of parity violation for solving the $\tau-\theta$ puzzle \cite{PhysRev.105.1671}, 
 and they succeeded. Only one year later, their hypothesis was experimentally tested
-by Wu etc in the decay of polarized $Co^{60}$ nuclei, establishing the fact
-that parity is not conserved in weak interaction and therefore the weak 
-current is not a pure vector-like quantity. 
-Based on the experimental fact that parity is maximally violated (left-handed 
+by Wu etc in the decay of polarized ${}^{60}$Co nuclei \cite{PhysRev.105.1413}, 
+establishing the fact that parity is not conserved in weak interaction and 
+therefore the weak current is not a pure vector-like quantity. 
+Based on the experimental result that parity is maximally violated (left-handed 
 electrons interact weakly but right-handed don't) \cite{PhysRev.109.1015}, 
 Sudarshan and Marshak \cite{PhysRev.109.1860.2}, also Feymann and Gell-Mann \cite{PhysRev.109.193}
 updated Fermi's theory by replacing the vector current with a new current to 
@@ -896,7 +898,7 @@ The factor of $\frac{1}{\sqrt{2}}$ was introduced to keep $G_F$ unchanged (Fermi
 original theory was not aware the fact that neutrino was left-handed only, resulting
 in a decay phase space twice the real value in nature, to fix the problem, we can
 either modify the value of $G_F$ or introduce a correction factor $\frac{1}{\sqrt{2}}$).
-The V and A parts of V-A theory refer to the vector and axial vector current, 
+The V and A parts of the V-A theory refer to the vector and axial vector current, 
 responsible for Fermi transitions and Gamow-Teller transitions respectively.
 \begin{equation}
     j_V^\mu = \bar{u}\gamma^\mu u   \qquad 
@@ -906,7 +908,7 @@ The form of V-A as $\mathds{1} - \gamma^5$ happens to be the projection operator
 \begin{equation}
     P_R = \frac{\mathds{1} + \gamma^5}{2}   \qquad P_L = \frac{\mathds{1} - \gamma^5}{2}
 \end{equation}
-By definition of gamma matrix, one can easily verify that:
+By definition of $\gamma$ matrix, one can easily verify that:
 \begin{equation}
     \begin{gathered}
 	\left(\frac{\mathds{1} - \gamma^5}{2} \right)^2 = \frac{\mathds{1} - \gamma^5}{2} 
@@ -930,11 +932,11 @@ connects 2 types of fermions and lepton number is conserved in weak interaction,
 it is natural to group them in a lepton doublet: $f_L = \begin{pmatrix} \nu_l \\ l \end{pmatrix}_L$.
 This implies us that for left-handed fermions: $T=\frac{1}{2}, T_3 = \pm\frac{1}{2}$ 
 
-Applying the V-A theory to more decay and scattering process (
-$\mu^+ \rightarrow e^+ + \nu_e + \bar{\nu}_\mu$, $\pi^- \rightarrow l + \bar{\nu}_l$ etc.), 
-we have 2 charge currents:
+Applying the V-A theory to more decay and scattering processes 
+( $\mu^+ \rightarrow e^+ + \nu_e + \bar{\nu}_\mu$, $\pi^- \rightarrow l + \bar{\nu}_l$ etc.), 
+we will have 2 charge currents:
 \begin{equation}
-    j_\mu^- = \bar{\nu}_{e, L} \gamma_\mu e_L	\quad 
+    j_\mu^- = \bar{\nu}_{e, L} \gamma_\mu e_L	\qquad 
     j_\mu^+ = \bar{e}_L \gamma_\mu \nu_{e,L}
 \end{equation}
 which can be written in a more compact way w.r.t. the lepton doublet:
@@ -970,11 +972,13 @@ Glashow, Salam and Weinberg postulated the GSW model, which interprets $j^3$ as
 part of a more complete neutral current that includes $j^{em}$ -- the so called
 $SU(2)_L \times U(1)$.
 
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{W Bosons}
 One problem with Fermi's theory is that the cross section ($\sigma \sim G_F^2 E^2$) 
 will diverge at high energy, to which the solution was the introduction of
 mediating mesons: $W^\pm$. Unlike photon that mediates EM interaction, W boson
 is charged, and has a heavy mass implied from the short-range nature of the
-weak interaction. The introduction of W fields just make the weak interaction
+weak interaction. The introduction of W fields just makes the weak interaction
 more similar to the EM interaction:
 \begin{equation}
     \CL = g_W(J^+W^+ + J^-W^-)
@@ -999,7 +1003,7 @@ more similar to the EM interaction:
 	    \coordinate (P) at (-35:2);
 	    \filldraw[black] (O) circle (1pt);
 	    \filldraw[black] (P) circle (1pt);
-	    \node[red, above left] at (O) {$V_{ud}g_W$};
+	    \node[red, above] at (O) {$V_{ud}g_W$};
 	    \draw[postaction={decorate}] (-2, 0) node[above] {n} -- +(2, 0);
 	    \draw[postaction={decorate}] (O) -- +(2, 0)node[above] {$p$} ;
 	    \draw[decorate, decoration=snake] (O) -- node[red, midway, below left] {$\frac{1}{M^2_W}$} (P);
@@ -1043,7 +1047,7 @@ therefore the covariant derivative for right-handed fermions is:
 \begin{equation}
     D_\mu = \partial_\mu - ig'y_{2(3)}B_\mu
 \end{equation}
-$y_{2(3)}$ are the hypercharge of $\psi_{2(3)}$
+$y_{2(3)}$ is the hypercharge of $\psi_{2(3)}$
 and the Lagrangian:
 \begin{equation}
     \CL_{int, R} = -ig'(y_2\bar{\psi}_2 \gamma^\mu \psi_2 + y_3\bar{\psi}_3\gamma^\mu \psi_3) B_\mu
@@ -1057,10 +1061,12 @@ where $\vec{j}^\mu$ is the weak isospin current, it couples to a weak
 isotriplet of vector bosons: $\vec{W} = (W^1, W^2, W^3)$ with
 coupling strength $g$; and the weak hypercharge current 
 $j^\mu_{Y} = \sum_{i=1}^3 y_i\bar{\psi}_i\gamma^\mu\psi_i$ couples to 
-an isosinglet vector boson: $B^\mu$ with strength $g'$. 
+an isosinglet vector boson $B^\mu$ with strength $g'$. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Weak Neutral Current}
 Because the GSW model preserve the SU(2) structure we talked about before, 
-therefore it is obvious to reproduce the charged current:
+it is obvious to reproduce the charged current:
 \begin{equation}
     W^\pm = \frac{1}{\sqrt{2}}(W^1 \mp iW^2)	\quad
     j^\pm = j^1 \pm ij^2
@@ -1070,9 +1076,9 @@ therefore it is obvious to reproduce the charged current:
 \end{equation}
 
 As for the other 2 bosons, there is no way to satisfy $y_1 = y_2 = y_3$ and 
-$g'y_i = eQ_i$ at the same time, so B is not pure A. 
+$g'y_i = eQ_i$ at the same time, so $B$ is not pure $A$. 
 Since both fields are neutral, one can try to mix them, 
-and get some result matching experimental results:
+and get something matching experimental results:
 \begin{equation}
     \begin{pmatrix}
 	A   \\
@@ -1104,7 +1110,7 @@ and get some result matching experimental results:
 \end{equation}
 The mixing angle is known as the Weinberg angle. 
 
-Rewrite eq. \ref{eq:GSW} in terms of $W^\pm$, $Z$ and $A$:
+Rewrite Eq. \ref{eq:GSW} in terms of $W^\pm$, $Z$ and $A$:
 \begin{equation}
     \begin{aligned}
 	i\CL = &\frac{g}{\sqrt{2}}(j^+W^+ + j^-W^-)	\\
@@ -1116,7 +1122,7 @@ Rewrite eq. \ref{eq:GSW} in terms of $W^\pm$, $Z$ and $A$:
 \end{equation}
 where $g_W = g/\sqrt{2}$ is the coupling constant of weak charged current.
 
-The neutral part can be expressed in corresponding charge:
+The neutral part can be expressed with corresponding charge:
 \begin{equation}
     \begin{aligned}
 	i\CL_{NC} &= \sum_{i=1}^{3} \bar{\psi}_i\gamma^\mu\psi_i
@@ -1127,7 +1133,7 @@ The neutral part can be expressed in corresponding charge:
 	&= ej^\mu_{EM}QA_\mu + g_Zj^\mu_Z Q_Z Z_\mu \\
     \end{aligned}
 \end{equation}
-Where $I_3$ is the weak isospin and $Y$ is the weak hypercharge; Similarly, $Q$ is
+where $I_3$ is the weak isospin and $Y$ is the weak hypercharge. Similarly, $Q$ is
 the EM charge in unit of electron charge and $Q_Z$ is the weak neutral charge.
 $e$ and $g_Z$ are coupling constant for EM and neutral weak interaction respectively.
 With $I_3$ and $Y$ vary for different fermions, we have the following relationship:
@@ -1146,7 +1152,7 @@ So the Weinberg angle is identified as:
 \end{equation}
 and: 
 \begin{equation}
-    Y = Q - I_3
+    Q = I_3 + Y	\Longrightarrow Y = Q - I_3
     \label{eq:weak_hypercharge}
 \end{equation}
 The value of weak hypercharge depends on the definition, if one keep the $\frac{1}{2}$
@@ -1155,9 +1161,9 @@ factor in the B current, then one will get:
     \frac{Y}{2} = Q - I_3   \Rightarrow Y = 2(Q-I_3)
 \end{equation}
 This is the traditional formula.
-In this thesis we will use the definition of eq. \ref{eq:weak_hypercharge}.
+In this thesis we will use the definition of Eq. \ref{eq:weak_hypercharge}.
 
-As for neutral weak current, the value of $g_Z$, $Q_Z$ and $J_Z$ dependent on our choice, 
+As for the neutral weak current, the value of $g_Z$, $Q_Z$ and $J_Z$ dependent on our choice, 
 as long as:
 \begin{equation}
     g_Z Q_Z J_Z = (g\cos\theta_W I_3 - g'\sin\theta_W Y)\bar{\psi}\gamma^\mu\psi 
@@ -1183,9 +1189,11 @@ with
 \begin{equation}
     c_v = I_3 - 2Q\sin^2\theta_W    \quad c_a = I_3
 \end{equation}
-So we come to a strikig prediction of the GSW model: the neutral weak interaction,
-which was experimentally observed in 1973 in the Gargemlle neutrino experiment \cite{HASERT19741}.
+So we come to a strikig prediction of the GSW model: the neutral weak interaction.
+That was experimentally verified in 1973 in the Gargemlle neutrino experiment \cite{HASERT19741}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{PREX-II and CREX Observations}
 What we are going to observe in PREX-II and CREX exactly originates from this
 neutral weak current.
 
@@ -1203,17 +1211,17 @@ neutral weak current.
     };
 \end{figure}
 
-\begin{equation*}
-    \CA_{pv} = \frac{\left( \frac{d\sigma}{d\Omega} \right)^R - \left( \frac{d\sigma}{d\Omega} \right)^L}
+\begin{equation}
+    \CA_{PV} = \frac{\left( \frac{d\sigma}{d\Omega} \right)^R - \left( \frac{d\sigma}{d\Omega} \right)^L}
     {\left( \frac{d\sigma}{d\Omega} \right)^R + \left( \frac{d\sigma}{d\Omega} \right)^L}
     = \frac{|\CM^R|^2 - |\CM^L|^2}{|\CM^R|^2 + |\CM^L|^2}
-\end{equation*}
+\end{equation}
 where: $\CM^{R, L} = \CM_{\gamma} + \CM_Z^{R,L}$. Because EM amplitude is much 
 larger than the weak amplitude: $\CM_\gamma >> \CM_Z^{R, L}$
 
 \begin{equation}
     \begin{aligned}
-	\CA_{pv} &\approx \frac{2\CM_\gamma (\CM_Z^R - \CM_Z^L)}{2\CM^2_\gamma}	\\
+	\CA_{PV} &\approx \frac{2\CM_\gamma (\CM_Z^R - \CM_Z^L)}{2\CM^2_\gamma}	\\
 	    &= \frac{\CM_Z^R - \CM_Z^L}{\CM_\gamma} \propto \frac{\left( \frac{d\sigma}{d\Omega} \right)_{\text{W}}}{\left( \frac{d\sigma}{d\Omega} \right)_{\text{EM}}}	\\
 	    &= \left(\frac{\CM_Z^R - \CM_Z^L}{\CM_\gamma}\right)_{point} \times \frac{Q_{W}}{Z}\frac{F_{W}(Q^2)}{F_{EM}(Q^2)}    \\
 	    &\approx \frac{g^2_Z/M_Z^2}{e^2/Q^2} \frac{(j_Z^{e,R} - j_Z^{e,L}) j_Z^n}{j_\gamma^e j_\gamma^p}
@@ -1226,43 +1234,46 @@ larger than the weak amplitude: $\CM_\gamma >> \CM_Z^{R, L}$
     \label{eq:asymmetry}
 \end{equation}
 The weak isospin for electron and neutron is: $I_3(e^-) = I_3(n) = -\frac{1}{2}$.
-The factor of $\frac{1}{2}$ in line 5 of eq. \ref{eq:asymmetry} arises from
+The factor of $\frac{1}{2}$ in line 5 of Eq. \ref{eq:asymmetry} arises from
 the fact that the target is unpolarized. At low $Q^2$ region of $Q^2 \sim 0.01 - 1 \ GeV^2$,
 one can estimate the PV asymmetry as 
 \begin{equation}
-    -\CA_{pv} \sim \frac{G_F Q^2}{4\pi\alpha \sqrt{2}} \lesssim 10^{-7} - 10^{-4}
+    -\CA_{PV} \sim \frac{G_F Q^2}{4\pi\alpha \sqrt{2}} \lesssim 10^{-7} - 10^{-4}
 \end{equation}
 
 The FFs can be further decomposed into point nucleon FFs:
-\begin{equation*}
+\begin{equation}
     \begin{aligned}
-	F_{EM}(q) &= G_{EM}^p(q)F_p(q) + G_{EM}^n(q)F_n(q)  \\
-		  &= G_{EM}^p(q)F_p(q) + \frac{N}{Z}G_E^n(q)F_n(q)	\\
-	F_{W}(q) &= G_{wk}^p(q)F_p(q) + G_{wk}^n(q)F_n(q)  \\
-		  &= G_E^p(q)\left[ F_n(q) - \frac{Z}{N}(1-4\sin^2\theta_W)F_p(q)\right] - G_E^n(q)\left[ F_n(q)(1-4\sin^2\theta_W) - \frac{Z}{N}F_p(q)\right]
+	F_{EM}(q) &= Q^\gamma_p F_p(q) + Q^\gamma_n F_n(q)  = F_p(q)	\\
+	F_{W}(q)  &= Q^Z_p F_p(q) + Q^Z_n F_n(q)  \\
     \end{aligned}
-\end{equation*}
-Where $G_E^p(q)$ and $G_E^n(q)$ are the EW single nucleon FFs, 
+\end{equation}
+Where $Q^\gamma$ and $Q^Z$ are the EM charge and weak charge respectively.
 $F_p(q)$ and $F_n(q)$ are the FFs of point proton and neutron density distribution. 
-Compared with $G_E^p(q)$, the charge FF of the neutron $G_E^n(q)$ can be neglected for small momentum transfer:
-\begin{equation*}
-    \begin{aligned}
-	F_p(q) &= \int d^3r j_0(qr) \rho_p(r)	\\
-	F_n(q) &= \int d^3r j_0(qr) \rho_n(r)	\\
-	G_{wk}^p &= q_p G_E^p + q_n G_E^n + q_0 G_E^s	\\
-	G_{wk}^n &= q_p G_E^p + q_n G_E^n + q_0 G_E^s	\\
-    \end{aligned}
-\end{equation*}
+\begin{equation}
+    F_{p,n}(q) = \int d^3r j_0(qr) \rho_{p,n}(r)
+\end{equation}
 For weak charges including radiative correction
-$$ q_p \approx 0.0712	\qquad q_n = q_0 \approx -0.9877 $$
-$$ \frac{F_{wk}(q)}{F_{ch}(q)} \approx \frac{F_n(q)}{F_p(q)}$$
-$$ \CA_{pv} = \frac{G_FQ^2}{4\pi\alpha\sqrt{2}}\frac{Q_{wk}}{Z}\left[ \frac{F_n(q)}{F_p(q)} - \frac{Z}{N}(1-4\sin^2\theta_W) \right]$$
+\begin{equation}
+    \begin{gathered}
+	Q^\gamma_p = 1  \qquad Q^\gamma_n = 0   \\
+	Q^Z_p = 0.0719    \qquad Q^Z_n = -0.9877
+    \end{gathered}
+\end{equation}
+Ignoring proton's weak charge, one will get:
+\begin{equation}
+    \CA_{PV} = -\frac{G_FQ^2}{4\pi\alpha\sqrt{2}}\frac{Q_{wk}}{Z} \frac{F_n(q)}{F_p(q)} 
+\end{equation}
+A more precise result by including the proton's weak charge is:
+\begin{equation}
+    \CA_{PV} = -\frac{G_FQ^2}{4\pi\alpha\sqrt{2}}\frac{Q_{wk}}{Z}\left[ \frac{F_n(q)}{F_p(q)} - \frac{Z}{N}(1-4\sin^2\theta_W) \right]
+    \label{eq:Apv}
+\end{equation}
 
-\bigskip
-When ignoring structure (tree level):
-\begin{equation*}
-    \CA_{\text{pv}} = \frac{G_F Q^2}{\pi\alpha\sqrt{2}} \left(\sin^2\theta_W + \frac{1}{4}\left[ \frac{N}{Z} - 1 \right] \right)
-\end{equation*}
+When ignoring the nuclear innner structure (at tree level), Eq. \ref{eq:Apv} reduces to:
+\begin{equation}
+    \CA_{PV} = -\frac{G_F Q^2}{\pi\alpha\sqrt{2}} \left(\sin^2\theta_W + \frac{1}{4}\left[ \frac{N}{Z} - 1 \right] \right)
+\end{equation}
 
 \section{Dynamics}
 \begin{center}
@@ -1282,9 +1293,11 @@ When ignoring structure (tree level):
 \end{tikzpicture}
 \end{center}
 
-4-Momentum conservation 
+Energy and momentum is conserved in elastic scattering:
 $$ E_0 + M = E' + E \qquad \vec{p}_0 = \vec{p}' + \vec{p} $$
-Assume ($m_e << 0 \Rightarrow E_0 \approx p_0, E' \approx p'$)
+where $M$ is the mass of the target nucleus.
+
+Ignore electron's mass, we have $E_0 \approx p_0$ and $E' \approx p'$:
 \begin{equation}
     \begin{aligned}
 	E^2 &= M^2 + \vec{p}^2 = M^2 + (\vec{p}_0 - \vec{p}')^2  \\
@@ -1293,73 +1306,65 @@ Assume ($m_e << 0 \Rightarrow E_0 \approx p_0, E' \approx p'$)
 	    &= (E_0 + M - E')^2
     \end{aligned}
 \end{equation}
-So we can get
+
+So we get:
 \begin{equation}
-    \begin{gathered}
-	M(E_0 - E') = E_0E'(1-\cos\theta)   \\ 
-	E' = \frac{ME_0}{M + E_0(1-\cos\theta)}
-    \end{gathered}
-    \label{eq:scattered_energy}
+    M(E_0 - E') = E_0E'(1-\cos\theta)   \Longrightarrow
+    E' = \frac{ME_0}{M + E_0(1-\cos\theta)}
+\label{eq:scattered_energy}
 \end{equation}
+
+$Q^2$ dependence on the scattering angle $\theta$ is calculated as:
 \begin{equation}
-    \begin{aligned}
-	Q^2 &= -q^2 = -[(E_0 - E')^2 - (\vec{p}_0 - \vec{p}')^2]    \\
-	    &= 2E_0E'(1-\cos\theta)
-    \end{aligned}
+    Q^2 = -q^2 = -[(E_0 - E')^2 - (\vec{p}_0 - \vec{p}')^2] = 2E_0E'(1-\cos\theta)
     \label{eq:Q2}
 \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
-\section{Why Pb and Ca}
-\begin{figure}
+\section{Why \Pb and \Ca}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\linewidth]{Nuclear_Landscape}
+    \includegraphics[width=0.5\linewidth]{Nuclear_Landscape}
     \caption{Nuclear Landscape}
     \label{fig:nuclear_landscape}
 \end{figure}
 As tiny as the neutron skin thickness, to measure it relatively accurate, the
-larger it is, the better our measurement will be. So the target elements should
-have a large neutron excess. So \Pb (\Ca) is chosen for PREX-II (CREX). Besides,
-both nuclei are spin-0, so that we don't need to worry about the target 
-polarization.
-% what is the magic number: when a shell is completely filled, and the next higher
-% energy shell is empty, the nucleus is said to have a magic number of proton 
-% or neutrons
-When the single nucleon separation energy in a nucleus is much larger than that of
-its neighbors, it is said that this nucleus has a magic number of protons or
-neutrons. The magic number arises from the nucleon shell structure -- when 
-a shell is fully filled and the next higher energy shell is empty, it is hard
-to separate out a nucleon from that closed shell.
-Both \Ca and \Pb are doubly magic nuclei, which means both the number of protons
-and neutrons are magic number, therefore a simple structure. 
-It also means that the energy of their first 
-excited state is much larger than the ground state, being 3.84 and 2.6 $MeV$ 
-respectively. Combined with the high momentum resolution of HRS, it provides
-sounding ground for flux integration detection.
+larger it is, the better our measurement will be. So the target element is expected to
+have a large neutron excess. Unfortunately, most medium and heavy nuclei that
+have extra neutrons are usually unstable because of those extra neutrons. Only
+some nuclei with specific number of protons and neutrons are stable, those specific
+numbers are called the magic number. The magic number arises from the nucleon 
+shell structure -- when a shell is fully filled and the next higher energy shell 
+is empty, it is hard to separate out a nucleon from that closed shell.
 
-As we see in previous section, the elastic scattering is quasi, not exact. The
-small energy change is caused by nuclei recoil. The heavier the target nuclei,
-the smaller the recoil effect, the smaller the $Q^2$, the better our measurement
-of $Q^2$ and scattering angle.
+Nuclei whose numbers of protons and neutrons are both magic are called doubly
+magic nuclei, which are more stable than single magic nuclei. Of all the known
+neutron-rich doubly magic nuclei: ${}^{10}$He, ${}^{28}$O, \Ca, ${}^{78}$Ni, 
+${}^{132}$Sn and \Pb, \Ca and \Pb are the only 2 that are stable and are chosen
+for PREX-II and CREX.
 
-Finally, \Ca, which lies in the medium region of the nuclear landscape, is 
-accessible from both ab-initio and DFT theoretical approaches. 
-The ab-initio calculation of the \Ca neutron skin thickness has been published
-before the proposal \cite{Hagen2016}.
-By measuring the neutron skin thickness of \Ca, we hope to 
-provides a possibility to bridge these two methods. 
+Being double magic nuclei, it also means that the energy of their first 
+excited state is much larger than their ground state. The energy needed to
+excited \Ca and \Pb are 3.84 and 2.6 $MeV$ respectively. 
+Together with the high momentum resolution of our sepctrometers, we can easily
+seperate inelastic scattering from elastic ones, giving grounds for our choice of
+flux integration detection.
 
-\begin{comment}
-    \Pb and \Ca are the only 2 stable, neutron rich, closed shell nuclei
-    other double magic isotopes: ${}^{10}He$, ${}^{28}O$, ${}^{78}Ni$, ${}^{132}Sn$ 
-    are unstable.
+Other advantages of \Ca and \Pb include
+\begin{itemize}
+    \item Both nuclei are spin-0, so that we don't need to worry about the target polarization.
+    \item Both nuclei are (medium) heavy. As we discuss in previous section, 
+	the elastic scattering is quasi, not exact. The small energy change is 
+	caused by nuclei recoil. The heavier the target nuclei, the smaller the 
+	recoil effect, therefore the better our measurement of $Q^2$ and the 
+	scattering angle.
+\end{itemize}
 
-    Why \Ca
-    \begin{itemize}
-	\item neutron rich
-	\item doubly magic
-	\item can be reached from ab-initio methods
-	\item being a smaller system, it allows direct comparison to Chiral EFT 
-	    calculations and very sensitive to 3-nucleon forces.
-    \end{itemize}
-\end{comment}
+Finally, one more reason for the choice of \Ca. \Ca lies in the medium region of the nuclear 
+landscape, as shown in Fig. \ref{fig:nuclear_landscape}. Compared to \Pb, it
+is a smaller system that is accessible from ab-initio method \cite{Hagen2016}.
+So it allows direct comparison to Chiral Effective Field Theory (EFT) calculations,
+which is very sensitive to 3-nucleon forces. In other words, it can be used
+to probe 3-nucleon forces. On the other hand, it is large enough to apply the
+Density Function Theory (DFT) methods. By measuring the neutron skin thickness of \Ca, 
+we hope to provide some inputs for bridging these two approaches. 
