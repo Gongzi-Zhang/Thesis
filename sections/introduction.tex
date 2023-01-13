@@ -1,7 +1,7 @@
 \chapter{Introduction}
-The Pb Radius EXperiment-II (PREX-II) and Ca48 Radius EXperiment (CREX) are 
+The Lead Radius EXperiment-II (PREX-II) and Calcium Radius EXperiment (CREX) are 
 high-precision experiments that measure the tiny parity-violating (PV) asymmetry 
-(at part per million (ppm) level) of longitudinally polarized electrons scattered 
+(at parts per million (ppm) level) of longitudinally polarized electrons scattered 
 off neutron-rich targets (\Pb and \Ca), from which the weak form factor, weak
 charge and neutron distribution, and finally the
 neutron skin thickness of the target nucleus will be extracted.
@@ -30,7 +30,7 @@ More precisely, we don't have a complete and thorough understanding of nuclei. I
 simple picture, of course, one may estimate the nuclear radius as $R = R_0 A^{1/3}$, 
 where $A$ is the nuclear mass number 
 and $R_0$ is an approximative constant coefficient that can be experimentally 
-identified ($R_0 \approx 1.20\ fm$). But this simple picture becomes powerless
+identified ($R_0 \approx 1.20\ \mathrm{fm}$). But this simple picture becomes powerless
 in cases where precise nucleon distribution of a nucleus is needed. 
 For example, what's the shape of a nucleus?
 Physicists have calculated and precisely measured the proton (charge) radius of most nuclei,
@@ -57,28 +57,50 @@ where $\rho(\vec{r})$ is the normalized proton (neutron) density at position $\v
 Searching through the literature, we can find many works on the high-precision  
 (with an uncertainty at $0.01 \ fm$ level)
 measurement of the proton (charge) radius ($R_p$) of many nuclei through atomic 
-and nuclear experiments \cite{DEVRIES1987495, ANGELI2004185}, but few
+and nuclear experiments \cite{DEVRIES1987495, ANGELI201369}, but few
 precise determinations of the neutron radius ($R_n$). The difficulties lie in that
 neutron is electrically chargeless, so one can measure its size through only 
 strong or weak interaction. Both methods suffer from their own
 limitations: the weak interaction is too weak (compared to the background EM 
 interaction) to measure it directly, people have to turn to PV asymmetry
-measurement, which is also tiny, much efforts are needed to do such measurements.
+measurement, which is also tiny, many efforts are needed to do such measurements.
 In terms of the strong interaction, it has large theoretical uncertainties rooted 
 in the non-perturbative nature of the underlying Quantum Chromodynamics (QCD) at low energy scale, 
 and the interpretation of hadronic measurement is usually model dependent. Though of these
 difficulties, there have been a lot of efforts and progresses from the community to explore
 different aspects of neutron radius (and neutron skin thickness): 
-the hadronic probe includes pion \cite{ALLARDYCE19731}, proton \cite{LOMBARDI1972103}, 
-antiproton \cite{PhysRevC.76.014311} and alpha particle \cite{FRIEDMAN1969213,PhysRevC.5.234};
+the hadronic probe includes pion \cite{ALLARDYCE19731}, proton \cite{LOMBARDI1972103,PhysRevC.82.044611}, 
+antiproton \cite{PhysRevC.76.014311} and alpha particle \cite{KRASZNAHORKAY2004224};
 atomic experiments like electric dipole polarizabilities \cite{Roca_Maza_2012} and 
 pygmy dipole resonances \cite{PhysRevC.88.044610}
-also provide input to our understanding.
-Experimentally, the best resolution we got about $R_n$ is about 5\%. (FIXME)
+also provide inputs to our understanding.
+Experimentally, with model dependence, the best resolution we got about $R_n$ is better than 1\%,
 Theoretically, The best estimate of $R_n$ appears to come from nuclear theory, 
 where models have been constrained primarily by data other than measurements 
 of neutron radii. Therefore, a precise measurement of $R_n$ will provide a powerful 
 independent check of the basic nuclear theory.
+\begin{comment}
+% https://doi.org/10.1016/j.nuclphysa.2003.11.034
+\item proton
+    \begin{itemize}
+	\item high-energy polarized proton
+	\item Relativistic Impulse Approximation (RIA) with free nucleon-nucleon interaction
+    \end{itemize}
+\item pion
+    \begin{itemize}
+	\item in the $\Delta(1332)$ region, $\pi^- N$ interaction is 3 times larger than $\pi^- p$.
+	\item strong absorption at the surface, sensitive to the tail of neutron distributions;
+	    increase pion energy to reduce xsection
+	\item applicable to only light stable nuclei
+    \end{itemize}
+\item antiproton
+    \begin{itemize}
+	\item slow antiproton capture (like an electron)
+    \end{itemize}
+\item PVES
+\item GDR: Giant Dipole Resonance
+\item SDR: Spin-Dipole Resonance
+\end{comment}
 
 Experimentally, the nucleon radius is measured from their corresponding form
 factors (FFs). According to QM, under the Born approximation, the matrix element (ME) 
@@ -306,8 +328,10 @@ distribution):
 \begin{equation}
     \rho(r) = \frac{\rho(0)}{1 + \exp((r-R)/t)}
 \end{equation}
-where $R = (1.2A^{1/3} - 0.48) \ fm$ denotes the nuclear force radius, 
-and $t \sim 0.4-0.5 \ fm$ for  $A > 40$ indicates the surface thickness.
+where $R = (1.2A^{1/3} - 0.48) \ fm$ denotes the nuclear force radius at which 
+$\rho(r) = \frac{\rho(0)}{2}$, 
+and $t \sim 0.4-0.5 \ fm$ for  $A > 40$ indicates the surface thickness, over
+which $\rho{r}$ falls from 90\% to 10\% .
 \begin{figure}
     \centering
     \includegraphics[width=0.5\linewidth]{fermi_distribution}
@@ -366,6 +390,10 @@ the PV asymmetry, as shown in the following 2 plots.
 
 % 2. symmetry energy dependence on density
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% nuclei models:
+% 1. Liquid Drop Model -- macroscopic
+% 2. Fermi Gas Model -- microscopic
+% 3. Nuclear Shell Model -- micro
 \section{Symmetry Energy} 
 It has long been a hot topic for nuclear scientists to study how the asymmetry 
 between number of protons and neutrons will affect various properties of nuclei, 
@@ -467,6 +495,7 @@ Eq. \ref{eq:modified-mass-formula-2} will be:
 \begin{equation}
     e(\rho, \beta) = e(\rho, 0) + S(\rho)\beta^2 + O(\beta^4)
     \label{eq:symmetry-energy}
+    % e(\rho, 0) = 31.7 \ MeV; L \sim 60 MeV
 \end{equation}
 
 This is an expansion of the binding energy per nucleon around $\beta = 0$.
@@ -530,7 +559,7 @@ a few protons, so its $\beta \approx 1$.
 The amazing thing is that neutron star's pressure dependents on $L$ and is proportional 
 to $R^4$. Once we know the $L$ value, we can therefore calculate the radius of a neutron star. 
 
-Being such an important parameter, great efforts have been invested to extract S 
+Being such an important parameter, great efforts have been devoted to extract S 
 and $L$. Comparing Eq. \ref{eq:modified-mass-formula-2} and \ref{eq:symmetry-energy},
 we can directly get:
 \begin{equation}
@@ -1155,7 +1184,7 @@ and:
     Q = I_3 + Y	\Longrightarrow Y = Q - I_3
     \label{eq:weak_hypercharge}
 \end{equation}
-The value of weak hypercharge depends on the definition, if one keep the $\frac{1}{2}$
+The value of weak hypercharge depends on the definition, if one keeps the $\frac{1}{2}$
 factor in the B current, then one will get:
 \begin{equation}
     \frac{Y}{2} = Q - I_3   \Rightarrow Y = 2(Q-I_3)

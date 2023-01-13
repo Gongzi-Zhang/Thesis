@@ -1,0 +1,63 @@
+%%------------------------------------------------------------------
+%% Misha Mikhasenko, 2018
+%% a few useful commands for the internal collaboration review
+%%------------------------------------------------------------------
+%%% checked by command
+\usepackage{mfirstuc} % to uppercase the name
+% \usepackage{todonotes} % to uppercase the name
+\newcommand{\addReviewer}[2]{
+\expandafter\newcommand\csname #1\endcsname[1]{{\textbf{ \color{#2}
+\capitalisewords{#1}:\,##1}}}
+\expandafter\newcommand\csname #1cor\endcsname[2]{{\color{#2}
+\capitalisewords{#1}:\,\st{##1}{\textbf{##2}}}}
+\expandafter\newcommand\csname #1color\endcsname{#2}
+\expandafter\newcommand\csname #1todo\endcsname[1]{{\todo[inline,color=white!70!#2,
+caption={}]{\textbf{\capitalisewords{#1}}: ##1}}}
+}
+%%% checked by command
+\usepackage{tikz, marginnote} % margin notes with circles
+\newcommand{\checkedby}[1]{
+\ifdefined\CROSSCHECKS
+\marginnote{
+\begin{tikzpicture}
+\foreach \x [count=\xi] in {#1} {
+\node[shape=circle,inner sep=0mm,
+minimum size=2mm,
+fill=\csname \x color\endcsname] at (\xi*3mm,0) {};
+}
+\end{tikzpicture}
+}
+\else
+\fi
+}
+\newcommand{\showCrossChecks}{\newcommand*{\CROSSCHECKS}{true}}
+%%%%
+\usepackage{soul,color}
+\definecolor{chromeyellow}{rgb}{1.0, 0.65, 0.0}
+\definecolor{DodgeBlue}{rgb}{0.118, 0.565,1.000}
+\definecolor{asparagus}{rgb}{0.53, 0.66, 0.42}
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\definecolor{blue(ryb)}{rgb}{0.01, 0.28, 1.0}
+\definecolor{periwinkle}{RGB}{181, 146, 203}
+\definecolor{turquoiseblue}{rgb}{0.02, 0.55, 0.55}
+\definecolor{atlanticstorm}{RGB}{57,107,127}
+\definecolor{amethyst}{rgb}{0.6, 0.4, 0.8}
+\definecolor{blue-violet}{rgb}{0.54, 0.17, 0.89}
+\definecolor{brightlavender}{rgb}{0.75, 0.58, 0.89}
+\definecolor{brightmaroon}{rgb}{0.76, 0.13, 0.28}
+\definecolor{brilliantrose}{rgb}{1.0, 0.33, 0.64}
+\definecolor{byzantine}{rgb}{0.74, 0.2, 0.64}
+\definecolor{darkmagenta}{rgb}{0.55, 0.0, 0.55}
+\addReviewer{kk}{red}
+\addReviewer{kent}{blue}
+\addReviewer{xiaochao}{brilliantrose}
+
+\addReviewer{weibin}{purple}
+\addReviewer{abhay}{cyan}
+\addReviewer{ciprian}{brightmaroon}
+\addReviewer{james}{amethyst}
+\addReviewer{jiangyong}{chromeyellow}
+\addReviewer{author2}{brown}
+\addReviewer{aaa}{cadmiumgreen}
+\addReviewer{bbb}{magenta}
+\addReviewer{ccc}{DodgeBlue}
