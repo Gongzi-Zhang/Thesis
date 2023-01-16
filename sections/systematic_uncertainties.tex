@@ -10,7 +10,7 @@ acceptance function.
 
 After removing false asymmetry from the beam, we need further correction of the
 background asymmetry, namely, target contamination and inelastic scattering,
-as shown in Eq. \ref{eq:background_correction}.
+as shown in Eq.~\ref{eq:background_correction}.
 \begin{equation}
     \CA_{pv} = \frac{\CA_{cor}/\CP - \sum_i \CA_i f_i}{1 - \sum_i f_i}
     \label{eq:background_correction}
@@ -46,7 +46,7 @@ a watercell target.
     is the relative energy difference: $dp = \frac{p - p0}{p0}$. Plot from Siyu}
     % HRS_optics_siyu
 \end{figure}
-As we see from Eq. \ref{eq:scattered_energy}, the energy difference between the
+As we see from Eq.~\ref{eq:scattered_energy}, the energy difference between the
 2 elastic peaks is
 \begin{equation}
     \Delta E' = E'_O - E'_H = E\left( \frac{1}{1 + \frac{E(1-\cos\theta)}{M_O}} -
@@ -77,14 +77,14 @@ and spin-0 nucleus, so benign background.
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Target Thickness}
 The \Pb foil was $0.5\ mm$ thick, the upstream and downstream diamond foils 
-were half the \Pb thickness, as shown in Table \ref{tab:target_thickness}.
+were half the \Pb thickness, as shown in Table~\ref{tab:target_thickness}.
 
 % https://prex.jlab.org/DocDB/0004/000446/001/target_thickness_errors.txt
 The target foils' thicknesses were measured differently. The diamond foil's 
 thickness was measured directly using calipers with an accuracy of $0.0005 \ in$ ($0.0127 \ mm$).
 Given diamond foil's thickness of $1\ in$ ($0.255 \ mm$), an estimation of 5\% 
 relative error was reasonable. Foil to foil variations were small than 5\% (the
-largest variation was 3.6\%), as shown in Table \ref{tab:target_thickness}.
+largest variation was 3.6\%), as shown in Table~\ref{tab:target_thickness}.
 
 As for the \Pb foil, its thickness (area density) was inferred from its mass 
 and area, which was calculated from the measurement of its four corners ($\rho t = \frac{m}{A}$). 
@@ -266,7 +266,7 @@ in $Q^2$ (2\%).
 To study the systematic uncertainties, we varied the thickness of \Pb foil and 
 diamond foil (total thickness) by 5 percent based on the nominal values, and applied
 different momentum cut (varied from 1.8 to 2.6 $MeV$), the result is shown in
-Table \ref{tab:prex_C_contam_rate_thickness} and \ref{tab:prex_C_contam_rate_pcut}. 
+Table~\ref{tab:prex_C_contam_rate_thickness} and \ref{tab:prex_C_contam_rate_pcut}. 
 $f_c$ is the rate fraction.
 \begin{table}[h!]
     \centering
@@ -342,7 +342,7 @@ from the nominal value, as shown below:
     and n2 for C foil. (pcut) indicates the p cut value}
     \label{tab:prex_C_contam_error}
 \end{table}
-Based on Table \ref{tab:prex_C_contam_error}, a conservative error value 
+Based on Table~\ref{tab:prex_C_contam_error}, a conservative error value 
 (the larger one) was used , which gave out the final value of $f_C$
 \begin{equation*}
     f_C = 0.0629 \pm 0.005
@@ -359,7 +359,7 @@ t and m are, respectively, area density and atomic mass. Therefore
 \begin{equation}
     \frac{R_C}{R_{Pb}} = \frac{\sigma_C}{\sigma_{Pb}} \times \frac{t_c}{t_{Pb}} \times \frac{m_{Pb}}{m_C}
 \end{equation}
-Take $E = 0.95\ GeV$ and $\theta = 4.8^\circ$ (based on Table \ref{tab:prex_C_contam_Q2}), 
+Take $E = 0.95\ GeV$ and $\theta = 4.8^\circ$ (based on Table~\ref{tab:prex_C_contam_Q2}), 
 our theorist friends predicted the cross section of C and Pb to be
 \begin{equation*}
     \sigma_C = 48.001\ mbarn	\qquad \sigma_{Pb} = 3386.100\ mbarn	
@@ -415,7 +415,7 @@ As said before, the asymmetry from carbon scattering was well understood, and
 we had a table of cross section and asymmetry for electron-carbon elastic scattering
 at various energies and scattering angles, which were numerical solved from the Dirac equation
 by our theoretical friends. The same for Pb.
-The asymmetry for carbon was taken to be $539.36 \ ppb$ as shown in Table \ref{tab:prex_C_contam_Q2}
+The asymmetry for carbon was taken to be $539.36 \ ppb$ as shown in Table~\ref{tab:prex_C_contam_Q2}
 with the nominal Pb and nominal C thicknesses. The uncertainty for it was taken
 to be a conservative estimation of 4\%.
 \begin{figure}
@@ -428,8 +428,8 @@ to be a conservative estimation of 4\%.
     asymmetry values for C and Pb.}
     \label{prex_asym}
 \end{figure}
-Using Eq. \ref{eq:systematic_uncertainty}, we could calculate the uncertainty
-contribution to $\CA_{pv}$, summarized in Table. \ref{tab:prex_C_contam}
+Using Eq.~\ref{eq:systematic_uncertainty}, we could calculate the uncertainty
+contribution to $\CA_{pv}$, summarized in Table~\ref{tab:prex_C_contam}
 \begin{equation*}
     \begin{gathered}
 	\frac{\partial \CA_{pv}}{\partial \CA_C} \delta \CA_C = 
@@ -497,7 +497,7 @@ electrons, which depends on the scattering angle $\theta$:
     \label{eq:acceptance_definition}
 \end{equation}
 
-From Eq. \ref{eq:acceptance_function}, we see the importance of the acceptance
+From Eq.~\ref{eq:acceptance_function}, we see the importance of the acceptance
 function. Firstly, it will be a systematic uncertainty of our asymmetry
 measurement; and secondly, only with the acceptance function, can we compare
 our experimental measurement to theoretical predictions to interpret our
@@ -582,7 +582,7 @@ have:
     \end{pmatrix}
 \end{equation}
 The `tg' subscript means corresponding values at the target plane. With this matrix, we can
-propogate backward (inverse of T) to calculate electron position at the exit 
+propagate backward (inverse of T) to calculate electron position at the exit 
 of the target from what we detect using VDCs. Usually we calculate the beam
 position on the focal plane $\vec{X}_{fp}$, then the beam position on the target
 plane will be: 
@@ -613,9 +613,9 @@ interfere with each other, so that $x|y = x|\phi = \theta|y = \theta|\phi
 The matrix elements were measured using beam trajectory with sieve slit collimator
 inserted in. When the sieve slit collimator was put in, the electron trajectory
 from different holes were naturally separated on the focal plane, which allowed
-us to match them to sieve holes one by one. With a reasonable inital value of 
+us to match them to sieve holes one by one. With a reasonable initial value of 
 the transportation matrix (from previous experiments),
-we could reconstruct electron's trajectory on the sieve plane using Eq. \ref{eq:reconstruction}.
+we could reconstruct electron's trajectory on the sieve plane using Eq.~\ref{eq:reconstruction}.
 By tuning the matrix element, the one that minimizes the distance of each electron's trajectory on the sieve
 plane from its corresponding hole center was identified as the transportation
 matrix, so this is a linear regression problem. The identification of the septum 
@@ -640,7 +640,7 @@ the scattering angle in the lab frame. The 2 coordinate systems and the transpor
 between them are defined below.
 
 \begin{itemize}
-    \item Hall Coordinate System: origined at the center of the hall and
+    \item Hall Coordinate System: originated at the center of the hall and
 	cross the beam line.  $\hat{Z}$ is along the beam line, pointing downstream; 
 	$\hat{y}$ points up and $\hat{x}$ points left to form a RH coordinate system.
     \item Target Coordinate System: each HRS specific, the transport coordinate at target position.
@@ -850,7 +850,7 @@ With selected septum current, we continued to minimize beam spot size on the det
 plane, a fine tune of Q1 and Q3 gave us the smallest detector spot size with
 Q1 -17\% (-15\%) from the nominal value on left (right) arm, and Q3 -5\% from
 the nominal value on both arms, which led to the final CREX tune as shown in
-Table \ref{tab:pcrex_tune}.
+Table~\ref{tab:pcrex_tune}.
 \begin{table}[h!]
     \begin{tabular}{c c | c c c | c c c}
 	\hline
@@ -1045,7 +1045,7 @@ We can check the $\theta_{lab}$ for the best models
 %     \caption{$\theta_{lab}$ and $Q^2$ comparison between best models and data (apparent values).}
 % \end{figure}
 
-Using this best models, we can calculate the acceptance function as Eq. \ref{eq:acceptance_definition}:
+Using this best models, we can calculate the acceptance function as Eq.~\ref{eq:acceptance_definition}:
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.49\linewidth]{acc1_L_p2_-1_0_0.0}

@@ -63,10 +63,10 @@ out.
 CREX started commissioning around December 2019, we took the first good run on 
 Dec 12. 6 slugs (slug 100 - 105) were collected before the Christmas break. After 
 the Christmas break, data taking was resumed until Jan 18 2020 when the first \Ca 
-target was damaged accidently. It took 5 days to prepare a new \Ca target.
+target was damaged accidentally. It took 5 days to prepare a new \Ca target.
 Things moving on quite smoothly, we had 2 days of transverse asymmetry (AT)
 measurement from Feb 10 to Feb 12. We were a little over halfway on data taking 
-when Covid-19 hitted and the lab was shut down at the end of March 2020. Fortunately,
+when Covid-19 hit and the lab was shut down at the end of March 2020. Fortunately,
 things came back 4 months later, we had the chance to continue data taking for
 about 1 month. The experiment stopped data taking on Sep 18 2020. A total charge
 of 480 C was collected, among which 390 C was good charge. The dataset is clearly
@@ -111,10 +111,10 @@ larger than our helicity flipping frequency of $120\ Hz$, so electron beam can b
 as continous. All scattered electrons in one helicity window will be integrated as 1
 readout (event). Every 4 continuous helicty windows were grouped into one quadruplet 
 (in case of $240\ Hz$ flipping frequency in PREX-II, every 8 helicity windows 
-were grouped into one octuplet)
-in order to cancel the $60\ Hz$ line power noise, and asymmetry was
+were grouped into one octuplet).
+In order to cancel the $60\ Hz$ line power noise, and asymmetry was
 calculated based on helicity quadruplet (octuplet in the case of $240\ Hz$), 
-whose frequency was $30\ Hz$, as shown in Fig. \ref{fig:helicity_pattern}. 
+whose frequency was $30\ Hz$, as shown in Fig.~\ref{fig:helicity_pattern}. 
 CREX collected ??? such good helicity quadruplet.
 \begin{figure}[H]
     \centering
@@ -170,7 +170,7 @@ conditions is changing quickly, it is inappropriate to calculate detectors'
 response to beam fluctuations -- the detector slope, over a 60 mins time scale. 
 Minirun will be more proper, the beam conditions, and therefore
 the slope value should be more stable during such a shorter time period.  
-Every minirun contains 9000 good (passing cut) quadruplets, which counts about 5 mins
+Every minirun contains 9000 good (passing cut) quadruplets, which counts about 5~mins
 in data taking, the last minirun in each run contains 
 whatever number of good quadruplets left that can't be divided into 2 miniruns. 
 Miniruns whose number of samples is less half of the standard (4500) will be discarded.
@@ -235,7 +235,7 @@ each slug took about 8 hours or longer in case of any accidents. CREX collected
     (\texttt{ErrorFlag == 0}).}
 \end{figure}
 
-Finnaly, slugs were splitted into parts, with different wien flip states. We
+Finally, slugs were split into parts, with different wien flip states. We
 have 3 parts as said before.
 \begin{table}[!h]
     \centering
@@ -255,13 +255,13 @@ have 3 parts as said before.
 A loose cut was applied in the event level to select as much as possible good events.
 During data taking, the JAPAN analyzer will check various hardware failures, the
 beam stability level, helicity information and others. Based on these 23 checks,
-an error code (ErrorFlag), which was the bitwise OR of the result against each
+an error code (ErrorFlag), which was the bit-wise OR of the result against each
 check, was assigned to each event, an event that passed every check will have
 a null error code (ErrorFlag == 0). 
 
 The various hardware failure checks detected the ADC readout in the detectors and
 monitors, making sure we were not recording saturation or null values; the 
-sample size was also varified. These checks helped to identify the problematic
+sample size was also verified. These checks helped to identify the problematic
 hardware channels in case of any hardware failures.
 
 The beam stability level checks kept track of beam conditions based on their
@@ -278,7 +278,7 @@ quality of the data we collected.
 One example of such stability cut is the beam current cut. In cases of beam trip
 due to various accidents, the beam dropped and then recovered quickly, beam in
 the process of falling and rising was usually unstable, so we required the event
-beam current should be larger than the stable beam current minus $30\ \mu A$ ($15\ \mu A$ in PREX-II).
+beam current should be larger than the stable beam current minus $30\ \mu$A ($15\ \mu$A in PREX-II).
 
 \begin{figure}[!h]
     \centering
@@ -308,7 +308,7 @@ As explained before, the key to measure a teeny tiny asymmetry value is to
 keep all experimental conditions as the same as possible between different 
 helicity windows. Among all the conditions that needed precise control, the 
 hardest one was beam condition, any fluctuation in any components along the 
-long accelerater line will cause changes to beam, therefore introducing false 
+long accelerator line will cause changes to beam, therefore introducing false 
 asymmetry to our measurement. Though of the difficulties, CEBAF staff worked 
 hard to provide us excellent beam with tiny difference between different helicity 
 windows, as displayed below.
@@ -327,7 +327,7 @@ slightly different between helicity windows. The normalized raw asymmetry is:
 We see that the charge asymmetry contributes to our raw asymmetry directly, so
 tremendous effort was invested to keep the charge asymmetry as small as possible.
 Specifically, this was done through the charge feedback system. Overall, charge
-asymmetry was about hundreds of ppb. We can also tell from Fig. \ref{fig:crex_bcm_target}
+asymmetry was about hundreds of ppb. We can also tell from Fig.~\ref{fig:crex_bcm_target}
 that part 2 has relatively good beam conditions than the other 2 parts.
 \begin{figure}[H]
     \centering
@@ -374,8 +374,8 @@ Again, the second part has more stable beam than the other 2 parts.
 
 The beam momentum/energy was measured by BPM12X, whose dispersion tells deviation
 (dp) from the standard value (p0). The design value of dispersion for CREX was
-$D = 4.0\ m$, and an actual measurement gave $\sim3.8\ m$. I used $4.0\ m$ here.
-As can be seen in Fig. \ref{fig:crex_diff_p}, CEBAF provided a beam with energy 
+$D = 4.0\ m$, and an actual measurement gave $\sim3.8$~m. I used 4.0~m here.
+As can be seen in Fig.~\ref{fig:crex_diff_p}, CEBAF provided a beam with energy 
 dispersion as small as $\sim10\ ppb$.
 
 \begin{equation}
@@ -385,7 +385,7 @@ dispersion as small as $\sim10\ ppb$.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\linewidth]{crex_diff_p.mean}
-    \caption{Slug-wise mean value of beam energy dispersion. Overall, $\sim 10\ ppb$ 
+    \caption{Slug-wise mean value of beam energy dispersion. Overall, $\sim 10$~ppb 
     energy difference was achieved. }
     \label{fig:crex_diff_p}
 \end{figure}
@@ -429,8 +429,8 @@ As we can see in previous few plots about beam conditions, there were false
 asymmetries caused by the beam. The Helicity Correlated Beam Asymmetry (HCBA), 
 was the largest contributor to false asymmetry.
 
-As we can notice in Fig. \ref{fig:correlation}, beam jitter will cause 
-fluctuation in detector yield, with approximatively a linear correlation.
+As we can notice in Fig.~\ref{fig:correlation}, beam jitter will cause 
+fluctuation in detector yield, with approximately a linear correlation.
 So to remove the false asymmetries caused by beam jitter, we just need to
 know the correlation between detector's yield and each beam parameter, what
 we call the detector slope. 
@@ -518,9 +518,9 @@ The probability for measuring $\Delta D$ will be:
 
 We will have a bunch of independent data points: $(\Delta M, \Delta D)_i$ and 
 we want to extract the relationship between $\Delta d_0$ and $\Delta m_0$: 
-$\beta \equiv \frac{\partial d}{\partial m}$. Given the tinyness of $\delta m$ (
+$\beta \equiv \frac{\partial d}{\partial m}$. Given the tininess of $\delta m$ (
 compared to their normal yield), first order correlation is precise enough. 
-This is exactly a linea regression problem.
+This is exactly a linear regression problem.
 \begin{equation}
     \begin{gathered}
 	\Delta d = 0 + \beta \Delta m	\\
@@ -667,8 +667,8 @@ The 5 BPMs we chose in CREX analysis were BPM1X, BPM4aY, BPM4eX, BPM4eY and BPM1
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Slope Values}
-With Eq. \ref{eqn:slope}, we can calculate the slope values w.r.t. to chosen 
-BPMs. Fig. \ref{fig:slug_202_reg_asym_us_avg_diff_bpm12X} justifies our usage
+With Eq.~\ref{eqn:slope}, we can calculate the slope values w.r.t. to chosen 
+BPMs. Fig.~\ref{fig:slug_202_reg_asym_us_avg_diff_bpm12X} justifies our usage
 of minirun. As we can see in the plot, the slope value depends on the detector 
 yield, miniruns within the same run may have different slope values up to a few 
 percent. This is expected because we assumed the Gaussian distribution
@@ -686,9 +686,9 @@ we need to remove miniruns with beam condition outliers.
     \label{fig:slug_202_reg_asym_us_avg_diff_bpm12X}
 \end{figure}
 
-Table \ref{tab:crex_slope} summarise the approximative slope values w.r.t. the 5
+Table~\ref{tab:crex_slope} summarise the approximating slope values w.r.t. the 5
 BPMs we chose. Overall, our detector is sensitive to fluctuations in X direction
-(the dispersive direction) and beam energy, and dull to jitters in Y direction.
+(the disperse direction) and beam energy, and dull to jitters in Y direction.
 \begin{table}[!h]
     \centering
     \begin{tabular}{c | c}
@@ -714,7 +714,7 @@ false asymmetry correction:
     \CA_{cor} = \beta \times \text{(diff in bpm)}
 \end{equation}
 The main correction comes from difference in X direction and energy,
-typical correction is about a few $ppm$, as shown in Fig. \ref{fig:slug_202_reg_asym_us_avg_diff_bpm12X}.
+typical correction is about a few ppm, as shown in Fig.~\ref{fig:slug_202_reg_asym_us_avg_diff_bpm12X}.
 Due to detector's insensitivity to fluctuation in the Y direction, its correction 
 is relatively small, at the level of  a few hundred $ppb$. Note that corrections
 from each beam parameter don't add up, they actually cancel with each other,
@@ -747,13 +747,13 @@ leaving relatively small total correction, usually a few $ppm$.
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Regression Result}
 The asymmetry after regression correction reads $2080 \pm 84.01\ ppb$, as shown 
-in the left plot of Fig. \ref{fig:reg_asym_us_avg}. Compared to the raw asymmetry
+in the left plot of Fig.~\ref{fig:reg_asym_us_avg}. Compared to the raw asymmetry
 of $2106 \pm 178.9\ ppb$,
 the mean value doesn't change much, which is expected because the assumption 
 we made is that the false asymmetry follows the Gaussian distribution, therefore
 regression should just remove the noise without changing the mean value, which
 is exactly what we got. The width of the asymmetry distribution after regression
-reduces by a factor of 2, as shown in the right plot of Fig. \ref{fig:reg_asym_us_avg}.
+reduces by a factor of 2, as shown in the right plot of Fig.~\ref{fig:reg_asym_us_avg}.
 
 \begin{figure}[H]
     \centering
@@ -855,7 +855,7 @@ data taking, to alarm possible large beam fluctuations.
 \subsubsection{Run Segments}
 As we mentioned before, the modulation system consists of 7 coils, a complete 
 cycle of modulation takes about $2 mins$. Stable beam was required for modulation.
-Unfortunately, with low frequency of beam modulation (about 1 modulation per 10 mins), 
+Unfortunately, with low frequency of beam modulation (about 1 modulation per 10~mins), 
 it was an wild wish to have stable beam conditions during beam modulation. Chances were
 beam trip off during beam modulation, resulting in incomplete cycles. Though we
 need only 5 out of the total 7 coils to cover the whole beam parameter phase space,
@@ -868,7 +868,7 @@ Even though the run-wise strategy to save incomplete cycles, some runs were stil
 lack of dithering data. To enable dithering correction for these runs, we separated
 runs into segments based on beam conditions. An average dithering slope value
 was calculated using run-wise values within each segment and then the calculated
-slope value was used for correction for each run in that segment. The seperation
+slope value was used for correction for each run in that segment. The separation
 of segments happen when there were changes in beam setup or when we observed shift
 in slope values. List of segments can be found in Cameron's thesis \cite{Cameron_thesis}.
 
@@ -876,8 +876,8 @@ in slope values. List of segments can be found in Cameron's thesis \cite{Cameron
 \subsubsection{Beam Modulation Result}
 The dithering corrected asymmetry of $2085 \pm 84.22\ ppb$ is $0.24\%$ away from
 regression corrected result of $2080 \pm 84.01\ ppb$, verifying the correctness
-of both methods. The difference between asymmetrise corrected with these 2 methods
-for each slug is shown in the right plot of Fig. \ref{fig:dit_result}, the difference
+of both methods. The difference between asymmetries corrected with these 2 methods
+for each slug is shown in the right plot of Fig.~\ref{fig:dit_result}, the difference
 is zero within uncertainty for most slugs.
 \begin{figure}[H]
     \centering
@@ -904,7 +904,7 @@ Given the advantages and disadvantages of these 2 methods, it is natural to
 combine these 2 methods, which leads to the Lagrangian analysis -- regression
 with constraint from beam modulation.
 
-From Eq. \ref{eqn:regression_chi2}, we can derive the $chi^2$ for asymmetry regression:
+From Eq.~\ref{eqn:regression_chi2}, we can derive the $chi^2$ for asymmetry regression:
 \begin{equation}
     \chi^2 = \sum_i \left( \CA_{raw} - \sum_\mu \beta_\mu \Delta M_\mu \right)_i^2
 \end{equation}
@@ -925,7 +925,7 @@ where $\mu$ sums over selected monitors and $\alpha$ sums over selected coils.
     \label{eqn:lagrange_derivative}
 \end{equation}
 
-The difference between the second formula of Eq. \ref{eqn:lagrange_derivative} and
+The difference between the second formula of Eq.~\ref{eqn:lagrange_derivative} and
 the normal beam modulation method may be confusing, because they are actually
 the same if we consider only 5 BPMs. The constraint from beam modulation is so 
 strong that it identifies the slope values directly. Changes happen when we
@@ -933,7 +933,7 @@ include more BPMs in the analysis, with more BPMs than coils, the solution
 to the constraint is not unique anymore, so that we can apply the Lagrange multiplier
 method.
 
-Write Eq. \ref{eqn:lagrange_derivative} in matrix form:
+Write Eq.~\ref{eqn:lagrange_derivative} in matrix form:
 \begin{equation}
     \begin{pmatrix}
 	M_{m\times m}	& (B^T)_{m\times n}	\\
@@ -960,7 +960,7 @@ Write Eq. \ref{eqn:lagrange_derivative} in matrix form:
 \end{equation}
 with $m > n$. In our analysis, we used all 12 BPMs, so $m = 12$ and $n = 5$.
 
-Eq. \ref{eqn:lagrange_derivative_1} can be solved to be
+Eq.~\ref{eqn:lagrange_derivative_1} can be solved to be
 \begin{equation}
     \begin{pmatrix}
 	\vec{\beta} \\
@@ -985,7 +985,7 @@ values are segment-wise average value.
 % The difference between the Lagrange multiplier and regression
 \subsubsection{Lagrange Multiplier Result}
 The result of asymmetry corrected with Lagrange multiplier is shown in 
-Fig. \ref{fig:crex_corrected_asym}. Compared with corrected asymmetries using
+Fig.~\ref{fig:crex_corrected_asym}. Compared with corrected asymmetries using
 the other 2 methods, only tiny difference is observed.
 \begin{figure}[H]
     \centering
@@ -1003,7 +1003,7 @@ corrected asymmetries measured with opposite IHWP or Wien Filter state overlap
 with each other with $1\sigma$ uncertainty, verifying the unbiasedness of our
 measurement.
 
-The pitt plot in Fig. \ref{fig:crex_part_pitt} showes the asymmetry distribution
+The pitt plot in Fig.~\ref{fig:crex_part_pitt} shows the asymmetry distribution
 for each pitt. The concept of pitt originated from Mark Pitt. The idea is to combine
 nearby slugs of alternating IHWP states to have the same (similar) number of events for 
 opposite IHWP states. Every pitt includes about 4 slugs, the detailed range definition
@@ -1023,5 +1023,5 @@ of pitt can be found in Cameron's thesis.
 
 From the pitt plot, we read the final corrected asymmetry as $2081 \pm 83.77\ ppb$ (blinded).
 The number used in our published result was $2080 \pm 83.77$. The difference 
-lies in the 2 miniruns I discard in Table \ref{tab:short_miniruns} with too small
+lies in the 2 miniruns I discard in Table~\ref{tab:short_miniruns} with too small
 samples.
