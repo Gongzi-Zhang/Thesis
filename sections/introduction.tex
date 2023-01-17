@@ -234,6 +234,8 @@ the surface tension, so the surface tension favors squeezing extra neutrons % FI
 into the core. The balance between the symmetry energy and 
 the surface tension determine the thickness of the neutron skin.
 
+% FIXME: a conclusion paragraph stating the importance of the measurement
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Theoretical Models} 
 \label{subsec:models}
@@ -335,7 +337,7 @@ where $R = (1.2A^{1/3} - 0.48)$~fm denotes the nuclear force radius at which
 $\rho(r) = \frac{\rho(0)}{2}$,
 and $t \sim 0.4-0.5$~fm for  $A > 40$ indicates the surface thickness, 
 over which $\rho(r)$ falls from 90\% to 10\%.
-\begin{figure}
+\begin{figure}[!h]
     \centering
     \includegraphics[width=0.5\linewidth]{fermi_distribution}
     \caption{In the nuclear Shell Model, it is assumed that nucleons occupy 
@@ -359,7 +361,7 @@ distribution can be found in \cite{Maximon:1966sqn}.
 
 One example model based on the Fermi distribution is the FSUGold \cite{PhysRevLett.95.122501},
 the neutron distribution of \Pb predicted by FSUGold is shown in Fig.~\ref{fig:FSUGold_pb208}.
-\begin{figure}
+\begin{figure}[!h]
     \centering
     \includegraphics[width=0.6\linewidth]{FSUGold_pb208}
     \caption{Neutron and weak charge distribution in \Pb predicted by the FSUGold model.
@@ -378,7 +380,8 @@ the same nucleus, so the distortion correction is proportional to $Z\alpha$.
 Obviously, this correction is more important for \Pb because of its large Z value,
 Coulomb-distortion could reduce the PV asymmetry by as much as 30\% as we can see
 in Fig.~\ref{fig:diff_by_Coulomb_distortion}.
-\begin{figure}[H]
+\begin{figure}[!h]
+    \centering
     \includegraphics[width=0.5\linewidth]{Coulomb_distortion_Pb208_diff}
     \caption{Comparison of PV asymmetries with and without the effect of Coulomb
     distortion for \Pb. The calculation assumes the same weak and charge densities,
@@ -390,7 +393,7 @@ in Fig.~\ref{fig:diff_by_Coulomb_distortion}.
 With these information, one is able to solve the Dirac equation directly to know
 the PV asymmetry, as shown in Fig.~\ref{fig:Coulomb_distortion}.
 
-\begin{figure}[H]
+\begin{figure}[!h]
     \includegraphics[width=0.49\linewidth]{Coulomb_distortion_Pb208}
     \includegraphics[width=0.48\linewidth]{Coulomb_distortion_Ca48}
     \caption{PV asymmetry for \Pb (left) and \Ca (right) versus scattering angle 
@@ -437,7 +440,7 @@ Liquid Drop Model (LDM), we get the Bethe-Weizsacker Semi-empirical Mass Formula
 \end{itemize}
 
 The first three terms are natural:
-The volume term reflects the short-range nature of the strong interaction; the
+the volume term reflects the short-range nature of the strong interaction; the
 surface term comes from the fact that nucleons on the surface aren't completely 
 surrounded by other nucleons; and the Coulomb term reveals the EM interactions between
 protons. 
@@ -462,7 +465,7 @@ Since the Fermi energy is proportional to $n^{2/3}$
     E_k = C(Z^{5/3} + N^{5/3})
 \end{equation}
 where $C$ is a constant coefficient. 
-Expanse it in terms of $N-Z$ (see appendix \ref{ap:symmetry_energy}), we will get:
+Expand it in terms of $N-Z$ (see appendix \ref{ap:symmetry_energy}), we will get:
 \begin{equation}
     \begin{aligned}
 	E_k &= 2^{-2/3}C\left(A^{5/3} + \frac{5}{9}\frac{(N-Z)^2}{A^{1/3}} \right) + O((N-Z)^4) \\
@@ -503,7 +506,7 @@ term, we write:
 \end{equation}
 here we define $\beta = \frac{N-Z}{A}$ as asymmetry between the number of protons and neutrons. 
 
-For the infinite system, density, instead of $A$, will be a better choice to parameterize
+For an infinite system, density, instead of $A$, will be a better choice to parameterize
 the EOS. So we replace $N$, $Z$ and $A$ with their corresponding density: $\rho_n$, 
 $\rho_p$ and $\rho$ ($\beta = \frac{\rho_n - \rho_p}{\rho}$). Similarly, $E$ is replaced by
 its density counterpart $e$.
@@ -515,6 +518,7 @@ Eq.~\ref{eq:modified-mass-formula-2} will be:
     \label{eq:symmetry-energy}
     % e(\rho, 0) = 31.7~MeV; L \sim 60~MeV
 \end{equation}
+where $S(\rho)$ is a density dependent coefficient.
 
 This is an expansion of the binding energy per nucleon around $\beta = 0$.
 Due to the isospin symmetry between proton and neutron, any isoscalar quantities
@@ -570,12 +574,15 @@ a few protons, so its $\beta \approx 1$.
     \begin{aligned}
 	E &= E_0 + S	\\
 	 P &= \rho^2\frac{de}{d\rho} \simeq \rho^2 \frac{dS}{d\rho} \approx \frac{L\rho^2}{3\rho_0}  \\
-	 RP^{-1/4} &\approx const    \\
     \end{aligned}
-    \label{eq:neutron-star}
+    \label{eq:EOS_neutron-star}
 \end{equation}
 The amazing thing is that a neutron star's pressure depends on $L$ and is proportional 
-to $R^4$. Once we know the $L$ value, we can therefore calculate the radius of a neutron star. 
+to $R^4$. % FIXME reference
+\begin{equation}
+    RP^{-1/4} \approx \text{const}    
+\end{equation}
+Once we know the $L$ value, we can therefore calculate the radius of a neutron star. 
 
 Being such an important parameter, great efforts have been devoted to extract $S$ 
 and $L$. Comparing Eq.~\ref{eq:modified-mass-formula-2} and \ref{eq:symmetry-energy},
@@ -584,10 +591,12 @@ we can directly get:
     S(\rho) \approx -a_A
 % S(\rho) = -a_A + \frac{L}{3}\frac{\rho - \rho_0}{\rho_0}
 \end{equation}
-But this tells us only the symmetry energy at nuclear density ($1.22 \times 10^{44}\mathrm{m}^{-3}$).
-What about the symmetry energy at other density values? Especially at the nuclear
-saturation density ($\sim 1.7 \times 10^{44}\mathrm{m}^{-3}$)? And what about its density
-dependence? Another strategy is the energy density functionals (EDF), which fits
+The problem is this tells only the symmetry energy at the nuclear density ($1.22 \times 10^{44}\ \mathrm{m}^{-3}$).
+It says nothing about the symmetry energy at other density values, especially at the nuclear
+saturation density ($\sim 1.7 \times 10^{44}\ \mathrm{m}^{-3}$), let along the density
+dependence of the symmetry energy. 
+
+A more practical strategy is the energy density functionals (EDF), which fits
 the binding energy throughout the nuclear mass table to find out the best EDF,
 then use it to calculate $S(\rho)$. Fitting parameterizations are constrained
 by nuclear density, proton RMS radii and nuclear binding energies. 
@@ -607,6 +616,7 @@ then it will no doubt help a lot in understanding the symmetry energy and the EO
     at $\rho_n = 0.1$~neutron/fm${}^3$ vs the S value in \Pb for 18 Skyrme parameter sets. 
     The cross is SkX. Determination of S in \Pb will greatly constrain the 
     possible candidates.
+    % FIXME reference for Skyrme
     }
     \label{fig:neutron_EOS}
 \end{figure}
@@ -645,7 +655,7 @@ For flavor conserving interactions, their Feynman diagrams are shown below:
 \end{figure}
 
 Knowing that the EM interaction is much larger than the neutral weak current and
-the possible new interaction:
+the possible new interaction, we can approximate:
 \begin{equation}
     |\CA_\gamma + \CA_Z + \CA_{\text{new}}|^2 \approx A^2_\gamma\left[ 1 + 2\frac{\CA_Z}{\CA_\gamma}
     + 2\frac{\CA_{\text{new}}}{\CA_\gamma} \right]
@@ -696,9 +706,9 @@ is not completely cut off.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Symmetry and Asymmetry}
-Symmetry is the most profound concept and foundation of modern physics. For any
-physical system, by applying the proper symmetry requirements, one can derive 
-(guess) the Lagrangian of the system, and therefore properties and Equation Of Motion (EOM)
+Symmetry is a powerful framework in modern physics. For any physical system, 
+by applying the proper symmetry requirements, one can derive (guess) 
+the Lagrangian of the system, and therefore properties and Equation Of Motion (EOM)
 of the system.
 
 Common space-time symmetries can be separated into continuous symmetries 
@@ -707,7 +717,7 @@ boost, while discrete symmetries have space reflection (P) and time reversal (T)
 Another important discrete symmetry is charge conjugation (C).
 
 Playing such a key role, the violation of any symmetry is also an inspiring, challenging
-and far-reaching research. Physicists are doing their best to prove or falsify various
+and far-reaching research. Physicists are proving or falsifying various
 symmetries (and their combinations). Currently, it is widely accepted that continuous
 symmetries are conserved by all interactions while weak interaction violates
 some discrete symmetries, namely C, P, and their combination CP. There are some
@@ -773,7 +783,7 @@ of the space, spin is not affected by $\hat{\pi}$. So the parity of a spin state
 is randomly assigned: electron, proton and neutron are assigned even parity and
 their anti-particles have odd parity.
 
-Now we can play with helicity, which is the projection of the spin on the momentum
+Now we can discuss helicity, which is the projection of the spin on the momentum
 direction: 
 \begin{equation}
     H \equiv \frac{\vec{s}\cdot \vec{p}}{|\vec{s}\cdot\vec{p}|}
@@ -807,17 +817,17 @@ will flip its sign, as shown in Fig.~\ref{fig:parity_eA_scattering_1}.
     \begin{subfigure}[c]{0.44\linewidth}
 	\begin{tikzpicture}[scale=0.8]
 	    \begin{feynman}[transform shape]
-		\vertex (i1) {$e^-$};
-		\vertex [right=1.0cm of i1, inner sep=-2pt] (inspin) {\AxisRotator};
-		\vertex [right=2.3cm of inspin] (ip);
-		\vertex [right=2.8cm of ip] (i2) {A};
-		\vertex [above right = 2cm and 2cm of ip] (o1) {$e^-$};
-		\vertex [above right = 1cm and 1cm of ip] (outspin) {\AxisRotator[rotate=45]};
-		\vertex [below left = 2cm and 2cm of ip] (o2) {A};
+		\vertex (i1) {A};
+		\vertex [right=2.8cm of i1] (ip);
+		\vertex [right=2.3cm of ip, inner sep=-2pt] (inspin) {\AxisRotator};
+		\vertex [right=1.0cm of inspin] (i2) {$e^-$};
+		\vertex [above right = 2cm and 2cm of ip] (o1) {A};
+		\vertex [below left = 1cm and 1cm of ip] (outspin) {\AxisRotator[rotate=45]};
+		\vertex [below left = 2cm and 2cm of ip] (o2) {$e^-$};
 
-		\diagram* { {[edge=anti fermion]
-		    (i1) --[edge label=$\vec{k}$] (ip) [dot] --[edge label = $\vec{k}'$] (o1),
-		    (i2) --[edge label=$\vec{p}$](ip) [dot] -- [edge label = $\vec{p}'$]  (o2)},
+		\diagram* { {[edge=fermion]
+		    (i1) --[edge label=$\vec{p}$] (ip) [dot] --[edge label = $\vec{p}'$] (o1),
+		    (i2) --[edge label=$\vec{k}$](ip) [dot] -- [edge label = $\vec{k}'$]  (o2)},
 		};
 	    \end{feynman}
 	\end{tikzpicture}
@@ -975,7 +985,10 @@ will have $T_3 = 0$ and left-handed fermions have the same weak charge.
 
 Given the fact that the charge current (it changes particle's electric charge) 
 connects two types of fermions and lepton number is conserved in weak interaction, 
-it is natural to group them in a lepton doublet: $f_L = \begin{pmatrix} \nu_l \\ l \end{pmatrix}_L$.
+it is natural to group them in a lepton doublet: 
+\begin{equation}
+    f_L = \begin{pmatrix} \nu_l \\ l \end{pmatrix}_L
+\end{equation}
 This implies that for left-handed fermions: $T=\frac{1}{2}, T_3 = \pm\frac{1}{2}$ 
 
 Applying the V-A theory to more decay and scattering processes 
@@ -1011,7 +1024,7 @@ Then one should consider the third component:
 \begin{equation}
     j_\mu^3 = \bar{f}_L \gamma_\mu \frac{1}{2}t^3 f_L = \frac{1}{2} (\bar{\nu}_{e, L} \gamma_\mu \nu_{e, L} - \bar{e}_{L} \gamma_\mu e_L)
 \end{equation}
-This is a neutral current. But what does this neutral current represents for?
+This is a neutral current. The question is how to interpret it.
 The then only known neutral current is the EM current, but neutrino is neutral, how
 could it have a EM neutral current? The neutral current remained a mystery until
 Glashow, Salam and Weinberg postulated the GSW model, which interprets $j^3$ as
@@ -1070,7 +1083,7 @@ to the fact that only left-handed fermions couple to gauge boson of SU(2), and t
 part comes from the `weak hypercharge'. There are 4 vector bosons:
 $$ W^1, W^2, W^3, B $$
 These bosons will couple to both left-handed and right-handed fermions. For simplicity,
-let's consider only the first generation leptons here:
+consider only the first generation leptons here:
 \begin{equation}
     \psi_1 = \begin{pmatrix} \nu_e \\ e^-  \end{pmatrix}	\quad
     \psi_2 = \nu_{e,R}	\quad
@@ -1088,7 +1101,7 @@ The corresponding coupling Lagrangian is:
     \CL_{int, L} = -i\bar{\psi}_1 \gamma^\mu (g\frac{\sigma^a}{2}W^a_\mu + g'y_1B_\mu) \psi_1
 	= -i(g\vec{j}^\mu\vec{W}_\mu + g'y_1\bar{\psi}_1\gamma^\mu\psi_1 B_\mu)
 \end{equation}
-For right-handed singlets, they don't couple to weak vector bosons, 
+Right-handed singlets don't couple to weak vector bosons, 
 therefore the covariant derivative for right-handed fermions is:
 \begin{equation}
     D_\mu = \partial_\mu - ig'y_{2(3)}B_\mu
@@ -1111,7 +1124,7 @@ an isosinglet vector boson $B^\mu$ with strength $g'$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Weak Neutral Current}
-Because the GSW model preserves the SU(2) structure we talked about before, 
+Because the GSW model preserves the SU(2) structure, 
 it is obvious to reproduce the charged current:
 \begin{equation}
     W^\pm = \frac{1}{\sqrt{2}}(W^1 \mp iW^2)	\quad
@@ -1122,7 +1135,7 @@ it is obvious to reproduce the charged current:
 \end{equation}
 
 As for the other 2 bosons, there is no way to satisfy $y_1 = y_2 = y_3$ and 
-$g'y_i = eQ_i$ at the same time, so $B$ is not pure $A$. 
+$g'y_i = eQ_i$ at the same time, so $B$ is not pure $A$ (photon). 
 Since both fields are neutral, one can try to mix them, 
 and get something matching experimental results:
 \begin{equation}
@@ -1235,7 +1248,7 @@ with
 \begin{equation}
     c_v = I_3 - 2Q\sin^2\theta_W    \quad c_a = I_3
 \end{equation}
-So we come to a striking prediction of the GSW model: the neutral weak interaction.
+So we come to a striking prediction of the GSW model: the existance of the neutral weak interaction.
 That was experimentally verified in 1973 in the Gargemlle neutrino experiment \cite{HASERT19741}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -1247,13 +1260,14 @@ What will be measured in PREX-II and CREX exactly originates from this neutral w
 \feynmandiagram[small, vertical' = a to b]{
     i1 [particle = $e^-$] -- [fermion] a -- [fermion] o1 [particle = $e^-$],
     a -- [photon, edge label={Q}, edge label'=$\gamma$] b,
-    i2 [particle = p] -- [fermion] b -- [fermion] o2 [particle = p],
+    i2 [particle = N] -- [fermion] b -- [fermion] o2 [particle = N],
     };
 \feynmandiagram[small, vertical' = a to b]{
     i1 [particle = $e^-$] -- [fermion] a -- [fermion] o1 [particle = $e^-$],
     a -- [scalar, edge label={Q}, edge label'=Z] b,
-    i2 [particle = p] -- [fermion] b -- [fermion] o2 [particle = p],
+    i2 [particle = N] -- [fermion] b -- [fermion] o2 [particle = N],
     };
+    \caption{Feynman diagrams of elastic e-N scattering in PREX-II/CREX.}
 \end{figure}
 
 \begin{equation}
@@ -1320,6 +1334,7 @@ When ignoring the nuclear innner structure (at tree level), Eq.~\ref{eq:Apv} red
     \CA_{PV} = -\frac{G_F Q^2}{\pi\alpha\sqrt{2}} \left(\sin^2\theta_W + \frac{1}{4}\left[ \frac{N}{Z} - 1 \right] \right)
 \end{equation}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dynamics}
 \begin{center}
 \begin{tikzpicture}
@@ -1365,7 +1380,7 @@ $Q^2$ dependence on the scattering angle $\theta$ is calculated as:
     \label{eq:Q2}
 \end{equation}
 
-%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Why \Pb and \Ca}
 \begin{figure}[H]
     \centering
@@ -1413,5 +1428,4 @@ which is very sensitive to 3-nucleon forces. In other words, it can be used
 to probe 3-nucleon forces. On the other hand, it is large enough to apply the
 Density Function Theory (DFT) methods. By measuring the neutron skin thickness of \Ca, 
 we hope to provide some inputs for bridging these two approaches. 
-
 
