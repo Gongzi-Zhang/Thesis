@@ -23,7 +23,7 @@ higher precision.
 % First PVES experiment at JLab -- HAPPEX: Hall A Proton Parity EXperiment (E91-010)
 % PREX-I is the first EW observation that there is a neutron skin around a heavy nucleus -- https://indico.ihep.ac.cn/event/8987/contributions/105838/attachments/56820/65550/PREXCREX_jlzhang.pdf
 
-\begin{figure}[h!]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=0.5\linewidth]{PVES}
     \caption{Evolution of PVES experiments, solid lines represent the relative 
@@ -312,7 +312,7 @@ friends in \cite{PhysRevC.57.3430}.
     With $E$ = 950~MeV, there is a local maximum around $theta \sim 6^\circ$.
     }
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[!h]
     \includegraphics[width=0.5\linewidth]{Ca48_asym}
     \includegraphics[width=0.5\linewidth]{Ca48_sen}
     \caption{Similar asymmetry and sensitivity plot for \Ca, the asymmetry maximize 
@@ -391,7 +391,7 @@ As a compromise, the third method was chosen for PREX-II/CREX.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Continuous Electron Beam Accelerator Facility (CEBAF)}
-\begin{figure}[h!]
+\begin{figure}[!h]
     \begin{subfigure}[b]{0.59\textwidth}
     \begin{tikzpicture}
 	\begin{scope}
@@ -420,7 +420,7 @@ As a compromise, the third method was chosen for PREX-II/CREX.
     experimental halls under construction.}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[!h]
     \includegraphics[width=0.9\linewidth]{cebaf.png}
     \caption{Schematic plot of CEBAF. The circular plate with three slits is the beam chopper,
     which has no slit for Hall D, that's why Hall D beams have to follow electron beams of other
@@ -465,7 +465,7 @@ focus on different aspects. Hall A concentrates on form factors of various nucle
 Hall B digs into generalized parton distributions, Hall C devotes itself to precise
 determination of valance quark properties in nuclei, and finally, the newly 
 established Hall D explores origin of confinement through exotic mesons.
-\begin{figure}[h!]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=0.48\linewidth]{hall_A}
     \includegraphics[width=0.51\linewidth]{hall_A_bird}
@@ -726,7 +726,7 @@ With a strained layer, the degeneracy of the $P_{3/2}$ state is split,
 only states with $m_j = \pm 3/2$ will be pumped, therefore reaching a
 100\% polarization, in ideal case. The real polarization achieved by the CEBAF electron
 source is about 88\%.
-\begin{figure}[h!]
+\begin{figure}[!h]
     \tikzmath{\yone=1.3; \ytwo=2.5; \ythree=5;} 
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
@@ -787,13 +787,13 @@ source is about 88\%.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Polarization Control}
-\begin{figure}[h!]
+\begin{figure}[!h]
     \includegraphics[width=\linewidth]{injector}
     \caption{The laser system at the CEBAF injector}
     \label{fig:injector}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[!h]
     \begin{tikzpicture}
 	\tikzstyle{explain} = [align=center] 
 	\begin{scope}
@@ -829,7 +829,7 @@ consuming to manipulate electrons directly, while manipulating photons is much
 easier. One just need to reverse the circular polarization of the incident laser pulse,
 the electron beam polarization will be flipped. An easy way to do the job is
 a half-wave plate, by inserting it into or retracting it from the optical path,
-the phase of the laser pulse will be changed by $\pi$, therefore flipping the laser
+the phase of the laser pulse will be changed by $\pi$, therefore flip the laser
 circular polarization. 
 
 The drawback of the half-wave plate is that the mechanical movement is not fast enough. 
@@ -1062,7 +1062,7 @@ in Fig.~\ref{fig:compton_pol}. This
 separation allows to count the scattered electrons, together with the measurement
 of scattered photons, one can identify the scattering asymmetry and then the polarization
 of the electron beam.
-\begin{figure}[h!]
+\begin{figure}[!h]
     \begin{subfigure}[c]{0.55\linewidth}
 	\includegraphics[width=\linewidth]{Compton_setup}
     \end{subfigure}
@@ -1228,7 +1228,7 @@ Hall A has a series of BPMs along the beam pipe leading to the target chamber
 to monitor the beam conditions, among them, six switched electrode electronics (SEE) 
 stripline BPMs are important to PREX-II and CREX, their readouts are used to 
 extract beam parameters. They are shown in Fig.~\ref{fig:hall_a_monitors_and_modulation}. 
-BPM4A and BPM4E locate 5.725~m and 1.642~m upstream of the target chamber, 
+BPM4a and BPM4e locate 5.725~m and 1.642~m upstream of the target chamber, 
 they are used to determine the beam position and angle at the target. BPM11 and BPM12
 are positioned on the arc area to measure the beam energy using the bending 
 radius of the electron trajectory. BPM1 and BPM16 are backup monitors.
@@ -1332,9 +1332,9 @@ at high currents \cite{halla_manual}.
 For further understanding of beam dynamics, electronic noise and the possible target 
 boiling effect, a luminosity monitoring system, called the small angle monitors, 
 was installed in the dump pipe, about 7~m downstream of the target pivot. As shown
-in Fig.~\ref{fig:sams}, the SAMs system consist of 8 detector modules, symmetrically 
+in Fig.~\ref{fig:sams}, the SAMs system consist of eight detector modules, symmetrically 
 positioned around the dump pipe. Each detector module has a quartz tile (active 
-detector), attached to a lightguide. the Cherenkov light radiated by electrons
+detector), attached to a lightguide. the Cherenkov light radiated by electrons	% FIXME reference for Cherenkov
 will be read out by a PMT at the end of the lightguide. 
 As its name implies, SAMs are designed to monitor small angle ($\sim 1^\circ$)
 scattered and secondary flux from the target, thus it can also be used to
@@ -1372,8 +1372,8 @@ which will be used to correct the measured asymmetry.
 Another system shown in Fig.~\ref{fig:hall_a_monitors_and_modulation} is the
 beam modulation system, which lies in beamline arc right after the Beam Switch Yard 
 where electron chains are separated into Hall A/B/C beams.
-It consists of 6 air-core coils and an energy vernier in the last cavity of the south LINAC.
-The total number of 7 coils provides a redundancy w.r.t. the number of free degrees 
+It consists of six air-core coils and an energy vernier in the last cavity of the south LINAC.
+The total number of seven coils provides a redundancy w.r.t. the number of free degrees 
 of the beam phase space, making sure to cover the whole beam phase space at the target.  
 Coil (trim) 1, 3, 5 are responsible for modulating beam x position and coil 
 2, 4, 5 will modulate beam y position.
@@ -1391,7 +1391,7 @@ measured asymmetry. Therefore, the modulation should be much larger than the nat
 jitters in the beam, a typical position modulation is a sinusoid of amplitude about $200\ \mu$m 
 % https://www.arxiv-vanity.com/papers/1208.6513/
 and the energy vernier will result in a beam displacement of 0.75~mm in BPM11/12.
-% \begin{figure}[h!]
+% \begin{figure}[!h]
 %     \centering
 %     \includegraphics[width=0.49\linewidth]{bmw_modulated_beam}
 % \end{figure}
@@ -1503,37 +1503,38 @@ up to $\sim300$~K (melting point at 1115~K).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Raster}
-Although the target foil was cooled to about 20~K (PREX-II), it still deformed (even melted)
-under electron's bombardment. Small nonuniformities in the target 
-thickness vary the scattering rate, and over the course of the experiment they 
-eventually generated enough noise to swamp the tiny weak-scattering signal.
-Actually, this is how we inspect the status of a target and evidence to
-replace a target if the measured asymmetry width increase significantly.
+Despite the helium cooling, the target foil still deforms (even melts)
+under the electron bombardment. Small non-uniformities in the target 
+thickness vary the scattering rate, over the course of the experiment they 
+eventually generate large enough noise to swamp the tiny weak-scattering signal.
+Actually, this is how we inspect the status of a target, it prompts us to
+replace a target if the measured asymmetry width increases significantly.
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.48\linewidth]{raster_pattern_1}
     \includegraphics[width=0.48\linewidth]{raster_pattern_2}
     \caption{Raster pattern with different frequency difference between X and Y.
-    Left: $|f_y - f_x| = 120\ Hz$; Right: $|f_y - f_x| = 8*120\ Hz$. The raster
-    shape is a $4\times 4\ mm$ square.} 
+    Left: $|f_y - f_x| = 120$~Hz; Right: $|f_y - f_x| = 8*120$~Hz. The raster
+    shape is a $4\times 4$~mm square.} 
     \label{fig:raster_pattern}
 \end{figure}
 
 The solution to this problem is the raster, which is a set of dipole magnets % where are they
 between the Compton and the Moller polarimeters
 that deflect the beam at about 25~kHz to spread the beam on the target.
-What we learned from PREX-I was that we could significantly reduce the sensitivity 
-to target-thickness variations by synchronizing the helicity flipping frequency
-with the raster frequency so that it sampled exactly the same areas on the target,
-any noise from target thickness variation cancels by taking the difference of
+One thing we learned from PREX-I is that we could significantly reduce the sensitivity 
+to target-thickness variations by synchronizing the helicity flip frequency
+with the raster frequency so that it samples exactly the same areas on the target.
+Any noise from target thickness variations cancels by taking the difference of
 a helicity pair or quadruplet. 
+
 As shown in Fig.~\ref{fig:raster_pattern}, the Lissajous pattern depends
-on the frequency difference between X and Y, the larger the frequency difference,
+on the frequency difference between X and Y axes, the larger the frequency difference,
 the larger the scanning area. The ratio of $f_y/f_x$ should be an irrational number
-to prevent a closed Lissajous pattern. The actual frequencies used were 25.44
-and 24.48~kHz, for PREX-II, the raster size was $4 \times 6$~mm, and CREX
-had a raster size of $2 \times 2$~mm.
+to prevent a closed Lissajous pattern. The actual frequencies used are $f_x =$ 25.44
+and $f_y =$ 24.48~kHz. for PREX-II, the raster size is $4 \times 6$~mm, and CREX
+has a raster size of $2 \times 2$~mm.
 % https://prex.jlab.org/wiki/index.php/Raster_Scope
 
 \begin{figure}
@@ -1557,94 +1558,100 @@ had a raster size of $2 \times 2$~mm.
 	    \end{scope}
 	\end{scope}
     \end{tikzpicture}
-    \caption{Picture of Pb targets after running, one can see clearly the shape
-    of raster.}
+    \caption{Picture of Pb targets after running. One can clearly see the shape
+    of the raster pattern. Target 1 and 4 are melted.}
 \end{figure}
 
-Another reason for having raster is heat dissipation, the larger the raster size,
+Another reason for having the raster is heat dissipation, the larger the raster size,
 the quicker the heat dissipation will be, the lower the target temperature, as
 shown in Fig.~\ref{fig:target_temp_with_raster}.
 \begin{figure}
     \centering
     \includegraphics[width=0.5\linewidth]{target_temp_with_raster}
-    \caption{How the target temperature change with size of raster area.}
+    \caption{Simulation of target temperature evolution with different raster frequency
+    differences. The larger the raster frequency difference ($\Delta f$), the larger
+    the size of the raster area, the lower the highest target temperature.}
     \label{fig:target_temp_with_raster}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Beamline Collimator and Sieve Slit Collimators}
-\begin{figure}[h!]
+\begin{figure}[!h]
     \centering
     \includegraphics[height=0.21\paperheight]{beamline_collimator_side}
     \hspace{1 cm}
     \includegraphics[width=0.4\linewidth]{beamline_collimator_top}
-    \caption{Side and top view of beamline collimator. Beam from left to right.}
+    \caption{Side and top view of the beamline collimator. Beam travels from left to right.}
     \label{fig:beamline_collimator}
 \end{figure}
 
-Another problem that failed PREX-I was the excessive radiation, which damaged 
-electronics in the Hall and the o-ring on the target exit flange leading to
-leaks and ultimately halted the experiment.
+One problem that failed PREX-I is the excessive radiation, which damages
+electronics in the hall and the o-ring on the target exit flange, leading to
+leaks and ultimately halting the experiment.
 % https://mailman.jlab.org/pipermail/halla_parity/2010-April/000197.html
-With this experience, the new design of the pivot area (the center of the 2 HRS 
-where the target chamber lies in) for PREX-II and CREX payed more attention
-to radiation near the target region. The idea was to lead as much radiation to
-beam dump as possible, and absorb the rest radiation in one key component --
-the beamline collimator, which was placed $83\ cm$ downstream of the production 
-target. The beamline collimator consists of an inner collimator and a housing
+With this experience, the new design of the pivot area (the center of the two HRS 
+where the target chamber lies in) for PREX-II and CREX pays more attention
+to radiation near the target region. The idea is to lead as much radiation to
+the beam dump as possible, and absorb the rest in one key component --
+the beamline collimator. 
+
+The beamline collimator is placed 83~cm downstream of the production 
+target. It consists of an inner collimator and a housing
 jacket made of sintered tunsgsten; the inner collimator, in turn, has the same 
 structure of a 70\% W/30\% Cu alloy collimator and a copper jacket. As shown
-in Fig.~\ref{fig:beamline_collimator}, there is cylinder notch in the front of
+in Fig.~\ref{fig:beamline_collimator}, there is a cylinder notch in the front of
 the inner collimator, to make sure the electrons/radiation are completely 
-absorbed inside the collimator. The beamline collimator was water cooled, with
-maximum heat loading of about $3.65\ kW$ from Pb target. The power on the beamline
-% ffrom my simulation note
-collimator was another signal for the degradation of target. When the temperature 
-of the outgoing water increased dramatically, it was time to replace the target.
+absorbed inside the collimator. 
+
+The beamline collimator is water cooled, with a maximum heat loading of about 
+3.65~kW from the \Pb target. The power on the beamline
+collimator is another signal for the degradation of target. When the temperature 
+of the outgoing water increases dramatically, it is time to replace the \Pb target,
 as shown in Fig.~\ref{fig:collimator_see_target_degradation}
 
-Besides the beamline collimator, a few other devices were installed 
+Besides the beamline collimator, a few other devices are installed 
 to further eliminate the radiation level in the hall. These devices include the 
 high-density polyethylene (HDPE) neutron shield around the beamline collimator
-region and a skyshine shield consisting of a $6\ cm$ thick tungsten block and
-massive concrete blocks. These extra shields were used to block high energy
+region and a skyshine shield consisting of a 6~cm thick tungsten block and
+massive concrete blocks. These extra shields are used to block high energy
 neutrons from the collimator.
 % to make sure the site boundary does in a calendar year will not be exceeded.
 % https://prex.jlab.org/DocDB/0000/000009/001/riordan_err_recommend-3.pdf
 
-\begin{figure}[h!]
+\begin{figure}[!h]
     \includegraphics[width=0.32\linewidth]{collimator_power_fit}
     \includegraphics[width=0.32\linewidth]{Pb10_ndx02_n}
     \includegraphics[width=0.32\linewidth]{Pb10_ndx02_g}
-    \caption{Left: a simple model of target degradation -- assuming the inner 
-    foil ($t_1$) is becoming thinner and the outer foil is becoming thicker ($t_2$) 
-    while the total mass keeps intact. The plot shows how the power deposition 
-    on the beamline collimator change in this model. Middle and Right: actual
-    neutron and photon radiation level monitored along charge accumulation. They
-    show similar trends.}
+    \caption{Left: a simple model of target degradation -- assuming the raster 
+    area ($t_1$) is becoming thinner and the rest is becoming thicker ($t_2$),
+    both uniformly and the total mass keeps intact. The plot shows how the power 
+    deposition on the beamline collimator changes in this model. Middle and Right: actual
+    neutron and photon radiation level monitored along charge accumulation.
+    }
     \label{fig:collimator_see_target_degradation}
 \end{figure}
 % PREX-I O-ring failure: a large raster and a high current: 
 % https://hallaweb.jlab.org/halog/html/1004_archive/100413092229.html
 
-On both sides of the beamline collimator were the $5\ mm$ thick stainless steel
-sieve slit collimators (about $1.1\ m$ from the target), which    % NIM paper
-were used for optics study, helping electron trajectory reconstruction. When
-we took production data, the sieve slit collimators were moved out of the spectrometer
-acceptance; when we took optics data to measure the scattering angle and $Q^2$,
-the sieve slit collimators were put in to cover the whole spectrometer acceptance,
+On both sides of the beamline collimator are the 5~mm thick stainless steel
+sieve slit collimators (about 1.1~m from the target), which    % NIM paper
+are used for optics studies, helping electron trajectory reconstruction. When
+we take production data, the sieve slit collimators are moved out of the spectrometer
+acceptance; when we take optics data to measure the scattering angle and $Q^2$,
+they are put in to cover the whole spectrometer acceptance,
 without interfering the inner bore of the the beamline collimator. With known
-(x, y) information of each hole in the sieve plane, together with the vertical
-drift chamber (VDC) tracker, we can reconstruct the beam transport matrices.
-\begin{figure}[h!]
+(x, y) position of each hole on the sieve plane, and the track information from 
+the vertical drift chamber (VDC), we can reconstruct the beam transport matrices.
+\begin{figure}[!h]
     \centering
     \includegraphics[width=0.48\linewidth, angle=180]{beamline_collimator_and_sieve_slit}
     \hspace{1cm}
     \includegraphics[scale=0.18, angle=180]{beamline_collimator_and_sieve_slit_1}
-    \caption{Front picture of beamline collimator and sieve slit collimators, looking 
-    downstream. One can clearly see a cylinder removed from the central collimator.
+    \caption{Front pictures of the beamline collimator and sieve slit collimators, looking 
+    downstream. In the left picture, one can clearly see a cylinder is removed 
+    from the central collimator.
     The sieve planes lie after the beamline collimator and are movable like
-    a door, it can be opened or closed remotely.}
+    windors, they can be opened or closed from outside.}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1652,66 +1659,72 @@ drift chamber (VDC) tracker, we can reconstruct the beam transport matrices.
 The septum magnet is required to bridge the scattered electrons at small angle
 into the HRS. As said before, the designed scattering angle is about $5^\circ$
 while the smallest angle that HRS can reach is $12.5^\circ$, so a septum magnet 
-is needed to guide the scattered electrons into HRS. 
+is needed to bend the scattered electrons into the HRS. 
 
-The septum magnets are normal conducting magnets that consist of 3 coils, 
-by applying large current, it will produce a
-strong magnetic field (up to $\sim 1 \ T$ in the central region). A non-magnetic
+The septum magnets are normal conducting magnets that consist of three coils, 
+by applying large current, they will produce a
+strong magnetic field (up to $\sim 1$~T in the central region). A non-magnetic
 stainless vacuum box will connect the upstream collimator box and the downstream 
-HRS vacuum pipe on both sides of the septum. The septum beampipe (the one that
+HRS vacuum pipe on both ends of the septum. The septum beampipe (the one that
 leads to the beam dump) is made of magnetic stainless steel to shield the
-magnetic field from the septum, on both ends of the septum beampipe, there
+magnetic field from the septum. On both ends of the septum beampipe, there
 are magnetic steel box to shield the fringe magnetic field from septum. 
 
 % quad field resulted from the septum
-\begin{figure}[h!]
+\begin{figure}[!h]
     \includegraphics[width=0.52\linewidth]{septum}
     \includegraphics[width=0.46\linewidth]{septum_real}
-    \caption{Left: septum (the red coils) in the pivot region; 
-    Right: pciture of septum.}
+    \caption{Left: design plot of the pivot region; septums are represented by
+    red coils. Right: actual picture of septums.
+    }
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{High Resolution Spectrometer (HRS)}
-The key component of every Hall A experiment -- spectrometer. The most frequently
-used ones are the high resolution spectrometer pair. Each HRS consists 3 superconducting
-quadrupoles and 1 dipole. The maximum magnetic field of the 3 quadrupoles are
-$1.2$, $1.0$ and $1.0\ T$ respectively while the dipole can provide up to $1.7\ T$ field. 
+Spectrometer is a key component for every Hall A experiment. PREX-II and CREX
+use the HRS pair. Each HRS consists three superconducting
+quadrupoles and one dipole. The maximum magnetic field of the three quadrupoles are
+1.2, 1.0 and 1.0~T respectively while the dipole can provide up to 1.7~T field \cite{halla_parity}. 
 The incoming electrons will be bent $45^\circ$ up in the vertical plane and then
-received by the following detectors.
-HRS has a small angular acceptance ($\pm 28\ mr$ horizontally, $\pm 60\ mr$ vertically, 
+received by electron detectors.
+HRS has a small angular acceptance ($\pm 28$~mrad horizontally, $\pm 60$~mrad vertically, 
 % Vertical_drift_chambers_for_the_Hall_A_high-resolu.pdf
-the solid angle being $7.8\ msr$), but can move over a wide range of angle
+the solid angle being 7.8~msr), but can move over a wide range of angle
 around the hall ($12.5^\circ - 165^\circ$). As its name implies, it achieves a 
-very high momentum resolution at the $10^{-4}$ level over a wide range of momentum 
-($0.8 - 4\ GeV$). This capacity helps to reject most of inelastic electrons, 
-because a small difference in electron momentum ($2-3\ MeV$) will lead to
-large separation in the detector plane, thus leaving us a relative clean data 
-with very small background from inelastic scattering. 
+very high momentum resolution at the $dp/p \sim 10^{-4}$ level over a wide range of momentum 
+(0.8 - 4~GeV). This capacity helps to reject most inelastically scattered electrons.
+Because a small difference in momentum (2-3~MeV) will lead to a
+large separation in the detector plane, thus leaving us a relatively clean data 
+with a very small background from inelastic scattering, as shown in Fig.~\ref{fig:HRS} .
 
-\begin{figure}[h!]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=0.32\linewidth]{HRS_1}
     \includegraphics[width=0.32\linewidth]{hrs_rays}
     \includegraphics[width=0.32\linewidth]{hrs_inelastic}
-    \caption{Schematic plot of HRS and particle rays inside it. \cite{halla3d}
-    The 'focal plane' in the middle plot, by design, should be at an angle of $45^\circ$
+    \caption{Schematic plot of the HRS and particle rays inside. \cite{halla3d}
+    The `focal plane' in the middle plot, by design, should be at an angle of $45^\circ$
     w.r.t the central ray, but is actually rotated to $70^\circ$ due to lackness
     of sextupole winding in Q3. When we talk about the HRS focal plane, we
     usually refer to the VDC lower plane.
     }
+    \label{fig:HRS}
 \end{figure}
 
 % HRS magnetic field were monitor by 2 arrays of 3 NMR field probes	% NIM paper
 
-Before the entrance of Q1 quadrupoles was the Q1 collimator, which defined
-the spectrometer acceptance. It was strictly required that the symmetry between
+Before the entrance of the Q1 quadrupoles is a Q1 collimator, which defines
+the spectrometer acceptance. It is strictly required that the symmetry between
 left/right, and up/down of Q1 collimators should be preserved to reduce any
 possible systematic uncertainties.
-\begin{figure}[h!]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=0.5\linewidth]{Q1_collimator}
-    \caption{Picture of Q1 collimator pairs}
+    \caption{Picture of Q1 collimator pairs, looking downstream. 
+    Q1 collimator is the blue piece surrounded by a circular steel.
+    The pipe between the two Q1 collimators, covered by tin foils, is the
+    beampipe leading to the beam dump.
+    }
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Detector Package}
@@ -1719,40 +1732,68 @@ The standard HRS detector package on each arm consists of trigger scintillators 
 triggering, a pair of VDCs for particle tracking, Cherenkov type detectors and
 shower counters (calorimeters) for particle identification (PID). In PREX-II
 and CREX, only parts of these detectors are needed, namely VDCs and S0/S3 triggers,
-others were removed for safety. We built our own Cherenkov counters that can 
-work in the so called 'intergrating mode'.
-\begin{figure}[h!]
+others are removed for safety. We built our own Cherenkov counters that can 
+suffer high electron flux to integrate scattered electrons. The detector package
+is shown in Fig.~\ref{fig:detectors}.
+\begin{figure}[!h]
     \centering
-    \includegraphics[width=0.5\linewidth]{detectors_1}
-    \caption{The detector package}
+    \begin{tikzpicture}
+	\tikzstyle{explain} = [align=center] 
+	\begin{scope}
+	    \node[anchor=south west, inner sep=0] (image) at (0, 0)
+	    {\includegraphics[width=0.5\linewidth]{detectors_1}};
+	    \begin{scope}[x={(image.south east)}, y={(image.north west)}]
+		\draw[red, very thick, -stealth] (0.35, 0.02) -- (0.6, 0.9) node[above, red] {\large \textbf{electrons}} ;
+		\node[red] at (0.1, 0.06) {\large \textbf{GEM1}};
+		\draw[red, thick, -stealth] (0.2, 0.06) -- (0.35, 0.08);
+		\node[explain, red] at (0.1, 0.3) {\large \textbf{Main} \\ \large \textbf{Detectors}};
+		\draw[red, thick, -stealth] (0.2, 0.3) -- (0.4, 0.23);
+		\draw[red, thick, -stealth] (0.2, 0.3) -- (0.4, 0.33);
+		\node[red] at (0.1, 0.44) {\large \textbf{GEM2}};
+		\draw[red, thick, -stealth] (0.2, 0.44) -- (0.44, 0.44);
+		\node[red] at (0.1, 0.55) {\large \textbf{GEM3}};
+		\draw[red, thick, -stealth] (0.2, 0.55) -- (0.45, 0.55);
+		\node[red] at (0.1, 0.68) {\large \textbf{AT}};
+		\draw[red, thick, -stealth] (0.2, 0.68) -- (0.46, 0.61);
+		\draw[red, thick, -stealth] (0.2, 0.68) -- (0.58, 0.68);
+		\node[explain, red] at (0.1, 0.85) {\large \textbf{UVA} \\ \large \textbf{GEMs}};
+		\draw[red, thick, -stealth] (0.2, 0.85) -- (0.55, 0.82);
+	    \end{scope}
+	\end{scope}
+    \end{tikzpicture}
+    \caption{Picture of the detector package.}
     \label{fig:detectors}
 \end{figure}
 
 \subsubsection{Vertical Drift Chamber (VDC)}
-Each VDC detector package consists of 2 drift chambers, one lower and one upper
-chamber with a vertical separation of $0.23\ m$ ($0.335\ m$ between the same
+Each VDC detector package consists of two drift chambers, one lower and one upper
+chamber with a vertical separation of 0.23~m (0.335~m between the same
 U or V planes of the lower and upper chamber), to enable precise position and angle measurement. 
-The drift chamber is actually a multiwire proportional chamber (MWPC) with 2 
-layers of sense wires -- U and V planes in the lab horizontal plane, which are 
-orthogonal to each other and has a vertical separation of $26\ mm$. 
+The drift chamber is actually a multiwire proportional chamber (MWPC) with two 
+layers of sense wires -- U and V planes in the horizontal plane, which are 
+orthogonal to each other and have a vertical separation of 26~mm. 
 Each wire plane consists of 368 tungsten wires with the width of adjacent wires 
-being $4.24\ mm$, corresponding to $6\ mm$ in the spectrometer cross section due to the $45^\circ$
-cross angle between the central ray and the VDC plane. The ion's drift time in 
-the chamber are used to reconstruct particle trajectory. The single plane can
-achieve a position resolution of $\sim 235\ mm$ FWHM, the angular resolution
-is $6\ mrad$ FWHM for $\theta$ (out-of-plane angle) $2.3\ mrad$ for $\phi$ (in-plane
-angle) \cite{FISSUM2001108}.
+being 4.24~mm, corresponding to 6~mm in the spectrometer cross section due to the $45^\circ$
+cross angle between the axis of the spectormeter and the VDC plane. 
+
+VDC uses the drift time of ionized particles in the chamber to reconstruct 
+the electron trajectory. A single plane can achieve a position resolution 
+of $\sim 235$~mm full width at half maximum (FWHM), 
+the angular resolution is 6~mrad FWHM for $\theta$ (out-of-plane angle) 
+and 2.3~mrad FWHM for $\phi$ (in-plane angle) \cite{FISSUM2001108}.
 % composition, configuration and performance
-\begin{figure}[h!]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=0.5\linewidth]{VDC}
-    \caption{Schematic plot of VDCs showing UV wires \cite{FISSUM2001108}}
+    \caption{Schematic plot of a VDC detector with two drift chambers.
+    U and V wires are shown in each chamber. The black arrow indicates the 
+    incoming electron \cite{FISSUM2001108}.
+    }
 \end{figure}
 
-VDCs were only used for optics runs in PREX-II and CREX, when we collect electrons
-one by one to measure their scattering angle and energy, otherwise they were
-turned off during normal production runs.
-
+VDCs are on for only optics runs in PREX-II and CREX, when we collect electrons
+one by one to measure their scattering angle and energy, otherwise they are
+off during normal production runs.
 % VDC efficiency: http://ace.phys.virginia.edu/HAPPEX/4463
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -1760,30 +1801,32 @@ turned off during normal production runs.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Trigger}
-Same as VDCs, triggers were only used in counting mode for optics study. The standard
-detector package consists of multiple trigger planes, only 2 of them were used :
+Same as VDCs, triggers are only used in counting mode for optics study. The standard
+detector package consists of multiple trigger planes, only two of them are used :
 the S0 and S3 plastic scintillators. The S0 scintillator locates between VDCs and the main
 detectors while S3 lies behind the main detectors, they have a sensitive area
-of $170\ cm$ long by $25\ cm$ wide. Their signals were logically combined to 
-provide different trigger rate. The trigger rate was controlled to be less
-than $50\ kHz$ most of the time (the up limit of VDC is about $250\ kHz$).
+of 170~cm long by 25~cm wide. Their signals are logically combined to 
+provide different trigger rate. The trigger rate is controlled to be less
+than 50~kHz most of the time (the up limit of a VDC is about 250~kHz).
 % T1 records 8.4 kHz for 1.5 uA
+
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Main Detector}
-The main detector of PREX-II and CREX was the $5\ mm$ thick fused silica (quartz) tiles,
-with a size of $16\ cm$ long by $3.5\ cm$ wide ($3\ cm \times 3\ cm$ active area). 
-2 identical quartz detectors were installed with the upstream one used as the 
+The main detector of PREX-II and CREX is the 5~mm thick fused silica (quartz) tiles,
+with a size of 16~cm long by 3.5~cm wide (3~cm $\times$ 3~cm active area). 
+Two identical quartz detectors are installed with the upstream one used as the 
 main detector and the downstream one as the backup (also used for a cross check 
 in PREX-II). They are tilted to be perpendicular to the electron rays.
-The high refractive index of quartz ($n\approx 1.45$) means the opening angle $\theta$
-in Fig.~\ref{fig:quartz} is about $46^\circ$, larger than the critical angle
-to make total internal reflection ($\theta_c = \arcsin\frac{1}{n} = 43.6^\circ$),
-therefore, the Cherenkov light produced by high energy electrons will be totally
+The high refractive index of quartz ($n\approx 1.45$) means the opening angle ($\theta \approx \arccos\frac{1}{n}$)
+in Fig.~\ref{fig:quartz} is about $46^\circ$, larger than the critical angle 
+($\theta_c = \arcsin\frac{1}{n} = 43.6^\circ$).
+Therefore, the Cherenkov light produced by high energy electrons will be totally
 reflected inside the quartz and finally collected by the PMT. The high photon
-yield make it easier to resolve the electron peak, which was beneficial given
+yield makes it easier to resolve the electron peak, which is beneficial given
 the fact that non-linearity of the PMTs is one of the major contributors to 
 systematic uncertainties.
-\begin{figure}
+\begin{figure}[!h]
+    \centering
     \includegraphics[width=0.3\linewidth]{quartz}
     \includegraphics[width=0.3\linewidth]{Cherenkov}
     \begin{tikzpicture}[xshift=2cm]
@@ -1800,62 +1843,82 @@ systematic uncertainties.
 	\node[red] at (0.8, 0.5) {\small{Cherenkov}};
     \end{tikzpicture}
     \caption{Left: CAD drawing of the quartz detector; 
-    Middle: schematic plot of Cherenkov radiation, the angle between 
-    electron and the Cherenkov radiation is 
+    Middle: schematic plot of the Cherenkov radiation, the angle between 
+    the electron and the Cherenkov radiation is 
     $\cos\theta = \frac{v_c}{v_e} = \frac{c}{nv_e} = \frac{1}{n\beta} \approx \frac{1}{n}$;
     Right: electron flux goes through a quartz detector.
     }
     \label{fig:quartz}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!h]
     \centering
-    \includegraphics[width=0.5\linewidth]{quartz_QE}
-    \caption{Simulation result of photo-electron (PE) spectrum for single electron
+    \includegraphics[width=0.7\linewidth]{quartz_QE}
+    \caption{Simulation result of the photo-electron (PE) spectrum for single electron
     passing through the main detectors. The wider tail in the downstream
-    detector is due to particle showering in the upstream quartz.
-    Plot from Devi Adhikari.}
+    detector is due to particle showering in the upstream quartz \cite{Devi2021}. 
+    }
 \end{figure}
-The width of the photon-electron distribution will increase
-the statistical uncertainty:
+The width of the photon-electron distribution will increase the statistical uncertainty:
 \begin{equation}
-    \sigma_{A} = \sigma_{stat} \times \sqrt{1 + \left( \frac{\sigma_{PE}}{\langle PE \rangle }\right)^2}
+    \sigma_{\CA} = \sigma_{\text{stat}} \times \sqrt{1 + \left( \frac{\sigma_{\text{PE}}}{\langle \text{PE} \rangle }\right)^2}
 \end{equation}
-where $\sigma_{PE}$ is the RMS of the distribution. The RMS can be parameterized
+where $\sigma_{\text{PE}}$ is the RMS of the distribution. The RMS can be parameterized
 into 2 parts: the Gaussian principle part which is inversely proportional to
 the quartz thickness and a Landau tail which comes from the showering process
-and is proportional the thickness. The final decision of $5\ mm$ of thickness
-was a compromise between these 2 parts to minimize detector resolution 
-$\frac{\sigma_{PE}}{\langle PE \rangle}$: thicker to increase photon-electron
-yield and thinner to reduce showering.
+and is proportional the thickness. A thicker thickness will increase the 
+photon-electron yield while a thinner one can reduce the showering.
+The final decision of a 5~mm thickness is a compromise between these two parts 
+to minimize detector resolution $\sigma_{PE}/\langle PE \rangle$. 
 
-\begin{figure}
+\begin{figure}[!h]
     \centering
-    \includegraphics[width=0.32\linewidth]{quartz_x}
-    \includegraphics[width=0.32\linewidth]{quartz_y}
-    \includegraphics[width=0.32\linewidth]{quartz_xy}
-    \caption{Data of x,y distribution on quartz. Plots from Devi Adhikari.}
+    \includegraphics[width=\linewidth]{quartz_projection}
+    \caption{Electron position distribution, projected on the quartz plane. 
+    The positions of the first four excited states are shown in the left plot. 
+    The red rectangle on the right plot shows the relative position of the quartz.
+    Plots from Devi Adhikari \cite{Devi2021}.}
 \end{figure}
 
-There was a homemade motion control system in each arm to move the main detectors
-remotely, which allowed us to tune the position of the main detectors when we
-changed gain of the main detectors under a different beam current.
+There is a homemade motion control system in each arm to move the main detectors.
+The control system can be operated remotely, therefore we can conveniently tune
+the position of the main detectors whenever there is a change in the beam
+conditions or any other apparatus.
+% changed gain of the main detectors under a different beam current.
 
 % Can we used it as calorimeter? How do measure the beam energy?
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{AT Monitors}
 % last page of https://prex.jlab.org/DocDB/0000/000096/002/riordan_prex_soft.pdf
-About $1\ m$ downstream the main detector were a pair of AT monitors, as shown 
-in Fig.~\ref{fig:detectors}, which used exactly the same quartz piece as the 
-main detectors. They were used to monitor transverse polarization in the beam.
-\begin{figure}[h!]
+About 1~m downstream the main detector is a pair of AT monitors, as shown 
+in Fig.~\ref{fig:detectors}, which use exactly the same quartz piece as the 
+main detectors. They are used to monitor transverse polarization in the beam.
+\begin{figure}[!h]
+    % FIXME: source of these 2 plots
     \centering
-    \includegraphics[width=0.48\linewidth]{ATL1}
-    \includegraphics[width=0.48\linewidth]{ATL2}
-    \caption{Scatter plot of electrons on the AT monitor plane. Red and blue represent
-    events with opposite transverse polarization. 
-    % Some dots outside the AT acceptance due to showering in the upstream main detectors
+    \begin{tikzpicture}
+	\begin{scope}
+	    \node[anchor=south west, inner sep=0] (image) at (0, 0)
+	    { 
+		\includegraphics[width=0.48\linewidth]{ATL1}
+		\includegraphics[width=0.48\linewidth]{ATL2}
+	    };
+	    \begin{scope}[x={(image.south east)}, y={(image.north west)}]
+		\draw[thick, red] (0.06, 0.58) rectangle ++(0.2, 0.11);
+		\draw[thick, red] (0.15, 0.35) rectangle ++(0.2, 0.11);
+		\node[thick, red] at (0.3, 0.4) {\large \textbf{L-AT1}};
+		\draw[thick, blue] (0.568, 0.58) rectangle ++(0.2, 0.11);
+		\draw[thick, blue] (0.658, 0.35) rectangle ++(0.2, 0.11);
+		\node[thick, blue] at (0.62, 0.63) {\large \textbf{L-AT2}};
+	    \end{scope}
+	\end{scope}
+    \end{tikzpicture}
+    \caption{Scatter plot of electrons on the left arm AT monitor plane. 
+    Red and blue dots represent electrons scattered either above or below the
+    horizontal scattering plane, respectively. The red and blue rectangles
+    show the relative positions of the two AT detectors. 
+    % So the two AT detectors, are sensitive to different AT events.
     }
 \end{figure}
 
@@ -1864,29 +1927,29 @@ main detectors. They were used to monitor transverse polarization in the beam.
 JLab has its own framework of hardwares and softwares to aquire data, which
 is called CODA (CEBAF Online Data Acquisition) \cite{CODA}. It is a distributed
 system that can be scaled from a few detector channels to tens of thousands of
-channels needed in an experiment. CODA version 2.6.2 was used for PREX-II and CREX.
+channels needed in an experiment. CODA version 2.6.2 is used for PREX-II and CREX.
 % CODA data structure: https://hallaweb.jlab.org/equipment/daq/dstruct.html
 
-Data acquisition worked in 2 modes: the integrating mode and the counting mode,
-both have their own DAQs, because they had different triggers and read from
+Data acquisition works in 2 modes: the integrating mode and the counting mode,
+both have their own DAQs, because they have different triggers and read from
 different detectors.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Integrating DAQ}
-The integrating DAQ consists of 4 primary DAQ systems spread in the injector,
+The integrating DAQ consists of four primary DAQ systems spread in the injector,
 the Counting House (CH) and the hall (LHRS/RHRS). They are controlled by the
 CODA Run Control system in the CH, and triggered by the helicity signal.
 
-The helicity signal was produced by a Helicity Control Board \cite{Hboard} 
-located in the Injector Service Building, which is an Advanced Programmable Logic
-Generator. It has 4 timing modes: 3 fixed-frequencies of 30, 120 and 240~Hz
-and a fourth free-running mode. In fixed-frequency mode, as we chose in PREX-II/CREX,
-the phase was locked to the `Beam Sync': the accelerator's 60~Hz AC line synchronized 
+The helicity signal is produced by a helicity control board \cite{Hboard}, which 
+is an advanced programmable logic generator, located in the Injector Service Building.
+It has four timing modes: three fixed-frequencies of 30, 120 and 240~Hz
+and a fourth free-running mode. In fixed-frequency mode, as used for PREX-II/CREX,
+the phase is locked to the `beam sync': the accelerator's 60~Hz AC line synchronized 
 global timing reference, which means the last helicity window in a helicity pattern
 may be shorter or longer than other helicity windows because the 60~Hz line signal
-wanders from time to time, shown as Beam Sync Jitter in the second timing diagram 
+wanders from time to time, shown as the beam sync jitter in the second timing diagram 
 in Fig.~\ref{fig:timing}. To ensure that all helicity windows have the same integrating
-time, an artificial deadtime was introduce, which was $T_{\text{dead}} = 51.33 \mu$s,
+time, an artificial deadtime is introduce, which is $T_{\text{dead}} = 51.33\ \mu$s,
 as shown in Fig.~\ref{fig:integrating_timing}.
 This slightly reduce the integration time: $T_{\text{int}} = T_{\text{stable}} - T_{\text{dead}}$.
 % Beam sync signal: SCAM module, https://prex.jlab.org/wiki/index.php/Helicity_Control
@@ -1895,7 +1958,7 @@ This slightly reduce the integration time: $T_{\text{int}} = T_{\text{stable}} -
     \centering
     \includegraphics[width=0.9\linewidth]{timing}
     \caption{Helicity timing diagram. The Tsettle signal (falling edge) indicates 
-    the start of a new helicity window, which was chosen as the t=0 reference
+    the start of a new helicity window, which is chosen as the t=0 reference
     point for all timing diagram, it goes to the CH/hall.
     The QRT (Pattern Sync) signal indicates the start of each helicity pattern,
     it goes to the CH. 
@@ -1907,52 +1970,52 @@ This slightly reduce the integration time: $T_{\text{int}} = T_{\text{stable}} -
     The Hel- signal is a complementary signal to Hel+, so that the board always 
     keeps the same current regardless of the helicity state, preventing helicity 
     correlated electrical pickup from the board. This signal is not shown in the
-    plot, it goes to the helicity magnets (Wien filters).
-    The Delayed Helicity (DLY RPT) signal (by specified n windows).
+    plot, it goes to the helicity magnets (the double wien filters).
+    The delayed helicity (DLY RPT) signal is delayed by n (specified by the user) 
+    windows w.r.t. the Hel+ signal.
     It tells what the helicity was n windows before. It goes to the CH. This
     signal is not shown in the plot.}
     \label{fig:timing}
 \end{figure}
 
-The helicity signal sent to injector components (PCs, IAs and the Wien Filters) 
+The helicity signal sent to injector components (PCs, IAs and the double wien filters) 
 can be regarded as real time due to their geographical vicinity. The Tsettle 
-signal sent to hall A 
-will stop (falling edge) data taking in the previous helicity window, then hold for
-$T_{\text{settle}}$ time to allow settlement of the high voltage in PCs % $0\ \mu s$
-and readout of previous window data, its rising edge tells the start time of data taking in current 
-helicity window. The delay caused by signal transportation in fiber optics cables to Hall A 
-was about 100~ns, 1~$\mu$s was reserved between the Tsettle and the helicity
-signals to inform the hall of the change of helicity, as shown in Fig.~\ref{fig:timing}.
-Actually, this is not necessary, because $T_{\text{settle}} = 90\ \mu$s was long enough to
-allow such delay in signal transportation, as well as delay caused by beam 
-transportation in the accelerator, which was $1.4 \text{km/c} = 4.7\ \mu$s.
+signal sent to Hall A will stop (the falling edge) data taking in the previous 
+helicity window, then hold for $T_{\text{settle}}$ time to allow settlement of 
+the high voltage in PCs and readout of the previous helicity data. 
+Its rising edge tells the start time of data taking in current helicity window. 
+The delay caused by signal transportation in fiber optics cables to Hall A 
+is about 100~ns, 1~$\mu$s is reserved between the Tsettle and the helicity signals 
+to inform the hall of the change of helicity, as shown in Fig.~\ref{fig:timing}.
+Actually, this is not necessary, because $T_{\text{settle}} = 90\ \mu$s is long 
+enough to allow such a delay in signal transportation, as well as the delay caused 
+by beam transportation in the accelerator, which is $1.4 \ \text{km/c} = 4.7\ \mu$s.
 
 The actual helicity signal (DLY RPT) sent to Hall A will be delayed (by 8 helicity windows
 in PREX-II/CREX), so that no monitors along the beamline or detectors in the 
-hall know the helicity of current window, making sure that the monitors/detectors
-were not helicity sensitive. In the DAQ side, we needed to verify that
+hall know the helicity of the current window, making sure that the monitors/detectors
+are not helicity sensitive. In the DAQ side, we need to verify that
 the helicity pattern is expected based on the helicity pattern signal and the 
 measured helicity agrees with the delayed helicity signal, to ensure that the
-helicity information was correct. When doing data analysis, the data needs 
+helicity information is correct. When doing data analysis, the data needs 
 to be shifted number of delayed helicity windows to match the actual helicity 
-pattern. The helicity pattern was pseudo-randomly chosen by the helicity board 
-using a 30-bit Shift Register.
+pattern. The helicity pattern is pseudo-randomly chosen by the helicity board 
+using a 30-bit shift register.
 
 % https://prex.jlab.org/DocDB/0001/000187/001/PREX_DAQ_25July18.pdf
-The analog signals from the main detectors and various beam monitors were converted 
-to voltage by a customised I-to-V 
-pre-amplifier developed for the Qweak experiment, the voltage output was fed
-to a 18-bit ADC (Analog-Digital-Converter), sampled and integrated there. The
-18-bit ADC was also a product of previous parity experiments. The detector signal was
-sampled every $2\ \mu$s and integrated into 4 sub-blocks for each helicity window
-(1024 samples per sub-block, 4096 samples per helicity window at 120~Hz).
+The analog signals from the main detectors and various beam monitors are converted 
+to voltage by a customised I-to-V pre-amplifier developed for the Qweak experiment, 
+the voltage output is fed to a 18-bit ADC (Analog-Digital-Converter), sampled 
+and integrated there. The 18-bit ADC was also a product of previous parity experiments. 
+The detector signal is sampled every $2\ \mu$s and integrated into four sub-blocks 
+for each helicity window (1024 samples per sub-block, 4096 samples per helicity window at 120~Hz).
 The ADC will be triggered $80\ \mu$s after the start of $T_{\text{settle}}$, as shown
 in Fig.~\ref{fig:integrating_timing}, this allows $10\ \mu$s wait time for 
-ADC to void any possible effects from the external triggering NIM pulse on the 
-internal signal processing. To synchronize data collection (integration), 
-a HAPPEX Timing Board (HAPTB) was used, which received the Tsettle signal and
-produced the integration gate signal, distributing them to each ADC/scalar to trigger
-signal integration/collection.
+ADC to void any possible effects from the external triggering Nuclear Instrument Module
+(NIM) pulse on the internal signal processing. To synchronize the data collection (integration), 
+a HAPPEX Timing Board (HAPTB) is used, which receives the Tsettle signal and
+produces the integration gate signals, distributing them to each ADC/scalar to trigger
+the signal integration/collection.
 % HAPTB: https://prex.jlab.org/wiki/index.php/DAQ_Hardware_HAPTB
 
 \begin{figure}
@@ -1963,13 +2026,13 @@ signal integration/collection.
 \end{figure}
 
 Each DAQ has its own VME crate holding all necessary hardware modules, a read 
-out controller (ROC) controls the VME crate. All these crates (ROCs) were
-managed by a Trigger Supervisor (TS), which had its own VME crate. The TS was
-triggered by the Tsettle signal, which in turn trigger the ROCs.
-By receiving the triggering signal, ROC will read data stored in their memory 
+out controller (ROC) controls the VME crate. All these crates (ROCs) are
+managed by a trigger supervisor (TS), which has its own VME crate. The TS is
+triggered by the Tsettle signal, which in turn triggers the ROCs.
+By receiving the trigger signal, ROC will read data stored in their memory 
 buffer and send it to the CODA system, 
-which will build, transport and store events. We had an analyzer JAPAN (Just
-Another Parity ANalyzer) to monitor online data and analyze data off-line.
+which will build, transport and store events. We have an analyzer JAPAN (Just
+Another Parity ANalyzer) to monitor data quality online and analyze data off-line.
 
 % \begin{figure}
 %     \centering
@@ -1978,19 +2041,19 @@ Another Parity ANalyzer) to monitor online data and analyze data off-line.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Counting DAQ}
-The 2 counting DAQs, one for each HRS, were different from the integrating DAQs,
-in both hardwares and softwares. In contrast to counting electrons in the integrating
-mode, the counting DAQ record and recounstruct track for each scattered electrons.
-The counting DAQ read data from the scintillators,
-VDCs and GEMs, the main detectors were not used in the counting DAQ; and was
+The two counting DAQs, one for each HRS, are different from the integrating DAQs,
+in both hardwares and softwares. In contrast to integrating electrons,
+the counting DAQ record and recounstruct track for scattered electrons, one by one.
+The counting DAQ reads data from the scintillators, VDCs and GEMs, 
+the main detectors are not used in the counting DAQ. The counting DAQ is
 triggered by the scintillators, different logical combinations of the scintillator
-signals could trigger different counting rates. Most of the time, we used the S0
+signals could trigger different counting rates. Most of the time, we use the S0
 trigger signal, as discussed in the scintillator sector.
 
-The analyser used for decoding counting mode data was the general Hall A analyser,
+The analyser used for decoding counting mode data is the general Hall A analyser,
 which will read out the hit information in each detector and reconstruct the 
 electron track based on these hits. By reversing the optics matrix, it will
-calculate the electron info (position, angle and energy) on the target, allowing
+calculate the electron info (position, angle and energy) at the target, allowing
 to measure the scattering angle and $Q^2$, to tune the optics matrix, 
 to do detector alignment and check backgrounds.
 
@@ -1998,9 +2061,9 @@ to do detector alignment and check backgrounds.
 \subsubsection{EPICS}
 Besides the two DAQ systems, there is a site-wise slow (relative to the helicity frequency) 
 control system, called Experimental Physics and Industrial Control System (EPICS) \cite{EPICS},
-to monitor and control every important apparatus and quantity, such as magnets, 
+to monitor and control every important apparatus and quantity, such as various magnets, 
 beam current/position/energy, vacuum level, temperature, gas flow, 
-high voltage supply etc. EPICS polled a series of 
-Input/Output Controllers (IOCs) and record their average values about every second.
-It provides real-time monitoring of the whole system: both accelerator and detectors, and
-allows us to trace back the status whenever there were some problems.
+high voltage supply etc. EPICS polls a series of 
+input/output controllers (IOCs) and record their average values about every second.
+It provides real-time monitoring of the whole system: both the accelerator and detectors, and
+allows us to trace back the status whenever there are some problems.
