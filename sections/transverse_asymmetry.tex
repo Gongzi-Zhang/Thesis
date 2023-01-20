@@ -1,45 +1,45 @@
 \chapter{Transverse Asymmetry}
-The Beam Normal Single Spin Asymmetry (BNSSA, also known as Transverse Single Spin Asymmetry
-or Transverse Asymmetry) is different from the PV asymmetry, it is purely 
-electromagnetic and therefore parity-conserving. It arises from the interference
-between one-photon and two-photon exchange (OPE and TPE), therefore it is sensitive 
-to the TPE amplitude. By measuring it, we can probe the strength of TPE, an 
-important knowledge of electron elastic scattering that may explain the myth
-of proton radius measured with different methods.
+The beam normal single spin asymmetry (BNSSA, also known as the transverse single spin asymmetry
+or transverse asymmetry) is different from the PV asymmetry, it is purely 
+EM and therefore parity-conserving. It arises from the interference
+between the one-photon and two-photon exchanges (OPE and TPE), therefore it is sensitive 
+to the TPE amplitude. By measuring it, we can probe the strength of the TPE, an 
+important part of the electron elastic scattering that may explain the myth
+of the proton radius: the radius difference between measurements with different methods.
 
-The transverse asymmetry is also an important systematic uncertainty to our PV 
-asymmetry measurement, because there is always some residual transverse polarization
-in the electron beam. With $\CA_n \sim \alpha_{EM}m_e/E_e$, its magnitude of $10^{-5}$
-for a GeV level electron beam is much larger than $\CA_{pv}$, so a complete 
+The transverse asymmetry is also an important systematic uncertainty to the PV 
+asymmetry measurement, because there is always some residual transverse polarizations
+in the electron beam. With $\CA_n \sim \alpha_{EM}m_e/E_e$, its magnitude of $10^{-5}$ (10~ppm)
+for a GeV level electron beam is much larger than $\CA_{\text{PV}}$, so a complete 
 understanding and precise measurement of the transverse asymmetry is needed
-to ensure accurate correction of $\CA_{pv}$.
+to ensure the accuracy of $\CA_{\text{PV}}$.
 
 Being a routine and bonus of a PV experiment, PREX-I also measured the transverse
-asymmetry of some nuclei, namely ${}^{1}H$, \He, \C and \Pb. Surprisingly, PREX-I
+asymmetry of some nuclei, namely ${}^{1}$H, \He, \C and \Pb. Surprisingly, PREX-I
 saw a zero transverse asymmetry in \Pb, while the transverse asymmetries of other 
-light nuclei seemed to agree with theoretical predictions, as shown in 
-Fig.~\ref{fig:PREX-I_AT}. One of the reason for PREX-II was that we wanted to
-verify the zero measurement in \Pb, which remains as a challenge to theorists.
-\begin{figure}
+light nuclei agree with theoretical predictions, as shown in 
+Fig.~\ref{fig:PREX-I_AT}. One of the reason for PREX-II is that we want to
+verify the zero measurement in \Pb, which is still a puzzle to physicists.
+\begin{figure}[!h]
     \centering
     \includegraphics[width=0.5\linewidth]{PREX-I_AT}
-    \caption{Transverse asymmetry measured in PREX-I.}
+    \caption{Transverse asymmetry measured in PREX-I \cite{PhysRevLett.109.192501}.}
     \label{fig:PREX-I_AT}
 \end{figure}
 
 As its name implies, BNSSA depends on only one spin, either the target or the
-electron, polarized target is better that polarized target in that it is hard
-to polarize nuclei, especially heavy nuclei.
+electron beam. A polarized electron beam is better than a polarized target in that 
+it is hard to polarize nuclei, especially heavy nuclei.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Motivation for Transverse Asymmetry}
+\section{Motivation for the Transverse Asymmetry}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{The Scattering Theory}
 Consider the scattering of a free ($t_0 \rightarrow -\infty$) particle from a 
 time independent potential $V(\vec{r})$, 
 which decays quickly as $r \rightarrow \infty$. The evolution from the free initial state
-$\ket{i}$ is denoted as $\ket{\psi(t)}_S$ (under the Schr\"odinger picture, $\hbar = 1$):
+$\ket{i}$ is denoted as $\ket{\psi(t)}_S$ (under the Schr\"odinger picture and $\hbar = 1$):
 \begin{equation}
     \ket{\psi(t)}_S = U(t)\ket{\psi(t_0)} = \lim_{t_0 \rightarrow -\infty}U(t, t_0)\ket{i}
 \end{equation}
@@ -48,7 +48,7 @@ where $U(t, t_0)$ is the evolution operator:
     U(t, t_0) = \exp(\frac{1}{i}(H_0 + V)(t - t_0)) = \exp(-i(H_0 + V)(t-t_0))
 \end{equation}
 $H_0$ is the free Hamiltonian and $H = H_0 + V$ is the complete Hamiltonian
-with interaction term. 
+with the interaction term. 
 
 The projection of $\psi(t)$ to a free final state $\ket{f}$ defines the so called
 S-matrix (the order of the subscripts matters):
@@ -56,14 +56,14 @@ S-matrix (the order of the subscripts matters):
     S_{if} \equiv \lim_{t\rightarrow +\infty}\bra{f}\ket{\psi(t)} 
     = \lim_{t\rightarrow\infty} \lim_{t_0 \rightarrow -\infty} \bra{f} U(t, t_0) \ket{i}
 \end{equation}
-Which defines the S operator:
+which defines the S operator:
 \begin{equation}
     S_{if} = \bra{f} S \ket{i} \Longrightarrow S = U(+\infty, -\infty)
 \end{equation}
 
-The S-matrix describe the scattering amplitude from the free initial state $\ket{i}$
-to the free final state $\ket{f}$. Conservation of probability indicates
-unitary of S matrix:
+The S-matrix describes the scattering amplitude from a free initial state $\ket{i}$
+to a free final state $\ket{f}$. Conservation of the probability indicates
+unitary of the S matrix:
 \begin{equation}
     S^\dag S = \sum_f |\bra{f} U(+\infty, -\infty) \ket{i}|^2 = 1
 \end{equation}
@@ -90,8 +90,9 @@ where $V_I(t) = \exp(iH_0t)V\exp(-iH_0t)$ is the time dependent interaction term
 Eq.~\ref{eq:interaction_evolution} leads to the Dyson series:
 \begin{equation}
     U(t, t_0) = 1 - i\int_{t_0}^t dt_1 V_I(t_1) U(t_1, t_0) = \sum_{n=0}^\infty \frac{(-i)^n}{n!}\int_{t_0}^t dt_1 \cdots \int_{t_0}^t dt_n T[V_I(t_1)\cdots V_I(t_n)]
+    \label{eq:U_expansion}
 \end{equation}
-T means time-ordering:
+T means the time-ordering:
 \begin{equation}
     T(V_I(t_1) V_I(t_2)) \equiv 
     \begin{cases}
@@ -100,6 +101,7 @@ T means time-ordering:
     \end{cases}
 \end{equation}
 
+With Eq.~\ref{eq:U_expansion}, we have an iterative expression:
 \begin{equation}
     \begin{aligned}
 	\bra{f} U(t, t_0) \ket{i} 
@@ -109,8 +111,9 @@ T means time-ordering:
     \end{aligned}
     \label{eq:finite_S-matrix}
 \end{equation}
-Truncate Eq.~\ref{eq:finite_S-matrix} into first order ($\bra{m} U(t_1, t_0) \ket{i} = \delta_{im}$)
-and define $T_{if} = \bra{f} V \ket{i}$, we will get:
+
+Truncate Eq.~\ref{eq:finite_S-matrix} into the first order ($\bra{m} U(t_1, t_0) \ket{i} = \delta_{im}$)
+and define $T_{if} = \bra{f} V \ket{i}$, we write:
 \begin{equation}
     \bra{f} U(t, t_0) \ket{i} = \delta_{if} - iT_{if} \int_{t_0}^t dt_1 \exp(i(E_f - E_i)t_1)
 \end{equation}
@@ -122,11 +125,11 @@ and
 	    &= \delta_{if} + i2\pi\delta(E_f - E_i)T_{if}   \\
     \end{aligned}
 \end{equation}
-In matrix form:
+In the matrix form:
 \begin{equation}
     S = 1 + i2\pi T
 \end{equation}
-S begin unitary implies
+S being unitary implies
 \begin{equation}
     S^\dag S = (1 - i2\pi T^\dag) (1 + i2\pi T) = 1 + i2\pi(T - T^\dag) + (2\pi)^2 T^\dag T = 1
 \end{equation}
@@ -134,7 +137,7 @@ which reads
 \begin{equation}
     T - T^\dag = i (2\pi)T^\dag T = i(2\pi) T T^\dag
 \end{equation}
-In terms of matrix element:
+In terms of the matrix element:
 \begin{equation}
     \begin{gathered}
     \delta(E_f - E_i)(T_{if} - T^\dag_{if}) = \sum_m i2\pi\delta(E_f - E_m)\delta(E_m - E_i)T_{fm}T^\dag_{mi}	\\
@@ -151,12 +154,12 @@ to all on-shell intermediate states.
 The two parts of S are easy to understand.
 The constant piece denotes the evolution of one free particle into another free
 particle without any interactions; obviously, it can evolve only into itself.
-The T matrix describe the interaction (transition amplitude) between the free
-initial particle $\ket{i}$ and the free final particle $\ket{j}$, which tells
-us the interaction cross section.
+The T matrix describes the interaction (transition amplitude) between the free
+initial particle $\ket{i}$ and the free final particle $\ket{f}$, which tells
+the interaction cross section.
 
-The free particle state can be completely described by its momentum (ignoring spin
-for now) $\vec{p}$. For an incoming electron $\ket{\vec{p}_i}$, the probability
+A free particle state can be completely described by its momentum $\vec{p}$
+(ignoring the spin for now). For an incoming electron $\ket{\vec{p}_i}$, the probability
 to transform into the final state of $\ket{\vec{p}_f}$ is:
 \begin{equation}
     dP = (phase\ space) \times (transition\ probability) = \frac{d\vec{p}_f}{(2\pi)^3} \times |S_{\vec{p}_i\vec{p}_f}|^2
@@ -175,7 +178,7 @@ $\CL = \rho v = v$, and $\Delta t$ is the interaction time.
 \begin{equation}
     d\sigma = \frac{1}{v\Delta t} \frac{d\vec{p}_f}{(2\pi)^3} 2\pi\delta(E_f - E_i) \left. 2\pi\delta(E_f - E_i)\right|_{E_f = E_i} |T_{if}|^2
 \end{equation}
-Transform one $\delta$ back to integrating form: 
+Transform one $\delta$ expression back to the integrating form: 
 \begin{equation}
     \left. 2\pi\delta(E_f - E_i) \right|_{E_f = E_i} 
     = \int_{-\infty}^{+\infty} dt \left.\exp(-i(E_f - E_i)t)\right|_{E_f = E_i}
@@ -191,44 +194,43 @@ Thus we have a defined cross section
 \begin{equation}
     d\sigma = \frac{1}{v} \frac{d\vec{p}_f}{(2\pi)^3} 2\pi\delta(E_f - E_i) |T_{if}|^2
 \end{equation}
-The cross section is proportional to $|T_{if}|^2$, as known to us.
+The cross section is proportional to $|T_{if}|^2$, as already known to us.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{T-Symmetry}
-Symmetry is the most profound concept and foundation of modern physics, which
-can be separated into continuous symmetries and discrete ones. Time symmetry
-is one important discrete symmetry, which states that physical laws should
-keep unchanged under time reversal operation. Time reversal is the operation
-that flips time arrow, so that time runs backward after time reversal. Obviously, 
-vectors that are first order of time derivative will also reverse sign, such
-as momentum, angular momentum and magnetic field.
+Time symmetry is an important discrete symmetry, which states that physical laws should
+keep unchanged under the time reversal operation. Time reversal is the operation
+that flips the time arrow, so that time runs backward after time reversal. Obviously, 
+vectors that are first order derivatives of time will also reverse sign, such
+as the momentum, angular momentum and magnetic field.
 
-Express the time reversal operation in QM:
+Express the time reversal operation with QM:
 \begin{equation}
     \ket{\tilde{\psi}} = \hat{\mathcal{T}} \ket{\psi} 
 \end{equation}
 where $\hat{\mathcal{T}}: t \rightarrow -t$ is the time reversal operator. 
 
-In terms of our scattering, as said above, a particle will flip its momentum 
-and spin (angular momentum) under time reversal, and pick up a phase.
+In terms of the scattering discussed above, a particle will flip its momentum 
+and spin (angular momentum) under the time reversal, and pick up a phase.
 \begin{equation}
     \ket{\tilde{\psi}} = \hat{\mathcal{T}} \ket{\psi_\uparrow(\vec{k})} = \eta\ket{\psi_\downarrow(-\vec{k})}
 \end{equation}
-$\eta$ is the phase difference, $|\eta|^2 = 1$. So the T matrix can also be applied
-to time reversed state
+$\eta$ is the phase difference and $|\eta|^2 = 1$ (two times of the time reversal operation
+should transform a state back to itself.). The the T matrix in terms of the 
+time reversed states is:
 \begin{equation}
     T_{\tilde{i}\tilde{f}} = \bra{\tilde{f}} V \ket{\tilde{i}}
 \end{equation}
 
-It is well known that electromagnetic interaction is invariant under time reversal.
+It is well known that the EM interaction is invariant under time reversal.
 \begin{equation}
     |T_{if}|^2 = |T_{\tilde{f}\tilde{i}}|^2 
 \end{equation}
 
-With these concepts, one can also define the \textbf{T-odd} quantities which
+With these concepts, one can also define the T-odd quantities which
 are proportional to the difference of the magnitude of a normal T element and 
-its half time reversed version:
+its time reversed version:
 \begin{equation}
     \begin{aligned}
 	\text{T-odd} &\propto |T_{if}|^2 - |T_{\tilde{i}\tilde{f}}|^2	\\
@@ -236,14 +238,14 @@ its half time reversed version:
 	    &= |T_{if}|^2 - |T^\dag_{if}|^2	\\
 	    &= |T_{if}|^2 - |T_{if} - ia_{if}|^2	\\
 	    &= -i(T_{if}a^*_{if} - T^*_{if}a_{if}) - |a_{if}|^2	\\
-	    &= 2Im(T_{if}a^*_{if}) - |a_{if}|^2
+	    &= 2\text{Im}(T_{if}a^*_{if}) - |a_{if}|^2
     \end{aligned}
     \label{eq:T-odd}
 \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Transverse Asymmetry}
-Denote the incoming and outgoing transversely polarized electrons as 
+Denote the incoming and outgoing transversely polarized electron as 
 $\ket{\vec{k}}$ and $\ket{\vec{k}'}$, the scattering is shown in Fig.~\ref{fig:transverse_scattering}.
 \begin{figure}[h!]
     \centering
@@ -286,8 +288,9 @@ $\ket{\vec{k}}$ and $\ket{\vec{k}'}$, the scattering is shown in Fig.~\ref{fig:t
 	    \end{feynman}
 	\end{tikzpicture}
     \end{subfigure}
-    \caption{Feynman plots of transversely polarized electron scatters off
-    unpolarized nuclear target in the CoM. } 
+    \caption{Feynman diagrams of a transversely polarized electron scatters off
+    an unpolarized nuclear target in the COM frame. The vector in or out of the plane
+    indicates the electron's spin direction.} 
     \label{fig:transverse_scattering}
 \end{figure}
 
@@ -342,7 +345,7 @@ Fig.~\ref{fig:rotation_plot}
 	    \end{feynman}
 	\end{tikzpicture}
     \end{subfigure}
-    \caption{Rotation by $\pi$ around the normal direction.} 
+    \caption{Rotation by $\pi$ around the normal direction of the scattering plane.} 
     \label{fig:rotation_plot}
 \end{figure}
 \begin{equation}
@@ -355,12 +358,12 @@ and
     \begin{aligned}
 	\CA_n &\approx \frac{|T_{\uparrow}(\vec{k}, \vec{k}')|^2 - |T_{\downarrow}(-\vec{k}, -\vec{k}')|^2}{2|T_{\uparrow}(\vec{k}, \vec{k}')|^2} \\
 	    &= \frac{|T_{if}|^2 - |T_{\tilde{i}\tilde{f}}|^2}{2|T_{if}|^2}  \\
-	    &= \frac{2Im(T_{if}a^*_{if}) - |a_{if}|^2}{2|T_{if}|^2}
+	    &= \frac{2\text{Im}(T_{if}a^*_{if}) - |a_{if}|^2}{2|T_{if}|^2}
     \end{aligned}
     \label{eq:transverse_asymmetry}
 \end{equation}
 
-We see that the transverse asymmetry is a T-odd quantity. For EM interaction
+We see that the transverse asymmetry is a T-odd quantity. For the EM interaction
 \begin{equation}
     T_{if} \propto \alpha \qquad a_{if} \propto \alpha^2
 \end{equation}
@@ -372,95 +375,97 @@ in order of $\alpha$. To the lowest order
 \end{equation}
 and to the first order 
 \begin{equation}
-    \CA_n = \frac{Im(T_{if}a^*_{if})}{|T_{if}|^2}
+    \CA_n = \frac{\text{Im}(T_{if}a^*_{if})}{|T_{if}|^2}
     \label{eq:AT_1}
 \end{equation}
 
 $T_{ij}$ represents the OPE interaction while $a_{ij}$ represents
 the TPE interaction. So the physical interpretation of
-Eq.~\ref{eq:AT_0} and \ref{eq:AT_1} is that time reversal symmetry requires 
+Eq.~\ref{eq:AT_0} and \ref{eq:AT_1} is that the time symmetry requires 
 the transverse asymmetry to be zero under the Born approximation (OPE only)
 and the (lowest order) non-zero transverse asymmetry comes from the interference 
 between OPE and TPE.
-\begin{figure}[h!]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=0.8\linewidth]{at/OPE_n_TPE}
+    \caption{Feynman diagrams of the OPE (left) and TPE (right).}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{How to Measure the Transverse Asymmetry: the Method}
+\section{Measurement of the Transverse Asymmetry: the Method}
 The experimentally measured transverse asymmetry will be
 \begin{equation}
-    \CA_{mea} = \CA_n \vec{p}_e \cdot \hat{n} = \CA_n P_n \sin(\phi_s - \phi_e) = \CA_n P_n \sin\phi
+    \CA_{\text{mea}} = \CA_n \vec{\CP}_e \cdot \hat{n} = \CA_n \CP_n \sin(\phi_s - \phi_e) = \CA_n \CP_n \sin\phi
     \label{eq:measured_AT}
 \end{equation}
-where $\vec{p}_e$ is the electron spin vector, whose magnitude is the polarization,
-and $\phi_s$ being its angle w.r.t. the lab horizontal plane; 
+where $\vec{\CP}_e$ is the electron spin vector, whose magnitude is the polarization,
+and $\CP_n$ being its transverse component,
+$\phi_s$ being its angle w.r.t. the lab horizontal plane; 
 $\hat{n} = \frac{\vec{k} \times \vec{k}'}{|\vec{k} \times \vec{k}'|}$ 
 is the unit normal vector of the scattering plane and $\phi_e$ the angle between
-the scattering plane and the lab horizontal plane. As shown in Fig.~\ref{fig:AT_scattering}.
-So $\phi = \phi_s - \phi_e$ is angle between the spin vector and the scattering plane.
+the scattering plane and the horizontal plane. As shown in Fig.~\ref{fig:AT_scattering}.
+So $\phi = \phi_s - \phi_e$ is the angle between the spin vector and the scattering plane.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.7\linewidth]{AT_scattering}
-    \caption{Schematic plot of scattering of transversely polarized electron.}
+    \caption{Schematic plot of the scattering of a transversely polarized electron.}
     \label{fig:AT_scattering}
 \end{figure}
 
-We see an angle dependence of the measured transverse asymmetry. Experimentally,
-it is convenient to select the angle $\phi$ being $90^\circ$, which
-usually set the lab horizontal plane as the scattering plane and the electron spin
-is perpendicular to the scattering plane, as we did in PREX-II and CREX. Detailed
-dynamics for AT measurement are list in Table~\ref{tab:AT_dynamics}.
+Eq.~\ref{eq:measured_AT} shows the angle dependence of the transverse asymmetry. 
+Experimentally, it is convenient to select the angle $\phi$ being $90^\circ$. 
+With the lab horizontal plane as the scattering plane, the electron spin will
+be vertical, being perpendicular to the scattering plane, as done in PREX-II and CREX. 
+Detailed dynamics for the AT measurement are listed in Table~\ref{tab:AT_dynamics}.
 
 \begin{table}
     \centering
     \begin{tabular}{c c | c c c}
 	\hline
-	Exp (Energy)	& Target    & $\langle \theta \rangle ({}^\circ)$   & $\langle Q^2 \rangle \ (GeV^2)$	& $\langle \sin\phi \rangle$	\\
+	Exp (Energy)	& Target    & $\langle \theta \rangle ({}^\circ)$   & $\langle Q^2 \rangle \ (\mathrm{GeV}^2)$	& $\langle \sin\phi \rangle$	\\
 	\hline
-	\multirow{3}{*}{PREX-II ($0.95\ GeV$)}
+	\multirow{3}{*}{PREX-II (0.95~GeV)}
 	    & \C    & 4.87  & 0.0067    & 0.967 \\ 
 	    & \ca   & 4.81  & 0.0067    & 0.964 \\ 
 	    & \Pb   & 4.69  & 0.0064    & 0.966 \\ 
 	\hline
-	\multirow{4}{*}{CREX ($2.18\ GeV$)}
+	\multirow{4}{*}{CREX (2.18~GeV)}
 	    & \C    & 4.77  & 0.033	& 0.969 \\ 
 	    & \ca   & 4.55  & 0.031	& 0.970 \\ 
 	    & \Ca   & 4.53  & 0.031     & 0.970 \\ 
 	    & \Pb   & 4.60  & 0.032     & 0.969 \\ 
 	\hline
     \end{tabular}
-    \caption{Dynamics of AT measurement in PREX-II/CREX.}
+    \caption{Dynamics of the AT measurement in PREX-II/CREX.}
     \label{tab:AT_dynamics}
 \end{table}
 
-To achieve transverse polarization, we needed a different configuration of the
-double wien filter. Specifically, we just rotated the longitudinal spin originated
-from the source to vertical direction using the vertical wien filter, the 
-following rotation we did for longitudinal polarization, as shown in 
-Fig.~\ref{fig:double_wien_filter}, was omitted (the spin solenoid's rotating
-angle was set to $~0^\circ$). Because the spin is parallel/anti-parallel
-to the magnetic field in the accelerator arc, there is no spin precession as in
-the case of longitudinal polarization. 
+To achieve the transverse polarization, a different configuration of the double 
+wien filters is needed. Specifically, we just rotate the spin to the vertical 
+direction using the vertical wien filter, the 
+following rotations we do for the longitudinal polarization, as shown in 
+Fig.~\ref{fig:double_wien_filter}, are omitted (the spin solenoid's rotating
+angle is set to $~0^\circ$). Because the spin is parallel/anti-parallel
+to the magnetic field in the accelerator arc area, there is no spin precession as in
+the case of the longitudinal polarization. 
 
-In terms of measurement of transverse polarization, neither Moller, nor Compton
-polarimeter was on, because their analyzing powers go to 0 at the limit of transverse
-polarization. One may wonder, if no direct measurement of polarization in the 
-hall, how can we ensure the value of the polarization? Well, we had Mott measurement
-in the injector, and as said above, the beam transportation from injector to Hall A
+In terms of the measurement of the transverse polarization, neither Moller, nor Compton
+polarimeter is used, because their analyzing powers go to 0 at the limit of transverse
+polarization. Without a direct measurement of the polarization in the hall, 
+we turn to the Mott polarimeter in the injector. 
+As said above, the beam transportation from injector to Hall A
 is symmetric and flat, which means the vertical component of the polarization
-is preserved (can be safely assumed $>99.9\%$), so we don't need to worry about it.
+is preserved (can be safely assumed $>99.9\%$), so the measurement in the
+injector can be used as that in the hall.
 
-Except the difference in configuration of the double wien filter, everything 
-else was the same as in the case of longitudinal polarization (the Compton Chicane
-was off). 
+Except the difference in the configuration of the double wien filters, everything 
+else is the same as in the case of the longitudinal polarization (the Compton Chicane
+is off). 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Polarization Measurement}
-As said before, we don't have direct measurement of the transverse polarization
-in the hall, but we verity the polarization with the Mott measurement.
-The Mott polarimeter gave about 87\% polarization for both PREX-II and CREX runs.
+The 5~MeV Mott polarimter is used to verify the transverse polarization,
+which gives about 87\% transverse polarization for both PREX-II and CREX runs.
 The Mott data is summarized in Table~\ref{tab:AT_Mott}.
 % https://logbooks.jlab.org/entry/3781205, https://logbooks.jlab.org/entry/3718518, 
 \begin{table}[!h]
@@ -480,18 +485,19 @@ The Mott data is summarized in Table~\ref{tab:AT_Mott}.
 	    & 9085  & IN    & $-1.15795 \pm 0.33341 $   & $-34.0401 \pm 0.32742	$& -86.8148  \\
 	\hline
     \end{tabular}
-    \caption{Mott measurement during PREX-II and CREX AT runnings. The Up-Down
+    \caption{Mott measurements during PREX-II and CREX AT runnings. The Up-Down
     asymmetry measures the horizontal transverse polarization while the Left-Right
     asymmetry measures the vertical transverse polarization; The Mott analyzing 
-    power is $\CA_{Mott} = 0.3921 \pm 0.0016$, so the vertical polarization is 
-    $\frac{\CA_{LR}}{\CA_{mott}}$.} 
+    power is $\CA_{\text{Mott}} = 0.3921 \pm 0.0016$, so the vertical polarization is 
+    $\frac{\CA_{\text{LR}}}{\CA_{\text{Mott}}}$.} 
     \label{tab:AT_Mott}
 \end{table}
 
-What we used in our calculation was the average longitudinal polarization 
-measured shortly before and after the AT runs, with confidence in our pretty Wien
-Filter settings and that the accelerator won't change the beam polarization.
-The result is shown in Table~\ref{tab:AT_polarization}
+The actual value we use for the transverse asymmetry calculation is the 
+average longitudinal polarization measured shortly before and after the AT runs, 
+with confidence in our pretty wien filter settings and that the accelerator 
+won't change the beam transverse polarization. 
+The polarization result is shown in Table~\ref{tab:AT_polarization}
 \begin{table}[!h]
     \centering
     \begin{tabular}{c | c c c}
@@ -503,17 +509,17 @@ The result is shown in Table~\ref{tab:AT_polarization}
     \hline
     \end{tabular}
     \caption{Average Compton and Moller polarization measured near the AT runs. 
-    The PREX-II AT used only Moller result while the CREX one used the average value of the 
+    The PREX-II AT uses only the Moller result while the CREX one uses the average value of the 
     Compton and the Moller measurements.}
     \label{tab:AT_polarization}
-% why only the moller result for PREX-II
+% FIXME why only the moller result for PREX-II
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Data}
 
 % how much data is needed?
-We spent 1 (2) days in PREX-II (CREX) for transverse asymmetry measurement,
+We spent 1 (2) days in PREX-II (CREX) for the transverse asymmetry measurement,
 and collected 25 (56) good AT runs in PREX-II (CREX).
 % PREX-II: 20190813 - 20190814
 % CREX: 20200210 - 20200212
@@ -551,58 +557,59 @@ and collected 25 (56) good AT runs in PREX-II (CREX).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Data Analysis}
-
 Using the data set after 2 respins and following the standard analysis procedure, 
-we can extract the transverse asymmetry. As shown in Eq.~\ref{eq:measured_AT},
-$\hat{n}$ of the scattering planes for LHRS and RHRS are opposite to each other,
+the transverse asymmetry is extracted. As shown in Eq.~\ref{eq:measured_AT},
+$\hat{n}$ of the scattering plane for LHRS and RHRS are opposite to each other,
 so the measured transverse asymmetries have opposite sign in LHRS/RHRS. To
-combine measurement from both arms, we used asymmetry (double) difference, instead of 
-asymmetry average as in the main analysis, which is defined as (up to a `-' sign):
+combine measurement from both arms, we use the asymmetry (double) difference, 
+instead of the asymmetry average as in the main analysis. The asymmetry difference
+is defined as (up to a `-' sign):
 \begin{equation}
-    \CA_{dd} = \frac{\CA_L - \CA_R}{2}
+    \CA_{\text{dd}} = \frac{\CA_L - \CA_R}{2}
 \end{equation}
 
 % no beammod data
-A simple cut of \verb|ErrorFlag == 0| was applied to select good quadruplets 
-(in PREX-II, run 4112 was a long run with its data split into 2 rootfiles, the
-second one contained only a small size of samples, therefore was ignored in our AT analysis.
-Besides, the first minirun of run 4117 was removed due to large charge asymmetry
-in that minirun). The good quadruplets were firstly grouped into miniruns, 
-the average of these miniruns for each target was what we wanted. 
-Another way to extract the transverse asymmetry was fill 
-all quadruplets in one histogram -- the mulplot, whose mean value will be
-our final result. Statistically, there is no difference between these 2 methods,
-they used the same data set and weight each sample equivalently, so they can
-be used to cross check each other. The minirun average plots and mulplots for
-CREX \Ca are shown below in Fig.~\ref{fig:AT_crex_Ca48_minirun} and 
-Fig.~\ref{fig:AT_crex_Ca48_mulplot}, as an example.
+A simple cut of \verb|ErrorFlag == 0| is applied to select good quadruplets 
+(in PREX-II, run 4112 is a long run with its data split into two rootfiles, the
+second one contains only a small size of samples, therefore is ignored in our AT analysis.
+Besides, the first minirun of run 4117 is removed due to the large charge asymmetry
+in that minirun). The good quadruplets are first grouped into miniruns, 
+the average of these miniruns for each target will be what we wanted. 
+One can also extract the transverse asymmetry from the histogram filled with
+all quadruplets -- the mulplot, whose mean value will be our final result. 
+Statistically, there is no difference between these two methods,
+they use the same data set and weight each sample equivalently, so they can
+be used to cross check each other. The mulplots and minirun average plots for
+CREX \Ca are shown below in Fig.~\ref{fig:AT_crex_Ca48_mulplot} and 
+Fig.~\ref{fig:AT_crex_Ca48_miniruns}, as an example.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\linewidth]{at/mulplot_Ca48}
+    \caption{Mulplots for CREX \Ca. The red line is a Gaussian fit. One can clearly 
+    see how the false asymmetry correction reduces the width of the distribution (note that
+    the first plot has a larger X-range than the other two).}
+    \label{fig:AT_crex_Ca48_mulplot}
+\end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\linewidth]{at/mini_Ca48_asym_us_dd.mean.png}
     \includegraphics[width=0.9\linewidth]{at/mini_Ca48_reg_asym_us_dd.mean.png}
     \includegraphics[width=0.9\linewidth]{at/mini_Ca48_dit_asym_us_dd.mean.png}
-    \caption{Sign corrected minirun-average of raw, regression corrected and 
-    dithering corrected transverse asymmetry of \Ca. Different colors represent
-    different IHWP state (in/out). In each plot, the top pad shows the 
-    mean and error of the title variable for each minirun, the 3 fit lines indicate
-    fitting to IHWP=in, IHWP=out and all datapoints respectively;
+    \caption{Sign corrected minirun-wise scatter plot of the raw, regression corrected and 
+    dithering corrected transverse asymmetry of \Ca in CREX. Different colors represent
+    different IHWP states (in/out). In each plot, the top pad shows the 
+    mean and error of the title variable for each minirun, the three fit lines indicate
+    the zero order polynomial fit to IHWP=in, IHWP=out and all datapoints respectively;
     the bottom pad is the pull histogram, which is the ratio of the deviation 
-    from the (all datapoints) mean value over each datapoint's error.
+    from the mean value of all datapoints over each datapoint's error.
     % Regress with the following 5 BPMs: bpm1X, bpm4aY, bpm4eX, bpm4eY, bpm12X.
     % PREX-regression bpms: bpm4aX/Y, bpm4eX/Y, bpmE
     }
     \label{fig:AT_crex_Ca48_miniruns}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\linewidth]{at/mulplot_Ca48}
-    \caption{Mulplot for CREX \Ca. The red line is a Gaussian fit. One can see 
-    clearly the how correction reduce the width of the distribution (note that
-    the first plot has a larger x-range than the other two).}
-    \label{fig:AT_crex_Ca48_mulplot}
-\end{figure}
 
 The minirun mean and mulplot mean for each target are summarized in the following
 tables.
@@ -633,7 +640,7 @@ tables.
 	\Pb	& -196.2	& 671.7     & -0.9  	& 127.0     & -0.3  	& 128.8	    & -231.5  & 664.7     & 11.3    & 125.5     & 70.2    & 182.5   \\   
 	\hline
     \end{tabular}
-    \caption{PREX-II raw and beam corrected transverse asymmetry}
+    \caption{PREX-II raw and corrected transverse asymmetry}
 \end{table}
 
 \begin{table}[!h]
@@ -666,7 +673,7 @@ tables.
 	\Pb      & 2414.2	& 1741.4    & 2733.1	& 1608.4    & 2765.3	& 1610.1    & 2422.6    & 1741.7	& 2751.0    & 1608.6	& 2784.8    & 1610.4	\\        
 	\hline
     \end{tabular}
-    \caption{PREX-II raw and beam corrected transverse asymmetry}
+    \caption{CREX raw and corrected transverse asymmetry}
 \end{table}
 
 \begin{comment}
@@ -714,11 +721,11 @@ tables.
     \caption{Mini-wise average and mulplot average values for each target}
 \end{table}
 \end{comment}
-As shown in above tables, the 2 correction methods -- regression and dithering 
-match with each other,
-We chose the dithering corrected values to extract transverse asymmetry.
-A slug-wise plot of the transverse asymmetry are shown in Fig.~\ref{fig:AT_slug} 
-\begin{figure}[H]
+As shown in the above tables, the final result from the two false asymmetry 
+correction methods -- regression and dithering, agree with each other.
+We chose the dithering corrected values to extract the transverse asymmetry.	% FIXME why?
+The slug-wise plots of the transverse asymmetry are shown in Fig.~\ref{fig:AT_slug} 
+\begin{figure}[!h]
     \centering
     \includegraphics[width=\linewidth]{at/prex_at_slug}
     \includegraphics[width=\linewidth]{at/crex_at_slug}
@@ -729,35 +736,35 @@ A slug-wise plot of the transverse asymmetry are shown in Fig.~\ref{fig:AT_slug}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Systematic Uncertainties}
-Various corrections we made to the raw data will introduce corresponding uncertainties. 
-Such as beam false asymmetry, purity correction and detector/monitor non-linearity correction. 
-We need to know these correction precisely.
+Various corrections to the raw asymmetry will introduce corresponding uncertainties. 
+Such as the beam false asymmetry correction, purity and detector/monitor non-linearity correction. 
+These uncertainties affect the precision of the measurement, we should know 
+them precisely.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Beam Correction}
 % https://prex.jlab.org/DocDB/0005/000504/002/Dithering%20and%20Regression.pdf
-As said before, we used regression and dithering to extract detector's response
-to beam fluctuations, and corrections from these 2 methods agreed with each other.
-To count the uncertainty caused by beam correction, we used the difference 
-between corrections of these 2 methods. More specifically, 
-we found that for most runs, the difference between the corrections
-of the most significant BPMs using these 2 methods was less than 5\%, therefore,
-a conservative estimation of 5\% of the dithering correction was used as the 
-beam correction systematic uncertainty. The dithering slope was target wise, 
-the beam correction of each bpm (or their combinations) will be the product of 
-the dithering slope and the average difference in each bpm (or their combinations), 
-root-sum-square of 5\% of these corrections gave out the uncertainties. 
-The result is shown below:
+To count the uncertainty caused by the beam correction, the difference between 
+corrections with the regression and dithering methods is used. More specifically, 
+we find that for most runs, the difference between the corrections
+from the most significant BPMs with these two methods is less than 5\%. Therefore,
+a conservative estimation of 5\% of the correction with dithering is used as the 
+systematic uncertainty of the beam false asymmetry correction. 
+The correction from each BPM (or their combinations) will be the product of 
+the target-wise dithering slope and the average difference in each BPM (or their combinations), 
+root-sum-square of 5\% of these corrections give out the uncertainty. 
+The result is shown in Table~\ref{tab:beam_correction_uncertainty}.
 
-\begin{table}
+\begin{table}[!h]
     \centering
     \begin{tabular}{c c | c c | c c | c c | c}
 	\hline
 	Exp & Target	
-	& \multicolumn{2}{c|}{\thead{$\CA_{raw} \pm d\CA_{raw}$ \\ (ppb)}}    
-	& \multicolumn{2}{c|}{\thead{$\CA_{dit}  \pm d\CA_{dit}$ \\  (ppb)}}	
+	& \multicolumn{2}{c|}{\thead{$\CA_{\text{raw}} \pm d\CA_{\text{raw}}$ \\ (ppb)}}    
+	& \multicolumn{2}{c|}{\thead{$\CA_{\text{dit}}  \pm d\CA_{\text{dit}}$ \\  (ppb)}}	
 	& \multicolumn{2}{c|}{\thead{$\Delta\CA \pm d(\Delta\CA)$ \\ (ppb)}}	
-	& $d\Delta\CA/d\CA_{dit}$\\
+	& $d\Delta\CA/d\CA_{\text{dit}}$\\
 	\hline
 	\multirow{3}{*}{PREX-II}
 	    & \C    & -5268	& 741	& -5494	& 330	& 226.1	& 29.4	& 9\%	\\ 
@@ -772,29 +779,30 @@ The result is shown below:
 	\hline
     \end{tabular}
     \caption{Beam correction to transverse asymmetry.}
+    \label{tab:beam_correction_uncertainty}
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Purity Correction}
-For target purity correction, we need to consider only the \Pb and \Ca target.
+For the target purity correction, we need to consider only the \Pb and \Ca target.
 As we will discuss in the following chapter, the contamination in the \Pb target
 come from the diamond foils sandwiching the \Pb foil to cool the target, while
 the impurity in \Ca target is mainly the \ca isotope. The \ca target has an abundance
-larger than 99.6\%, so we regard it as a pure target.
+larger than 99.6\%, so it is regarded as a pure target.
 
 \begin{equation}
     \begin{gathered}
-	\CA_{mea} = \frac{R_t\CA_t + \sum_i R_i \CA_i}{R_t + \sum_i R_i} = \frac{\CA_t + \sum_i f_i \CA_i}{1 + \sum_i f_i}  \\
-	\CA_t = (1 + \sum_i f_i)\CA_{mea} - \sum_i f_i\CA_i
+	\CA_{\text{mea}} = \frac{R_t\CA_t + \sum_i R_i \CA_i}{R_t + \sum_i R_i} = \frac{\CA_t + \sum_i f_i \CA_i}{1 + \sum_i f_i}  \\
+	\CA_t = (1 + \sum_i f_i)\CA_{\text{mea}} - \sum_i f_i\CA_i
     \end{gathered}
     \label{eq:AT-asymmetry_correction}
 \end{equation}
-where $R$ and $\CA$ are the scattering rate and asymmetry of each element, the
-subscript t and i mean target and various impurity elements in the target, 
+where $R$ and $\CA$ are the scattering rate and asymmetry of each nucleus, the
+subscript $t$ and $i$ refer to the target and various impurity elements in the target, 
 $f_i = \frac{R_i}{R_t}$ is the rate fraction. 
-We used simulation to calculate the scattering rate for each different
-target, asymmetry value was what we measured.
-
+We use simulations to calculate the scattering rate for each different
+target, asymmetry value comes from the measurement. The diamond (C) rate fraction
+in the \Pb target is:
 \begin{equation}
     f_C = \frac{R_C}{R_{Pb}} = 
     \begin{cases}
@@ -803,17 +811,19 @@ target, asymmetry value was what we measured.
     \end{cases}
 \end{equation}
 
-The \Ca case was a little complicated, because the \Ca target was a stack of 3 different
-pieces with different purity. The upstream 2 pieces were the remnant of the destroyed
-old target with a \Ca abundance of 95.99\%, the downstream piece was a new foil
-with a \Ca abundance of 90.04\%. Based on the fact that contamination was isotope
-of \Ca: \ca ($\sim10\%$), ${}^{42}Ca$ ($\sim0.1\%$) and ${}^{44}Ca$ ($\sim0.2\%$), whose 
-scattering rate and asymmetry are similar to that of \Ca, so we calculated the
-non-\Ca fraction in the \Ca target, which gave the rate fraction as: 
-$f(\frac{non-{}^{48}Ca}{{}^{48}Ca}) = 9.07 \pm 0.18 \%$.
+The \Ca case is a little complicated, because the \Ca target is a stack of 3 different
+pieces with different purities. The upstream 2 pieces are the remnant of the damaged
+old target with a \Ca abundance of 95.99\%, the downstream piece is a new foil
+with a \Ca abundance of 90.04\%. Based on the fact that the contamination mainly
+come from various isotopes of \Ca: \ca ($\sim10\%$), ${}^{42}$Ca ($\sim0.1\%$) and ${}^{44}$Ca ($\sim0.2\%$), 
+whose scattering rates and asymmetries are similar to that of \Ca, so we simplily 
+count the non-\Ca fraction in the \Ca target, which leads to:
+\begin{equation}
+    f(\frac{non-{}^{48}Ca}{{}^{48}Ca}) = 9.07 \pm 0.18 \%
+\end{equation}
 
-Using equation \ref{eq:AT-asymmetry_correction}, we get the purity corrected
-asymmetries:
+Using equation \ref{eq:AT-asymmetry_correction}, the asymmetry after the purity correction
+is shown in Table~\ref{tab:purity_corrected_asymmetry} .
 \begin{table}
 % https://docs.google.com/spreadsheets/d/1ZI68PgAn_zySKozZ__kHBvxlBmaTMKw9jPSl-EIa91k/edit?pli=1#gid=1243115322
 % why cell J4 doesn't follow error propagation
@@ -822,7 +832,7 @@ asymmetries:
     \begin{tabular}{c c | c c }
 	\hline
 	Exp & Target	
-	& \multicolumn{2}{c}{$\CA_{cor}  \pm d\CA_{stat}$ (ppb)}	    \\
+	& \multicolumn{2}{c}{$\CA_{\text{cor}}  \pm d\CA_{\text{stat}}$ (ppb)}	    \\
 	\hline
 	\multirow{3}{*}{PREX-II}
 	    & \C    & -5494	& 330	 \\ 
@@ -837,18 +847,19 @@ asymmetries:
 	\hline
     \end{tabular}
     \caption{Purity corrected transverse asymmetry. The statistical uncertainties
-    were calculated following uncertainty propagation equation.}
+    are calculated following the uncertainty propagation equation.}
+    \label{tab:purity_corrected_asymmetry}
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Detector Non-linearity}
-For uncertainty caused by detector non-linearity response to the incoming electron flux,
-it was bounded to be $<0.5\%$ in bench tests.
+For the uncertainty caused by the non-linearity in detector's response to the incoming electron flux,
+it is bounded to be $<0.5\%$ in bench tests.
 \begin{table}[!h]
     \centering
     \begin{tabular}{c c | c c c}
 	\hline
-	Exp & Target	& $\CA_{raw}$ (ppb) & $d\CA_{sys}$ (ppb)    & $\frac{d\CA_{sys}}{\CA_{raw}}$   \\
+	Exp & Target	& $\CA_{\text{raw}}$ (ppb) & $d\CA_{\text{sys}}$ (ppb)    & $\frac{d\CA_{\text{sys}}}{\CA_{\text{raw}}}$   \\
 	\hline
 	\multirow{3}{*}{PREX-II}
 	    & \C    & -5268	& 26	& 0.50\%    \\ 
@@ -862,12 +873,12 @@ it was bounded to be $<0.5\%$ in bench tests.
 	    & \Pb   & -2414	& 12	& 0.50\%    \\ 
 	\hline
     \end{tabular}
-    \caption{Systematic uncertainty due to detector non-linearity}
+    \caption{Systematic uncertainty due to the detector non-linearity.}
 \end{table}
 
-For uncertainty come from bcm non-linearity, a conservative estimation of 1\% was used,
-as shown in Table~\ref{tab:AT_bcm_non-linearity}, the charge asymmetry was minirun-wise average 
-value.
+For uncertainty come from the BCM non-linearity, a conservative estimation of 1\% is used,
+as shown in Table~\ref{tab:AT_bcm_non-linearity}, the charge asymmetry is the 
+minirun-wise average value.
 \begin{table}[!h]
     \centering
     \begin{tabular}{c c | c c c}
@@ -886,7 +897,7 @@ value.
 	    & \Pb   & -1.61	& 0.0   & 1.00\%    \\ 
 	\hline
     \end{tabular}
-    \caption{Systematic uncertainty due to BCM non-linearity}
+    \caption{Systematic uncertainty due to the BCM non-linearity}
     \label{tab:AT_bcm_non-linearity}
 \end{table}
 
@@ -897,10 +908,11 @@ value.
 \subsubsection{$\phi$ Angle}
 % http://ace.phys.virginia.edu/HAPPEX/4179
 % http://ace.phys.virginia.edu/HAPPEX/4179
-We said above that we chose the angle $\phi$ to be $90^\circ$, but no way to 
-achieve exactly that value. The actually value will be a little deviate from
-the designed value, as we measured from the data. We draw the $\sin\phi$ distribution
-from data, and then took the average, as shown in the following table:
+It is said above that we chose the angle $\phi$ to be $90^\circ$, but no way to 
+achieve exactly that value. The actually value will be a little away from
+the designed value, as we measured from the data. By drawsing the $\sin\phi$ distribution
+from data, the average from the distribution is taken as the measured value. 
+The result is shown in the following table.
 \begin{table}[!htbp]
     \centering
     \begin{tabular}{c c | c c c}
@@ -924,9 +936,9 @@ from data, and then took the average, as shown in the following table:
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{$Q^2$}
-Similar to the extraction of $\phi$ angle, we draw the $Q^2$ distribution for
+Similar to the extraction of the $\phi$ angle, we draw the $Q^2$ distribution for
 each target, and then took the mean value. The results are shown in the
-following table:
+following table.
 % http://ace.phys.virginia.edu/HAPPEX/4453
 % http://ace.phys.virginia.edu/HAPPEX/4468
 \begin{table}[!htbp]
@@ -934,9 +946,9 @@ following table:
     \begin{tabular}{c c | r@{ $\pm$ }l | r@{ $\pm$ }l | r@{ $\pm$ }l r@{ $\pm$ }l}
 	\hline
 	Exp & Target	
-	& \multicolumn{2}{c|}{\thead{LHRS $Q^2$ \\ ($GeV^2$)}} 
-	& \multicolumn{2}{c|}{\thead{RHRS $Q^2$ \\ ($GeV^2$)}} 
-	& \multicolumn{2}{c}{\thead{Average $Q^2$ \\ ($GeV^2$)}} & \multicolumn{2}{c}{\thead{Average $Q$ \\ ($GeV$)}} \\
+	& \multicolumn{2}{c|}{\thead{LHRS $Q^2$ \\ ($\mathrm{GeV}^2$)}} 
+	& \multicolumn{2}{c|}{\thead{RHRS $Q^2$ \\ ($\mathrm{GeV}^2$)}} 
+	& \multicolumn{2}{c}{\thead{Average $Q^2$ \\ ($\mathrm{GeV}^2$)}} & \multicolumn{2}{c}{\thead{Average $Q$ \\ ($\mathrm{GeV}$)}} \\
 	\hline
 	\multirow{4}{*}{PREX-II}
 	& \C	& 0.0068    & 4E-6  & 0.0066    & 5E-6	& 0.00671   & 3.21E-6	& 0.082	& 1.96E-5	\\
@@ -956,27 +968,26 @@ following table:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Final Result}
-From Eq.~\ref{eq:measured_AT}, we can calculate the transverse asymmetry:
+With Eq.~\ref{eq:measured_AT}, the transverse asymmetry is calculated to be:
 \begin{equation}
-    \CA_n = \frac{\CA_{cor}}{P_n \cdot \sin\phi}
+    \CA_n = \frac{\CA_{\text{cor}}}{\CP_n \cdot \sin\phi}
 \end{equation}
 
-The statistical uncertainty was calculated as:
+The statistical uncertainty is:
 \begin{equation}
-    d\CA_n(stat) = \frac{d\CA_{cor}(stat)}{P_n \cdot \sin\phi}
+    d\CA_n(\text{stat}) = \frac{d\CA_{\text{cor}}(\text{stat})}{\CP_n \cdot \sin\phi}
 \end{equation}
-
-The systematic uncertainty was calculated as:
+and the systematic uncertainty is:
 \begin{equation}
-    \left( \frac{d\CA_n(sys)}{\CA_n} \right)^2 = 
-	\left( \frac{d\CA_{cor}(sys)}{d\CA_{cor}} \right)^2
-	+ \left( \frac{dP_n}{P_n}\right)^2 
+    \left( \frac{d\CA_n(\text{sys})}{\CA_n} \right)^2 = 
+	\left( \frac{d\CA_{\text{cor}}(\text{sys})}{d\CA_{\text{cor}}} \right)^2
+	+ \left( \frac{d\CP_n}{\CP_n}\right)^2 
 \end{equation}
 where
 \begin{equation}
-    d\CA^2_{cor}(sys) = d\CA^2(det\ nonlin) + d\CA^2(bcm\ nonlin) + d\CA^2(beam\ correction)
+    d\CA^2_{\text{cor}}(\text{sys}) = d\CA^2(\text{det\ nonlin}) + d\CA^2(\text{BCM\ nonlin}) + d\CA^2(\text{beam\ correction})
 \end{equation}
-In case of \Pb and \Ca target, we need to include uncertainties from contaminations.
+For the \Pb and \Ca target, we need to include uncertainties from contaminations.
 Various systematic uncertainties are summarized in Table~\ref{tab:AT_uncertainties}.
 \begin{table}[!h]
     \centering
@@ -996,7 +1007,7 @@ Various systematic uncertainties are summarized in Table~\ref{tab:AT_uncertainti
 	Total		& 0.39  & 0.34  & 0.18  & 1.05  & 1.11  & 1.11  & 3.23	\\
 	\hline
     \end{tabular}
-    \caption{AT uncertainty contributions in unit of ppm}
+    \caption{AT uncertainty contributions in units of ppm}
     \label{tab:AT_uncertainties}
 \end{table}
 
@@ -1020,18 +1031,18 @@ The final result is shown in Table~\ref{tab:AT_final_values}:
 	    & \Pb   & 0.62	& 3.15	& 0.75	& 3.23	\\ 
 	\hline
     \end{tabular}
-    \caption{Final result of Transverse asymmetry.}
+    \caption{Final result of the transverse asymmetry.}
     \label{tab:AT_final_values}
 \end{table}
 
-Compare to theoretical calculation \cite{PhysRevC.103.064316}, we confirm 
-the anomaly appeared in PREX-I, that is the \Pb transverse asymmetries
+Comparing to the theoretical calculations \cite{PhysRevC.103.064316}, we confirm 
+the anomaly appeared in PREX-I AT measurement, that is the \Pb transverse asymmetries
 are consistently 0 at various $Q$ values, as shown in Fig.~\ref{fig:pcrex_AT}. 
-As for other light nuclei, they are not far away from theoretical predictions.
-\begin{figure}
+As for other light nuclei, they are not far away from their theoretical predictions.
+\begin{figure}[!h]
     \centering
     \includegraphics[scale=.5]{at/pcrex_AT}
-    \caption{Transverse asymmetry measured in PREX-II/CREX. The PREX-I result
+    \caption{Transverse asymmetries measured in PREX-II/CREX. The PREX-I result
     is also included. Overlapping points are offset slightly in Q to distinguish
     them.}
     \label{fig:pcrex_AT}
