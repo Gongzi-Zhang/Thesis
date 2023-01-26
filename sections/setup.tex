@@ -26,7 +26,8 @@ higher precision.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.5\linewidth]{PVES}
-    \caption{Evolution of PVES experiments, solid lines represent the relative 
+    \caption[Evolution of PVES experiments.]
+    {Evolution of PVES experiments, solid lines represent the relative 
     precision. Generation I experiments (E122 (1978) \cite{PRESCOTT1978347}, 
     MIT-12C (1989) \cite{PhysRevLett.65.694} and Mainz-Be (1990) \cite{HEIL19891}) 
     did pioneering work to pave the way for PVES. Generation II experiments
@@ -38,7 +39,7 @@ higher precision.
     Qweak \cite{PhysRevLett.111.141803} and PVDIS \cite{PhysRevLett.111.082501})
     tested the SM at low energy and measured the neutron skin thickness of nuclei
     (PREX-I/II and CREX). The planned Generation IV experiments (SoLID program \cite{SoLID}
-    and MOLLER experiment \cite{Moller} at JLab, P2 experiment on the future
+    and MOLLER experiment \cite{Moller-project} at JLab, P2 experiment on the future
     Mainz Energy-recovery Superconducting Accelerator (MESA) \cite{MESA-P2})
     will continue to test the SM and explore the structure of nucleons with higher precision.
     (MESA-12C is the same experiment as MESA-P2 with a different \C target) }
@@ -111,7 +112,7 @@ we were able to measure this tiny PV asymmetry precisely.
 	Beam Current ($\mu$A)	& 50-85	& 100-150   \\
 	Average Beam Polarization (\%) & 89.7   & 87.1   \\
 	Beam Bunch Rate (MHz)	& 499	& 499 \\
-	Electrons/Bunch	($\times 10^6$)	& 1.75	& 3.76	\\  % FIXME for 70 and 150 uA
+	Electrons/Bunch	($\times 10^6$)	& 1.75	& 3.76	\\  
 	Helicity Flip Rate (Hz) & 120/240   & 120   \\
 	Power on the Target	& $\sim100$ W\@70~$\mu$A  & $\sim350$ W\@150~$\mu$A \\
 	\hline
@@ -137,10 +138,10 @@ we were able to measure this tiny PV asymmetry precisely.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Beam Parameters}
 PREX-II and CREX are follow-up experiments to PREX-I, which also ran at JLab in 2010. 
-With quite good control over the systematic uncertainty, but unfortunately, 
+With quite good control over systematic uncertainties, but unfortunately, 
 many technical challenges are encountered during the experiment, PREX-I's result is 
 statistics-limited, achieving a precision of 10\% \cite{PhysRevLett.108.112502}:
-$$ \CA_{Pb} = 656 \pm 60 \ (\text{stat}) \pm 14 \ (\text{syst}) \ \mathrm{parts-per-billion (ppb)} $$
+$$ \CA_{Pb} = 656 \pm 60 \ (\text{stat}) \pm 14 \ (\text{syst}) \ \text{parts-per-billion (ppb)} $$
 Based on the experience and lessons learned from PREX-I, 
 PREX-II and CREX have more well-established designs, which help to
 meet the goal of high-precision.
@@ -251,7 +252,7 @@ adopted for a higher scattering rate, which is:
     \item $N_A = 6.022\times 10^{23}$ is the Avogadro's constant.
 \end{itemize}
 
-The differential cross section is numerically calculated by our theoretical friends
+The differential cross section is calculated by our theorist friends
 with values of 3930.6~mbarn and 5.3~mbarn for \Pb and \Ca at their corresponding
 kinematics. Other parameters can be checked out in Table~\ref{tab:parameters}.
 
@@ -263,7 +264,7 @@ PREX-II and CREX have an acceptance defined by the septum magnet and the Q1 coll
 which is $d\Omega = 0.0037$~str.
 
 \begin{comment}
-Finally, we should also consider radiative correction due to emission of virtual
+Finally, we should also consider the radiative correction due to emission of virtual
 and real soft photons (Bremsstrahlung radiation), and hard photons by vacuum polarization,
 this correction is formulated as:
 \begin{equation}
@@ -274,12 +275,13 @@ which is evaluated to be: $\eta \sim 0.5$.
 
 As shown in Fig.~\ref{fig:scattering_rate}, for both \Pb and \Ca, the scattering 
 rate falls quickly along both the beam energy and the scattering angle, 
-so one would like a small beam energy and a small scattering angle (equivalently
-a small $\vec{q}$) for a large scattering rate.
+so one would like a low beam energy and a small scattering angle (equivalently
+a small $\vec{q}$) for a high scattering rate.
 \begin{figure}[!h]
     \includegraphics[width=0.5\linewidth]{Pb208_rate}
     \includegraphics[width=0.5\linewidth]{Ca48_rate}
-    \caption{Scattering rate versus the beam energy and the scattering angle for \Pb and \Ca,
+    \caption[Scattering rate]
+    {Scattering rate versus the beam energy and the scattering angle for \Pb and \Ca,
     the other parameters (energy in the scattering angle plot and vice versa) 
     are fixed to their design values.}
     \label{fig:scattering_rate}
@@ -299,12 +301,12 @@ as the relative change of $\CA$ with 1\% change in the neutron radius.
     \epsilon = \frac{\delta \CA/\CA}{\delta R/R} = \frac{|\CA_{stretched} - \CA|/\CA}{1\%}
 \end{equation}
 Though asymmetry is what will be measured, one can estimate its value based
-on some theoretical models, as is numerically calculated by our theoretical 
-friends in \cite{PhysRevC.57.3430}.
+on some theoretical models, as is calculated by our theorist friends in \cite{PhysRevC.57.3430}.
 \begin{figure}[!h]
     \includegraphics[width=0.5\linewidth]{Pb208_asym}
     \includegraphics[width=0.5\linewidth]{Pb208_sen}
-    \caption{Asymmetry and sensitivity plot for \Pb. The asymmetry increases along 
+    \caption[Asymmetry and sensitivity for \Pb]
+    {Asymmetry and sensitivity plot for \Pb. The asymmetry increases along 
     the beam energy and goes upward with oscillation along the scattering angle. 
     The sensitivity also increases against the beam energy and oscillates against
     the scattering angle.  The sensitivity plot is calculated with 1\% change in 
@@ -315,7 +317,8 @@ friends in \cite{PhysRevC.57.3430}.
 \begin{figure}[!h]
     \includegraphics[width=0.5\linewidth]{Ca48_asym}
     \includegraphics[width=0.5\linewidth]{Ca48_sen}
-    \caption{Similar asymmetry and sensitivity plot for \Ca, the asymmetry maximize 
+    \caption[Asymmetry and sensitivity for \Ca]
+    {Similar asymmetry and sensitivity plot for \Ca, the asymmetry maximize 
     around 2500~MeV with $\theta = 4^\circ$ and there is a local maximum 
     about $4.5^\circ$ when $E$ = 2200~MeV. As for the sensitivity, it increases
     monotonously along the beam energy and comes to a regional maximum around $5^\circ$
@@ -337,7 +340,7 @@ To minimize $\delta R/R$, it is equivalent to maximize
 \begin{figure}
     \includegraphics[width=0.5\linewidth]{Pb208_fom}
     \includegraphics[width=0.5\linewidth]{Ca48_fom}
-    \caption{For both nuclei, FOM supports a small scattering angle. As for the beam energy,
+    \caption[FOM]{For both nuclei, FOM supports a small scattering angle. As for the beam energy,
     FOM maximizes around 950 (2200)~MeV for \Pb (\Ca).}
 \end{figure}
 
@@ -382,7 +385,7 @@ In terms of cancelling the 60~Hz line noise, the second method works best,
 it removes the line noise completely, while other two methods also cancel the noise
 in their asymmetry calculation, it broadens the asymmetry width. But in a comprehensive
 consideration, the frequency in the second method is not high enough to cancel
-other low frequency noises. As for the first method, it is best in terms of % FIXME e.x. of other low frequency noises
+other low frequency noises. As for the first method, it is best in terms of % FIXME e.g. of other low frequency noises
 removing low frequency noises, the only drawback is that with a fixed settle time $T_{\text{settle}}$
 -- the time needed to settle a helicity state,
 the higher the frequency, the lower the $T_{\text{stable}}$ -- the stable time window
@@ -410,7 +413,8 @@ As a compromise, the third method was chosen for PREX-II/CREX.
 	\includegraphics[width=0.9\linewidth]{hall_construction}
     \end{subfigure}
 
-    \caption{Aerial view of JLab accelerator site, yellow line tells the position
+    \caption[JLab aerial view]
+    {Aerial view of JLab accelerator site, yellow line tells the position
     of the CEBAF accelerator and the three experimental halls are marked out as A/B/C 
     (Hall D locates on the top left corner, after the exit of the north LINAC).
     The accelerator tunnel is 30~feet ($\sim 9$~m) underground and 10~feet ($\sim 3$~m) 
@@ -422,7 +426,8 @@ As a compromise, the third method was chosen for PREX-II/CREX.
 
 \begin{figure}[!h]
     \includegraphics[width=0.9\linewidth]{cebaf.png}
-    \caption{Schematic plot of CEBAF. The circular plate with three slits is the beam chopper,
+    \caption[CEBAF]
+    {Schematic plot of CEBAF. The circular plate with three slits is the beam chopper,
     which has no slit for Hall D, that's why Hall D beams have to follow electron beams of other
     halls. During acceleration, low energy beams will be kicked into 
     higher arcs, while high energy beams will go through lower arcs. The magnetic
@@ -469,11 +474,12 @@ established Hall D explores origin of confinement through exotic mesons.
     \centering
     \includegraphics[width=0.48\linewidth]{hall_A}
     \includegraphics[width=0.51\linewidth]{hall_A_bird}
-    \caption{3D and bird view of Hall A \cite{halla_manual}. Originally, the 2 spectrometers
+    \caption[Hall A]
+    {3D and bird view of Hall A \cite{halla_manual}. Originally, the 2 spectrometers
     were called High Resolution Hadron Spectrometer (HRHS) and High Resolution Electron
     Spectrometer (HRES), but they are essentially identical to each other and
     can be used interchangeably.
-    so now they are called left arm (HRS-L) and right arm HRS (HRS-R).
+    so now they are called left arm (LHRS) and right arm HRS (RHRS).
     }
 \end{figure}
 
@@ -504,7 +510,7 @@ Currently, GaAs-based semiconductor photoemission source is % confirmed by Wang 
 the only choice on the market that can be used as the polarized electron source.
 Historically, this kind of electron source was the only one that could satisfy high peak 
 currents required by the low duty factors of the old accelerators and rapid helicity 
-reversal required by PVES experiments. That's why it is the only player on the market now.
+reversal required by PVES experiments. That is why it is the only player on the market now.
 Over the past few decades, pulsed beam has been replaced by continuous beam while
 this electron source is inherited and further developed. The polarized electron
 source used by CEBAF can produce electron beams with polarization greater than
@@ -696,7 +702,8 @@ for both helicities.
 	}
 	\label{fig:NEA}
     \end{subfigure}
-    \caption{The energy band diagram of GaAs near its surface. 
+    \caption[Energy band diagram of GaAs]
+    {The energy band diagram of GaAs near its surface. 
     Left: bare p-type GaAs, the large positive electron affinity (PEA) 
     prevents electrons from escaping the surface; 
     Middle: p-type GaAs with a cesiated surface, the electron affinity (EA)
@@ -1005,7 +1012,8 @@ so it is not used for the determination of the beam polarization during PREX-II/
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.5\linewidth]{Mott_polarimeter}
-    \caption{Schematic plot of the Mott polarimeter. It has 4 symmetric detector
+    \caption[Mott polarimeter]
+    {Schematic plot of the Mott polarimeter. It has 4 symmetric detector
     ports (up and down, left and right -- left/right detectors are not shown in the plot). 
     The back scattering angle is $172.6^\circ$, where the highest analyzing power 
     is achieved from theoretical calculations of the Sherman function.
@@ -1024,7 +1032,8 @@ vector of the scattering plane. The same formula applies to the up-down asymmetr
 \begin{figure}
     \centering
     \includegraphics[width=0.5\linewidth]{Mott_asym_1}
-    \caption{The Sherman function for different high-Z targets at 5~MeV, dots
+    \caption[Sherman function]
+    {The Sherman function for different high-Z targets at 5~MeV, dots
     represent experimental measurements.}   % FIXME reference
 \end{figure}
 Because the asymmetry comes from the coupling of the electron spin and the induced
@@ -1069,7 +1078,8 @@ of the electron beam.
     \begin{subfigure}[c]{0.55\linewidth}
 	\includegraphics[width=\linewidth]{Compton_beam_path}
     \end{subfigure}
-    \caption{Left: schematic plot of the Compton Chicane \cite{PhysRevSTAB.7.042802}; 
+    \caption[Compton Chicane]
+    {Left: schematic plot of the Compton Chicane \cite{PhysRevSTAB.7.042802}; 
     Right: schematic plot of the electron-photon scattering.} 
     \label{fig:compton_pol}
 \end{figure}
@@ -1100,7 +1110,8 @@ analyzing power is:
 \begin{figure}
     \centering
     \includegraphics[width=0.5\linewidth]{compton_asym}
-    \caption{The Compton analyzing power increases with the incoming electron energy. 
+    \caption[Compton analyzing power]
+    {The Compton analyzing power increases with the incoming electron energy. 
     Note that the analyzing power will change sign at $\rho \sim 0.5$ for both PREX-II
     and CREX beam energies.}
 \end{figure}
@@ -1362,7 +1373,7 @@ the one from beam fluctuation (HCBA). Ideally, the electrons bunches with opposi
 polarization should have exactly the same intensity and energy, hitting the target 
 at the same place with the same angle, which is obviously impossible in reality. 
 So we need to correct the false asymmetry introduce by the beam fluctuation. There are a
-few methods to do the correction, one of them is the so called Beam modulation.
+few methods to do the correction, one of them is the so-called Beam modulation.
 The idea is to introduce man-made fluctuations to the beam through the 
 modulation system, then we can measure the changes in monitors and detectors 
 to find the sensitivities of detectors to changes in energy, position and angle,
@@ -1443,7 +1454,8 @@ as shown in Fig.~\ref{fig:scattering_chamber} and \ref{fig:target_ladder}.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=\linewidth]{target_chamber}
-    \caption{Design plot of the scattering chamber and the two target ladders.
+    \caption[Scattering chamber]
+    {Design plot of the scattering chamber and the two target ladders.
     The horizontal one is the production ladder and the other one being the 
     calibration ladder.}
     \label{fig:scattering_chamber}
@@ -1514,7 +1526,8 @@ replace a target if the measured asymmetry width increases significantly.
     \centering
     \includegraphics[width=0.48\linewidth]{raster_pattern_1}
     \includegraphics[width=0.48\linewidth]{raster_pattern_2}
-    \caption{Raster pattern with different frequency difference between X and Y.
+    \caption[Raster pattern]
+    {Raster pattern with different frequency difference between X and Y.
     Left: $|f_y - f_x| = 120$~Hz; Right: $|f_y - f_x| = 8*120$~Hz. The raster
     shape is a $4\times 4$~mm square.} 
     \label{fig:raster_pattern}
@@ -1568,7 +1581,8 @@ shown in Fig.~\ref{fig:target_temp_with_raster}.
 \begin{figure}
     \centering
     \includegraphics[width=0.5\linewidth]{target_temp_with_raster}
-    \caption{Simulation of target temperature evolution with different raster frequency
+    \caption[Target temperature]
+    {Simulation of target temperature evolution with different raster frequency
     differences. The larger the raster frequency difference ($\Delta f$), the larger
     the size of the raster area, the lower the highest target temperature.}
     \label{fig:target_temp_with_raster}
@@ -1581,7 +1595,8 @@ shown in Fig.~\ref{fig:target_temp_with_raster}.
     \includegraphics[height=0.21\paperheight]{beamline_collimator_side}
     \hspace{1 cm}
     \includegraphics[width=0.4\linewidth]{beamline_collimator_top}
-    \caption{Side and top view of the beamline collimator. Beam travels from left to right.}
+    \caption[beamline collimator]
+    {Side and top view of the beamline collimator. Beam travels from left to right.}
     \label{fig:beamline_collimator}
 \end{figure}
 
@@ -1622,7 +1637,8 @@ neutrons from the collimator.
     \includegraphics[width=0.32\linewidth]{collimator_power_fit}
     \includegraphics[width=0.32\linewidth]{Pb10_ndx02_n}
     \includegraphics[width=0.32\linewidth]{Pb10_ndx02_g}
-    \caption{Left: a simple model of target degradation -- assuming the raster 
+    \caption[Target degradation]
+    {Left: a simple model of target degradation -- assuming the raster 
     area ($t_1$) is becoming thinner and the rest is becoming thicker ($t_2$),
     both uniformly and the total mass keeps intact. The plot shows how the power 
     deposition on the beamline collimator changes in this model. Middle and Right: actual
@@ -1647,7 +1663,8 @@ the vertical drift chamber (VDC), we can reconstruct the beam transport matrices
     \includegraphics[width=0.48\linewidth, angle=180]{beamline_collimator_and_sieve_slit}
     \hspace{1cm}
     \includegraphics[scale=0.18, angle=180]{beamline_collimator_and_sieve_slit_1}
-    \caption{Front pictures of the beamline collimator and sieve slit collimators, looking 
+    \caption[sieve slit collimators]
+    {Front pictures of the beamline collimator and sieve slit collimators, looking 
     downstream. In the left picture, one can clearly see a cylinder is removed 
     from the central collimator.
     The sieve planes lie after the beamline collimator and are movable like
@@ -1674,7 +1691,8 @@ are magnetic steel box to shield the fringe magnetic field from septum.
 \begin{figure}[!h]
     \includegraphics[width=0.52\linewidth]{septum}
     \includegraphics[width=0.46\linewidth]{septum_real}
-    \caption{Left: design plot of the pivot region; septums are represented by
+    \caption[pivot region]
+    {Left: design plot of the pivot region; septums are represented by
     red coils. Right: actual picture of septums.
     }
 \end{figure}
@@ -1684,7 +1702,7 @@ are magnetic steel box to shield the fringe magnetic field from septum.
 Spectrometer is a key component for every Hall A experiment. PREX-II and CREX
 use the HRS pair. Each HRS consists three superconducting
 quadrupoles and one dipole. The maximum magnetic field of the three quadrupoles are
-1.2, 1.0 and 1.0~T respectively while the dipole can provide up to 1.7~T field \cite{halla_parity}. 
+1.2, 1.0 and 1.0~T respectively while the dipole can provide up to 1.7~T field \cite{halla_manual}. 
 The incoming electrons will be bent $45^\circ$ up in the vertical plane and then
 received by electron detectors.
 HRS has a small angular acceptance ($\pm 28$~mrad horizontally, $\pm 60$~mrad vertically, 
@@ -1702,7 +1720,7 @@ with a very small background from inelastic scattering, as shown in Fig.~\ref{fi
     \includegraphics[width=0.32\linewidth]{HRS_1}
     \includegraphics[width=0.32\linewidth]{hrs_rays}
     \includegraphics[width=0.32\linewidth]{hrs_inelastic}
-    \caption{Schematic plot of the HRS and particle rays inside. \cite{halla3d}
+    \caption[HRS]{Schematic plot of the HRS and particle rays inside. \cite{halla3d}
     The `focal plane' in the middle plot, by design, should be at an angle of $45^\circ$
     w.r.t the central ray, but is actually rotated to $70^\circ$ due to lackness
     of sextupole winding in Q3. When we talk about the HRS focal plane, we
@@ -1720,7 +1738,7 @@ possible systematic uncertainties.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.5\linewidth]{Q1_collimator}
-    \caption{Picture of Q1 collimator pairs, looking downstream. 
+    \caption[Q1 Collimator pairs]{Picture of Q1 collimator pairs, looking downstream. 
     Q1 collimator is the blue piece surrounded by a circular steel.
     The pipe between the two Q1 collimators, covered by tin foils, is the
     beampipe leading to the beam dump.
@@ -1728,7 +1746,7 @@ possible systematic uncertainties.
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Detector Package}
-The standard HRS detector package on each arm consists of trigger scintillators for
+The standard HRS detector package in each arm consists of trigger scintillators for
 triggering, a pair of VDCs for particle tracking, Cherenkov type detectors and
 shower counters (calorimeters) for particle identification (PID). In PREX-II
 and CREX, only parts of these detectors are needed, namely VDCs and S0/S3 triggers,
@@ -1785,7 +1803,7 @@ and 2.3~mrad FWHM for $\phi$ (in-plane angle) \cite{FISSUM2001108}.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.5\linewidth]{VDC}
-    \caption{Schematic plot of a VDC detector with two drift chambers.
+    \caption[VDC]{Schematic plot of a VDC detector with two drift chambers.
     U and V wires are shown in each chamber. The black arrow indicates the 
     incoming electron \cite{FISSUM2001108}.
     }
@@ -1842,7 +1860,7 @@ systematic uncertainties.
 	\draw[-stealth,Blue, line width=1mm] (-2, 0) -- ++(2, 2) node[below right] {\small{electrons}};
 	\node[red] at (0.8, 0.5) {\small{Cherenkov}};
     \end{tikzpicture}
-    \caption{Left: CAD drawing of the quartz detector; 
+    \caption[quartz]{Left: CAD drawing of the quartz detector; 
     Middle: schematic plot of the Cherenkov radiation, the angle between 
     the electron and the Cherenkov radiation is 
     $\cos\theta = \frac{v_c}{v_e} = \frac{c}{nv_e} = \frac{1}{n\beta} \approx \frac{1}{n}$;
@@ -1854,7 +1872,8 @@ systematic uncertainties.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.7\linewidth]{quartz_QE}
-    \caption{Simulation result of the photo-electron (PE) spectrum for single electron
+    \caption[photo-electron spectrum of quartz]
+    {Simulation result of the photo-electron (PE) spectrum for single electron
     passing through the main detectors. The wider tail in the downstream
     detector is due to particle showering in the upstream quartz \cite{Devi2021}. 
     }
@@ -1874,7 +1893,8 @@ to minimize detector resolution $\sigma_{PE}/\langle PE \rangle$.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=\linewidth]{quartz_projection}
-    \caption{Electron position distribution, projected on the quartz plane. 
+    \caption[Electron position distribution, projected on the quartz plane.]
+    {Electron position distribution, projected on the quartz plane. 
     The positions of the first four excited states are shown in the left plot. 
     The red rectangle on the right plot shows the relative position of the quartz.
     Plots from Devi Adhikari \cite{Devi2021}.}
@@ -1914,11 +1934,12 @@ main detectors. They are used to monitor transverse polarization in the beam.
 	    \end{scope}
 	\end{scope}
     \end{tikzpicture}
-    \caption{Scatter plot of electrons on the left arm AT monitor plane. 
+    \caption[Scatter plot of electrons on the left arm AT monitor plane.]
+    {Scatter plot of electrons on the left arm AT monitor plane. 
     Red and blue dots represent electrons scattered either above or below the
     horizontal scattering plane, respectively. The red and blue rectangles
     show the relative positions of the two AT detectors. 
-    % So the two AT detectors, are sensitive to different AT events.
+    % So the two AT detectors, are sensitive events of opposite 
     }
 \end{figure}
 
@@ -1957,7 +1978,8 @@ This slightly reduce the integration time: $T_{\text{int}} = T_{\text{stable}} -
 \begin{figure}
     \centering
     \includegraphics[width=0.9\linewidth]{timing}
-    \caption{Helicity timing diagram. The Tsettle signal (falling edge) indicates 
+    \caption[Helicity timing diagram]
+    {Helicity timing diagram. The Tsettle signal (falling edge) indicates 
     the start of a new helicity window, which is chosen as the t=0 reference
     point for all timing diagram, it goes to the CH/hall.
     The QRT (Pattern Sync) signal indicates the start of each helicity pattern,

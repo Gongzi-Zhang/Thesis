@@ -1,4 +1,5 @@
 \chapter{Systematic Uncertainties}
+\label{cha:systematic_uncertainties}
 
 The systematic uncertainty control is a highlight of these two
 high-precision experiments. To achieve a smaller systematic uncertainty, a
@@ -49,7 +50,8 @@ a watercell target.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.5\linewidth]{watercell_Dp}
-    \caption{Momentum distribution of an optics run with the watercell target. 
+    \caption[Momentum distribution of an watercell run]
+    {Momentum distribution of an optics run with the watercell target. 
     The X-axis is the relative energy difference: $dp = \frac{p - p_0}{p_0}$. 
     The two peaks result from ${}^1$H (left) and ${}^{16}$O (right), respectively. 
     Plot from Siyu.}
@@ -93,7 +95,7 @@ have thicknesses of half the \Pb foil, as shown in Table~\ref{tab:target_thickne
 % https://prex.jlab.org/DocDB/0004/000446/001/target_thickness_errors.txt
 The thickness of the target foils are measured in different ways. The diamond foil 
 is measured directly using calipers with an accuracy of 0.0005~in (0.0127~mm).
-Given the thickness of diamond foils being 1~in (0.255~mm), an estimation of 5\% 
+Given the thickness of diamond foils being 1~in (0.255~mm), an estimate of 5\% 
 relative error is reasonable. Foil to foil variations are smaller than 5\% (the
 largest variation is 3.6\%), as shown in Table~\ref{tab:target_thickness}.
 
@@ -109,7 +111,7 @@ the raster area doesn't occupy the whole foil, this is a source of the uncertain
 The small irregularity in the edge (corner) is another error source. 
 With these considerations and taking into account the thickness variations 
 from foil to foil (the largest variation being 3.8\%),
-a conservative estimation of 5\% is used as the
+a conservative estimate of 5\% is used as the
 relative uncertainty of the thickness of the \Pb foil. 
 
 \begin{table}[!h]
@@ -139,7 +141,8 @@ relative uncertainty of the thickness of the \Pb foil.
 	16  & \ca	    &       & 1004  &       & \\
 	\hline
     \end{tabular}
-    \caption{Mass thickness of each target in the production ladder. 
+    \caption[Target mass thickness]
+    {Mass thickness of each target in the production ladder. 
     Name convention: upstream material\#label - central material\#label - downstream material\#label. 
     Pb208 foils count from 1 to 10, diamond foils count 1-10, A-G, I, J, 20. 
     The first two Pb targets are natural Pb foils, not the pure \Pb isotope foil. 
@@ -173,7 +176,7 @@ code block.
     \centering
     \includegraphics[width=0.5\linewidth]{prex_C_contamination_P}
     \caption{Post target electron momentum distribution. The lower end tail comes 
-    from the multi-scattering and radiation.}
+    from multi-scattering and radiation.}
 \end{figure}
 
 With these cuts, we can count the scattering rate from \C and \Pb directly 
@@ -206,8 +209,7 @@ Table~\ref{tab:prex_C_contam_rate_thickness} and \ref{tab:prex_C_contam_rate_pcu
 	 5\% &  5\% &     & 1.28E+2 & 1.91E+3 & 6.72 & 6.30   \\
 	\hline
     \end{tabular}
-    \caption{Scattering rate of the \Pb and diamond foils with different foil
-    thicknesses.}
+    \caption{Scattering rate from \Pb and diamond foils with different foil thicknesses.}
     \label{tab:prex_C_contam_rate_thickness}
 \end{table}
 
@@ -235,8 +237,7 @@ Table~\ref{tab:prex_C_contam_rate_thickness} and \ref{tab:prex_C_contam_rate_pcu
 	& & 2.60 & 1.34E+2 & 1.99E+3 & 6.74 & 6.32  \\
 	\hline
     \end{tabular}
-    \caption{Scattering rate of the \Pb and diamond foils with different momentum 
-    cuts.}
+    \caption{Scattering rate from \Pb and diamond foils with different momentum cuts.}
     \label{tab:prex_C_contam_rate_pcut}
 \end{table}
 
@@ -255,7 +256,8 @@ from the nominal value, as shown below:
 	total	&   & 4.63E-3	&   & 4.35E-3	\\
 	\hline
     \end{tabular}
-    \caption{The maximum and minimum difference for each variation. (n1, n2) 
+    \caption[Carbon contamination uncertainty]
+    {The maximum and minimum difference for each variation. (n1, n2) 
     represents the configuration of the target foils thicknesses. n1 for the Pb foil
     and n2 for the C foil.}
     \label{tab:prex_C_contam_error}
@@ -291,7 +293,8 @@ The goodness of the simulation can be checked by comparison with the optics data
 	\multicolumn{3}{c|}{average} & 0.00626	& 0.00658   & 0.00658	& 0.00658   & 0.55820   & 0.53859 \\
 	\hline
     \end{tabular}
-    \caption{Average post target $Q^2$ (left arm) for various thickness configurations. 
+    \caption[post target qsq and asym]
+    {Average post target $Q^2$ (left arm) for various thickness configurations. 
     As expected, the $Q^2$ doesn't change with varied foil thicknesses. There is
     some fluctuations in the asymmetry.}
     % why the C $Q^2$ is a little larger than that of Pb:
@@ -392,14 +395,13 @@ Therefore:
     \frac{R_C}{R_{Pb}} = \frac{\sigma_C}{\sigma_{Pb}} \times \frac{t_c}{t_{Pb}} \times \frac{m_{Pb}}{m_C}
 \end{equation}
 Take $E = 0.95$~GeV and $\theta = 4.8^\circ$ (based on Table~\ref{tab:prex_C_contam_Q2}), 
-our theorist friends assert the cross section of the e-\C and e-\Pb scatterings
-as:
-\begin{equation*}
+the cross section for e-\C and e-\Pb scatterings is numerically solved to be:
+\begin{equation}
     \sigma_C = 48.001\ \mathrm{mbarn}	\qquad \sigma_{Pb} = 3386.100\ \mathrm{mbarn}	
-\end{equation*}
+\end{equation}
 % this angle is different from what we used in simulation 4.74
 
-The ratio of $t_C/T_{Pb}$ is calculated to be:
+The ratio of $t_C/t_{Pb}$ is calculated as:
 \begin{table}[!h]
     \centering
     \begin{tabular}{c | c c c | c c c}
@@ -418,7 +420,8 @@ The ratio of $t_C/T_{Pb}$ is calculated to be:
 		    & 179.2	& 625.6	& 0.286	&	    & 1.1700	& \color{red} 0.287 \\
 	\hline                                                
     \end{tabular}
-    \caption{Calculation of the weighted $t_C/t_{Pb}$, the main detector error is
+    \caption[carbon rate fraction]
+    {Calculation of the weighted $t_C/t_{Pb}$, the main detector error is
     the uncertainty of the main detector mean value (reg\_asym\_us\_avg); the 
     weighted ratio is calculated as $\frac{w_j}{\sum_i w_i} \times \left( t_C/t_{Pb} \right)_j$.}
     \label{tab:ratio_of_area_density}
@@ -447,23 +450,24 @@ The ratio of $t_C/T_{Pb}$ is calculated to be:
 As shown in Table~\ref{tab:theoretical_value}, the theoretical value is 4.6\% higher than the simulation result.
 
 \subsubsection{Contribution to $\CA_{\text{PV}}$}
-As said before, the asymmetry of the electron-diamond scattering is well understood.
-The cross section and asymmetry of the e-\C elastic scattering at various energies 
+As said before, the asymmetry of the elastic electron-diamond scattering is well understood.
+The cross section and asymmetry of e-\C scattering at various energies 
 and scattering angles are numerically solved from the Dirac equation by our 
-theoretical friends, and tabulated (Chuck's table). The similar table exists for \Pb.
-The asymmetry of the e-\C scattering is taken to be 539.36~ppb as shown in 
+theorist friends, and tabulated (Chuck's table). For \Pb, there is a similar table.
+The asymmetry of e-\C scattering is taken to be 539.36~ppb, as shown in 
 Table~\ref{tab:prex_C_contam_sim}
 with the nominal \Pb and nominal diamond thicknesses. The relative uncertainty is taken
-to be a conservative estimation of 4\%.
+to be a conservative estimae of 4\%.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.49\linewidth]{prex_asym_C}
     \includegraphics[width=0.49\linewidth]{prex_asym_Pb}
-    \caption{Theoretical asymmetries of the e-\C and e-\Pb in the experimental 
+    \caption[Theoretical asymmetries of the e-\C and e-\Pb scattering]
+    {Theoretical asymmetries of the e-\C and e-\Pb scatterings in the experimental 
     dynamics predicted by the Chuck's table, which includes the Coulomb correction. 
     The Chuck's table is cross checked by the Standard Model Born approximation 
     calculation. We see similar values between the two methods for both nuclei.}
-    \label{prex_asym}
+    \label{fig:prex_asym}
 \end{figure}
 
 Using Eq.~\ref{eq:systematic_uncertainty}, the uncertainty contribution to $\CA_{\text{PV}}$
@@ -487,7 +491,7 @@ is calculated and summarized in Table~\ref{tab:prex_C_contam}.
         \hline
     \end{tabular}
     \caption{Relative uncertainty due to $\CA_C$ and $f_C$.}
-    \label{tab:prex_C_contan}
+    \label{tab:prex_C_contam}
 \end{table}
 The uncertainty caused by the error in $f_C$ is negligible, and the one from $\CA_C$
 is also tiny, which in hindsight, justifies our adoption of the sandwich target.
@@ -517,7 +521,7 @@ The C graphite target has a thickness of $1.991\ mm$ and a density of
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Acceptance Function}
+\section{The CREX Acceptance Function}
 As said before, the spectrometer acceptance is mainly defined by the Q1 
 collimator, while other components may have some affections on it. The acceptance
 is not tiny (0.00377~sr), points within the acceptance may have
@@ -561,6 +565,7 @@ function. The three parameters we explored are:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Transportation Matrix}
+% http://home.bakingrpi.com/Data/CRex_2021DNP_Opt/
 Due to the existence of various magnetic fields (septum, HRS) between the target 
 and the detector, there is no way to know the analytical expression of the transportation
 between them, though we can approximate and measure it.
@@ -581,7 +586,7 @@ Similarly, y and $\phi$ are displacement and `velocity' in the y-z plane.
     \phi = \frac{\partial y}{\partial z}
 \end{equation}
 $\hat{y}$ is oriented such that $\hat{x}$, $\hat{y}$, $\hat{z}$ are orthogonal 
-to each other and they form a right-handed coordinate $\hat{z} = \hat{x} \times \hat{y}$.
+to each other and they form a right-handed (RH) coordinate $\hat{z} = \hat{x} \times \hat{y}$.
 \begin{equation}
     \delta = \frac{\Delta p}{p}
 \end{equation}
@@ -643,7 +648,7 @@ then the electron state on the target plane will be:
     \label{eq:reconstruction}
 \end{equation}
 The reason that we don't use BPMs to `measure' the electron position/angle at 
-the target is that the multi-scattering/radiation inside the target foil will 
+the target is that multi-scattering/radiation inside the target foil will 
 distort the electron trajectory. 
 
 The typical HRS transportation plots are shown in Fig. \ref{fig:hrs_transport}:
@@ -681,7 +686,7 @@ we could reconstruct the electron state on the sieve plane using Eq.~\ref{eq:rec
 By tuning the matrix elements, the one that minimizes the distance of the 
 electron trajectory on the sieve plane from the closest hole center 
 is identified as the transportation matrix. % This is a linear regression problem. 
-The identification of the septum and the HRS current is based on the sieve pattern 
+The selection of the septum and HRS current is based on the sieve pattern 
 derived from the transportation matrix. 
 
 % The transportation matrix was extracted for following optics runs:
@@ -693,41 +698,47 @@ derived from the transportation matrix.
 % which run was used? how different runs/number of effects affect the final result
 % energy on the quartz plane:
 
+% the matrix elements are store in file
+% https://github.com/Jiansiyu/CRex_Database : DB_CREX : APEX_db_L.vdc.dat
+% line: L.vdc.matrixelem
+% replace L with R for right arm
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Scattering Angle $\theta_{\text{lab}}$}
-The parameter that directly reflects the quality of simulation is the scattering
-angle, while it was more convenient to use the Target Coordinate System (TCS) 
-than the Hall Coordinate System (HCS) in simulation, we finally were comparing
-the scattering angle in the lab frame. The 2 coordinate systems and the transportation
+The parameter that directly reflects the quality of the simulation is the scattering
+angle. It is more convenient to use the target coordinate system (TCS) 
+than the hall coordinate system (HCS) in simulation, though the comparison to
+the data uses values in the lab frame (HCS). The two coordinate systems and the transportation
 between them are defined below.
 
 \begin{itemize}
-    \item Hall Coordinate System: originated at the center of the hall and
+    \item Hall coordinate system: originated at the center of the hall and
 	cross the beam line.  $\hat{Z}$ is along the beam line, pointing downstream; 
-	$\hat{y}$ points up and $\hat{x}$ points left to form a RH coordinate system.
-    \item Target Coordinate System: each HRS specific, the transport coordinate at target position.
-	$\hat{z}$ is along the beam trajectory, pointing away the target, 
-	$\hat{x}$ in the dispersive plane and points down, $\hat{y}$ is perpendicular
-	to the dispersive plane and points away (toward) the beamline for L-HRS (R-HRS).
+	$\hat{Y}$ points up and $\hat{X}$ points left to form a RH coordinate system.
+    \item Target coordinate system: which is the transport coordinate system at the target.
+	$\hat{Z}$ is along the beam trajectory, pointing away the target, 
+	$\hat{X}$ is on the dispersive plane and points down, $\hat{Y}$ is perpendicular
+	to the dispersive plane and points away (toward) the beamline for LHRS (RHRS).
 \end{itemize}
 
-\begin{figure}[H]
+\begin{figure}[!h]
     \begin{subfigure}[b]{0.5\textwidth}
 	\includegraphics[width=\linewidth]{HCS}
-	\caption{Top view of HCS}
+	\caption{Top view of the HCS}
     \end{subfigure}
     \begin{subfigure}[b]{0.5\textwidth}
 	\includegraphics[width=\linewidth]{TCS}
-	\caption{Top view of TCS}
+	\caption{Top view of the TCS}
     \end{subfigure}
-    \caption{Schematic plot of HCS and TCS. The Hall center is the origin of the 
-    HCS, but the target doesn't necessary lie in the Hall center. The distance
-    from the Hall center to the sieve plane L is constant, which is used to
-    identify the origin of the TCS. In ideal case, the origins of both coordinate
+    \caption[HCS and TCS]
+    {Schematic plot of the HCS and TCS. The hall center is the origin of 
+    the HCS, but the target doesn't necessary lie in the hall center. The distance
+    from the hall center to the sieve plane ($L$) is a constant, which is used to
+    identify the origin of the TCS. In the ideal case, the origins of both coordinate
     systems will overlap.}
 \end{figure}
 
-The relationship between HCS and TCS is:
+The relationship between the HCS and TCS is:
 \begin{equation}
     \begin{pmatrix}
 	x_{tg}	\\
@@ -751,7 +762,7 @@ The relationship between HCS and TCS is:
 	z   \\
     \end{pmatrix}
 \end{equation}
-
+which leads to:
 \begin{equation}
     \left.
     \begin{aligned}
@@ -769,29 +780,35 @@ The relationship between HCS and TCS is:
     \end{aligned}
     \right.
 \end{equation}
-Define $R = \left(x^2 + y^2 + z^2\right)^{1/2} = z_{tg} \left(\phi^2_{tg} + \theta^2_{tg} + 1\right)^{1/2}$.
+where $\theta_0$ is the scattering angle of the central ray in the lab frame.
+
+The distance of an electron from the origin in both coordinate systems is:
+\begin{equation}
+    R = \left(x^2 + y^2 + z^2\right)^{1/2} = z_{tg} \left(\phi^2_{tg} + \theta^2_{tg} + 1\right)^{1/2}
+\end{equation}
 So the scattering angle in the lab frame will be:
 \begin{equation}
     \cos\theta = \frac{z}{R} = \frac{-\phi_{tg}\sin\theta_0 + \cos\theta_0}{\left(\phi^2_{tg} + \theta^2_{tg} + 1\right)^{1/2}}
 \end{equation}
-For data, $\theta_0$ was identified to be $4.789^\circ$ ($4.771^\circ$) for
-L-HRS (R-HRS). In simulation, both arms used $4.74^\circ$. Note that $\theta_{lab}$
-is a post-target (apparent) quantity, which includes effect of post-vertex radiation and
-multi-scattering, not the `real' scattering angle (vertex quantity) at the vertex 
+For the data, $\theta_0$ is identified to be $4.789^\circ$ ($4.771^\circ$) for the
+LHRS (RHRS). In the simulation, both arms use $4.74^\circ$. Note that $\theta_{\text{lab}}$
+is a post-target (apparent) quantity, which includes effects from the 
+post-vertex radiation and multi-scattering. It is not the `real' 
+scattering angle (vertex quantity) at the vertex 
 where the interesting PV elastic scattering happens. The correction from the apparent 
 distribution to the vertex distribution is about 1.5\%.
-\begin{figure}[H]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=0.5\linewidth]{scattering}
-    \caption{Schematic plot of vertex and apparent quantities.}
+    \caption{Schematic plot of the vertex and apparent quantities.}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Data}
-\begin{table}[h!]
+\begin{table}[!h]
     \begin{tabular}{c c | c | c | c c c c}
 	\hline
-	Exp & Arm   & Dipole p0 ($GeV$)    & Septum ($A$)  & Q1 ($A$)	& A2 ($A$) & Q3 ($A$)  \\
+	Exp & Arm   & Dipole p0 (GeV)    & Septum (A)  & Q1 (A)	& A2 (A) & Q3 (A)  \\
 	\hline
 	\multirow{2}{*}{PREX-II} & Left	& 0.95285   & 333   & 118.50	& 407.70    & 450.76    \\
 				 & Right& 0.95284   & 333   & 118.55	& 404.07    & 446.90    \\
@@ -800,7 +817,7 @@ distribution to the vertex distribution is about 1.5\%.
 				& Right	& 2.183499  & 801   & 230.916	& 925.955   & 981.301    \\
 	\hline
     \end{tabular}
-    \caption{PREX-II and CREX tune}
+    \caption{PREX-II and CREX tunes of the septum and HRS.}
     \label{tab:pcrex_tune}
 \end{table}
 
@@ -832,18 +849,18 @@ distribution to the vertex distribution is about 1.5\%.
     \end{equation}
 \end{comment}
 
-To determine the new tune of septum and HRS settings for CREX, we started with 
-PREX-II tune, scaled it to CREX momentum. To know the appropriate septum 
-current that will bridge the central ray into HRS axis we tuned septum and 
-Q1 current in 2 steps: coarse and fine tuning. During coarse tuning, we
-changed septum and Q1 current by a large step: 10\% (\textbf{central ray search});
-and then fine tuned the septum current in a smaller step: 2.5\% to find out
-the largest acceptance (\textbf{inner edge search}).
+To determine the new tune of the septum and HRS for CREX, we started with the
+PREX-II tune by scaling it to the CREX momentum. To know the appropriate septum 
+current that will bridge the central ray into the HRS axis, we tuned the septum and 
+Q1 current in two steps: the coarse and fine tunes. The septum or Q1 current 
+was changed by a large step of 10\% (the central ray search) in the coarse tune;
+and then fine tuned in a smaller step of 2.5\% to find out
+the largest acceptance (the inner edge search).
 
-During the central ray search, if the septum current was inappropriate, 
-then when we changed the Q1 current, the central hole in reconstructed sieve 
-pattern plot would shift, as shown in Fig. \ref{fig:central_ray_0}.
-\begin{figure}[H]
+In the central ray search, if the septum current is inappropriate, 
+the central hole in the reconstructed sieve pattern plot would shift when we 
+change the Q1 current, as shown in Fig. \ref{fig:central_ray_0}.
+\begin{figure}[!h]
     \centering
     \includegraphics[width=0.32\linewidth]{minus10_septum_minus10_Q1_right}
     \includegraphics[width=0.32\linewidth]{minus10_septum_nominal_Q1_right}
@@ -851,14 +868,16 @@ pattern plot would shift, as shown in Fig. \ref{fig:central_ray_0}.
     \includegraphics[width=0.32\linewidth]{minus10_septum_minus10_Q1_left}
     \includegraphics[width=0.32\linewidth]{minus10_septum_nominal_Q1_left}
     \includegraphics[width=0.32\linewidth]{minus10_septum_plus10_Q1_left}
-    \caption{Sieve pattern plots for -10\% septum current
-    and varied Q1 current, from left to right: -10\%, nominal and +10\% Q1 current.
-    With different Q1 current, the sieve pattern twist, and the central hole 
-    shifts in $\theta$, so the septum current is not a good value.}
+    \caption[Sieve pattern plots for the -10\% septum current]
+    {Sieve pattern plots for the -10\% septum current
+    and varied Q1 currents, from left to right: -10\%, nominal and +10\% Q1 current.
+    The top (bottom) row shows the right (left) arm plot.  With different Q1 currents, 
+    the sieve pattern twists, and the central hole 
+    shifts in $\theta$ (vertical axis), so the septum current is not a good value.}
     \label{fig:central_ray_0}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=0.32\linewidth]{nominal_septum_minus10_Q1_right}
     \includegraphics[width=0.32\linewidth]{nominal_septum_nominal_Q1_right}
@@ -866,20 +885,22 @@ pattern plot would shift, as shown in Fig. \ref{fig:central_ray_0}.
     \includegraphics[width=0.32\linewidth]{nominal_septum_minus10_Q1_left}
     \includegraphics[width=0.32\linewidth]{nominal_septum_nominal_Q1_left}
     \includegraphics[width=0.32\linewidth]{nominal_septum_plus10_Q1_left}
-    \caption{Sieve pattern plots for nominal (scaled from PREX-II setting) septum current
-    and varied Q1 current, from left to right: -10\%, nominal and +10\% Q1 current.
-    Top row is right arm and bottom row is left arm. With different Q1 current,
-    the sieve pattern twist, but the central hole keeps at the same position, 
+    \caption[Sieve pattern plots for the nominal (scaled from PREX-II)]
+    {Sieve pattern plots for the nominal (scaled from PREX-II) 
+    septum current and varied Q1 currents, from left to right: -10\%, nominal and +10\% Q1 current.
+    The top (bottom) row shows the right (left) arm plot. With different Q1 currents,
+    the sieve pattern twists, but the central hole keeps at the same position, 
     which means the central ray goes through the axis of the HRS.}
     \label{fig:central_ray_1}
 \end{figure}
 
-Fig. \ref{fig:central_ray_1} told us the nominal septum current and HRS settings was not a bad choice,
-so we could move on to inner edge search with this septum nominal value: to
-see more inner holes -- holes with largest (smallest) phi in Left (right) arm.
-It turned out a 5\% increment from the nominal value gave us the largest 
-acceptance, which corresponds to a septum current of: $1.05 \times (333*2.183522/0.95285) = 801.25 \ A$.
-\begin{figure}[H]
+Fig. \ref{fig:central_ray_1} indicates that the nominal septum current and the 
+nominal HRS setting is not a bad choice.
+Then we moved on to the inner edge search to see more inner holes -- holes 
+with the largest (smallest) $\phi$ in the left (right) arm.
+It turns out a 5\% increment from the nominal value allows the largest 
+acceptance, which corresponds to a septum current of: $1.05 \times (333*2.183522/0.95285) = 801.25$~A.
+\begin{figure}[!h]
 % https://logbooks.jlab.org/entry/3748464
     \begin{tikzpicture}
 	\begin{scope}
@@ -902,17 +923,18 @@ acceptance, which corresponds to a septum current of: $1.05 \times (333*2.183522
 	    };
 	\end{scope}
     \end{tikzpicture}
-    \caption{Inner edge search on the left arm. Septum current from top left
-    to bottom right: +2.5\%, +5\%, +7.5\%, +10\%. The inner middle hole starts
+    \caption[Inner edge search (left arm)]
+    {Inner edge search in the left arm. Septum currents from top left
+    to bottom right are: +2.5\%, +5\%, +7.5\%, +10\%. The inner middle hole starts
     to appear since +5\%, and outer holes disappear since 7.5\%, so the best
     septum current was chosen to be +5\%}
 \end{figure}
 
-With selected septum current, we continued to minimize beam spot size on the detector
-plane, a fine tune of Q1 and Q3 gave us the smallest detector spot size with
-Q1 -17\% (-15\%) from the nominal value on left (right) arm, and Q3 -5\% from
-the nominal value on both arms, which led to the final CREX tune as shown in
-Table~\ref{tab:pcrex_tune}.
+With the selected septum current, we continued to minimize the beam spot size 
+on the detector plane, which was achieved with the Q1 current being -17\% (-15\%) 
+from the nominal value in the left (right) arm, and the Q3 current being -5\% from
+the nominal value in both arms. The current values of the CREX tune is shown 
+in Table~\ref{tab:pcrex_tune}.
 \begin{table}[h!]
     \begin{tabular}{c c | c c c | c c c}
 	\hline
@@ -946,37 +968,43 @@ Table~\ref{tab:pcrex_tune}.
 	-15 (R);-17 (L)	& -5	&2543	& 0.8409	& 0.8315  & 21623 & 0.8382	& 0.7615  \\
 	\hline
     \end{tabular}
-    \caption{Beam spot size with different HRS settings.}
+    \caption{Beam spot size with different HRS settings. The septum current being 
+    the nominal value.}
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Simulation}
-The simulation was not exactly the reproduction of reality. We used GEANT4 to
-simulate the geometry of each component based on the designed values, the
+The simulation is not an exact reproduction of the reality. We used GEANT4 to
+simulate the geometry of each component based on the design values. The
 septum magnetic field was scaled from a field map file sampled from the septum
-at $j_0 = -1320\ A/cm^2$: % FIXME why?
+with a current density of $j_0 = -1320\ \mathrm{A}/\mathrm{cm}^2$: % FIXME why?
 % https://prex.jlab.org/DocDB/0001/000160/001/g4hrs_tune.pdf
 \begin{equation}
-    B'_{xyz} = \frac{J}{J_0} \times \frac{P}{P_0} \times B_{xyz}
+    B'_{x,y,z} = \frac{j}{j_0} \times \frac{P}{P_0} \times B_{x,y,z}
+    \label{eq:septum_current}
 \end{equation}
-The same for HRS field: % how to know HRS field at each position
+where $j$ is the current density and $P$ being the electron momentum.
+
+The same operation for the HRS field: % how to know HRS field at each position
 \begin{equation}
     B'_{i = Q1, Q2, D, Q3} = \frac{P}{P_0} \times B_i
 \end{equation}
 
-Using this construction, we could firstly vary the septum current to choose the
-one that most matched the data, then scanned through collimator shift and pinch point
-shift to select the best model.
+With Eq.~\ref{eq:septum_current}, we could vary the septum current to find a value
+at which the sieve pattern plot from simulation agrees with that from data,
+then scanned through the collimator shift and the pinch point shift to select the 
+best match between simulation and data, for various kinematic variables.
 
 \begin{figure}[H]
     \includegraphics[width=0.49\linewidth]{sieve_run3103}
     \includegraphics[width=0.49\linewidth]{sieve_run22109}
-    \caption{Sieve plot of CREX tune. Centered at (-0.3, -1.5), the new beam 
+    \caption{Sieve plot of the CREX tune. Centered at (-0.3, -1.5), the new beam 
     position for the new target.}
 \end{figure}
 
-Somewhat expected, a coarse scan through the septum told us the septum range
-for best model: around 0-5\% above the nominal value.
+Somewhat expected, a coarse scan through the septum current showed that the 
+proper range for best match with data was about 0-5\% above the nominal value,
+as shown in Fig.~\ref{fig:sim_septum_scan}.
 \begin{figure}[H]
     \begin{tikzpicture}
 	\begin{scope}
@@ -1011,7 +1039,9 @@ for best model: around 0-5\% above the nominal value.
 	    \draw [thick, Red] (0.88, 0.55) circle (4 pt);
 	\end{scope}
     \end{tikzpicture}
-    \caption{Sieve pattern plots from simulation with different septum current.}
+    \caption{Sieve pattern plots from simulation with different septum currents.
+    The red circles label extra or missing holes.}
+    \label{fig:sim_septum_scan}
 \end{figure}
 
 \begin{figure}[H]
@@ -1030,13 +1060,14 @@ for best model: around 0-5\% above the nominal value.
     \end{tikzpicture}
     \caption{Position of the pinch point and the Q1 collimator.}
 \end{figure}
-Then we can scan through the pinch point and collimator shift with a fine tune
+With this narrow range, scan through the pinch point and collimator shift with a fine tune
 of the septum current (from -1\% to +5\%). The pinch point is the connection point
-between the septum beampipe and the collimator box, whose misalignment will affect
-the acceptance; another parameter we can tune is the collimator (TCS) y position,
-which of course has a large impact on the acceptance. For each simulation, we
-will compare the average scattering angle $\theta_{lab}$, $Q^2$ and asymmetry to
-that of optics data.
+between the septum beampipe and the upstream collimator box, whose misalignment will affect
+the acceptance; the other parameter we can adjust is the collimator y position (in the transport
+coordinate system),
+which has a large impact on the acceptance. For each simulation, we
+compared the average value of the scattering angle $\theta_{\text{lab}}$, $Q^2$ and asymmetry to
+corresponding values from optics runs.
 
 \begin{figure}[H]
     \centering
@@ -1046,56 +1077,70 @@ that of optics data.
     \includegraphics[width=0.32\linewidth]{pinch_scan_th_lab_2_run99999}
     \includegraphics[width=0.32\linewidth]{pinch_scan_qsq_2_run99999}
     \includegraphics[width=0.32\linewidth]{pinch_scan_asym_2_run99999}
-    \caption{Ratio of simulation to data average value for 
-    $\theta_{lab}$, $Q^2$ and $\CA$. Top (bottom) row for left (right) arm.
+    \caption[Ratio plot of simulation to data]{Ratio of simulation to data for average value of
+    $\theta_{\text{lab}}$, $Q^2$ and $\CA$. Top (bottom) row corresponds to
+    the left (right) arm. Data points whose y value is close 1 are good models.
     % FIXME: average over which runs?
     }
     \label{fig:pinch_scan}
 \end{figure}
 
 As shown in Fig. \ref{fig:pinch_scan}, when we shift the pinch point toward the
-beam pipe (from negative values to positive values for left arm, opposite for 
-right arm), the acceptance increases until the nominal value, and then saturates. 
-Similar trend was seen for shift of Q1 collimator.
+beam pipe (from negative values to positive values for the left arm, opposite for 
+the right arm), the acceptance increases until the nominal value is reached, 
+and then saturates. 
+Similar trend is seen for shift in the Q1 collimator.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.49\linewidth]{col_scan_th_lab_0_run0}
     \includegraphics[width=0.49\linewidth]{col_scan_th_lab_0_run99999}
+    \caption[Theta ratio plot]
+    {The $\theta_{\text{lab}}$ ratio plot for different models with 
+    pinch point shift = 0~mm. The left (right) arm plot is shown in the left (right).
+    The best models are selected from these two plots.}
+    \label{fig:best_model}
 \end{figure}
 
-Various correction was applied to the simulation values. That includes the position
-difference between the production target and the calibration target, which was
-$20\ mm$ downstream the production \Ca target; and the correction caused by
-the database, which was optimized on one beam position ($x_0, y_0$):
+Various corrections are applied to the simulation values, including the position
+difference between the production target and the calibration target, which is
+20~mm; and the correction caused by
+the transportation matrix, whose optimization depends on the beam position.
 \begin{equation}
-    \phi_a = \phi_r + 0.5\ mrad/mm \times (x - x_0) + 0.5\ mrad/mm \times (y - y_0)
+    \phi_a = \phi_r + 0.5\ \text{mrad/mm} \times (x - x_0) + 0.5\ \text{mrad/mm} \times (y - y_0)
 \end{equation}
-(x, y) is the actual beam position. $\phi_a$ and $\phi_r$ are actual and reconstructed
-$\phi_{tg}$. An extra acceptance was added to the right arm to get a better 
-match.
+where (x, y) is the actual beam position and ($x_0$, $y_0$) being the beam position
+with which the transportation matrix is optimized. $\phi_a$ and $\phi_r$ refer
+to the actual and reconstructed $\phi_{tg}$. 
+An extra acceptance is added to the right arm to get a better match.
 
-From the ratio plot, we selected the best model which had the smallest difference
-between simulation and data in $\theta_{lab}$ and $Q^2$:
-\begin{table}[h!]
+From Fig.~\ref{fig:best_model}, 
+we selected the best model which has the smallest difference
+between simulation and data in $\theta_{\text{lab}}$ and $Q^2$:
+\begin{table}[!h]
     \centering
     \begin{tabular}{c | c c c c}
 	\hline
-	    & septum & col shift ($mm$)	& pinch point shift ($mm$)	\\
+	    & septum & col shift (mm)	& pinch point shift (mm)	\\
 	\hline
 	LHRS	& +2\%	& -1	& 0 \\
 	RHRS	& +5\%	& 2	& 0 \\
 	\hline
     \end{tabular}
+    \caption{The best models we selected for LHRS and RHRS.}
 \end{table}
 
-We can check the $\theta_{lab}$ for the best models
+Check the best models against optics runs it terms of the distributions of
+$\theta_{\text{lab}}$ and $Q^2$, as shown in Fig.~\ref{fig:best_model_check}.
+Quite good aggrements are achieved for both arms.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.49\linewidth]{best_model_run2886_th_lab}
     \includegraphics[width=0.49\linewidth]{best_model_run2886_qsq}
     \includegraphics[width=0.49\linewidth]{best_model_run21874_th_lab}
     \includegraphics[width=0.49\linewidth]{best_model_run21874_qsq}
-    \caption{$\theta_{lab}$ and $Q^2$ comparison between best models and data (apparent values).}
+    \caption{$\theta_{lab}$ and $Q^2$ comparison between the best models and data (apparent values).
+    The red line is the simulation result while the blue line comes from data.}
+    \label{fig:best_model_check}
 \end{figure}
 % We can also check the difference between the vertex values and data:
 % \begin{figure}
@@ -1107,16 +1152,23 @@ We can check the $\theta_{lab}$ for the best models
 %     \caption{$\theta_{lab}$ and $Q^2$ comparison between best models and data (apparent values).}
 % \end{figure}
 
-Using this best models, we can calculate the acceptance function as Eq.~\ref{eq:acceptance_definition}:
+Using the selected best models, the acceptance function is
+calculated with Eq.~\ref{eq:acceptance_definition} and drew in Fig.~\ref{fig:acceptance_function}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.49\linewidth]{acc1_L_p2_-1_0_0.0}
     \includegraphics[width=0.49\linewidth]{acc1_R_p5_2_0_0.0}
-    \caption{Acceptance function extracted using the best models.}
+    \caption{Acceptance function extracted with the best models.}
+    \label{fig:acceptance_function}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Non-Linearity}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Other Systematic Uncertainties}
+Other systematic uncertainties that are not talked about can be found in other 
+PREX-II and CREX theses. The detector non-linearity is analyzed by Devi \cite{Devi2021},
+and Ryan has a detailed discussion about the horizontal transverse asymmetry \cite{Ryan2021}.
+
+\begin{comment}
 \begin{equation}
     Y = I + \alpha I^2 + \beta I^3 + \gamma I^4 + \cdots
 \end{equation}
@@ -1125,4 +1177,5 @@ Non-linearity: $\alpha$, reduce it
     \item $\alpha=0.0028$ for Compton $\gamma$ detector
     % https://prex.jlab.org/DocDB/0002/000273/002/Cornejo_and_Quinn_ComptonPhoton_CREX_PREX_Nov_2018.pdf
 \end{itemize}
+\end{comment}
 % \subsection{tg variables}

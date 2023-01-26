@@ -1,4 +1,5 @@
 \chapter{Data Analysis}
+\label{cha:data_analysis}
 As mentioned before, though of the fast helicity flipping and tremendous effort to keep 
 the electron beam in exactly the same conditions through opposite helicity states, 
 there is no way to achieve such a goal. There are always various noises produced
@@ -86,7 +87,8 @@ whose result almost overlaps with the chronological separation.
 	    \end{scope}
 	\end{scope}
     \end{tikzpicture}
-    \caption{Charge accumulation versus time (left) and the run number (right). The
+    \caption[charge accumulation]
+    {Charge accumulation versus time (left) and the run number (right). The
     long plateau on the left plot is due to the Covid shutdown, which is shown around
     run 7500 on the right plot. One sees that data taking is most efficient after
     the AT and before the Covid, the last month (after the Covid) is not bad while the 
@@ -147,7 +149,8 @@ CREX collected about 87 million such good helicity quadruplets.
 	\draw[stealth-stealth, Violet] (0, -3.5) -- node[below] {30 Hz} +(4, 0);
 	\node[message, Mulberry, very thick] at (-1, -2.5) {Integrating \\ Gate};
     \end{tikzpicture}
-    \caption{Schematic plot of the helicity pattern. In CREX, $T_{\text{settle}} = 90\ \mu$s, 
+    \caption[Helicity pattern]
+    {Schematic plot of the helicity pattern. In CREX, $T_{\text{settle}} = 90\ \mu$s, 
     which allows the PC to stablize after a voltage polarity flipping, avoiding 
     any cross effect from the previous helicity state. The corresponding deputy factor 
     is 98.92\%.}
@@ -157,7 +160,8 @@ CREX collected about 87 million such good helicity quadruplets.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=\linewidth]{run_6600_maindet}
-    \caption{A run plot: detector yield and asymmetry distribution in run 6600, 
+    \caption[A run plot: detector yield and asymmetry distribution in run 6600]
+    {A run plot: detector yield and asymmetry distribution in run 6600, 
     selected with \texttt{ErrorFlag == 0}. The shift in the second half of the 
     yield plot is caused by the beam position/angle fluctuation. 
     The right 2 plots are average and difference of the asymmetry of LHRS and RHRS. 
@@ -216,7 +220,8 @@ To avoid another respin, these miniruns are simply removed. % which counts ??? C
 \begin{figure}[!h]
     \centering
     \includegraphics[width=\linewidth]{run_6620_mini_asym_us_avg.mean}
-    \caption{A minirun plot: mean values of asym\_us\_avg of each minirun in 
+    \caption[A minirun plot]
+    {A minirun plot: mean values of asym\_us\_avg of each minirun in 
     run 6620 (\texttt{ErrorFlag == 0}).
     The red line is a zero-order polynomial fit and the bottom histogram is
     the ratio of the deviation to the mean fit value w.r.t. each point's uncertainty.
@@ -233,7 +238,8 @@ each slug takes about 8~hours or longer in case of any accidents. CREX collectes
 \begin{figure}[!h]
     \centering
     \includegraphics[width=\linewidth]{slug_150_asym_us_avg.mean}
-    \caption{A slug plot: minirun-wise distribution of asym\_us\_avg in slug 150 
+    \caption[A slug plot]
+    {A slug plot: minirun-wise distribution of asym\_us\_avg in slug 150 
     (\texttt{ErrorFlag == 0}).}
 \end{figure}
 
@@ -287,7 +293,8 @@ beam current should be larger than the stable beam current minus $30\ \mu$A ($15
     \centering
     \includegraphics[width=\linewidth]{8019_bpm4aX}
     % \includegraphics[scale=0.28]{8019_bpm4aY}
-    \caption{BPM4aX distribution (top) in run 8019, the bottom plot is the corresponding
+    \caption[BPM4aX distributionn in run 8019]
+    {BPM4aX distribution (top) in run 8019, the bottom plot is the corresponding
     beam current distribution. Black points are good events (\texttt{ErrorFlag == 0}) 
     and red points are bad ones (\texttt{ErrorFlag != 0}). 
     One can clearly see that all beam trips and most beam jitters are recognized 
@@ -305,6 +312,7 @@ some beam modulation events are usable for our asymmetry analysis and are
 included in our final published result, which counts for about 5\% of the CREX data set.
 To be consistent with the published result, all following plots are produced with the cut 
 \verb|ErrorFlag&0xda7e6bff == 0| if not mentioned otherwise. 
+% http://ace.phys.virginia.edu/HAPPEX/4611
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Beam Conditions}
@@ -339,8 +347,9 @@ that period 2 has relatively good beam conditions than the other two periods.
     \includegraphics[width=0.32\linewidth]{crex_yield_bcm_target.mean}
     \includegraphics[width=0.32\linewidth]{crex_asym_bcm_target.mean}
     \includegraphics[width=0.32\linewidth]{crex_reg_asym_bcm_target.mean}
-    \caption{Slug-wise mean value of the beam current, asymmetry and regressed 
-    asymmetry in CREX (\texttt{ErrorFlag == 0}). The blue dashed lines separate
+    \caption[Asymmetry slug-wise plot]
+    {Slug-wise mean value of the beam current, asymmetry and regressed 
+    asymmetry in CREX. The blue dashed lines separate
     the data set into three periods with different wien-flip states.
     Most of the time, CREX run at $\sim 150\ \mu$A, an overall $\sim 100~$~ppb charge 
     asymmetry is achieved.}
@@ -373,7 +382,8 @@ Again, the second period has a more stable beam than the other two periods.
     \centering
     \includegraphics[width=0.49\linewidth]{crex_diff_targetX.mean}
     \includegraphics[width=0.49\linewidth]{crex_diff_thetaX.mean}
-    \caption{Slug-wise mean value of the beam position (left) and angle (right) 
+    \caption[Slug-wise plot of beam position and angle]
+    {Slug-wise mean value of the beam position (left) and angle (right) 
     difference at the target. 
     Very precise control of the beam conditions is achieved.
     The Y dimension plots are similar and are not shown here.}
@@ -424,7 +434,8 @@ calibrated with their corresponding pedestals.
     \centering
     \includegraphics[width=0.49\linewidth]{crex_mulplot_asym_us_avg}
     \includegraphics[width=0.49\linewidth]{crex_mulplot_asym_us_dd}
-    \caption{Mulplot of the CREX raw asymmetry average (left) and difference (right). 
+    \caption[Mulplots]
+    {Mulplot of the CREX raw asymmetry average (left) and difference (right). 
     The blue line is the data and the red line is a Gaussian fit. 
     The difference plot has less entries because single arm runs have no difference.}
 \end{figure}
@@ -445,7 +456,8 @@ the detector slope.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.6\linewidth]{run7679_correlation}
-    \caption{Correlation between the detector yield and the beam position/energy in run 7679.
+    \caption[Correlation plot in run 7679]
+    {Correlation between the detector yield and the beam position/energy in run 7679.
     The left/right detector yields change oppositely when the beam position shifts,
     and they move in the same direction w.r.t. fluctuations in the beam energy.
     }
@@ -779,7 +791,8 @@ reduces by a factor of 2, as shown in the right plot of Fig.~\ref{fig:reg_asym_u
     \centering
     \includegraphics[width=0.52\linewidth]{crex_reg_asym_us_avg}
     \includegraphics[width=0.47\linewidth]{crex_mulplot_asym_us_avg_cor}
-    \caption{Left: slug-wise scatter plot of the regression corrected asymmetry.
+    \caption[Regression correction asymmetry]
+    {Left: slug-wise scatter plot of the regression corrected asymmetry.
     Right: Comparison of the experiment-wise distributions of the asymmetry 
     before and after the regression correction.}
     \label{fig:reg_asym_us_avg}
@@ -910,7 +923,8 @@ is about zero, taking into account its uncertainty.
     \centering
     \includegraphics[width=0.49\linewidth]{crex_dit_asym_us_avg}
     \includegraphics[width=0.49\linewidth]{crex_diff_reg_dit_asym_us_avg.mean}
-    \caption{Left: slug-wise scatter plot of the asymmetry corrected with the beam modulation.
+    \caption[Dithering corrected asymmetry]
+    {Left: slug-wise scatter plot of the asymmetry corrected with the beam modulation.
     Right: difference between the asymmetry values corrected by the regression and
     beam modulation.}
     \label{fig:dit_result}
@@ -1034,12 +1048,13 @@ the other two methods, only tiny difference is observed.
 As discussed before, the slow helicity reversal using the IHWP and the 
 double wien filters allow us to check the possible systematic bias. 
 Define a part as all runs with the same IHWP state in a period. 
-By looking at the part asymmetry in Fig.~\ref{fic:crex_part-pitt}, 
+By looking at the part asymmetry in Fig.~\ref{fig:crex_part_pitt}, 
 one see that asymmetries measured with 
 opposite IHWP states or opposite wien-flip states overlap
 with each other within a $1\sigma$ uncertainty, verifying the unbiasedness of our
 measurement.
 
+% pitt: https://docs.google.com/spreadsheets/d/1LdoBsa34J5YpNRZqGgA_A9wKwgx2oydEu621Fswt75c/edit#gid=862711716
 The pitt plot in Fig.~\ref{fig:crex_part_pitt} shows the asymmetry distribution
 for each pitt. The concept of pitt originated from Mark Pitt. The idea is to combine
 nearby slugs of alternating IHWP states to have the same (similar) number of events for 

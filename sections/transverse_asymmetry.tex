@@ -50,7 +50,7 @@ where $U(t, t_0)$ is the evolution operator:
 $H_0$ is the free Hamiltonian and $H = H_0 + V$ is the complete Hamiltonian
 with the interaction term. 
 
-The projection of $\psi(t)$ to a free final state $\ket{f}$ defines the so called
+The projection of $\psi(t)$ to a free final state $\ket{f}$ defines the so-called
 S-matrix (the order of the subscripts matters):
 \begin{equation}
     S_{if} \equiv \lim_{t\rightarrow +\infty}\bra{f}\ket{\psi(t)} 
@@ -288,7 +288,8 @@ $\ket{\vec{k}}$ and $\ket{\vec{k}'}$, the scattering is shown in Fig.~\ref{fig:t
 	    \end{feynman}
 	\end{tikzpicture}
     \end{subfigure}
-    \caption{Feynman diagrams of a transversely polarized electron scatters off
+    \caption[Feynman diagrams of AT]
+    {Feynman diagrams of a transversely polarized electron scatters off
     an unpolarized nuclear target in the COM frame. The vector in or out of the plane
     indicates the electron's spin direction.} 
     \label{fig:transverse_scattering}
@@ -444,7 +445,7 @@ To achieve the transverse polarization, a different configuration of the double
 wien filters is needed. Specifically, we just rotate the spin to the vertical 
 direction using the vertical wien filter, the 
 following rotations we do for the longitudinal polarization, as shown in 
-Fig.~\ref{fig:double_wien_filter}, are omitted (the spin solenoid's rotating
+Fig.~\ref{fig:double_wien_filters}, are omitted (the spin solenoid's rotating
 angle is set to $~0^\circ$). Because the spin is parallel/anti-parallel
 to the magnetic field in the accelerator arc area, there is no spin precession as in
 the case of the longitudinal polarization. 
@@ -468,6 +469,7 @@ The 5~MeV Mott polarimter is used to verify the transverse polarization,
 which gives about 87\% transverse polarization for both PREX-II and CREX runs.
 The Mott data is summarized in Table~\ref{tab:AT_Mott}.
 % https://logbooks.jlab.org/entry/3781205, https://logbooks.jlab.org/entry/3718518, 
+% spin rotator setting: https://logbooks.jlab.org/entry/4070199
 \begin{table}[!h]
     \begin{tabular}{c c c | c c | c}
 	\hline
@@ -485,7 +487,8 @@ The Mott data is summarized in Table~\ref{tab:AT_Mott}.
 	    & 9085  & IN    & $-1.15795 \pm 0.33341 $   & $-34.0401 \pm 0.32742	$& -86.8148  \\
 	\hline
     \end{tabular}
-    \caption{Mott measurements during PREX-II and CREX AT runnings. The Up-Down
+    \caption[Mott measurement during AT]
+    {Mott measurements during PREX-II and CREX AT runnings. The Up-Down
     asymmetry measures the horizontal transverse polarization while the Left-Right
     asymmetry measures the vertical transverse polarization; The Mott analyzing 
     power is $\CA_{\text{Mott}} = 0.3921 \pm 0.0016$, so the vertical polarization is 
@@ -508,7 +511,8 @@ The polarization result is shown in Table~\ref{tab:AT_polarization}
     CREX    & $86.67 \pm 0.63$	& $86.897 \pm 0.778$	& $86.8 \pm 0.6$  \\
     \hline
     \end{tabular}
-    \caption{Average Compton and Moller polarization measured near the AT runs. 
+    \caption[AT Polarization]
+    {Average Compton and Moller polarization measured near the AT runs. 
     The PREX-II AT uses only the Moller result while the CREX one uses the average value of the 
     Compton and the Moller measurements.}
     \label{tab:AT_polarization}
@@ -586,7 +590,8 @@ Fig.~\ref{fig:AT_crex_Ca48_miniruns}, as an example.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=\linewidth]{at/mulplot_Ca48}
-    \caption{Mulplots for CREX \Ca. The red line is a Gaussian fit. One can clearly 
+    \caption[AT \Ca Mulplots]
+    {Mulplots for CREX \Ca. The red line is a Gaussian fit. One can clearly 
     see how the false asymmetry correction reduces the width of the distribution (note that
     the first plot has a larger X-range than the other two).}
     \label{fig:AT_crex_Ca48_mulplot}
@@ -597,7 +602,8 @@ Fig.~\ref{fig:AT_crex_Ca48_miniruns}, as an example.
     \includegraphics[width=0.9\linewidth]{at/mini_Ca48_asym_us_dd.mean.png}
     \includegraphics[width=0.9\linewidth]{at/mini_Ca48_reg_asym_us_dd.mean.png}
     \includegraphics[width=0.9\linewidth]{at/mini_Ca48_dit_asym_us_dd.mean.png}
-    \caption{Sign corrected minirun-wise scatter plot of the raw, regression corrected and 
+    \caption[AT \Ca asymmetry plot]
+    {Sign corrected minirun-wise scatter plot of the raw, regression corrected and 
     dithering corrected transverse asymmetry of \Ca in CREX. Different colors represent
     different IHWP states (in/out). In each plot, the top pad shows the 
     mean and error of the title variable for each minirun, the three fit lines indicate
@@ -623,21 +629,21 @@ tables.
 	\hline
 	\multicolumn{13}{c}{IHWP IN}   \\
 	\hline
-	\C	& 4205.3	& 1113.7    & 5173.9	& 501.5	    & 5169.4	& 502.1	    & 4129.8  & 1117.7    & 5105.0  & 504.9     & 5103.5  & 505.6   \\ 
-	\ca	& 3055.9	& 1762.7    & 5507.5	& 419.3     & 5517.4	& 420.7	    & 2979.8  & 1763.3    & 5501.8  & 420.0     & 5511.7  & 421.4   \\   
-	\Pb	& -266.2	& 974.2     & 54.9  	& 183.5     & 27.7  	& 185.7	    & -386.2  & 958.3     & 101.5   & 180.3     & 70.2    & 182.5   \\   
+	\C	& 4205.3	& 1113.7    & 5173.9	& 501.5	    & 5169.4	& 502.2	    & 4129.8  & 1117.7    & 5105.0  & 504.9     & 5103.5  & 505.6   \\ 
+	\ca	& 3055.8	& 1762.8    & 5507.5	& 419.3     & 5517.4	& 420.7	    & 2979.8  & 1763.3    & 5501.8  & 420.0     & 5511.7  & 421.4   \\   
+	\Pb	& -266.2	& 974.3     & 54.9  	& 183.5     & 27.6  	& 185.7	    & -381.0  & 975.2     & 56.0   & 183.5	& 22.4    & 185.8   \\   
 	\hline
 	\multicolumn{13}{c}{IHWP OUT}   \\
 	\hline
-	\C	& 6111.0	& 992.1	    & 5685.5	& 437.4	    & 5740.6	& 437.9	    & 6055.9  & 995.8     & 5619.1  & 440.1     & 5669.4  & 440.6   \\ 
-	\ca	& 5707.4	& 1687.6    & -679.8	& 443.0     & 5093.7	& 399.6	    & 5775.6  & 1687.8    & 5033.6  & 396.7     & 5033.6  & 399.2   \\   
-	\Pb	& -132.7	& 927.4     & -52.3 	& 176.1     & -26.1 	& 178.7	    & -86.5   & 922.7     & -73.2   & 174.9     & -86.2   & 209.0   \\   
+	\C	& 6111.0	& 992.8	    & 5685.5	& 437.4	    & 5740.6	& 437.9	    & 6055.9  & 995.8     & 5619.1  & 440.1     & 5669.4  & 440.6   \\ 
+	\ca	& 5707.3	& 1687.7    & 5069.0	& 397.0     & 5093.7	& 399.7	    & 5775.6  & 1687.8    & 5033.6  & 396.7     & 5033.6  & 399.2   \\   
+	\Pb	& -132.7	& 927.4     & -52.3 	& 176.1     & -26.1 	& 178.7	    & \multicolumn{6}{c}{\color{red}{data can't be reproduced due to lost of run 4112}}	\\   
 	\hline
 	\multicolumn{13}{c}{COMBINED}   \\
 	\hline
 	\C	& 5267.8	& 740.8	    & 5464.5	& 329.6	    & 5493.9	& 330.0	    & 5209.7  & 743.5     & 5393.2  & 331.8     & 5427.0  & 332.2   \\ 
-	\ca	& 4439.2	& 1219.0    & 5276.3	& 288.3     & 5294.7	& 289.7	    & 4444.9  & 1219.7    & 5275.3  & 288.5     & 5293.9  & 290.0   \\   
-	\Pb	& -196.2	& 671.7     & -0.9  	& 127.0     & -0.3  	& 128.8	    & -231.5  & 664.7     & 11.3    & 125.5     & 70.2    & 182.5   \\   
+	\ca	& 4439.2	& 1219.1    & 5276.3	& 288.3     & 5294.7	& 289.8	    & 4444.9  & 1219.7    & 5275.3  & 288.5     & 5293.9  & 290.0   \\   
+	\Pb	& -196.2	& 671.8     & -0.9  	& 127.0     & -0.3  	& 128.8	    & \multicolumn{6}{c}{\color{red}{data can't be reproduced due to lost of run 4112}}  \\   
 	\hline
     \end{tabular}
     \caption{PREX-II raw and corrected transverse asymmetry}
@@ -749,7 +755,7 @@ To count the uncertainty caused by the beam correction, the difference between
 corrections with the regression and dithering methods is used. More specifically, 
 we find that for most runs, the difference between the corrections
 from the most significant BPMs with these two methods is less than 5\%. Therefore,
-a conservative estimation of 5\% of the correction with dithering is used as the 
+a conservative estimate of 5\% of the correction with dithering is used as the 
 systematic uncertainty of the beam false asymmetry correction. 
 The correction from each BPM (or their combinations) will be the product of 
 the target-wise dithering slope and the average difference in each BPM (or their combinations), 
@@ -876,7 +882,7 @@ it is bounded to be $<0.5\%$ in bench tests.
     \caption{Systematic uncertainty due to the detector non-linearity.}
 \end{table}
 
-For uncertainty come from the BCM non-linearity, a conservative estimation of 1\% is used,
+For uncertainty come from the BCM non-linearity, a conservative estimate of 1\% is used,
 as shown in Table~\ref{tab:AT_bcm_non-linearity}, the charge asymmetry is the 
 minirun-wise average value.
 \begin{table}[!h]
@@ -1042,15 +1048,23 @@ As for other light nuclei, they are not far away from their theoretical predicti
 \begin{figure}[!h]
     \centering
     \includegraphics[scale=.5]{at/pcrex_AT}
-    \caption{Transverse asymmetries measured in PREX-II/CREX. The PREX-I result
+    \caption[PCREX AT result]
+    {Transverse asymmetries measured in PREX-II/CREX. The PREX-I result
     is also included. Overlapping points are offset slightly in Q to distinguish
     them.}
     \label{fig:pcrex_AT}
 \end{figure}
 
 \begin{comment}
+    resource:
     \begin{itemize}
-	\item resource: AT plot: https://github.com/cipriangal/prexATplot
+	\item C contaminations: https://docs.google.com/spreadsheets/d/1PSR-MtSp1jTthA82ohaNlGB7ZESbbdwzgZsv32p5TvM/edit#gid=0
+	\item AT data: https://docs.google.com/spreadsheets/d/1ZI68PgAn_zySKozZ__kHBvxlBmaTMKw9jPSl-EIa91k/edit?pli=1#gid=1243115322
+	\item AT plot: https://github.com/cipriangal/prexATplot
+    \end{itemize}
+
+    Misc:
+    \begin{itemize}
 	\item regression: which bpm set were used?
 	\item dithering: ???
 	\item 
