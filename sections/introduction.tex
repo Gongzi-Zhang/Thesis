@@ -377,11 +377,13 @@ and the difference between the numbers of protons and neutrons. To describe it,
 we can use the liquid drop model (LDM), which gives rise to the Bethe-Weizsacker Semi-empirical Mass Formula:
 \begin{equation}
     \begin{gathered}
-	E\ (\mathrm{MeV}) = \textcolor{black}{a_V A} 
-	    - \textcolor{blue}{a_S A^{2/3}} 
-	    - \textcolor{green}{a_C\frac{Z(Z-1)}{A^{1/3}}} 
-	    - \textcolor{red}{a_A\frac{(N-Z)^2}{A}} 
-	    + \textcolor{cyan}{\delta a_p A^{-3/4}} \\
+	E\ (\mathrm{MeV}) = 
+            a_V A - a_S A^{2/3}  - a_C\frac{Z(Z-1)}{A^{1/3}} - a_A\frac{(N-Z)^2}{A} + \delta a_p A^{-3/4} \\
+            % \textcolor{black}{a_V A} 
+	    % - \textcolor{blue}{a_S A^{2/3}} 
+	    % - \textcolor{green}{a_C\frac{Z(Z-1)}{A^{1/3}}} 
+	    % - \textcolor{red}{a_A\frac{(N-Z)^2}{A}} 
+	    % + \textcolor{cyan}{\delta a_p A^{-3/4}} \\
 	\delta a_p A^{-3/4} = 
 	    \begin{cases}
 		+a_p A^{-3/4}	& \text{Z, N even} \\
@@ -394,11 +396,11 @@ we can use the liquid drop model (LDM), which gives rise to the Bethe-Weizsacker
 
 \begin{itemize}
     % https://en.wikipedia.org/wiki/Semi-empirical_mass_formula
-    \color{black} \item Volume term ($a_V$): strong force between nearby nucleons ($a_V \sim 16$~MeV)
-    \color{blue}  \item Surface term ($a_S$): correction to the volume term ($a_S \sim 18$~MeV)
-    \color{green} \item Coulomb term ($a_C$): repulsion due to EM charge ($a_C \sim 0.7$~MeV)
-    \color{red}   \item Asymmetry term ($a_A$): correction from the Pauli exclusion principle ($a_A \sim 24$~MeV)
-    \color{cyan}  \item Pairing term ($\delta$): correction caused by the spin coupling effect 
+    \item Volume term ($a_V$): strong force between nearby nucleons ($a_V \sim 16$~MeV)
+    \item Surface term ($a_S$): correction to the volume term ($a_S \sim 18$~MeV)
+    \item Coulomb term ($a_C$): repulsion due to EM charge ($a_C \sim 0.7$~MeV)
+    \item Asymmetry term ($a_A$): correction from the Pauli exclusion principle ($a_A \sim 24$~MeV)
+    \item Pairing term ($\delta$): correction caused by the spin coupling effect 
 	($a_p \sim 34$~MeV)
 \end{itemize}
 

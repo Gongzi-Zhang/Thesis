@@ -111,7 +111,7 @@ recognize option: \CurrentOption}}
      [0.2in] in\\%
      [0.2in] \textbf{\large \@program}\\%
      [0.5in] Stony Brook University\\%
-     [0.2in] \@month\ \@year%
+     [0.2in] \textbf{\@month\ \@year}%
      \end{center}%
      \par\null%
      \setcounter{footnote}{0}%
@@ -139,33 +139,33 @@ recognize option: \CurrentOption}}
      \setlength{\baselineskip}{14.5pt}%
 
      \rule[-0.55in]{3in}{\if@sig 0.01in \else 0.00in \fi}\\
-     [0.03in]\@directorname{} -- \@work{} Advisor\\
-     \@directorposition\\%
+     [0.03in]\textbf{\@directorname{} -- \@work{} Advisor\\
+     \@directorposition}\\%
  
      \rule[-0.55in]{3in}{\if@sig 0.01in \else 0.00in \fi}\\
-     [0.03in]\@chairmanname{} -- Chairperson of Defense\\
-     \@chairmanposition\\%
+     [0.03in]\textbf{\@chairmanname{} -- Chairperson of Defense\\
+     \@chairmanposition}\\%
  
      \rule[-0.55in]{3in}{\if@sig 0.01in \else 0.00in \fi}\\
-     [0.03in]\@fstmembername\\
-     \@fstmemberposition\\%
+     [0.03in]\textbf{\@fstmembername\\
+     \@fstmemberposition}\\%
 
      \rule[-0.55in]{3in}{\if@sig 0.01in \else 0.00in \fi}\\
-     [0.03in]\@outmembername\\
+     [0.03in]\textbf{\@outmembername\\
      \@outmemberposition\\
-     \@outmemberschool
+     \@outmemberschool}
      \end{center}%
 
      \vspace{0.2in}%
+     \begin{center}%
      This \MakeLowercase{\@work}\ is accepted by the Graduate School.
-     \begin{flushright}%
      \parbox{\if@sig 3in \else 2.5in \fi}%
      {\centering%\raggedright%
      \baselineskip 14.5pt%
      \rule[-0.55in]{3in}{\if@sig 0.01in \else 0.00in \fi}\\[0.03in]
      \if@sig \else \@dean\\ \fi
      Dean of the Graduate School\\}%
-     \end{flushright}\clearpage}
+     \end{center}\clearpage}
 
 \renewenvironment{abstract}{%
     \if@top
@@ -185,7 +185,7 @@ recognize option: \CurrentOption}}
     [0.2in]in\\%
     [0.2in]\textbf{\large \@program}\\%
     [0.2in]{\large Stony Brook University} \\
-    [0.2in]{\large \@year}\\%
+    [0.2in]{\textbf{\large \@year}}\\%
     [0.2in]\if@sig {\large \@directorname} \fi %for extra abstract copy
     \end{center}%
     \par%
@@ -214,8 +214,9 @@ recognize option: \CurrentOption}}
      \phantomsection
      \addcontentsline{toc}{chapter}{\protect\numberline{}{Acknowledgements}}
      \chapter*{Acknowledgements}%
-     \thispagestyle{empty}%
-     \pagestyle{empty}}%
+     %\thispagestyle{empty}%
+     %pagestyle{empty}%
+     }%
      {\clearpage}
 
 \renewenvironment{thebibliography}[1]
