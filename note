@@ -1,7 +1,5 @@
 # structure
 neutron skin thickness: 
-    what's neutron skin 
-    how to measure it 
     why want to measure it?
 	symmetry energy
 	neutron star (EOS)
@@ -27,28 +25,10 @@ neutron skin thickness:
 	electron scattering
 	    Fourier-Bessel Analysis -- B. Dreher etc (1974) Nucl. Phys. A 235, 219
 	    Sum of Gaussian -- I. Sick, Nucl. Phys. A 218, 509 (1974)
-    
-Asymmetry: 
-    how to derive it theoretically? -- 2 pages
-    tiny value
 
 * drip line: most weakly bounded isotopes
-How to derive weak FF from EW FF?
-
-Experimental setup:
-    source
-    helicity control
-    polarimeter
-    target
-    raster
-    septum
-    HRS
-    detector
-    systematic uncertainty control
-
-Data
-    raw data
-
+* How to extract neutron skin thickness
+    Asymmetry ==> Fn(Q²) ==> Rn ==> symmetry energy \cite{FURNSTAHL200285}
 
 # Questions:
 * why asymmetry rather than measurement of weak interaction directly -- large 
@@ -57,9 +37,6 @@ Data
 
 # papers
 * Nuclear Fermi Momenta: E.Moniz, I.Sick, R.Whitney, et	al., Phys.Rev.Lett. 26	(1971)445.
-
-# phrase
-in closing
 
 # experimental setup
 * number of electrons / pulse ==> luminosity???
@@ -75,11 +52,6 @@ in closing
 * Polarization
 * Charge Normalization
 * Beam Asymmetries
-
-# Neutron stars
-    * size
-    * cooling
-    * properties of the crust
 
 # Models
     * Skyrme-Hartree-Fock
@@ -103,7 +75,3 @@ in closing
 # jcache
 > jcache get /mss/halla/parity/rootfiles/pass1/crex_respin2/
 > file will be availabel at /cache/halla/parity/rootfiles/pass1/crex_respin2/
-
-
-# word
-* indicate, mean, denote, represent, refer to, stand for, 
